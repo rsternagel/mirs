@@ -4,6 +4,10 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import { rhythm, scale } from 'utils/typography'
 
+// import MdMail from 'react-icons/lib/md/mail'
+import MdMailOutline from 'react-icons/lib/md/mail-outline'
+import FaPhone from 'react-icons/lib/fa/phone'
+
 class Homepage extends React.Component {
   render () {
     const site = this.props.data.site
@@ -33,8 +37,8 @@ class Homepage extends React.Component {
             flexDirection: 'column',
           }}>
           So erreichen Sie mich:
-          <span>+49/23872389</span>
-          <span>rhdjsahjk@sjdha</span>
+          <span><FaPhone /> +49/23872389</span>
+          <span><MdMailOutline /> rhdjsahjk@sjdha</span>
         </p>
 
       </div>
