@@ -1,5 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router'
+// import Link from 'gatsby-link'
+import get from 'lodash/get'
+import Helmet from 'react-helmet'
 import { Container } from 'react-responsive-grid'
 import { prefixLink } from 'gatsby-helpers'
 import { rhythm, scale } from 'utils/typography'
@@ -7,60 +10,73 @@ import { rhythm, scale } from 'utils/typography'
 class Template extends React.Component {
   render () {
     const { location, children } = this.props
-    let header
-    if (location.pathname === prefixLink('/')) {
-      header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-            to={prefixLink('/')}
+
+    const navItems = ['angebot', 'projekte', 'kenntnisse']
+    let navLinks = []
+
+    navItems.forEach((item) => {
+        navLinks.push(
+          <li
+            key={item}
+            style={{marginBottom: rhythm(1/4)}}
           >
-            Gatsby Starter Blog
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h3
-          style={{
-            fontFamily: 'Montserrat, sans-serif',
-            marginTop: 0,
-            marginBottom: rhythm(-1),
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-            to={prefixLink('/')}
-          >
-            Gatsby Starter Blog
-          </Link>
-        </h3>
-      )
-    }
+            <Link
+              style={{
+                boxShadow: 'none'
+              }}
+              to={`/${item}/`}
+            >
+              {item[0].toUpperCase().concat(item.substr(1))}
+            </Link>
+          </li>
+        )
+    })
+
     return (
-      <Container
-        style={{
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3/4)}`,
-        }}
-      >
-        {header}
-        {children}
-      </Container>
+      <div>
+        <Container
+          style={{
+            maxWidth: rhythm(24),
+            padding: `${rhythm(1.5)} ${rhythm(3/4)}`,
+          }}
+        >
+          <header
+            style={{
+                display: 'flex',
+                flexDirection: 'row',
+            }}
+          >
+            <Link
+              style={{
+                boxShadow: 'none',
+                textDecoration: 'none',
+                color: 'inherit',
+                flex: 1,
+              }}
+              to={prefixLink('/')}
+            >
+              Logo
+            </Link>
+            <nav
+              style={{
+                flex: 8,
+                marginLeft: '100px',
+              }}
+            >
+              <ul
+                style={{
+                  display: 'flex',
+                  listStyleType: 'none',
+                  justifyContent: 'space-between',
+                }}
+              >
+                {navLinks}
+              </ul>
+            </nav>
+          </header>
+          {children}
+        </Container>
+      </div>
     )
   }
 }
