@@ -31,15 +31,18 @@ class Homepage extends React.Component {
           to={'/projekte/'} >Berufserfahrung</Link>.
         </p>
 
-        <p
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-          }}>
+        <p className="contact">
           So erreichen Sie mich:
           <span><FaPhone /> +49/23872389</span>
           <span><MdMailOutline /> rhdjsahjk@sjdha</span>
         </p>
+
+         <style jsx>{`
+           .contact {
+             display: flex;
+             flex-direction: column;
+           }
+         `}</style>
 
       </div>
     )
