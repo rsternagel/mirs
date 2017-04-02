@@ -5,6 +5,9 @@
 node_modules/
 npm-debug.log
 
+# yarn
+yarn.lock
+
 # vim
 Session.vim
 
