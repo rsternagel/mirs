@@ -15,20 +15,58 @@ class Template extends React.Component {
       <div>
         <Container
           style={{
-            maxWidth: rhythm(24),
-            padding: `${rhythm(1.5)} ${rhythm(3/4)}`,
+            maxWidth: rhythm(34),
+            padding: `${rhythm(1)} ${rhythm(3/4)}`,
           }}
         >
           <header>
             <Logo />
             <Nav />
           </header>
-          {children}
+          <section className="maincontent" role="main">
+            {children}
+          </section>
 
          <style jsx>{`
            header {
              display: flex;
              flex-direction: row;
+           }
+
+           .maincontent :global(h1) {
+             font-family: Palatino, Georgia, serif;
+             font-size: 130%;
+             border-bottom: 2px solid #6aae6a;
+             display: inline-block;
+             margin-bottom: 30px;
+             padding: 0 5px;
+           }
+
+           .maincontent :global(h2) {
+             font-family: Roboto, sans-serif;
+             font-size: 100%;
+           }
+
+           .maincontent {
+             font-family: 'Open Sans', sans-serif;
+           }
+
+           .maincontent :global(a) {
+             text-decoration: none;
+             padding-bottom: 1px;
+             // border-bottom: 1px solid #6aae6a;
+           }
+
+           .maincontent :global(a),
+           .maincontent :global(a:visited) {
+             text-decoration: none;
+             padding-bottom: 1px;
+             color: #1964ae;
+             // border-bottom: 1px solid #6aae6a;
+           }
+
+           .maincontent :global(a:hover) {
+             background-color: #ffb;
            }
          `}</style>
         </Container>
