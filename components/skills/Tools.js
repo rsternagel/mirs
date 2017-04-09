@@ -37,7 +37,8 @@ class Tools extends React.Component {
           <dt className="category">Dokumentation</dt>
           <dd className="details">
             <ul className="row">
-              <li className="high">Sphinx,</li>
+              <li className="high">Gatsby (JS),</li>
+              <li className="high">Sphinx (Python),</li>
               <li className="middle">JSDoc,</li>
               <li className="low">Maven Site</li>
             </ul>
