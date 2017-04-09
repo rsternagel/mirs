@@ -1,42 +1,191 @@
 import React from 'react'
 import { Link } from 'react-router'
 import { rhythm, scale } from 'utils/typography'
+import { prefixLink } from 'gatsby-helpers'
 
 class Nav extends React.Component {
-  render () {
+  constructor(props) {
+    super(props)
 
-    const navItems = ['angebot', 'projekte', 'kenntnisse']
+    const pathname = props.location.pathname;
+    const selectedNavItemId = this.getInitialSelectedNav(pathname, this.navTitles);
+    this.state = { selectedNavItemId };
+  }
+
+  navTitles = ['angebot', 'projekte', 'kenntnisse']
+  navHtmlElems = new Map();
+
+  getInitialSelectedNav(path, navTitles) {
+    let selectedNavItemId = '';
+
+    navTitles.forEach((title, index, arr) => {
+      if (path.includes(title)) {
+        selectedNavItemId = title;
+      }
+    });
+
+    return selectedNavItemId;
+  }
+
+  componentDidMount() {
+    const selectedId = this.state.selectedNavItemId;
+
+    window.setTimeout(() => {
+      if (selectedId === null || this.navHtmlElems.has(selectedId) === false) { return; }
+
+      const selectedHtmlElem = this.navHtmlElems.get(selectedId)
+      this.moveSelectionIndicatorTo(selectedHtmlElem)
+    }, 500)
+  }
+
+  handleClick = (e) => {
+    const newNavItemId = e.currentTarget.id;
+    const { selectedNavItemId } = this.state;
+
+    if (newNavItemId !== selectedNavItemId) {
+      this.setState({ selectedNavItemId: newNavItemId });
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const { pathname } = nextProps.location;
+    let curPageHasOneOfNavTitlesList = [];
+
+    this.navTitles.forEach((title, index, arr) => {
+      curPageHasOneOfNavTitlesList.push(pathname.includes(title));
+    });
+
+    if (curPageHasOneOfNavTitlesList.includes(true) === false) {
+      // unset selectedNavItemId cause current
+      // page is not part of any navTitle
+      this.setState({ selectedNavItemId: null });
+      this.moveSelectionIndicatorTo(null);
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    const selectedId = this.state.selectedNavItemId;
+
+    if (selectedId === null || this.navHtmlElems.has(selectedId) === false) { return; }
+
+    if (this.state.selectedNavItemId !== prevState.selectedNavItemId) {
+      const selectedHtmlElem = this.navHtmlElems.get(selectedId)
+      this.moveSelectionIndicatorTo(selectedHtmlElem)
+    }
+  }
+
+  moveSelectionIndicatorTo(newSelectedItem) {
+    let indicatorWrapperStyle = { display: "none" }
+    if (newSelectedItem !== null) {
+      const { clientHeight, clientWidth, offsetLeft } = newSelectedItem;
+      indicatorWrapperStyle = {
+        height: clientHeight,
+        transform: `translateX(${Math.floor(offsetLeft)}px)`,
+        width: clientWidth,
+      }
+    }
+    this.setState({ indicatorWrapperStyle });
+  }
+
+  render () {
     let navLinks = []
 
-    navItems.forEach((item) => {
-        navLinks.push(
-          <li key={item}>
-            <Link to={`/${item}/`}>
-              {item[0].toUpperCase().concat(item.substr(1))}
-            </Link>
-          </li>
-        )
+    this.navTitles.forEach((item) => {
+      let liElem = {}
+      let dynamicAttrs = {}
+
+      if (item === this.state.selectedNavItemId) {
+        dynamicAttrs['data-selected'] = true;
+      }
+
+      liElem = <li key={item}
+                   id={item}
+                   onClick={this.handleClick}
+                   ref={(navHtmlElem) => { this.navHtmlElems.set(item, navHtmlElem) }}
+                   {...dynamicAttrs}>
+        <Link to={prefixLink(`/${item}/`)}>
+          {item[0].toUpperCase().concat(item.substr(1))}
+        </Link>
+      </li>
+
+      navLinks.push(liElem);
     })
 
     return (
-       <nav>
-         <ul>
-           {navLinks}
-         </ul>
+      <nav>
+        <ul>
+          <div className="nav-indicator-wrapper" style={this.state.indicatorWrapperStyle}>
+            <div className="nav-indicator"></div>
+          </div>
+          {navLinks}
+        </ul>
 
-         <style jsx>{`
-           nav {
-             flex: 8;
-             margin-left: 100px;
-           }
+        <style jsx>{`
+          nav :global(a) {
+            text-decoration: none;
+          }
 
-           ul {
-             display: flex;
-             list-style-type: none;
-             justify-content: space-between;
-           }
-         `}</style>
-       </nav>
+          nav {
+            flex: 8 1 0;
+            font-family: Palatino, Georgia, serif;
+          }
+
+          nav :global(a) {
+            padding: 5px;
+            color: #000;
+          }
+
+          nav :global([data-selected='true']) :global(a),
+          nav :global([data-selected='true']) :global(a:visited) {
+            color: #479047;
+          }
+
+          ul {
+            position:relative;
+            display: flex;
+            margin-top: 20px;
+          }
+
+          ul :global(li:not(:last-child)) {
+            margin-right: 30px;
+            padding-bottom: 10px;
+          }
+
+          ul :global(li) {
+            flex: 0 1 content;
+            padding-left: 8px;
+            padding-right: 8px;
+          }
+
+          .nav-indicator-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateX(0);
+            transition: height, transform, width;
+            transition-duration: 400ms;
+            transition-timing-function: cubic-bezier(0.4, 1, 0.75, 0.9);
+            pointer-events: none;
+          }
+
+          .nav-indicator {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: #1d7324;
+            /*
+            color: #6aae6a;
+            color: #479047;
+            color: #1d7324;
+            height: 3px;
+            */
+            height: 90px;
+            opacity: 0.1;
+            border-radius: 5px;
+          }
+        `}</style>
+      </nav>
     )
   }
 }
