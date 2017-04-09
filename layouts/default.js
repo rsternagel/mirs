@@ -28,6 +28,11 @@ class Template extends React.Component {
           </section>
 
          <style jsx>{`
+           :global(body) {
+             -webkit-font-smoothing: antialiased;
+             -moz-osx-font-smoothing: grayscale;
+           }
+
            header {
              display: flex;
              flex-direction: row;
