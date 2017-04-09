@@ -43,8 +43,9 @@ class Template extends React.Component {
            }
 
            .maincontent :global(h2) {
-             font-family: Roboto, sans-serif;
+             font-family: 'Open Sans', sans-serif;
              font-size: 100%;
+             margin-bottom: .7rem;
            }
 
            .maincontent {
