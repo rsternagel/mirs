@@ -21,7 +21,7 @@ class Template extends React.Component {
         >
           <header>
             <Logo />
-            <Nav />
+            <Nav location={this.props.location} />
           </header>
           <section className="maincontent" role="main">
             {children}
