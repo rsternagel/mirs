@@ -127,12 +127,12 @@ class Nav extends React.Component {
 
           nav {
             flex: 8 1 0;
-            font-family: Palatino, Georgia, serif;
+            font-family: Palatino, 'Palatino Linotype', Georgia, serif;
           }
 
           nav :global(a) {
             padding: 5px;
-            color: #000;
+            color: rgba(0, 0, 0, .8);
           }
 
           nav :global([data-selected='true']) :global(a),
@@ -173,13 +173,7 @@ class Nav extends React.Component {
             right: 0;
             bottom: 0;
             left: 0;
-            background-color: #1d7324;
-            /*
-            color: #6aae6a;
-            color: #479047;
-            color: #1d7324;
-            height: 3px;
-            */
+            background-color: hsla(105, 70%, 38%, 1);
             height: 90px;
             opacity: 0.1;
             border-radius: 5px;

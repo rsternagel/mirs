@@ -34,7 +34,7 @@ class Template extends React.Component {
            }
 
            .maincontent :global(h1) {
-             font-family: Palatino, Georgia, serif;
+             font-family: Palatino, 'Palatino Linotype', Georgia, serif;
              font-size: 130%;
              border-bottom: 2px solid #6aae6a;
              display: inline-block;
@@ -67,6 +67,10 @@ class Template extends React.Component {
 
            .maincontent :global(a:hover) {
              background-color: #ffb;
+           }
+
+           .maincontent :global(ul) {
+             font-size: 95%;
            }
          `}</style>
         </Container>

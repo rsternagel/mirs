@@ -17,7 +17,7 @@ class Logo extends React.Component {
            .logo :global(img) {
              margin-left: -10px;
              margin-top: 5px;
-             width: 70%;
+             width: 65%;
            }
          `}</style>
       </div>
