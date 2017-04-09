@@ -29,6 +29,7 @@ class Template extends React.Component {
 
          <style jsx>{`
            :global(body) {
+             border-top: 6px solid #6aae6a;
              -webkit-font-smoothing: antialiased;
              -moz-osx-font-smoothing: grayscale;
            }
