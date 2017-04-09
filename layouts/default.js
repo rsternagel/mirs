@@ -54,7 +54,7 @@ class Template extends React.Component {
            .maincontent :global(a) {
              text-decoration: none;
              padding-bottom: 1px;
-             // border-bottom: 1px solid #6aae6a;
+             /* border-bottom: 1px solid #6aae6a; */
            }
 
            .maincontent :global(a),
@@ -62,7 +62,7 @@ class Template extends React.Component {
              text-decoration: none;
              padding-bottom: 1px;
              color: #1964ae;
-             // border-bottom: 1px solid #6aae6a;
+             /* border-bottom: 1px solid #6aae6a; */
            }
 
            .maincontent :global(a:hover) {
