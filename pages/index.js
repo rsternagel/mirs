@@ -6,8 +6,6 @@ import profilePic from '../components/img/profile_pic.jpg'
 
 import MdMailOutline from 'react-icons/lib/md/mail-outline'
 import FaPhone from 'react-icons/lib/fa/phone'
-import AtSign from 'react-icons/lib/fa/at'
-import PlusSign from 'react-icons/lib/go/plus'
 
 class Homepage extends React.Component {
   render () {
@@ -33,27 +31,29 @@ class Homepage extends React.Component {
 
             <p className="contact">
               So erreichen Sie mich:
-              <span><FaPhone />{' '} <PlusSign />49176 / 21746640</span>
-              <span><MdMailOutline />{' '} rsternagel<AtSign />posteo.de</span>
+              <span><MdMailOutline />{' '} <a href="mailto:rsternagel@posteo.de">rsternagel@posteo.de</a></span>
+              <span><FaPhone />{' '} <a href="tel:+4917621746640">+49176 / 21746640</a></span>
             </p>
           </aside>
           <section className="intro">
             <p>
-              Hallo,<br /> ich bin <span className="name">Richard Sternagel</span>,<br /> Web-Entwickler aus Frankfurt am Main (FFM).
+              Hallo,<br/>
+              ich bin <span className="name">Richard Sternagel</span>,<br />
+              Web-Entwickler (Freelancer) aus Frankfurt am Main.
             </p>
 
             <p>
-              Ich bin Spezialist für die <Link to={'/angebot/'} >Entwicklung von
+              Ich bin Spezialist für die <Link to={prefixLink('/angebot/')} >Entwicklung von
               Web Applikationen, Infrastruktur und Tooling</Link>. Mein
-              umfangreiches und <Link to={'/kenntnisse/'} >praxiserprobtes
+              {' '}<Link to={prefixLink('/kenntnisse/')} >praxiserprobtes
               Expertenwissen</Link> ist das Ergebnis meines
-              Medieninformatikstudiums sowie meiner 10-jährigen <Link
-              to={'/projekte/'} >Berufserfahrung</Link>.
+              Studiums (Medieninformatik) sowie meiner 10-jährigen <Link
+              to={prefixLink('/projekte/')} >Berufserfahrung</Link>.
             </p>
 
             <p>
               Mein Fokus liegt auf <a href="https://developer.mozilla.org/en/docs/Web/JavaScript">JavaScript</a>
-              {' '}und <a href="https://nodejs.org/en/">Node.js</a>.
+              {' '}<span className="amp">&</span> <a href="https://nodejs.org/en/">Node.js</a>.
             </p>
 
             <p>
@@ -67,12 +67,6 @@ class Homepage extends React.Component {
           </section>
         </section>
         <style jsx>{`
-          .name {
-             font-family: Palatino, Georgia, serif;
-             font-size: 110%;
-             font-style: italic;
-          }
-
           .labels p {
             font-size: 70%;
           }
@@ -86,11 +80,11 @@ class Homepage extends React.Component {
             flex-direction: column;
             font-size: 95%;
 
-            border: 1px solid #ddd;
-            padding: 10px 20px;
-            border-radius: 7px;
-            margin-right: 40px;
-            margin-left: -10px;
+            padding: 10px 10px;
+          }
+
+          .contact a {
+            padding-left: 5px;
           }
 
           .content {
@@ -120,7 +114,12 @@ class Homepage extends React.Component {
           time {
             font-family: Georgia, serif;
             font-size: 100%;
-            padding: 0 5px;
+            padding: 0 3px;
+          }
+
+          :global(.amp) {
+            font-family: Palatino, 'Palatino Linotype', serif;
+            font-style: italic;
           }
         `}</style>
 
