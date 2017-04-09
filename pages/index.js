@@ -24,11 +24,11 @@ class Homepage extends React.Component {
             <img src={prefixLink(profilePic)} width="200" height="248" alt="Richard Sternagel" />
 
             <div className="labels">
-            <p>
-              Entwicklung von Web-Applikationen<br/>
-              Infrastruktur · Tooling · Workflows<br/>
-              <span className="jsNode">JavaScript · Node.js</span>
-            </p>
+              <p>
+                Entwicklung von Web-Applikationen<br/>
+                Infrastruktur · Tooling · Workflows<br/>
+                <span className="jsNode">JavaScript · Node.js</span>
+              </p>
             </div>
 
             <p className="contact">
@@ -85,31 +85,44 @@ class Homepage extends React.Component {
             display: flex;
             flex-direction: column;
             font-size: 95%;
+
+            border: 1px solid #ddd;
+            padding: 10px 20px;
+            border-radius: 7px;
+            background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(#fff), to(#eee));
+            margin-right: 40px;
+            margin-left: -10px;
           }
 
-         .content {
-           display: flex;
-         }
+          .content {
+            display: flex;
+          }
 
-         .intro,
-         .image {
-           padding: 10px;
-         }
+          .intro,
+          .image {
+            padding: 10px;
+          }
 
-         .intro {
-           width: 65%;
-         }
+          .intro {
+            width: 65%;
+          }
 
-         .image {
-           width: 35%;
-           margin-right: 10px;
-         }
+          .image {
+            width: 35%;
+            margin-right: 10px;
+          }
 
-         .image img {
-           padding: 1px;
-           border: 1px solid #ddd;
-           border-radius: 5px;
-         }
+          .image img {
+            padding: 1px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+          }
+
+          time {
+            font-family: Georgia, serif;
+            font-size: 100%;
+            padding: 0 5px;
+          }
         `}</style>
 
       </div>
