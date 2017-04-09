@@ -57,13 +57,13 @@ class Homepage extends React.Component {
             </p>
 
             <p>
-              Aktuell liegt mein Projektfokus auf
+              Aktuell liegt mein Projektschwerpunkt auf
               {' '}<a href="https://facebook.github.io/react/">React</a> und dessen Ökosystem (d.h.
               {' '}<a href="http://redux.js.org/">Redux</a>, <a href="http://graphql.org/">GraphQL</a>,
               {' '}<a href="https://facebook.github.io/relay/">Relay</a>, <a href="https://webpack.js.org/">Webpack</a>, etc.).
             </p>
 
-            <p>Ich bin ab Mai 2017 verfügbar.</p>
+            <p>Ich bin ab <time>Mai 2017</time> verfügbar.</p>
           </section>
         </section>
         <style jsx>{`
@@ -89,7 +89,6 @@ class Homepage extends React.Component {
             border: 1px solid #ddd;
             padding: 10px 20px;
             border-radius: 7px;
-            background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(#fff), to(#eee));
             margin-right: 40px;
             margin-left: -10px;
           }
