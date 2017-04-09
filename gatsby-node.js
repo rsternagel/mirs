@@ -5,6 +5,8 @@ const select = require('unist-util-select')
 const precache = require('sw-precache')
 const fs = require('fs-extra')
 
+// currently there is no markdown content :(
+/*
 exports.createPages = ({ args }) => {
   const { graphql } = args
 
@@ -42,6 +44,7 @@ exports.createPages = ({ args }) => {
     })
   })
 }
+*/
 
 // add custom url pathname for blog posts
 exports.modifyAST = ({ args }) => {
