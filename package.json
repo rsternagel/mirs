@@ -42,8 +42,7 @@
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.10.3",
-    "gh-pages": "^0.12.0"
+    "eslint-plugin-react": "^6.10.3"
   },
   "homepage": "https://github.com/rsternagel/mirs",
   "license": "MIT",
@@ -58,7 +57,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "develop": "gatsby develop",
     "build": "gatsby build",
-    "deploy": "gatsby build --prefix-links && gh-pages -d public",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
   }
 }
