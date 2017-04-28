@@ -32,7 +32,7 @@ class Homepage extends React.Component {
             <p className="contact">
               So erreichen Sie mich:
               <span><MdMailOutline />{' '} <a href="mailto:rsternagel@posteo.de">rsternagel@posteo.de</a></span>
-              <span><FaPhone />{' '} <a href="tel:+4917621746640">+49176 / 21746640</a></span>
+              <span><FaPhone />{' '} <a href="tel:+4917621746640">+49 176 / 21746640</a></span>
             </p>
           </aside>
           <section className="intro">
