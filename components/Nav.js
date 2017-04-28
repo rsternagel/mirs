@@ -12,8 +12,8 @@ class Nav extends React.Component {
     this.state = { selectedNavItemId };
   }
 
-  navTitles = ['angebot', 'projekte', 'kenntnisse']
-  navHtmlElems = new Map();
+  navTitles = ['home', 'angebot', 'projekte', 'kenntnisse']
+  navHtmlElems = new Map()
 
   getInitialSelectedNav(path, navTitles) {
     let selectedNavItemId = '';
@@ -22,7 +22,11 @@ class Nav extends React.Component {
       if (path.includes(title)) {
         selectedNavItemId = title;
       }
-    });
+    })
+
+    if (path === '/') {
+      selectedNavItemId = 'home'
+    }
 
     return selectedNavItemId;
   }
@@ -48,14 +52,22 @@ class Nav extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    const { pathname } = nextProps.location;
-    let curPageHasOneOfNavTitlesList = [];
+    const home = 'home'
+    const { pathname } = nextProps.location
+    let curPageHasOneOfNavTitlesList = []
 
     this.navTitles.forEach((title, index, arr) => {
-      curPageHasOneOfNavTitlesList.push(pathname.includes(title));
-    });
+      let isHome = (pathname === '/' && title === home)
+      curPageHasOneOfNavTitlesList.push(isHome || pathname.includes(title))
+    })
 
-    if (curPageHasOneOfNavTitlesList.includes(true) === false) {
+    if (pathname === '/') {
+      // set selectedNavItemId if root no matter
+      // if other links than nav home link was used
+      const selectedHtmlElem = this.navHtmlElems.get(home)
+      this.setState({ selectedNavItemId: home })
+      this.moveSelectionIndicatorTo(selectedHtmlElem)
+    } else if (curPageHasOneOfNavTitlesList.includes(true) === false) {
       // unset selectedNavItemId cause current
       // page is not part of any navTitle
       this.setState({ selectedNavItemId: null });
@@ -92,18 +104,23 @@ class Nav extends React.Component {
 
     this.navTitles.forEach((item) => {
       let liElem = {}
+      let linkTarget = {}
       let dynamicAttrs = {}
 
       if (item === this.state.selectedNavItemId) {
         dynamicAttrs['data-selected'] = true;
       }
 
+      linkTarget = (item === 'home')
+        ? prefixLink('/')
+        : prefixLink(`/${item}/`)
+
       liElem = <li key={item}
                    id={item}
                    onClick={this.handleClick}
                    ref={(navHtmlElem) => { this.navHtmlElems.set(item, navHtmlElem) }}
                    {...dynamicAttrs}>
-        <Link to={prefixLink(`/${item}/`)}>
+        <Link to={linkTarget}>
           {item[0].toUpperCase().concat(item.substr(1))}
         </Link>
       </li>
