@@ -38,8 +38,8 @@ class Homepage extends React.Component {
           <section className="intro">
             <p>
               Hallo,<br/>
-              ich bin <span className="name">Richard Sternagel</span>,<br />
-              Web-Entwickler (Freelancer) aus Frankfurt am Main.
+              ich bin <span className="name">Richard Sternagel</span>, Diplom Medien-Informatiker (DH)
+              {' '}<span className="amp">&</span> Web-Entwickler (Freelancer) aus Frankfurt am Main.
             </p>
 
             <p>
@@ -61,6 +61,10 @@ class Homepage extends React.Component {
               {' '}<a href="https://facebook.github.io/react/">React</a> und dessen Ökosystem (d.h.
               {' '}<a href="http://redux.js.org/">Redux</a>, <a href="http://graphql.org/">GraphQL</a>,
               {' '}<a href="https://facebook.github.io/relay/">Relay</a>, <a href="https://webpack.js.org/">Webpack</a>, etc.).
+            </p>
+
+            <p>
+              Mein bevorzugtes Einsatzgebiet ist Frankfurt am Main und das umliegende Rhein-Main Gebiet.
             </p>
 
             <p>Ich bin ab <time>Mai 2017</time> verfügbar.</p>
@@ -112,9 +116,6 @@ class Homepage extends React.Component {
           }
 
           time {
-            font-family: Georgia, serif;
-            font-size: 100%;
-            padding: 0 3px;
           }
 
           :global(.amp) {
