@@ -12,14 +12,14 @@ class Logo extends React.Component {
           <img src={prefixLink(logoMirs)} alt="Medieninformatik Richard Sternagel" />
         </Link>
 
-         <style jsx>{`
-           /* TODO: replace with smaller img */
-           .logo :global(img) {
-             margin-left: -10px;
-             margin-top: 5px;
-             width: 65%;
-           }
-         `}</style>
+        <style jsx>{`
+          /* TODO: replace with smaller img */
+          .logo :global(img) {
+            margin-left: -10px;
+            margin-top: 5px;
+            width: 65%;
+          }
+        `}</style>
       </div>
     )
   }
