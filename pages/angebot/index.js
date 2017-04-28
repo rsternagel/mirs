@@ -69,7 +69,7 @@ class Angebote extends React.Component {
         <p className="contact">
           Nennen Sie mir Ihre Herausforderungen bei denen ich Sie unterstützen kann:
           <span><MdMailOutline />{' '} <a href="mailto:rsternagel@posteo.de">rsternagel@posteo.de</a></span>
-          <span><FaPhone />{' '} <a href="tel:+4917621746640">+49176 / 21746640</a></span>
+          <span><FaPhone />{' '} <a href="tel:+4917621746640">+49 176 / 21746640</a></span>
         </p>
 
         <style jsx>{`
