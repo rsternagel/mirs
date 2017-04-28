@@ -7,20 +7,20 @@ class Nav extends React.Component {
   constructor(props) {
     super(props)
 
-    const pathname = props.location.pathname;
-    const selectedNavItemId = this.getInitialSelectedNav(pathname, this.navTitles);
-    this.state = { selectedNavItemId };
+    const pathname = props.location.pathname
+    const selectedNavItemId = this.getInitialSelectedNav(pathname, this.navTitles)
+    this.state = { selectedNavItemId }
   }
 
   navTitles = ['home', 'angebot', 'projekte', 'kenntnisse']
   navHtmlElems = new Map()
 
   getInitialSelectedNav(path, navTitles) {
-    let selectedNavItemId = '';
+    let selectedNavItemId = ''
 
     navTitles.forEach((title, index, arr) => {
       if (path.includes(title)) {
-        selectedNavItemId = title;
+        selectedNavItemId = title
       }
     })
 
@@ -28,11 +28,11 @@ class Nav extends React.Component {
       selectedNavItemId = 'home'
     }
 
-    return selectedNavItemId;
+    return selectedNavItemId
   }
 
   componentDidMount() {
-    const selectedId = this.state.selectedNavItemId;
+    const selectedId = this.state.selectedNavItemId
 
     window.setTimeout(() => {
       if (selectedId === null || this.navHtmlElems.has(selectedId) === false) { return; }
@@ -43,11 +43,11 @@ class Nav extends React.Component {
   }
 
   handleClick = (e) => {
-    const newNavItemId = e.currentTarget.id;
-    const { selectedNavItemId } = this.state;
+    const newNavItemId = e.currentTarget.id
+    const { selectedNavItemId } = this.state
 
     if (newNavItemId !== selectedNavItemId) {
-      this.setState({ selectedNavItemId: newNavItemId });
+      this.setState({ selectedNavItemId: newNavItemId })
     }
   }
 
@@ -70,13 +70,13 @@ class Nav extends React.Component {
     } else if (curPageHasOneOfNavTitlesList.includes(true) === false) {
       // unset selectedNavItemId cause current
       // page is not part of any navTitle
-      this.setState({ selectedNavItemId: null });
-      this.moveSelectionIndicatorTo(null);
+      this.setState({ selectedNavItemId: null })
+      this.moveSelectionIndicatorTo(null)
     }
   }
 
   componentDidUpdate(prevProps, prevState) {
-    const selectedId = this.state.selectedNavItemId;
+    const selectedId = this.state.selectedNavItemId
 
     if (selectedId === null || this.navHtmlElems.has(selectedId) === false) { return; }
 
@@ -89,14 +89,14 @@ class Nav extends React.Component {
   moveSelectionIndicatorTo(newSelectedItem) {
     let indicatorWrapperStyle = { display: "none" }
     if (newSelectedItem !== null) {
-      const { clientHeight, clientWidth, offsetLeft } = newSelectedItem;
+      const { clientHeight, clientWidth, offsetLeft } = newSelectedItem
       indicatorWrapperStyle = {
         height: clientHeight,
         transform: `translateX(${Math.floor(offsetLeft)}px)`,
         width: clientWidth,
       }
     }
-    this.setState({ indicatorWrapperStyle });
+    this.setState({ indicatorWrapperStyle })
   }
 
   render () {
@@ -108,7 +108,7 @@ class Nav extends React.Component {
       let dynamicAttrs = {}
 
       if (item === this.state.selectedNavItemId) {
-        dynamicAttrs['data-selected'] = true;
+        dynamicAttrs['data-selected'] = true
       }
 
       linkTarget = (item === 'home')
@@ -125,7 +125,7 @@ class Nav extends React.Component {
         </Link>
       </li>
 
-      navLinks.push(liElem);
+      navLinks.push(liElem)
     })
 
     return (
