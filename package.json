@@ -6,8 +6,8 @@
   "dependencies": {
     "gatsby": "1.0.0-alpha12-alpha.dbf1a599",
     "gatsby-link": "1.0.0-alpha12-alpha.dbf1a599",
-    "gatsby-parser-remark": "1.0.0-alpha12-alpha.dbf1a599",
-    "gatsby-parser-sharp": "1.0.0-alpha12-alpha.dbf1a599",
+    "gatsby-transformer-remark": "1.0.0-alpha12-alpha.dbf1a599",
+    "gatsby-transformer-sharp": "1.0.0-alpha12-alpha.dbf1a599",
     "gatsby-plugin-google-analytics": "1.0.0-alpha12-alpha.dbf1a599",
     "gatsby-plugin-manifest": "1.0.0-alpha12-alpha.dbf1a599",
     "gatsby-plugin-offline": "1.0.0-alpha12-alpha.dbf1a599",
