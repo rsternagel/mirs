@@ -12,5 +12,5 @@ yarn.lock
 Session.vim
 
 # generated
-.intermediate-representation/
+.cache/
 public/
