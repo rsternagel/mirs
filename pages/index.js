@@ -53,7 +53,7 @@ class Homepage extends React.Component {
 
             <p>
               Mein Fokus liegt auf <a href="https://developer.mozilla.org/en/docs/Web/JavaScript">JavaScript</a>
-              {' '}<span className="amp">&</span> <a href="https://nodejs.org/en/">Node.js</a>.
+              {' '}<span className="amp">&</span> <a href="https://nodejs.org/">Node.js</a>.
             </p>
 
             <p>
