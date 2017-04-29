@@ -178,7 +178,6 @@ export const pageQuery = `
    site {
      siteMetadata {
        title
-       author
      }
    }
  }
