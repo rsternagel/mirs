@@ -1,6 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router'
-import { prefixLink } from 'gatsby-helpers'
+import Link from 'gatsby-link'
 import logoMirs from './img/logo_mirs.png'
 
 class Logo extends React.Component {
@@ -8,8 +7,8 @@ class Logo extends React.Component {
 
     return (
       <div className="logo">
-        <Link to={prefixLink('/')}>
-          <img src={prefixLink(logoMirs)} alt="Medieninformatik Richard Sternagel" />
+        <Link to={'/'}>
+          <img src={logoMirs} alt="Medieninformatik Richard Sternagel" />
         </Link>
 
         <style jsx>{`
@@ -26,5 +25,4 @@ class Logo extends React.Component {
 }
 
 export default Logo
-
 
