@@ -26,7 +26,6 @@ export const pageQuery = `
     site {
       siteMetadata {
         title
-        author
       }
     }
     markdownRemark(slug: { eq: $slug }) {
