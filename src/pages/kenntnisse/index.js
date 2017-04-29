@@ -2,11 +2,11 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
-import MainSkills from 'components/skills/MainSkills'
-import Technologies from 'components/skills/Technologies'
-import Tools from 'components/skills/Tools'
-import MiscSkills from 'components/skills/MiscSkills'
-import Beliefs from 'components/skills/Beliefs'
+import MainSkills from '../../components/skills/MainSkills'
+import Technologies from '../../components/skills/Technologies'
+import Tools from '../../components/skills/Tools'
+import MiscSkills from '../../components/skills/MiscSkills'
+import Beliefs from '../../components/skills/Beliefs'
 
 class Skills extends React.Component {
   render () {

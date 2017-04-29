@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { rhythm, scale } from 'utils/typography'
+import { rhythm, scale } from '../../utils/typography'
 
 class Beliefs extends React.Component {
   render () {
