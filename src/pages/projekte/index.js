@@ -1,7 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router'
+import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
-import { prefixLink } from 'gatsby-helpers'
 
 import logoEue from '../../components/img/logo_eue.png'
 import logoQx from '../../components/img/logo_qooxdoo.png'
@@ -20,7 +19,7 @@ class Projekte extends React.Component {
 
         <div className="project-list">
           <div className="project">
-            <img src={prefixLink(logoEue)} alt="1&1" />
+            <img src={logoEue} alt="1&1" />
 
             <dl>
               <dt>Projekt</dt>
@@ -94,7 +93,7 @@ class Projekte extends React.Component {
 
         <div className="project-list">
           <div className="project">
-            <img src={prefixLink(logoQx)} alt="qooxdoo" />
+            <img src={logoQx} alt="qooxdoo" />
             <dl>
               <dt>Projekt</dt>
               <dd><a href="http://www.qooxdoo.org/">qooxdoo</a><br />

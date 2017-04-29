@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router'
+import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
 import MdMailOutline from 'react-icons/lib/md/mail-outline'

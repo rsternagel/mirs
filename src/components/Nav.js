@@ -1,7 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router'
+import Link from 'gatsby-link'
 import { rhythm, scale } from 'utils/typography'
-import { prefixLink } from 'gatsby-helpers'
 
 class Nav extends React.Component {
   constructor(props) {
@@ -112,8 +111,8 @@ class Nav extends React.Component {
       }
 
       linkTarget = (item === 'home')
-        ? prefixLink('/')
-        : prefixLink(`/${item}/`)
+        ? '/'
+        : `/${item}/`
 
       liElem = <li key={item}
                    id={item}

@@ -1,7 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router'
+import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
-import { prefixLink } from 'gatsby-helpers'
 import profilePic from '../components/img/profile_pic.jpg'
 
 import MdMailOutline from 'react-icons/lib/md/mail-outline'
@@ -19,7 +18,7 @@ class Homepage extends React.Component {
 
         <section className="content">
           <aside className="image">
-            <img src={prefixLink(profilePic)} width="200" height="248" alt="Richard Sternagel" />
+            <img src={profilePic} width="200" height="248" alt="Richard Sternagel" />
 
             <div className="labels">
               <p>
@@ -43,12 +42,12 @@ class Homepage extends React.Component {
             </p>
 
             <p>
-              Ich bin Spezialist für die <Link to={prefixLink('/angebot/')} >Entwicklung von
+              Ich bin Spezialist für die <Link to={'/angebot/'} >Entwicklung von
               Web Applikationen, Infrastruktur und Tooling</Link>. Mein
-              {' '}<Link to={prefixLink('/kenntnisse/')} >praxiserprobtes
+              {' '}<Link to={'/kenntnisse/'} >praxiserprobtes
               Expertenwissen</Link> ist das Ergebnis meines
               Studiums (Medieninformatik) sowie meiner 10-jährigen <Link
-              to={prefixLink('/projekte/')} >Berufserfahrung</Link>.
+              to={'/projekte/'} >Berufserfahrung</Link>.
             </p>
 
             <p>

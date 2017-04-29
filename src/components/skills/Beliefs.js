@@ -1,6 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router'
-import { prefixLink } from 'gatsby-helpers'
+import Link from 'gatsby-link'
 import { rhythm, scale } from 'utils/typography'
 
 class Beliefs extends React.Component {
