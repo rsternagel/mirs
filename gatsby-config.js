@@ -11,8 +11,8 @@ module.exports = {
         name: 'pages',
       },
     },
-    `gatsby-parser-remark`,
-    `gatsby-parser-sharp`,
+    `gatsby-transformer-remark`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-typegen-remark`,
       options: {
