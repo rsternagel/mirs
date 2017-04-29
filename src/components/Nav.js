@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { rhythm, scale } from 'utils/typography'
+import { rhythm, scale } from '../utils/typography'
 
 class Nav extends React.Component {
   constructor(props) {

@@ -1,11 +1,11 @@
 import React from 'react'
 import { Container } from 'react-responsive-grid'
-import { rhythm, scale } from 'utils/typography'
+import { rhythm, scale } from '../utils/typography'
 
 import 'sanitize.css/sanitize.css';
 
-import Nav from 'components/Nav'
-import Logo from 'components/Logo'
+import Nav from '../components/Nav'
+import Logo from '../components/Logo'
 
 class Template extends React.Component {
   render () {
