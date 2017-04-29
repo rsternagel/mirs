@@ -2,13 +2,12 @@ const _ = require('lodash')
 const Promise = require('bluebird')
 const path = require('path')
 const select = require('unist-util-select')
-const precache = require('sw-precache')
 const fs = require('fs-extra')
 
 // currently there is no markdown content :(
 /*
-exports.createPages = ({ args }) => {
-  const { graphql } = args
+exports.createPages = ({ graphql, boundActionCreators }) => {
+  const { upsertPage } = boundActionCreators
 
   return new Promise((resolve, reject) => {
     const pages = []
@@ -31,7 +30,7 @@ exports.createPages = ({ args }) => {
 
       // create top level pages.
       _.each(result.data.allMarkdownRemark.edges, (edge) => {
-        pages.push({
+        upsertPage({
           path: edge.node.slug, // required
           component: topLevelPage,
           context: {
@@ -40,29 +39,26 @@ exports.createPages = ({ args }) => {
         })
       })
 
-      resolve(pages)
+      resolve()
     })
   })
 }
 */
 
 // add custom url pathname for blog posts
-exports.modifyAST = ({ args }) => {
-  const { ast } = args
-  const files = select(ast, 'File')
-  files.forEach((file) => {
-    if (file.extension !== 'md') {
-      return
-    }
-    const parsedFilePath = path.parse(file.relativePath)
-    console.log(parsedFilePath)
+exports.onNodeCreate = ({ node, boundActionCreators, getNode }) => {
+  const { updateNode } = boundActionCreators
+  if (node.type === 'File' && typeof node.slug === 'undefined') {
+    const parsedFilePath = path.parse(node.relativePath)
     const slug = `/${parsedFilePath.dir}/`
-    console.log(slug)
-    file.slug = slug
-    const markdownNode = select(file, 'MarkdownRemark')[0]
-    if (markdownNode) {
-      markdownNode.slug = slug
-    }
-  })
-  return files
+    node.slug = slug
+    updateNode(node)
+  } else if (
+    node.type === 'MarkdownRemark' &&
+    typeof node.slug === 'undefined'
+  ) {
+    const fileNode = getNode(node.parent)
+    node.slug = fileNode.slug
+    updateNode(node)
+  }
 }
