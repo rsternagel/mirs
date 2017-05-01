@@ -55,9 +55,8 @@
     "dev": "gatsby develop",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "develop": "gatsby develop",
     "build": "gatsby build",
-    "clean": "rm -rf .cache/* && rm -rf node_modules && rm -rf yarn.lock",
+    "clean": "rm -rf .cache/* && rm -rf node_modules && rm -rf yarn.lock && rm -rf public/*",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
   }
 }
