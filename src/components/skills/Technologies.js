@@ -43,7 +43,7 @@ class Technologies extends React.Component {
         </dl>
 
         <dl className="skill-list">
-          <dt className="category">Schemsprachen</dt>
+          <dt className="category">Schemasprachen</dt>
           <dd className="details">
             <ul className="row">
               <li className="high">JSON Schema,</li>

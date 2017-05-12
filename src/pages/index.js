@@ -36,7 +36,7 @@ class Homepage extends React.Component {
           </aside>
           <section className="intro">
             <p>
-              Hallo,<br/>
+              <span className="greeting">Hallo,</span><br/>
               ich bin <span className="name">Richard Sternagel</span>,<br/>
               Web-Entwickler aus Frankfurt am Main.
             </p>
@@ -70,6 +70,10 @@ class Homepage extends React.Component {
           </section>
         </section>
         <style jsx>{`
+          .greeting {
+            display: block;
+          }
+
           .labels p {
             font-size: 70%;
           }
@@ -112,9 +116,6 @@ class Homepage extends React.Component {
             padding: 1px;
             border: 1px solid #ddd;
             border-radius: 5px;
-          }
-
-          time {
           }
 
           :global(.amp) {
