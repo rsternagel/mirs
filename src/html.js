@@ -13,7 +13,7 @@ if (process.env.NODE_ENV === `production`) {
   }
 }
 
-module.exports = React.createClass({
+export default class Skeleton extends React.Component {
   render () {
     const head = Helmet.rewind()
     let css
@@ -44,5 +44,5 @@ module.exports = React.createClass({
         </body>
       </html>
     )
-  },
-})
+  }
+}
