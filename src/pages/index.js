@@ -134,12 +134,13 @@ Homepage.propTypes = {
 
 export default Homepage
 
-export const pageQuery = `
- {
-   site {
-     siteMetadata {
-       title
-     }
-   }
+export const pageQuery = graphql`
+query IndexQuery {
+  site {
+    siteMetadata {
+      title
+    }
+  }
  }
 `
+

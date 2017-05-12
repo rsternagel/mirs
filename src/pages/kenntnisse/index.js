@@ -99,12 +99,13 @@ Skills.propTypes = {
 
 export default Skills
 
-export const pageQuery = `
- {
-   site {
-     siteMetadata {
-       title
-     }
-   }
+export const pageQuery = graphql`
+query SkillsQuery {
+  site {
+    siteMetadata {
+      title
+    }
+  }
  }
 `
+

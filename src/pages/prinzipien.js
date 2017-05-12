@@ -58,13 +58,13 @@ class Prinzipien extends React.Component {
 
 export default Prinzipien
 
-export const pageQuery = `
- {
-   site {
-     siteMetadata {
-       title
-     }
-   }
+export const pageQuery = graphql`
+query BeliefsQuery {
+  site {
+    siteMetadata {
+      title
+    }
+  }
  }
 `
 

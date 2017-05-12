@@ -5,7 +5,6 @@ class Datenschutz extends React.Component {
   render() {
     const site = this.props.data.site
     const siteTitle = site.siteMetadata.title
-    const domain = site.siteMetadata.domain
 
     return (
       <div>
@@ -106,13 +105,13 @@ class Datenschutz extends React.Component {
 
 export default Datenschutz
 
-export const pageQuery = `
- {
-   site {
-     siteMetadata {
-       title
-       domain
-     }
-   }
+export const pageQuery = graphql`
+query PrivacyQuery {
+  site {
+    siteMetadata {
+      title
+    }
+  }
  }
 `
+

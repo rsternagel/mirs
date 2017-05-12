@@ -172,13 +172,13 @@ Projekte.propTypes = {
 
 export default Projekte
 
-export const pageQuery = `
- {
-   site {
-     siteMetadata {
-       title
-     }
-   }
+export const pageQuery = graphql`
+query ProjectsQuery {
+  site {
+    siteMetadata {
+      title
+    }
+  }
  }
 `
 
