@@ -52,7 +52,7 @@
     "url": "https://github.com/rsternagel/mirs"
   },
   "scripts": {
-    "dev": "gatsby develop",
+    "dev": "gatsby develop --host 127.0.0.1 --port 8000",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gatsby build",
