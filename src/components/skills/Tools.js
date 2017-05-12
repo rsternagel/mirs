@@ -26,9 +26,21 @@ class Tools extends React.Component {
               <li className="middle">Jasmine,</li>
               <li className="middle">Mocha,</li>
               <li className="low">Protractor,</li>
-              <li className="low">JUnit,</li>
-              <li className="low">Mockito,</li>
               <li className="low">Selenium</li>
+            </ul>
+          </dd>
+        </dl>
+
+        <dl className="skill-list">
+          <dt className="category">Qualitätskontrolle</dt>
+          <dd className="details">
+            <ul className="row">
+              <li className="high">eslint,</li>
+              <li className="high">prettier,</li>
+              <li className="high">flow,</li>
+              <li className="low">JSCS,</li>
+              <li className="low">JSHint,</li>
+              <li className="low">JSLint</li>
             </ul>
           </dd>
         </dl>
@@ -53,6 +65,7 @@ class Tools extends React.Component {
           <dd className="details">
             <ul className="row">
               <li className="high">Travis CI,</li>
+              <li className="high">Greenkeeper,</li>
               <li className="middle">Jenkins</li>
             </ul>
           </dd>
