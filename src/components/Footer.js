@@ -6,18 +6,18 @@ class Footer extends React.Component {
   render () {
     return (
       <footer role="contentinfo">
-        <p className="meta">
+        <div className="meta">
           <span className="copyright">Copyright © { new Date().getFullYear() } <em>Richard Sternagel</em></span>
           {/*
           <Link to={'/prinzipien/'}>Prinzipien</Link>
           <span className="seperator apart"></span>
           */}
-          <div className="metaLinks">
+          <span className="metaLinks">
             <Link to={'/impressum/'}>Impressum</Link>
             <span className="seperator">•</span>
             <Link to={'/datenschutz/'}>Datenschutz</Link>
-          </div>
-        </p>
+          </span>
+        </div>
 
         <style jsx>{`
           footer {
@@ -37,6 +37,7 @@ class Footer extends React.Component {
 
             height: 45px;
             font-size: 80%;
+            text-align: center;
           }
 
           footer :global(a),
@@ -56,7 +57,6 @@ class Footer extends React.Component {
             margin: 0 auto;
             padding-top: 9px;
             text-shadow: 0 1px 0 rgba(255,255,255, 1);
-            text-align: center;
           }
 
           .copyright {
@@ -66,10 +66,6 @@ class Footer extends React.Component {
           .copyright em {
             font-style: normal;
             padding-left: 10px;
-          }
-
-          .metaLinks {
-            display: inline;
           }
 
           .seperator.apart {
