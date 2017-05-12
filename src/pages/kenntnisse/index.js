@@ -57,7 +57,6 @@ class Skills extends React.Component {
           .skills :global(.category),
           .skills :global(.details) {
             padding: 5px 0 5px 0;
-            font-size: 85%;
           }
 
           .skills :global(.category) {
@@ -80,16 +79,13 @@ class Skills extends React.Component {
           }
 
           .skills :global(.low), .low {
-            color: hsla(220, 0%, 60%, 1)
+            color: hsla(220, 0%, 60%, .9);
           }
           .skills :global(.middle), .middle {
-            color: hsla(130, 30%, 40%, 1);
-            text-shadow: 0 1px 1px #ddd;
+            color: hsla(33, 40%, 35%, .9);
           }
           .skills :global(.high), .high {
-            /* color: hsla(20, 85%, 50%, 1); */
-            color: hsla(354, 44%, 49%, 1);
-            text-shadow: 0 1px 1px #ddd;
+            color: hsla(130, 45%, 30%, 1);
           }
         `}</style>
       </div>
