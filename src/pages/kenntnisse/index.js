@@ -6,7 +6,6 @@ import MainSkills from '../../components/skills/MainSkills'
 import Technologies from '../../components/skills/Technologies'
 import Tools from '../../components/skills/Tools'
 import MiscSkills from '../../components/skills/MiscSkills'
-import Beliefs from '../../components/skills/Beliefs'
 
 class Skills extends React.Component {
   render () {
@@ -32,13 +31,9 @@ class Skills extends React.Component {
           <MiscSkills />
         </div>
 
-        <hr />
-        <Beliefs />
-
         <style jsx>{`
-          hr {
-            border-bottom: 1px solid #ddd;
-            margin: 40px 0 30px 0;
+          .skills {
+            margin-bottom: 30px;
           }
 
           .skills :global(ul) {
