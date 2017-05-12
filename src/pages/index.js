@@ -37,8 +37,8 @@ class Homepage extends React.Component {
           <section className="intro">
             <p>
               Hallo,<br/>
-              ich bin <span className="name">Richard Sternagel</span>, Diplom Medien-Informatiker (DH)
-              {' '}<span className="amp">&</span> Web-Entwickler (Freelancer) aus Frankfurt am Main.
+              ich bin <span className="name">Richard Sternagel</span>,<br/>
+              Web-Entwickler aus Frankfurt am Main.
             </p>
 
             <p>
@@ -46,7 +46,7 @@ class Homepage extends React.Component {
               Web Applikationen, Infrastruktur und Tooling</Link>. Mein
               {' '}<Link to={'/kenntnisse/'} >praxiserprobtes
               Expertenwissen</Link> ist das Ergebnis meines
-              Studiums (Medieninformatik) sowie meiner 10-jährigen <Link
+              Studiums (Medieninformatik auf Diplom) sowie meiner 10-jährigen <Link
               to={'/projekte/'} >Berufserfahrung</Link>.
             </p>
 
@@ -66,7 +66,7 @@ class Homepage extends React.Component {
               Mein bevorzugtes Einsatzgebiet ist Frankfurt am Main und das umliegende Rhein-Main Gebiet.
             </p>
 
-            <p>Ich bin ab <time>Mai 2017</time> verfügbar.</p>
+            <p>Ich bin ab <time>Juni 2017</time> verfügbar.</p>
           </section>
         </section>
         <style jsx>{`
