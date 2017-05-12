@@ -6,14 +6,10 @@ import typography from './utils/typography'
 
 import flush from 'styled-jsx/server'
 
-
 let styles = ''
-const styledJsxStyles = flush()
-
 if (process.env.NODE_ENV === `production`) {
   try {
     styles = require(`!raw-loader!../public/styles.css`)
-    styles += styledJsxStyles
   } catch (e) {
     console.log(e)
   }
@@ -22,8 +18,11 @@ if (process.env.NODE_ENV === `production`) {
 export default class Skeleton extends React.Component {
   render () {
     const head = Helmet.rewind()
+
     let css
+    let cssStyleJsx
     if (process.env.NODE_ENV === `production`) {
+      cssStyleJsx = flush()
       css = <style id="gatsby-inlined-css" dangerouslySetInnerHTML={{ __html: styles }} />
     }
 
@@ -39,6 +38,7 @@ export default class Skeleton extends React.Component {
           {this.props.headComponents}
           <TypographyStyle typography={typography} />
           {css}
+          {cssStyleJsx}
           {head.title.toComponent()}
           {head.meta.toComponent()}
           {head.link.toComponent()}
