@@ -4,10 +4,16 @@ import Helmet from 'react-helmet'
 
 import typography from './utils/typography'
 
-let stylesStr
+import flush from 'styled-jsx/server'
+
+
+let styles = ''
+const styledJsxStyles = flush()
+
 if (process.env.NODE_ENV === `production`) {
   try {
-    stylesStr = require(`!raw-loader!../public/styles.css`)
+    styles = require(`!raw-loader!../public/styles.css`)
+    styles += styledJsxStyles
   } catch (e) {
     console.log(e)
   }
@@ -18,7 +24,7 @@ export default class Skeleton extends React.Component {
     const head = Helmet.rewind()
     let css
     if (process.env.NODE_ENV === `production`) {
-      css = <style id="gatsby-inlined-css" dangerouslySetInnerHTML={{ __html: stylesStr }} />
+      css = <style id="gatsby-inlined-css" dangerouslySetInnerHTML={{ __html: styles }} />
     }
 
     return (
