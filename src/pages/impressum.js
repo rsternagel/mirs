@@ -5,7 +5,6 @@ class Impressum extends React.Component {
   render() {
     const site = this.props.data.site
     const siteTitle = site.siteMetadata.title
-    const domain = site.siteMetadata.domain
 
     return (
       <div>
@@ -47,13 +46,13 @@ class Impressum extends React.Component {
 
 export default Impressum
 
-export const pageQuery = `
- {
-   site {
-     siteMetadata {
-       title
-       domain
-     }
-   }
+export const pageQuery = graphql`
+query ImprintQuery {
+  site {
+    siteMetadata {
+      title
+    }
+  }
  }
 `
+

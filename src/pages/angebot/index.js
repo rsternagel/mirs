@@ -115,13 +115,13 @@ Angebote.propTypes = {
 
 export default Angebote
 
-export const pageQuery = `
- {
-   site {
-     siteMetadata {
-       title
-     }
-   }
+export const pageQuery = graphql`
+query OfferQuery {
+  site {
+    siteMetadata {
+      title
+    }
+  }
  }
 `
 

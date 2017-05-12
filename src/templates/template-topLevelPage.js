@@ -21,19 +21,11 @@ class TopLevelPageRoute extends React.Component {
 
 export default TopLevelPageRoute
 
-export const pageQuery = `
+export const pageQuery = graphql`
   query TopLevelPageRoutePath($slug: String!) {
     site {
       siteMetadata {
         title
-      }
-    }
-    markdownRemark(slug: { eq: $slug }) {
-      id
-      html
-      frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
       }
     }
   }

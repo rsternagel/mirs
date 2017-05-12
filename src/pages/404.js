@@ -26,13 +26,14 @@ class FourOFour extends React.Component {
 
 export default FourOFour
 
-export const pageQuery = `
- {
-   site {
-     siteMetadata {
-       title
-       domain
-     }
-   }
+export const pageQuery = graphql`
+query FOFQuery {
+  site {
+    siteMetadata {
+      title
+      domain
+    }
+  }
  }
 `
+
