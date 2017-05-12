@@ -15,7 +15,7 @@ class Prinzipien extends React.Component {
         <h1>Prinzipien</h1>
         <p>Angelehnt an <a href="http://www.python.org/dev/peps/pep-0020/">The Zen
            of Python</a> und das <a href="http://agilemanifesto.org/ ">Agile
-           Manifesto</a> einige meiner Überzeugungen:
+           Manifesto</a>, einige meiner Überzeugungen:
         </p>
         <ul>
           <li>General

@@ -45,19 +45,19 @@ class Projekte extends React.Component {
             </p>
             <p>Als Teil des Frontend-Teams, welches diese Web-Applikation entwickelt hat, waren meine Aufgaben:</p>
             <ul>
-              <li>Fachliche Umsetzung von User-Stories u.a.:
+              <li>Fachliche Umsetzung von User-Stories, u.a.:
                 <ul>
                   <li>1&1 Multi-Card (Anfordern, Aktivieren, Sperren, Entsperren)</li>
                   <li>DSL-Störungsformular</li>
                   <li>Einbindung der Kontaktstrategie in Hilfe-Lasche mit Kontaktkanal- und Anliegenauswahl</li>
                   <li>Technikerterminvereinbarung mit Calendar-Widget</li>
-                  <li>Verschiedene DSL und Mobile Accordions um „Einstellungen & Services“ zu konfigurieren</li>
+                  <li>Verschiedene DSL und Mobile Accordions, um „Einstellungen & Services“ zu konfigurieren</li>
                 </ul>
               </li>
               <li>Wartung/Modernisierung der Frontend-Toolchain:
                 <ul>
                   <li>Einbindung von Browserify und Babel</li>
-                  <li>Buildprozess komplett auf Node.js/npm-packages umgestellt</li>
+                  <li>Umstellung des Buildprozesses auf Node.js/npm-packages</li>
                   <li>Einbau von ESLint als Ersatz für JSCS und JSHint</li>
                 </ul>
               </li>
@@ -68,14 +68,15 @@ class Projekte extends React.Component {
                   <li>Frontend Security Job, der auf bekannte Schwachstellen in npm-Packages, die verwendet werden, hinweist</li>
                 </ul>
               </li>
-              <li>Verbesserung des Entwicklerflows durch:
+              <li>Verbesserung des Entwicklerflows:
                 <ul>
-                  <li>Git Migration und selbstgeschriebene Git Hooks eingeführt</li>
+                  <li>Migration von SVN zu Git</li>
+                  <li>Einsatz von selbstgeschriebenen Git Hooks</li>
                 </ul>
               </li>
               <li>Sonstiges:
                 <ul>
-                  <li>REST-Ressourcen mit Backend neu überarbeitet</li>
+                  <li>Überarbeitung der REST-Ressourcen mit dem Backend-Team</li>
                   <li>Erweiterung des Frontend-Review/Release-Prozesses</li>
                   <li>Dokumentation des CD-Build/Relase/Deployment-Prozesses</li>
                   <li>Analyse/Konzeption FE- Zielarchitektur mit  Migrationsplan</li>
@@ -115,12 +116,12 @@ class Projekte extends React.Component {
             <p><strong>qooxdoo</strong> ist ein Open Source Web Framework zur Erstellung von RIAs,
               nativ-ähnlicher Mobile Apps und leichtgewichtiger Web-Anwendungen.
               Die komplette Entwicklung passiert auf <a href="https://github.com/qooxdoo/qooxdoo">GitHub</a>.</p>
-            <p>Als Teil des Core-Teams, welches qooxdoo weiterentwickelt, waren meine Aufgaben:</p>
+            <p>Als Teil des Core-Teams, welches qooxdoo weiterentwickelt hat, waren meine Aufgaben:</p>
             <ul>
               <li>Core/Tooling-Entwickler:
                 <ul>
-                  <li>Hauptverantwortlicher für das Tooling</li>
-                  <li>Mitarbeit und Weiterentwicklung des JS-Framework-Codes auf GitHub v.a. des IO-Bereiches (z.B. XHR/JSONP und REST)</li>
+                  <li>Hauptverantwortlich für das Tooling</li>
+                  <li>Mitarbeit und Weiterentwicklung des JS-Framework-Codes auf GitHub, v.a. des IO-Bereiches (z.B. XHR/JSONP und REST)</li>
                 </ul>
               </li>
               <li>Entwicklung einer JS-Toolchain (Grunt-Plugins/npm-Packages):

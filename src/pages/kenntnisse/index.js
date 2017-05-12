@@ -18,7 +18,7 @@ class Skills extends React.Component {
         <Helmet title={`Kenntnisse | ${siteTitle}`}/>
 
         <h1>Kenntnisse</h1>
-        <p>Diese Liste spiegelt wieder <span
+        <p>Diese Liste spiegelt wider <span
            className="low">woher ich komme</span>, <span
            className="middle">was ich bevorzuge</span> und <span
            className="high">wofür ich brenne</span>.
