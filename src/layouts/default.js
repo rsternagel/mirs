@@ -6,6 +6,7 @@ import 'sanitize.css/sanitize.css';
 
 import Nav from '../components/Nav'
 import Logo from '../components/Logo'
+import Footer from '../components/Footer'
 
 class Template extends React.Component {
   render () {
@@ -58,18 +59,11 @@ class Template extends React.Component {
              font-family: 'Open Sans', sans-serif;
            }
 
-           .maincontent :global(a) {
-             text-decoration: none;
-             padding-bottom: 1px;
-             /* border-bottom: 1px solid #6aae6a; */
-           }
-
            .maincontent :global(a),
            .maincontent :global(a:visited) {
              text-decoration: none;
              padding-bottom: 1px;
              color: #1964ae;
-             /* border-bottom: 1px solid #6aae6a; */
            }
 
            .maincontent :global(a:hover) {
@@ -81,6 +75,7 @@ class Template extends React.Component {
            }
          `}</style>
         </Container>
+        <Footer />
       </div>
     )
   }
