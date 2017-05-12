@@ -38,12 +38,6 @@ module.exports = {
     `gatsby-typegen-filesystem`,
     `gatsby-typegen-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: 'UA-22466234-1',
-      },
-    },
     `gatsby-plugin-offline`,
   ],
 }
