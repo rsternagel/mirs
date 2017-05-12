@@ -128,7 +128,7 @@ class Nav extends React.Component {
     })
 
     return (
-      <nav>
+      <nav role="navigation">
         <ul>
           <div className="nav-indicator-wrapper" style={this.state.indicatorWrapperStyle}>
             <div className="nav-indicator"></div>
@@ -147,7 +147,7 @@ class Nav extends React.Component {
           }
 
           nav :global(a) {
-            padding: 5px;
+            padding: 3px;
             color: rgba(0, 0, 0, .8);
           }
 
