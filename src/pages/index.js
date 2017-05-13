@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import profilePic from '../components/img/profile_pic.jpg'
@@ -130,7 +131,7 @@ class Homepage extends React.Component {
 }
 
 Homepage.propTypes = {
-  route: React.PropTypes.object,
+  route: PropTypes.object,
 }
 
 export default Homepage
