@@ -39,7 +39,7 @@ class Homepage extends React.Component {
             <p>
               <span className="greeting">Hallo,</span><br/>
               ich bin <span className="name">Richard Sternagel</span>,<br/>
-              Web-Entwickler aus Frankfurt am Main.
+              Web-Entwickler (IT-Freelancer) aus Frankfurt am Main.
             </p>
 
             <p>
@@ -143,6 +143,6 @@ query IndexQuery {
       title
     }
   }
- }
+}
 `
 
