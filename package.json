@@ -18,7 +18,6 @@
     "gatsby-remark-responsive-iframe": "1.0.0-alpha14",
     "gatsby-remark-responsive-image": "1.0.0-alpha14",
     "gatsby-remark-smartypants": "1.0.0-alpha14",
-    "moment": "^2.14.1",
     "react-helmet": "^4.0.0",
     "react-icons": "^2.2.3",
     "react-responsive-grid": "^0.3.3",
@@ -26,8 +25,7 @@
     "safe-access": "^0.1.0",
     "sanitize.css": "^5.0.0",
     "styled-jsx": "^0.5.7",
-    "typography": "^0.15.8",
-    "underscore.string": "^3.2.3"
+    "typography": "^0.15.8"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.1",
