@@ -24,7 +24,7 @@ const Template = ({
         <Nav location={location} />
       </header>
       <section className="maincontent" role="main">
-        {children}
+        {children()}
       </section>
 
      <style jsx>{`
