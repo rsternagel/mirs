@@ -65,6 +65,7 @@ class MainSkills extends React.Component {
             <ul className="row">
               <li className="high">React,</li>
               <li className="high">Redux,</li>
+              <li className="high">React Router,</li>
               <li className="high">Relay</li>
             </ul>
           </dd>
