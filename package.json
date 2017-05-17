@@ -26,8 +26,6 @@
     "safe-access": "^0.1.0",
     "sanitize.css": "^5.0.0",
     "styled-jsx": "^0.5.7",
-    "typeface-merriweather": "^0.0.25",
-    "typeface-montserrat": "^0.0.24",
     "typography": "^0.15.8",
     "underscore.string": "^3.2.3"
   },
