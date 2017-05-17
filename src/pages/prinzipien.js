@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
-import { rhythm, scale } from '../utils/typography'
 
 class Prinzipien extends React.Component {
   render () {
