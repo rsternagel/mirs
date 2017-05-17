@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Container } from 'react-responsive-grid'
-import { rhythm, scale } from '../utils/typography'
 
 import 'sanitize.css/sanitize.css';
 
