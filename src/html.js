@@ -48,7 +48,7 @@ const Skeleton = ({
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet" />
       </head>
       <body>
-        <div id="react-mount" dangerouslySetInnerHTML={{ __html: body }} />
+        <div id="___gatsby" dangerouslySetInnerHTML={{ __html: body }} />
         {postBodyComponents}
       </body>
     </html>
