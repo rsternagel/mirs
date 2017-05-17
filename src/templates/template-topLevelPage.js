@@ -1,23 +1,14 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import get from 'lodash/get'
 
-class TopLevelPageRoute extends React.Component {
-  render () {
-    const page = this.props.data.markdownRemark
-    const siteTitle = get(this.props, 'data.site.siteMetadata.title')
-    const pageTitle = page.frontmatter.title
-
-    console.log(this.props)
-
-    return (
-      <div>
-        <Helmet title={`${pageTitle} | ${siteTitle}`}/>
-        <div dangerouslySetInnerHTML={{ __html: page.html }} />
-      </div>
-    )
-  }
-}
+const TopLevelPageRoute = ({
+  data
+}) => (
+    <div>
+      <Helmet title={`${data.site.siteMetadata.title}`}/>
+      <div dangerouslySetInnerHTML={{ __html: page.html }} />
+    </div>
+)
 
 export default TopLevelPageRoute
 
