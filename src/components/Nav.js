@@ -1,6 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+import {s, m} from '../utils/breakpoints'
+
 class Nav extends React.Component {
   constructor(props) {
     super(props)
@@ -189,9 +191,15 @@ class Nav extends React.Component {
             bottom: 0;
             left: 0;
             background-color: hsla(105, 70%, 38%, 1);
-            height: 90px;
+            height: 45px;
             opacity: 0.1;
             border-radius: 5px;
+          }
+
+          /* Media Queries */
+
+          @media (max-width: ${s}) {
+            ul { flex-direction: column; align-items: flex-start; }
           }
         `}</style>
       </nav>
