@@ -34,19 +34,19 @@ const Angebote = ({
     </header>
 
     <ul>
-      <li>Der aktuelle Frameworks (<a href="(https://angular.io/">Angular</a>, <a href="https://vuejs.org/">Vue</a>)
-        und Libraries (<a href="https://facebook.github.io/react/">React</a>) kennt.</li>
-      <li>Dessen Schwerpunkt auf <a href="https://facebook.github.io/react/">React</a>
+      <li>Ich kenne aktuelle Frameworks (<a href="(https://angular.io/">Angular</a>, <a href="https://vuejs.org/">Vue</a>)
+        und Libraries (<a href="https://facebook.github.io/react/">React</a>) gut.</li>
+      <li>Mein Schwerpunkt liegt auf <a href="https://facebook.github.io/react/">React</a>
         {' '}und seinem Ökosystem (z.B. {' '}<a href="http://redux.js.org/">Redux</a>,
         {' '}<a href="http://graphql.org/">GraphQL</a>, {' '}<a href="https://facebook.github.io/relay/">Relay</a>,
-        {' '}<a href="https://webpack.js.org/">Webpack</a>) liegt.</li>
-      <li>Der mit agilen Vorgehensmodellen (z.B. Kanban und <a href="https://www.scrum.org/">Scrum</a>) gut vertraut ist.</li>
-      <li>Der mit allen Projektbeteiligten (z.B. PM, Backend, Grafik, Ops, SysAdmin) auf Augenhöhe kommuniziert.</li>
-      <li>Für den Build-Tools und Versionsverwaltung selbstverständlich sind.</li>
-      <li>Der sich mit Node.js und den Neuerungen von ECMAScript 6/20XX auskennt.</li>
+        {' '}<a href="https://webpack.js.org/">Webpack</a>).</li>
+      <li>Agile Vorgehensmodellen (z.B. Kanban und <a href="https://www.scrum.org/">Scrum</a>) sind mir mehr als vertraut.</li>
+      <li>Ich kommuniziere mit allen Beteiligten (z.B. PM, Backend, UI/UX-Design, Ops, SysAdmin) auf Augenhöhe.</li>
+      <li>Build-Tools und Versionsverwaltung sind für mich selbstverständlich.</li>
+      <li>Mit ECMAScript 6/20XX und Node.js kenne ich mich sehr gut aus.</li>
     </ul>
 
-    <h2>Welchen <strong>Nutzen</strong> ich Ihnen außerdem bieten kann:</h2>
+    <h2>Welchen <strong>Nutzen</strong> kann ich Ihnen außerdem bieten:</h2>
 
     <ul>
       <li>Ich bringe mein praxiserprobtes 10-jähriges Expertenwissen
