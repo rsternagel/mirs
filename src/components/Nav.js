@@ -39,6 +39,16 @@ class Nav extends React.Component {
 
       const selectedHtmlElem = this.navHtmlElems.get(selectedId)
       this.moveSelectionIndicatorTo(selectedHtmlElem)
+
+      // TODO:
+      //   make prettier and without hard coded 580px
+      const mql = window.matchMedia('(max-width: 580px)');
+      mql.addListener(function () {
+        return function () {
+          return this.moveSelectionIndicatorTo(this.navHtmlElems.get(this.state.selectedNavItemId));
+        }.bind(this)
+      }.bind(this)());
+
     }, 500)
   }
 
@@ -89,10 +99,10 @@ class Nav extends React.Component {
   moveSelectionIndicatorTo(newSelectedItem) {
     let indicatorWrapperStyle = { display: "none" }
     if (newSelectedItem !== null) {
-      const { clientHeight, clientWidth, offsetLeft } = newSelectedItem
+      const { clientHeight, clientWidth, offsetLeft, offsetTop } = newSelectedItem
       indicatorWrapperStyle = {
         height: clientHeight,
-        transform: `translateX(${Math.floor(offsetLeft)}px)`,
+        transform: `translateX(${Math.floor(offsetLeft)}px) translateY(${Math.floor(offsetTop)}px)`,
         width: clientWidth,
       }
     }
