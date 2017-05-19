@@ -8,6 +8,8 @@ import Technologies from '../../components/skills/Technologies'
 import Tools from '../../components/skills/Tools'
 import MiscSkills from '../../components/skills/MiscSkills'
 
+import {s, m} from '../../utils/breakpoints'
+
 const Skills = ({
   data: {site: {siteMetadata: {title: siteTitle}}}
 }) => (
@@ -84,6 +86,18 @@ const Skills = ({
       }
       .skills :global(.high), .high {
         color: hsla(130, 45%, 30%, 1);
+      }
+
+      /* Media Queries */
+
+      @media (max-width: ${m}) {
+        .skills :global(.skill-list) { display: block; }
+        .skills :global(.category) { width: 100%; }
+        .skills :global(.details) { width: 100%; }
+      }
+
+      @media (max-width: ${s}) {
+        .skills :global(.row) { display: block; }
       }
     `}</style>
   </div>

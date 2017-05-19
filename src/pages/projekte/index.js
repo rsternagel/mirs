@@ -6,6 +6,8 @@ import Helmet from 'react-helmet'
 import logoEue from '../../components/img/logo_eue.png'
 import logoQx from '../../components/img/logo_qooxdoo.png'
 
+import {s, m} from '../../utils/breakpoints'
+
 const Projekte = ({
   data: {site: {siteMetadata: {title: siteTitle}}}
 }) => (
@@ -21,7 +23,7 @@ const Projekte = ({
 
         <dl>
           <dt>Projekt</dt>
-          <dd><a href="http://control-center.1und1.de/">1&1 Control Center Access</a>
+          <dd><a href="http://control-center.1und1.de/">1&1 Control Center Access</a><br />
             {' '}(Bestandskundenportal)</dd>
 
           <dt>Firma</dt>
@@ -161,6 +163,14 @@ const Projekte = ({
 
       .responsibility {
         width: 68%;
+      }
+
+      /* Media Queries */
+
+      @media (max-width: ${m}) {
+        .project-list { display: block; }
+        .project { width: 100%; }
+        .responsibility { width: 100%; }
       }
     `}</style>
   </div>
