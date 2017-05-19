@@ -20,7 +20,6 @@
     "gatsby-remark-smartypants": "1.0.0-alpha14",
     "react-helmet": "^4.0.0",
     "react-icons": "^2.2.3",
-    "react-responsive-grid": "^0.3.3",
     "react-typography": "^0.15.0",
     "safe-access": "^0.1.0",
     "sanitize.css": "^5.0.0",
