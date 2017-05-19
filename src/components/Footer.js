@@ -36,13 +36,6 @@ const Footer = () => (
         width: 100%;
         font-family: 'Open Sans', sans-serif;
 
-        /*
-        border-top: 1px solid rgba(25, 100, 174, .2);
-        background-color: rgba(25, 100, 174, .1);
-        border-top: 1px solid hsla(105, 70%, 38%, .3);
-        background-color: hsla(105, 80%, 38%, .1);
-        */
-
         border-top: 1px solid #b0dda4;
         border-bottom: 1px solid #b0dda4;
         background-color: #ebf6e8;
