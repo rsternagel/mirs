@@ -7,6 +7,8 @@ import profilePic from '../components/img/profile_pic.jpg'
 import MdMailOutline from 'react-icons/lib/md/mail-outline'
 import FaPhone from 'react-icons/lib/fa/phone'
 
+import {s, m} from '../utils/breakpoints'
+
 const Homepage = ({
   data: {site: {siteMetadata: {title: siteTitle}}}
 }) => (
@@ -15,22 +17,27 @@ const Homepage = ({
     <Helmet title={`${siteTitle}`}/>
 
     <section className="content">
-      <aside className="image">
-        <img src={profilePic} width="200" height="248" alt="Richard Sternagel" />
+      <aside className="sidebar">
 
-        <div className="labels">
-          <p>
-            Entwicklung von Web-Applikationen<br/>
-            Infrastruktur · Tooling · Workflows<br/>
-            <span className="jsNode">JavaScript · Node.js</span>
-          </p>
+        <div className="container-img">
+          <img src={profilePic} width="200" height="248" alt="Richard Sternagel" />
         </div>
 
-        <p className="contact">
-          So erreichen Sie mich:
-          <span><MdMailOutline />{' '} <a href="mailto:rsternagel@posteo.de">rsternagel@posteo.de</a></span>
-          <span><FaPhone />{' '} <a href="tel:+4917621746640">+49 176 / 21746640</a></span>
-        </p>
+        <div className="container-labels-contact">
+          <div className="labels">
+            <p>
+              Entwicklung von Web-Applikationen<br/>
+              Infrastruktur · Tooling · Workflows<br/>
+              <span className="jsNode">JavaScript · Node.js</span>
+            </p>
+          </div>
+
+          <p className="contact">
+            So erreichen Sie mich:
+            <span><MdMailOutline />{' '} <a href="mailto:rsternagel@posteo.de">rsternagel@posteo.de</a></span>
+            <span><FaPhone />{' '} <a href="tel:+4917621746640">+49 176 / 21746640</a></span>
+          </p>
+        </div>
       </aside>
       <section className="intro">
         <p>
@@ -68,8 +75,26 @@ const Homepage = ({
       </section>
     </section>
     <style jsx>{`
-      .greeting {
-        display: block;
+      .content {
+        display: flex;
+      }
+
+      .sidebar {
+        width: 35%;
+        margin-right: 10px;
+      }
+
+      .container-img {
+        max-width: 200px;
+        min-width: 150px;
+      }
+
+      .container-img img {
+        padding: 1px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        max-width: 100%;
+        height: auto;
       }
 
       .labels p {
@@ -92,12 +117,12 @@ const Homepage = ({
         padding-left: 5px;
       }
 
-      .content {
-        display: flex;
+      .greeting {
+        display: block;
       }
 
       .intro,
-      .image {
+      .sidebar {
         padding: 10px;
       }
 
@@ -105,20 +130,26 @@ const Homepage = ({
         width: 65%;
       }
 
-      .image {
-        width: 35%;
-        margin-right: 10px;
-      }
-
-      .image img {
-        padding: 1px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-      }
-
       :global(.amp) {
         font-family: Palatino, 'Palatino Linotype', serif;
         font-style: italic;
+      }
+
+      /* Media Queries */
+
+      @media (max-width: ${m}) {
+        .content { display: block; }
+        .sidebar { display: flex; width: 100%; }
+        .container-labels-contact { margin: 30px 0 0 50px; }
+        .container-labels-contact .labels p { font-size: 80%; }
+        .intro { width: 100%; }
+      }
+
+      @media (max-width: ${s}) {
+        .content { display: block; }
+        .sidebar { display: block; width: 100%; }
+        .container-labels-contact { margin: 0; }
+        .intro { width: 100%; }
       }
     `}</style>
 
