@@ -7,6 +7,8 @@ import Nav from '../components/Nav'
 import Logo from '../components/Logo'
 import Footer from '../components/Footer'
 
+import {s, m} from '../utils/breakpoints'
+
 const Layout = ({
   location,
   children
@@ -75,6 +77,9 @@ const Layout = ({
         font-size: 95%;
       }
 
+      @media (max-width: ${m}) {
+        .masthead { display: block; }
+      }
     `}</style>
   </div>
 );
