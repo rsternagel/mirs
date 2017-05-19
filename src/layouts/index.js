@@ -7,7 +7,7 @@ import Nav from '../components/Nav'
 import Logo from '../components/Logo'
 import Footer from '../components/Footer'
 
-const Template = ({
+const Layout = ({
   location,
   children
 }) => (
@@ -79,10 +79,10 @@ const Template = ({
   </div>
 );
 
-Template.propTypes = {
+Layout.propTypes = {
   children: PropTypes.any,
   location: PropTypes.object,
   route: PropTypes.object,
 }
 
-export default Template
+export default Layout
