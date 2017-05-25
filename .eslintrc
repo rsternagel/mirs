@@ -1,20 +1,68 @@
 {
-  "extends": "eslint-config-airbnb",
-  "rules": {
-    "indent": [2, 2, {"SwitchCase": 1}],
-    "no-console": [0],
-    "func-names": [0],
-    "semi": [2, "never"],
-    "no-extra-semi": [2],
-    "space-before-function-paren": [2, "always"],
-    "no-else-return": [0],
-    "space-infix-ops": [0],
-    "react/prefer-es6-class": [0],
-    "react/prefer-stateless-function": [0],
-    "import/no-unresolved": [0],
-    "global-require": [0],
+  "extends": [
+    "eslint-config-airbnb",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "prettier",
+    "prettier/react"
+  ],
+  "plugins": [
+    "react"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2016,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "node": true,
+    "jest": true
   },
   "globals": {
-    "__PREFIX_LINKS__": true,
+    "graphql": true
   },
+  "rules": {
+    "no-console": "off",
+    "valid-jsdoc": "off",
+    "require-jsdoc": "off",
+    "consistent-return": [
+      "error",
+    ],
+    "arrow-body-style": [
+      "error",
+      "as-needed",
+      { "requireReturnForObjectLiteral": true }
+    ],
+    "jsx-quotes": [
+      "error",
+      "prefer-double"
+    ],
+    "semi": [
+      "error",
+      "never"
+    ],
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "ignore"
+      }
+    ],
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": [".js"]
+      }
+    ]
+  }
 }
