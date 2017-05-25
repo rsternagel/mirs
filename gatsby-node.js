@@ -1,9 +1,9 @@
-const _ = require('lodash')
-const Promise = require('bluebird')
+// const _ = require('lodash')
+// const Promise = require('bluebird')
 const path = require('path')
-const select = require('unist-util-select')
-const precache = require('sw-precache')
-const fs = require('fs-extra')
+// const select = require('unist-util-select')
+// const precache = require('sw-precache')
+// const fs = require('fs-extra')
 
 // currently there is no markdown content :(
 /*

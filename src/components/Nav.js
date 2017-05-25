@@ -1,72 +1,51 @@
+/* global window */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+
 import React from 'react'
+import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 
-import {s, m} from '../utils/breakpoints'
+import { s } from '../utils/breakpoints'
 
 class Nav extends React.Component {
   constructor(props) {
     super(props)
 
-    const pathname = props.location.pathname
+    this.navTitles = ['home', 'angebot', 'projekte', 'kenntnisse']
+    this.navHtmlElems = new Map()
+
+    const { pathname } = props
     const selectedNavItemId = this.getInitialSelectedNav(pathname, this.navTitles)
     this.state = { selectedNavItemId }
-  }
-
-  navTitles = ['home', 'angebot', 'projekte', 'kenntnisse']
-  navHtmlElems = new Map()
-
-  getInitialSelectedNav(path, navTitles) {
-    let selectedNavItemId = ''
-
-    navTitles.forEach((title, index, arr) => {
-      if (path.includes(title)) {
-        selectedNavItemId = title
-      }
-    })
-
-    if (path === '/') {
-      selectedNavItemId = 'home'
-    }
-
-    return selectedNavItemId
   }
 
   componentDidMount() {
     const selectedId = this.state.selectedNavItemId
 
     window.setTimeout(() => {
-      if (selectedId === null || this.navHtmlElems.has(selectedId) === false) { return; }
+      if (selectedId === null || this.navHtmlElems.has(selectedId) === false) { return }
 
       const selectedHtmlElem = this.navHtmlElems.get(selectedId)
       this.moveSelectionIndicatorTo(selectedHtmlElem)
 
       // TODO:
       //   make prettier and without hard coded 580px
-      const mql = window.matchMedia('(max-width: 580px)');
+      const mql = window.matchMedia('(max-width: 580px)')
       mql.addListener(function () {
         return function () {
-          return this.moveSelectionIndicatorTo(this.navHtmlElems.get(this.state.selectedNavItemId));
+          return this.moveSelectionIndicatorTo(this.navHtmlElems.get(this.state.selectedNavItemId))
         }.bind(this)
-      }.bind(this)());
+      }.bind(this)())
 
     }, 500)
   }
 
-  handleClick = (e) => {
-    const newNavItemId = e.currentTarget.id
-    const { selectedNavItemId } = this.state
-
-    if (newNavItemId !== selectedNavItemId) {
-      this.setState({ selectedNavItemId: newNavItemId })
-    }
-  }
-
   componentWillReceiveProps(nextProps) {
     const home = 'home'
-    const { pathname } = nextProps.location
+    const { pathname } = nextProps
     let curPageHasOneOfNavTitlesList = []
 
-    this.navTitles.forEach((title, index, arr) => {
+    this.navTitles.forEach((title) => {
       let isHome = (pathname === '/' && title === home)
       curPageHasOneOfNavTitlesList.push(isHome || pathname.includes(title))
     })
@@ -88,11 +67,36 @@ class Nav extends React.Component {
   componentDidUpdate(prevProps, prevState) {
     const selectedId = this.state.selectedNavItemId
 
-    if (selectedId === null || this.navHtmlElems.has(selectedId) === false) { return; }
+    if (selectedId === null || this.navHtmlElems.has(selectedId) === false) { return }
 
     if (this.state.selectedNavItemId !== prevState.selectedNavItemId) {
       const selectedHtmlElem = this.navHtmlElems.get(selectedId)
       this.moveSelectionIndicatorTo(selectedHtmlElem)
+    }
+  }
+
+  getInitialSelectedNav(path, navTitles) {
+    let selectedNavItemId = ''
+
+    navTitles.forEach((title) => {
+      if (path.includes(title)) {
+        selectedNavItemId = title
+      }
+    })
+
+    if (path === '/') {
+      selectedNavItemId = 'home'
+    }
+
+    return selectedNavItemId
+  }
+
+  handleClick = (e) => {
+    const newNavItemId = e.currentTarget.id
+    const { selectedNavItemId } = this.state
+
+    if (newNavItemId !== selectedNavItemId) {
+      this.setState({ selectedNavItemId: newNavItemId })
     }
   }
 
@@ -139,11 +143,11 @@ class Nav extends React.Component {
     })
 
     return (
-      <nav role="navigation">
+      <nav>
         <ul>
-          <div className="nav-indicator-wrapper" style={this.state.indicatorWrapperStyle}>
-            <div className="nav-indicator"></div>
-          </div>
+          <li className="nav-indicator-wrapper" style={this.state.indicatorWrapperStyle}>
+            <div className="nav-indicator" />
+          </li>
           {navLinks}
         </ul>
 
@@ -219,6 +223,10 @@ class Nav extends React.Component {
       </nav>
     )
   }
+}
+
+Nav.propTypes = {
+  pathname: PropTypes.string.isRequired,
 }
 
 export default Nav

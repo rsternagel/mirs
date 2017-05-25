@@ -1,27 +1,27 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import 'sanitize.css/sanitize.css';
+import 'sanitize.css/sanitize.css'
 
 import Nav from '../components/Nav'
 import Logo from '../components/Logo'
 import Footer from '../components/Footer'
 
-import {s, m} from '../utils/breakpoints'
+import { m } from '../utils/breakpoints'
 
 const Layout = ({
   location,
-  children
+  children,
 }) => (
   <div>
     <div className="container">
       <header className="masthead">
         <Logo />
-        <Nav location={location} />
+        <Nav pathname={location.pathname} />
       </header>
-      <section className="maincontent" role="main">
+      <main className="maincontent">
         {children()}
-      </section>
+      </main>
     </div>
     <Footer />
 
@@ -82,12 +82,13 @@ const Layout = ({
       }
     `}</style>
   </div>
-);
+)
 
 Layout.propTypes = {
-  children: PropTypes.any,
-  location: PropTypes.object,
-  route: PropTypes.object,
+  children: PropTypes.func.isRequired,
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+  }).isRequired,
 }
 
 export default Layout

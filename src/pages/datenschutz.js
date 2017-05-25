@@ -1,8 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 const Datenschutz = ({
-  data: {site: {siteMetadata: {title: siteTitle}}}
+  data: { site: { siteMetadata: { title: siteTitle } } },
 }) => (
   <div>
     <Helmet title={`Datenschutz | ${siteTitle}`}/>
@@ -97,6 +98,16 @@ const Datenschutz = ({
     </p>
   </div>
 )
+
+Datenschutz.propTypes = {
+  data: PropTypes.shape({
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+      }).isRequired,
+    }).isRequired,
+  }).isRequired,
+}
 
 export default Datenschutz
 

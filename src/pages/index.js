@@ -1,16 +1,16 @@
+import MdMailOutline from 'react-icons/lib/md/mail-outline'
+import FaPhone from 'react-icons/lib/fa/phone'
+
 import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
+
 import profilePic from '../components/img/profile_pic.jpg'
-
-import MdMailOutline from 'react-icons/lib/md/mail-outline'
-import FaPhone from 'react-icons/lib/fa/phone'
-
-import {s, m} from '../utils/breakpoints'
+import { s, m } from '../utils/breakpoints'
 
 const Homepage = ({
-  data: {site: {siteMetadata: {title: siteTitle}}}
+  data: { site: { siteMetadata: { title: siteTitle } } },
 }) => (
   <div>
 
@@ -157,7 +157,13 @@ const Homepage = ({
 )
 
 Homepage.propTypes = {
-  route: PropTypes.object,
+  data: PropTypes.shape({
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+      }).isRequired,
+    }).isRequired,
+  }).isRequired,
 }
 
 export default Homepage

@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
 import MainSkills from '../../components/skills/MainSkills'
@@ -8,10 +7,10 @@ import Technologies from '../../components/skills/Technologies'
 import Tools from '../../components/skills/Tools'
 import MiscSkills from '../../components/skills/MiscSkills'
 
-import {s, m} from '../../utils/breakpoints'
+import { s, m } from '../../utils/breakpoints'
 
 const Skills = ({
-  data: {site: {siteMetadata: {title: siteTitle}}}
+  data: { site: { siteMetadata: { title: siteTitle } } },
 }) => (
   <div>
 
@@ -104,7 +103,13 @@ const Skills = ({
 )
 
 Skills.propTypes = {
-  route: PropTypes.object,
+  data: PropTypes.shape({
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+      }).isRequired,
+    }).isRequired,
+  }).isRequired,
 }
 
 export default Skills
