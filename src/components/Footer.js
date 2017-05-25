@@ -4,10 +4,10 @@ import Link from 'gatsby-link'
 // import FaGithub from 'react-icons/lib/fa/github'
 // import FaStackOverflow from 'react-icons/lib/fa/stack-overflow'
 
-import {s, m} from '../utils/breakpoints'
+import { s } from '../utils/breakpoints'
 
 const Footer = () => (
-  <footer role="contentinfo">
+  <footer>
     <div className="meta">
       <span className="copyright">
         © { new Date().getFullYear() }

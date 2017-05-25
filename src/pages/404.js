@@ -1,9 +1,10 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 const FourOFour = ({
-  data: {site: {siteMetadata: {title: siteTitle}}},
-  data: {site: {siteMetadata: {domain }}}
+  data: { site: { siteMetadata: { title: siteTitle } } },
+  data: { site: { siteMetadata: { domain } } },
 }) => (
   <div>
     <Helmet title={`Fehler 404 | ${siteTitle}`}/>
@@ -17,7 +18,18 @@ const FourOFour = ({
       :_(
     </p>
   </div>
-);
+)
+
+FourOFour.propTypes = {
+  data: PropTypes.shape({
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        domain: PropTypes.string.isRequired,
+      }).isRequired,
+    }).isRequired,
+  }).isRequired,
+}
 
 export default FourOFour
 

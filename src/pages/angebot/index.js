@@ -1,13 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
 import MdMailOutline from 'react-icons/lib/md/mail-outline'
 import FaPhone from 'react-icons/lib/fa/phone'
 
 const Angebot = ({
-  data: {site: {siteMetadata: {title: siteTitle}}}
+  data: { site: { siteMetadata: { title: siteTitle } } },
 }) => (
   <div>
 
@@ -111,7 +110,13 @@ const Angebot = ({
 )
 
 Angebot.propTypes = {
-  route: PropTypes.object,
+  data: PropTypes.shape({
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+      }).isRequired,
+    }).isRequired,
+  }).isRequired,
 }
 
 export default Angebot

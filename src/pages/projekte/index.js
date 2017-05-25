@@ -1,15 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
 import logoEue from '../../components/img/logo_eue.png'
 import logoQx from '../../components/img/logo_qooxdoo.png'
 
-import {s, m} from '../../utils/breakpoints'
+import { m } from '../../utils/breakpoints'
 
 const Projekte = ({
-  data: {site: {siteMetadata: {title: siteTitle}}}
+  data: { site: { siteMetadata: { title: siteTitle } } },
 }) => (
   <div>
 
@@ -17,7 +16,7 @@ const Projekte = ({
 
     <h1>Projekte</h1>
 
-    <div className="project-list">
+    <section className="project-list">
       <div className="project">
         <img src={logoEue} alt="1&1" />
 
@@ -91,11 +90,11 @@ const Projekte = ({
           </li>
         </ul>
       </div>
-    </div>
+    </section>
 
     <hr />
 
-    <div className="project-list">
+    <section className="project-list">
       <div className="project">
         <img src={logoQx} alt="qooxdoo" />
         <dl>
@@ -143,7 +142,7 @@ const Projekte = ({
           </li>
         </ul>
       </div>
-    </div>
+    </section>
 
     <style jsx>{`
       .project-list  {
@@ -177,7 +176,13 @@ const Projekte = ({
 )
 
 Projekte.propTypes = {
-  route: PropTypes.object,
+  data: PropTypes.shape({
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+      }).isRequired,
+    }).isRequired,
+  }).isRequired,
 }
 
 export default Projekte

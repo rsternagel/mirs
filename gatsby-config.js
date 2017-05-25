@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Medienformatik Richard Sternagel',
-    domain: 'rsternagel.de'
+    domain: 'rsternagel.de',
   },
   plugins: [
     {

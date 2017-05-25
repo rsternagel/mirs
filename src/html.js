@@ -1,10 +1,15 @@
+/* eslint-disable react/no-danger */
+/* eslint-disable react/prop-types */
+/* eslint-disable react/forbid-prop-types */
+
+import flush from 'styled-jsx/server'
+
 import React from 'react'
+
 import { TypographyStyle } from 'react-typography'
 import Helmet from 'react-helmet'
 
 import typography from './utils/typography'
-
-import flush from 'styled-jsx/server'
 
 let styles = ''
 if (process.env.NODE_ENV === `production`) {

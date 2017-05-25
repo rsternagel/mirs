@@ -1,9 +1,9 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 const Prinzipien = ({
-  data: {site: {siteMetadata: {title: siteTitle}}}
+  data: { site: { siteMetadata: { title: siteTitle } } },
 }) => (
   <div>
     <Helmet title={`Impressum | ${siteTitle}`}/>
@@ -47,8 +47,17 @@ const Prinzipien = ({
     <style jsx>{`
     `}</style>
   </div>
-
 )
+
+Prinzipien.propTypes = {
+  data: PropTypes.shape({
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+      }).isRequired,
+    }).isRequired,
+  }).isRequired,
+}
 
 export default Prinzipien
 
