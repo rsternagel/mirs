@@ -211,6 +211,10 @@ class Nav extends React.Component {
           @media (max-width: ${s}) {
             ul { flex-direction: column; align-items: flex-start; }
           }
+
+          @media print {
+            nav { display: none; }
+          }
         `}</style>
       </nav>
     )
