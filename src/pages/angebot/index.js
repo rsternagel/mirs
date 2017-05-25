@@ -6,7 +6,7 @@ import Helmet from 'react-helmet'
 import MdMailOutline from 'react-icons/lib/md/mail-outline'
 import FaPhone from 'react-icons/lib/fa/phone'
 
-const Angebote = ({
+const Angebot = ({
   data: {site: {siteMetadata: {title: siteTitle}}}
 }) => (
   <div>
@@ -110,11 +110,11 @@ const Angebote = ({
   </div>
 )
 
-Angebote.propTypes = {
+Angebot.propTypes = {
   route: PropTypes.object,
 }
 
-export default Angebote
+export default Angebot
 
 export const pageQuery = graphql`
 query OfferQuery {
