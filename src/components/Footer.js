@@ -92,6 +92,10 @@ const Footer = () => (
         .copyright { display: block; }
         .icons { display: block; }
       }
+
+      @media print {
+        .metaLinks { display: none; }
+      }
     `}</style>
   </footer>
 )
