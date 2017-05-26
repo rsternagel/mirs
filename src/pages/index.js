@@ -109,8 +109,7 @@ const Homepage = ({
         display: flex;
         flex-direction: column;
         font-size: 95%;
-
-        padding: 10px 10px;
+        padding: 10px;
       }
 
       .contact a {
@@ -136,6 +135,7 @@ const Homepage = ({
       }
 
       /* Media Queries */
+      /* stylelint-disable declaration-block-single-line-max-declarations */
 
       @media (max-width: ${m}) {
         .content { display: block; }
@@ -151,6 +151,7 @@ const Homepage = ({
         .container-labels-contact { margin: 0; }
         .intro { width: 100%; }
       }
+      /* stylelint-enable */
     `}</style>
 
   </div>

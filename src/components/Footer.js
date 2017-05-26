@@ -35,11 +35,9 @@ const Footer = () => (
       footer {
         width: 100%;
         font-family: 'Open Sans', sans-serif;
-
         border-top: 1px solid #b0dda4;
         border-bottom: 1px solid #b0dda4;
         background-color: #ebf6e8;
-
         font-size: 80%;
         text-align: center;
         padding: 8px 0;
@@ -64,7 +62,7 @@ const Footer = () => (
 
       .meta {
         margin: 0 auto;
-        text-shadow: 0 1px 0 rgba(255,255,255, 1);
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
       }
 
       .copyright {
@@ -82,7 +80,7 @@ const Footer = () => (
       }
 
       .seperator {
-        padding: 0 5px 0 5px;
+        padding: 0 5px;
         color: #999;
       }
 

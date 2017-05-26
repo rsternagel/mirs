@@ -55,7 +55,7 @@ const Layout = ({
       .maincontent :global(h2) {
         font-family: 'Open Sans', sans-serif;
         font-size: 100%;
-        margin-bottom: .7rem;
+        margin-bottom: 0.7rem;
       }
 
       .maincontent {

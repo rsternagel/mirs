@@ -145,7 +145,7 @@ const Projekte = ({
     </section>
 
     <style jsx>{`
-      .project-list  {
+      .project-list {
         display: flex;
       }
 

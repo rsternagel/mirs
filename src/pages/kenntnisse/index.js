@@ -55,7 +55,7 @@ const Skills = ({
 
       .skills :global(.category),
       .skills :global(.details) {
-        padding: 5px 0 5px 0;
+        padding: 5px 0;
       }
 
       .skills :global(.category) {
@@ -69,7 +69,6 @@ const Skills = ({
 
       .skills :global(.row) {
         display: flex;
-        flow-direction: row;
       }
 
       .skills :global(.details) :global(li) {
@@ -77,17 +76,23 @@ const Skills = ({
         margin-bottom: 3px;
       }
 
-      .skills :global(.low), .low {
-        color: hsla(220, 0%, 60%, .9);
+      .low,
+      .skills :global(.low) {
+        color: hsla(220, 0%, 60%, 0.9);
       }
-      .skills :global(.middle), .middle {
-        color: hsla(33, 40%, 35%, .9);
+
+      .middle,
+      .skills :global(.middle) {
+        color: hsla(33, 40%, 35%, 0.9);
       }
-      .skills :global(.high), .high {
+
+      .high,
+      .skills :global(.high) {
         color: hsla(130, 45%, 30%, 1);
       }
 
       /* Media Queries */
+      /* stylelint-disable declaration-block-single-line-max-declarations */
 
       @media (max-width: ${m}) {
         .skills :global(.skill-list) { display: block; }
@@ -98,6 +103,8 @@ const Skills = ({
       @media (max-width: ${s}) {
         .skills :global(.row) { display: block; }
       }
+
+      /* stylelint-enable */
     `}</style>
   </div>
 )
