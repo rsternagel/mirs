@@ -168,7 +168,7 @@ class Nav extends React.Component {
 
           nav :global(a) {
             padding: 3px;
-            color: rgba(0, 0, 0, .8);
+            color: rgba(0, 0, 0, 0.8);
           }
 
           nav :global([data-selected='true']) :global(a),
@@ -177,7 +177,7 @@ class Nav extends React.Component {
           }
 
           ul {
-            position:relative;
+            position: relative;
             display: flex;
             margin-top: 20px;
           }
@@ -217,6 +217,7 @@ class Nav extends React.Component {
           }
 
           /* Media Queries */
+          /* stylelint-disable declaration-block-single-line-max-declarations */
 
           @media (max-width: ${s}) {
             ul { flex-direction: column; align-items: flex-start; }
@@ -225,6 +226,8 @@ class Nav extends React.Component {
           @media print {
             nav { display: none; }
           }
+
+          /* stylelint-enable */
         `}</style>
       </nav>
     )

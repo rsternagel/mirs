@@ -88,9 +88,9 @@ const Angebot = ({
       }
 
       ul.noBullet {
-         font-size: 100%;
-         list-style-type: none;
-         margin-left: 1rem;
+        font-size: 100%;
+        list-style-type: none;
+        margin-left: 1rem;
       }
 
       .contact {
