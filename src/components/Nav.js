@@ -191,6 +191,7 @@ class Nav extends React.Component {
             flex: 0 1 content;
             padding-left: 8px;
             padding-right: 8px;
+            cursor: pointer;
           }
 
           .nav-indicator-wrapper {
