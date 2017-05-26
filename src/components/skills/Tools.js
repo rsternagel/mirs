@@ -32,9 +32,10 @@ const Tools = () => (
       <dt className="category">Qualitätskontrolle</dt>
       <dd className="details">
         <ul className="row">
-          <li className="high">eslint,</li>
-          <li className="high">prettier,</li>
-          <li className="high">flow,</li>
+          <li className="high">ESLint,</li>
+          <li className="high">stylelint,</li>
+          <li className="high">Prettier,</li>
+          <li className="high">Flow,</li>
           <li className="low">JSCS,</li>
           <li className="low">JSHint,</li>
           <li className="low">JSLint</li>
@@ -46,10 +47,20 @@ const Tools = () => (
       <dt className="category">Dokumentation</dt>
       <dd className="details">
         <ul className="row">
+          <li className="high">documentation.js,</li>
           <li className="high">Gatsby (JS),</li>
           <li className="high">Sphinx (Python),</li>
-          <li className="middle">JSDoc,</li>
-          <li className="low">Maven Site</li>
+          <li className="middle">JSDoc</li>
+        </ul>
+      </dd>
+    </dl>
+
+    <dl className="skill-list">
+      <dt className="category">Static Site Generator</dt>
+      <dd className="details">
+        <ul className="row">
+          <li className="high">Gatsby (JS),</li>
+          <li className="high">Pelican (Python)</li>
         </ul>
       </dd>
     </dl>
