@@ -18,29 +18,6 @@ const MainSkills = () => (
     </dl>
 
     <dl className="skill-list">
-      <dt className="category">Datenbanken</dt>
-      <dd className="details">
-        <ul className="row">
-          <li className="middle">Redis,</li>
-          <li className="middle">MongoDB,</li>
-          <li className="middle">MySQL,</li>
-          <li className="low">SQLite</li>
-        </ul>
-      </dd>
-    </dl>
-
-    <dl className="skill-list">
-      <dt className="category">Server</dt>
-      <dd className="details">
-        <ul className="row">
-          <li className="middle">nginx,</li>
-          <li className="low">Apache,</li>
-          <li className="low">Tomcat</li>
-        </ul>
-      </dd>
-    </dl>
-
-    <dl className="skill-list">
       <dt className="category">Frameworks</dt>
       <dd className="details">
         <ul>
@@ -67,6 +44,30 @@ const MainSkills = () => (
         </ul>
       </dd>
     </dl>
+
+    <dl className="skill-list">
+      <dt className="category">Datenbanken</dt>
+      <dd className="details">
+        <ul className="row">
+          <li className="middle">Redis,</li>
+          <li className="middle">MongoDB,</li>
+          <li className="middle">MySQL,</li>
+          <li className="low">SQLite</li>
+        </ul>
+      </dd>
+    </dl>
+
+    <dl className="skill-list">
+      <dt className="category">Server</dt>
+      <dd className="details">
+        <ul className="row">
+          <li className="middle">nginx,</li>
+          <li className="low">Apache,</li>
+          <li className="low">Tomcat</li>
+        </ul>
+      </dd>
+    </dl>
+
 
     <style jsx>{`
     `}</style>

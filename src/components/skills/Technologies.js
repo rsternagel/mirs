@@ -20,8 +20,19 @@ const Technologies = () => (
       <dt className="category">Architektur</dt>
       <dd className="details">
         <ul className="row">
-          <li className="high">Rest,</li>
+          <li className="high">REST,</li>
           <li className="low">SOA / Web Services</li>
+        </ul>
+      </dd>
+    </dl>
+
+    <dl className="skill-list">
+      <dt className="category">Paradigmen</dt>
+      <dd className="details">
+        <ul className="row">
+          <li className="high">Responsive web design,</li>
+          <li className="high">CSS Modules,</li>
+          <li className="high">Regular Expressions</li>
         </ul>
       </dd>
     </dl>

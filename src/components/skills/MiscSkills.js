@@ -14,6 +14,27 @@ const MiscSkills = () => (
       </dd>
     </dl>
 
+    <dl className="skill-list">
+      <dt className="category">Misc</dt>
+      <dd className="details">
+        <ul className="row">
+          <li className="high">Photoshop,</li>
+          <li className="high">LibreOffice</li>
+        </ul>
+      </dd>
+    </dl>
+
+    <dl className="skill-list">
+      <dt className="category">OS</dt>
+      <dd className="details">
+        <ul className="row">
+          <li className="high">macOS,</li>
+          <li className="middle">Linux,</li>
+          <li className="low">Windows</li>
+        </ul>
+      </dd>
+    </dl>
+
     <style jsx>{`
     `}</style>
   </div>
