@@ -47,7 +47,8 @@ class Nav extends React.Component {
 
     this.navTitles.forEach((title) => {
       let isHome = (pathname === '/' && title === home)
-      curPageHasOneOfNavTitlesList.push(isHome || pathname.includes(title))
+      let hasNavTitleMatchingPathname = (pathname.search(new RegExp(`/${title}/?`)) !== -1)
+      curPageHasOneOfNavTitlesList.push(isHome || hasNavTitleMatchingPathname)
     })
 
     if (pathname === '/') {
@@ -79,7 +80,9 @@ class Nav extends React.Component {
     let selectedNavItemId = ''
 
     navTitles.forEach((title) => {
-      if (path.includes(title)) {
+      let hasNavTitleMatchingPathname = (path.search(new RegExp(`/${title}/?`)) !== -1)
+
+      if (hasNavTitleMatchingPathname) {
         selectedNavItemId = title
       }
     })
