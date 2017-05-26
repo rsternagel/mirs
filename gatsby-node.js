@@ -12,13 +12,15 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
   return new Promise((resolve, reject) => {
     const pages = []
-    const topLevelPage = path.resolve('templates/template-topLevelPage.js')
+    const topLevelPage = path.resolve('templates/topLevelPage.js')
     graphql(`
       {
         allMarkdownRemark(limit: 1000) {
           edges {
             node {
-              slug
+              fields {
+                slug
+              }
             }
           }
         }
@@ -32,10 +34,10 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       // create top level pages.
       _.each(result.data.allMarkdownRemark.edges, (edge) => {
         upsertPage({
-          path: edge.node.slug, // required
+          path: edge.node.fields.slug, // required
           component: topLevelPage,
           context: {
-            slug: edge.node.slug,
+            slug: edge.nodefields.slug,
           },
         })
       })
@@ -48,18 +50,20 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
 // add custom url pathname for blog posts
 exports.onNodeCreate = ({ node, boundActionCreators, getNode }) => {
-  const { updateNode } = boundActionCreators
-  if (node.type === 'File' && typeof node.slug === 'undefined') {
+  const { addFieldToNode } = boundActionCreators
+  if (node.internal.type === 'File' && typeof node.slug === 'undefined') {
     const parsedFilePath = path.parse(node.relativePath)
     const slug = `/${parsedFilePath.dir}/`
-    node.slug = slug
-    updateNode(node)
+    addFieldToNode({ node, fieldName: `slug`, fieldValue: slug })
   } else if (
-    node.type === 'MarkdownRemark' &&
+    node.internal.type === 'MarkdownRemark' &&
     typeof node.slug === 'undefined'
   ) {
     const fileNode = getNode(node.parent)
-    node.slug = fileNode.slug
-    updateNode(node)
+    addFieldToNode({
+      node,
+      fieldName: `slug`,
+      fieldValue: fileNode.fields.slug,
+    })
   }
 }
