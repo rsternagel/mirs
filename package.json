@@ -37,6 +37,7 @@
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-react": "^7.0.1",
     "husky": "^0.13.3",
+    "lint-staged": "^3.5.0",
     "prettier-eslint-cli": "^4.0.1"
   },
   "homepage": "https://github.com/rsternagel/mirs",
@@ -54,6 +55,11 @@
     "build": "NODE_ENV=production gatsby build",
     "serve": "gatsby serve-build",
     "clean": "rm -rf .cache/* && rm -rf node_modules && rm -rf yarn.lock && rm -rf public/*",
-    "precommit": "yarn lint"
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "lint"
+    ]
   }
 }
