@@ -16,7 +16,9 @@ class Nav extends React.Component {
 
     const { pathname } = props
     const selectedNavItemId = this.getInitialSelectedNav(pathname, this.navTitles)
-    this.state = { selectedNavItemId }
+    const indicatorWrapperStyle = { display: "none" }
+
+    this.state = { selectedNavItemId, indicatorWrapperStyle }
   }
 
   componentDidMount() {
