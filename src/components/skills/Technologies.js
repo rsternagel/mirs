@@ -31,8 +31,7 @@ const Technologies = () => (
       <dd className="details">
         <ul className="row">
           <li className="high">Responsive web design,</li>
-          <li className="high">CSS Modules,</li>
-          <li className="high">Regular Expressions</li>
+          <li className="high">CSS Modules</li>
         </ul>
       </dd>
     </dl>
@@ -67,6 +66,15 @@ const Technologies = () => (
         <ul className="row">
           <li className="high">GraphQL,</li>
           <li className="low">SQL</li>
+        </ul>
+      </dd>
+    </dl>
+
+    <dl className="skill-list">
+      <dt className="category"><abbr title="Domain Specific Language">DSL</abbr></dt>
+      <dd className="details">
+        <ul className="row">
+          <li className="high">Regular Expressions</li>
         </ul>
       </dd>
     </dl>
