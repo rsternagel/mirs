@@ -17,6 +17,10 @@
       "jsx": true
     }
   },
+  settings: {
+    // react is provided 'magically' by gatsby
+    'import/core-modules': ['react'],
+  },
   "env": {
     "es6": true,
     "node": true,
