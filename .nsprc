@@ -1,0 +1,9 @@
+{
+  "exceptions": [
+    // hapi related which is only used for 'gatsby serve-build'
+    "https://nodesecurity.io/advisories/63",
+    "https://nodesecurity.io/advisories/65",
+    "https://nodesecurity.io/advisories/45",
+    "https://nodesecurity.io/advisories/121"
+  ]
+}
