@@ -28,7 +28,7 @@ const Homepage = ({
             <p>
               Entwicklung von Web-Applikationen<br/>
               Infrastruktur · Tooling · Workflows<br/>
-              <span className="jsNode">JavaScript · Node.js</span>
+              JavaScript · React · Node.js
             </p>
           </div>
 
@@ -99,10 +99,8 @@ const Homepage = ({
 
       .labels p {
         font-size: 70%;
-      }
-
-      .labels p .jsNode {
-        padding-left: 30px;
+        margin-right: 3rem;
+        text-align: center;
       }
 
       .contact {
@@ -149,6 +147,7 @@ const Homepage = ({
         .content { display: block; }
         .sidebar { display: block; width: 100%; }
         .container-labels-contact { margin: 0; }
+        .labels p { text-align: left; }
         .intro { width: 100%; }
       }
       /* stylelint-enable */
