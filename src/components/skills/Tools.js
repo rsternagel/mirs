@@ -48,7 +48,7 @@ const Tools = () => (
       <dd className="details">
         <ul className="row">
           <li className="high">nsp,</li>
-          <li className="high">Sync</li>
+          <li className="high">Snyk</li>
         </ul>
       </dd>
     </dl>
