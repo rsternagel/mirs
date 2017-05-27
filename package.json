@@ -38,6 +38,7 @@
     "eslint-plugin-react": "^7.0.1",
     "husky": "^0.13.3",
     "lint-staged": "^3.5.0",
+    "nsp": "^2.6.3",
     "prettier-eslint-cli": "^4.0.1",
     "stylelint": "^7.10.1",
     "stylelint-config-css-modules": "^1.0.0",
@@ -60,7 +61,8 @@
     "build": "NODE_ENV=production gatsby build",
     "serve": "gatsby serve-build",
     "clean": "rm -rf .cache/* && rm -rf node_modules && rm -rf yarn.lock && rm -rf public/*",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "sec": "nsp check"
   },
   "lint-staged": {
     "*.js": [
