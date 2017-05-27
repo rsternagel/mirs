@@ -44,6 +44,16 @@ const Tools = () => (
     </dl>
 
     <dl className="skill-list">
+      <dt className="category">Security</dt>
+      <dd className="details">
+        <ul className="row">
+          <li className="high">nsp,</li>
+          <li className="high">Sync</li>
+        </ul>
+      </dd>
+    </dl>
+
+    <dl className="skill-list">
       <dt className="category">Dokumentation</dt>
       <dd className="details">
         <ul className="row">
