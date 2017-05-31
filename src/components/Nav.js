@@ -187,13 +187,13 @@ class Nav extends React.Component {
 
           ul :global(li:not(:last-child)) {
             margin-right: 30px;
-            padding-bottom: 10px;
           }
 
           ul :global(li) {
             flex: 0 1 content;
             padding-left: 8px;
             padding-right: 8px;
+            padding-bottom: 10px;
             cursor: pointer;
           }
 
