@@ -70,7 +70,7 @@ const Tools = () => (
       <dd className="details">
         <ul className="row">
           <li className="high">Gatsby (JS),</li>
-          <li className="high">Pelican (Python)</li>
+          <li className="middle">Pelican (Python)</li>
         </ul>
       </dd>
     </dl>
