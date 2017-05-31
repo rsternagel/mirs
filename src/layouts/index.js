@@ -30,6 +30,7 @@ const Layout = ({
         border-top: 6px solid #6aae6a;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        line-height: 1.6em;
       }
 
       .container {
