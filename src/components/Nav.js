@@ -163,7 +163,9 @@ class Nav extends React.Component {
 
           nav {
             flex: 8 1 0;
-            font-family: Palatino, 'Palatino Linotype', Georgia, serif;
+            font-family: 'Open Sans', Palatino, 'Palatino Linotype', Georgia, serif;
+            text-transform: uppercase;
+            font-size: 90%;
           }
 
           nav :global(a) {
