@@ -173,6 +173,7 @@ class Nav extends React.Component {
             color: rgba(0, 0, 0, 0.8);
           }
 
+          nav :global(a:hover),
           nav :global([data-selected='true']) :global(a),
           nav :global([data-selected='true']) :global(a:visited) {
             color: #479047;
