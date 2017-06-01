@@ -30,13 +30,9 @@ class Nav extends React.Component {
       const selectedHtmlElem = this.navHtmlElems.get(selectedId)
       this.moveSelectionIndicatorTo(selectedHtmlElem)
 
-      // TODO:
-      //   make prettier and without hard coded 580px
-      const mql = window.matchMedia('(max-width: 580px)')
+      const mql = window.matchMedia(`(max-width: ${s})`)
       mql.addListener(function () {
-        return function () {
-          return this.moveSelectionIndicatorTo(this.navHtmlElems.get(this.state.selectedNavItemId))
-        }.bind(this)
+        return () => this.moveSelectionIndicatorTo(this.navHtmlElems.get(this.state.selectedNavItemId))
       }.bind(this)())
 
     }, 500)
