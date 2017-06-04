@@ -10,7 +10,9 @@ const TopLevelPageRoute = ({
   data,
 }) => (
     <div>
-      <Helmet title={`${data.site.siteMetadata.title}`}/>
+      <Helmet>
+        <title>{`${data.site.siteMetadata.title}`}</title>
+      </Helmet>
       <div dangerouslySetInnerHTML={{ __html: page.html }} />
     </div>
 )

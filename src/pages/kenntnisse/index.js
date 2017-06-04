@@ -14,7 +14,9 @@ const Skills = ({
 }) => (
   <div>
 
-    <Helmet title={`Kenntnisse | ${siteTitle}`}/>
+    <Helmet>
+      <title>{`Kenntnisse | ${siteTitle}`}</title>
+    </Helmet>
 
     <h1>Kenntnisse</h1>
     <p>Diese Liste spiegelt wider <span

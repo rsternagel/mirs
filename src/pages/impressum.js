@@ -6,7 +6,9 @@ const Impressum = ({
   data: { site: { siteMetadata: { title: siteTitle } } },
 }) => (
   <div>
-    <Helmet title={`Impressum | ${siteTitle}`}/>
+    <Helmet>
+      <title>{`Impressum | ${siteTitle}`}</title>
+    </Helmet>
 
     <h1>Impressum</h1>
     <p>

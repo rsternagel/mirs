@@ -10,7 +10,9 @@ const Angebot = ({
 }) => (
   <div>
 
-    <Helmet title={`Angebot | ${siteTitle}`}/>
+    <Helmet>
+      <title>{`Angebot | ${siteTitle}`}</title>
+    </Helmet>
 
     <h1>Angebot</h1>
 

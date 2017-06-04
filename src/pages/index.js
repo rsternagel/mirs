@@ -14,7 +14,9 @@ const Homepage = ({
 }) => (
   <div>
 
-    <Helmet title={`${siteTitle}`}/>
+    <Helmet>
+      <title>{`${siteTitle}`}</title>
+    </Helmet>
 
     <section className="content">
       <aside className="sidebar">
