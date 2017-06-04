@@ -8,7 +8,7 @@ const path = require('path')
 // currently there is no markdown content :(
 /*
 exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { upsertPage } = boundActionCreators
+  const { createPage } = boundActionCreators
 
   return new Promise((resolve, reject) => {
     const pages = []
@@ -33,7 +33,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
       // create top level pages.
       _.each(result.data.allMarkdownRemark.edges, (edge) => {
-        upsertPage({
+        createPage({
           path: edge.node.fields.slug, // required
           component: topLevelPage,
           context: {
@@ -49,18 +49,18 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 */
 
 // add custom url pathname for blog posts
-exports.onNodeCreate = ({ node, boundActionCreators, getNode }) => {
-  const { addFieldToNode } = boundActionCreators
+exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
+  const { createNodeField } = boundActionCreators
   if (node.internal.type === 'File' && typeof node.slug === 'undefined') {
     const parsedFilePath = path.parse(node.relativePath)
     const slug = `/${parsedFilePath.dir}/`
-    addFieldToNode({ node, fieldName: `slug`, fieldValue: slug })
+    createNodeField({ node, fieldName: `slug`, fieldValue: slug })
   } else if (
     node.internal.type === 'MarkdownRemark' &&
     typeof node.slug === 'undefined'
   ) {
     const fileNode = getNode(node.parent)
-    addFieldToNode({
+    createNodeField({
       node,
       fieldName: `slug`,
       fieldValue: fileNode.fields.slug,
