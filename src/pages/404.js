@@ -7,7 +7,9 @@ const FourOFour = ({
   data: { site: { siteMetadata: { domain } } },
 }) => (
   <div>
-    <Helmet title={`Fehler 404 | ${siteTitle}`}/>
+    <Helmet>
+      <title>{`Fehler 404 | ${siteTitle}`}</title>
+    </Helmet>
 
     <h1>Sorry, diese Seite existiert nicht!</h1>
     <p>

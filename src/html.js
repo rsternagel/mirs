@@ -25,7 +25,7 @@ const Skeleton = ({
   headComponents,
   postBodyComponents,
 }) => {
-  const head = Helmet.rewind()
+  const head = Helmet.renderStatic()
 
   let css
   let cssStyleJsx

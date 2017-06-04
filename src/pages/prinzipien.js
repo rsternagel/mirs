@@ -6,7 +6,9 @@ const Prinzipien = ({
   data: { site: { siteMetadata: { title: siteTitle } } },
 }) => (
   <div>
-    <Helmet title={`Impressum | ${siteTitle}`}/>
+    <Helmet>
+      <title>{`Impressum | ${siteTitle}`}</title>
+    </Helmet>
 
     <h1>Prinzipien</h1>
     <p>Angelehnt an <a href="http://www.python.org/dev/peps/pep-0020/">The Zen

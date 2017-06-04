@@ -6,7 +6,9 @@ const Datenschutz = ({
   data: { site: { siteMetadata: { title: siteTitle } } },
 }) => (
   <div>
-    <Helmet title={`Datenschutz | ${siteTitle}`}/>
+    <Helmet>
+      <title>{`Datenschutz | ${siteTitle}`}</title>
+    </Helmet>
 
     <h1>Datenschutzerklärung</h1>
     <p>

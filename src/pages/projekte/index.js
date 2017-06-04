@@ -12,7 +12,9 @@ const Projekte = ({
 }) => (
   <div>
 
-    <Helmet title={`Projekte | ${siteTitle}`}/>
+    <Helmet>
+      <title>{`Projekte | ${siteTitle}`}</title>
+    </Helmet>
 
     <h1>Projekte</h1>
 
