@@ -24,7 +24,7 @@
     "react-typography": "^0.15.0",
     "safe-access": "^0.1.0",
     "sanitize.css": "^5.0.0",
-    "styled-jsx": "^0.5.7",
+    "styled-jsx": "^1.0.4",
     "typography": "^0.15.10"
   },
   "devDependencies": {
@@ -37,7 +37,7 @@
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-react": "^7.0.1",
     "husky": "^0.13.3",
-    "lint-staged": "^3.5.0",
+    "lint-staged": "^3.6.0",
     "nsp": "^2.6.3",
     "prettier-eslint-cli": "^4.0.1",
     "stylelint": "^7.10.1",
