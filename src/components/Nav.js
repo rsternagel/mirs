@@ -103,7 +103,7 @@ class Nav extends React.Component {
 
   moveSelectionIndicatorTo(newSelectedItem) {
     let indicatorWrapperStyle = { display: "none" }
-    if (newSelectedItem !== null) {
+    if (newSelectedItem !== null && newSelectedItem !== undefined) {
       const { clientHeight, clientWidth, offsetLeft, offsetTop } = newSelectedItem
       indicatorWrapperStyle = {
         height: clientHeight,
