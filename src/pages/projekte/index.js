@@ -68,7 +68,7 @@ const Projekte = ({
           <li>Verantwortung der Jobs auf dem CI-Server (Jenkins):
             <ul>
               <li>Job, der die App baut und Releases mittels Maven erstellt</li>
-              <li>Frontend Code Quality-Job, der Checks durchführt (Linting von JS und Sass-Code sowie JS Unit- und Integrationstests)</li>
+              <li>Frontend Code Quality-Job, der Checks durchführt (Linting von JS und SCSS-Code sowie JS Unit- und Integrationstests)</li>
               <li>Frontend Security Job, der auf bekannte Schwachstellen in npm-Packages, die verwendet werden, hinweist</li>
             </ul>
           </li>

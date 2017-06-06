@@ -8,7 +8,7 @@ const Technologies = () => (
       <dd className="details">
         <ul className="row">
           <li className="high">HTML,</li>
-          <li className="high">CSS & Sass/SCSS/PostCSS,</li>
+          <li className="high">CSS (inkl. SCSS & PostCSS),</li>
           <li className="middle">XML,</li>
           <li className="middle">XUL,</li>
           <li className="low">XPath</li>

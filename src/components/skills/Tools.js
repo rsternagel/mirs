@@ -60,7 +60,7 @@ const Tools = () => (
           <li className="high">documentation.js,</li>
           <li className="high">Gatsby (JS),</li>
           <li className="high">Sphinx (Python),</li>
-          <li className="middle">JSDoc</li>
+          <li className="low">JSDoc</li>
         </ul>
       </dd>
     </dl>
@@ -117,7 +117,7 @@ const Tools = () => (
     </dl>
 
     <dl className="skill-list">
-      <dt className="category">Project Management</dt>
+      <dt className="category">Projekt Management</dt>
       <dd className="details">
         <ul className="row">
           <li className="high">GitHub,</li>
