@@ -18,6 +18,8 @@ const Projekte = ({
 
     <h1>Projekte</h1>
 
+    <p>Hier sehen Sie meine Projektreferenzen:</p>
+
     <section className="project-list">
       <div className="project">
         <img src={logoEue} alt="1&1" />
@@ -122,13 +124,13 @@ const Projekte = ({
           Die komplette Entwicklung passiert auf <a href="https://github.com/qooxdoo/qooxdoo">GitHub</a>.</p>
         <p>Als Teil des Core-Teams, welches qooxdoo weiterentwickelt, waren meine Aufgaben:</p>
         <ul>
-          <li>Core/Tooling-Entwickler:
+          <li>Core-Entwickler und verantwortlich für die (Python-)Toolchain:
             <ul>
-              <li>Hauptverantwortlich für das Tooling</li>
-              <li>Mitarbeit und Weiterentwicklung des JS-Framework-Codes auf GitHub, v.a. des IO-Bereiches (z.B. XHR/JSONP und REST)</li>
+              <li>Weiterentwicklung der Buildprozesse (Parsing, Preprocessing, Minifying etc)</li>
+              <li>Weiterentwicklung des JS-Framework-Codes auf GitHub, v.a. des IO-Bereiches (z.B. XHR/JSONP und REST)</li>
             </ul>
           </li>
-          <li>Entwicklung einer JS-Toolchain (Grunt-Plugins/npm-Packages):
+          <li>Konzeption und Entwicklung einer neuen JS-Toolchain (via Grunt-Plugins):
             <ul>
               <li>Parsing von JS-Code inkl. Scope- und Dependency-Analyse</li>
               <li>Minifizierung und Optimierung von JS Code</li>
