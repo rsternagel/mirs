@@ -26,7 +26,7 @@ const Angebot = ({
         <abbr title="Continuous Delivery">CD</abbr>-Systeme)?
       </li>
     </ul>
-    <p>Dann könnte Ihre Suche jetzt zu Ende sein.</p>
+    <p>Dann bin ich der passende Mann für Sie.</p>
 
     <header>
       <h2>Mein Profil:</h2>
@@ -41,7 +41,7 @@ const Angebot = ({
         {' '}und seinem Ökosystem (z.B. {' '}<a href="http://redux.js.org/">Redux</a>,
         {' '}<a href="http://graphql.org/">GraphQL</a>, {' '}<a href="https://facebook.github.io/relay/">Relay</a>,
         {' '}<a href="https://webpack.js.org/">Webpack</a>).</li>
-      <li>Agile Vorgehensmodellen (z.B. Kanban und <a href="https://www.scrum.org/">Scrum</a>) sind mir mehr als vertraut.</li>
+      <li>Agile Vorgehensmodelle (z.B. Kanban und <a href="https://www.scrum.org/">Scrum</a>) sind mir mehr als vertraut.</li>
       <li>Ich kommuniziere mit allen Beteiligten (z.B. PM, Backend, UI/UX-Design, Ops, SysAdmin) auf Augenhöhe.</li>
       <li>Build-Tools und Versionsverwaltung sind für mich selbstverständlich.</li>
       <li>Mit ECMAScript 6/20XX und Node.js kenne ich mich sehr gut aus.</li>
@@ -55,7 +55,7 @@ const Angebot = ({
       <li>Ich arbeite dediziert immer nur für ein Projekt, weil Multi-Tasking
         nicht funktioniert und Kontext-Switches teuer sind.</li>
       <li>Ich gliedere mich nahtlos in agile Teams ein und beteilige mich aktiv
-        an der Einführung von agilen Vorgehensmodellen (z.b. Scrum/Kanban), wenn gewünscht.</li>
+        an der Einführung von agilen Vorgehensmodellen (z.B. Scrum/Kanban), wenn gewünscht.</li>
       <li>Ich lege Wert auf sauberen, lesbaren und einfachen Code.
         Kommentare, Dokumentation im Code sowie Code Reviews sind für mich selbstverständlich.</li>
       <li>Ich bin mit sämtlichen Praktiken des „eXtreme Programming“ vertraut und setze
@@ -65,7 +65,7 @@ const Angebot = ({
       <li>Ich bin ausgesprochen teamfähig, da ich lange als Angestellter auch mit IT-Freelancern
         zusammengearbeitet habe und um deren Reibungspunkte und Anforderungen weiß.</li>
       <li>Ich habe den Anspruch, qualitativen, verständlichen und wartbaren Code zu hinterlassen.
-        Deshalb, trage ich aktiv mein Wissen ins Team für die Zeit nach meinem Einsatz.</li>
+        Deshalb trage ich aktiv mein Wissen ins Team für die Zeit nach meinem Einsatz.</li>
     </ul>
 
     <h2>Packen wir es zusammen an!</h2>

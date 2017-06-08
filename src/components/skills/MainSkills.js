@@ -21,12 +21,12 @@ const MainSkills = () => (
       <dt className="category">Frameworks</dt>
       <dd className="details">
         <ul>
-          <li className="middle">qooxdoo (JavaScript - Core-Team Mitglied),</li>
-          <li className="middle">CherryPy (Python),</li>
-          <li className="middle">Flask (Python),</li>
-          <li className="middle">Django (Python),</li>
-          <li className="low">AngularJS 1 (JS),</li>
-          <li className="low">AngularJS 2 (JS),</li>
+          <li className="middle">qooxdoo (JavaScript - Core-Team Mitglied)</li>
+          <li className="middle">CherryPy (Python)</li>
+          <li className="middle">Flask (Python)</li>
+          <li className="middle">Django (Python)</li>
+          <li className="low">AngularJS 1 (JS)</li>
+          <li className="low">AngularJS 2 (JS)</li>
           <li className="low">Pustefix (Java)</li>
           <li className="low">Spring (Java)</li>
         </ul>

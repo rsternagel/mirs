@@ -19,7 +19,6 @@ const Tools = () => (
         <ul className="row">
           <li className="high">Jest,</li>
           <li className="high">Enzyme,</li>
-          <li className="middle">Karma,</li>
           <li className="middle">Jasmine,</li>
           <li className="middle">Mocha,</li>
           <li className="low">Protractor,</li>
@@ -35,10 +34,7 @@ const Tools = () => (
           <li className="high">ESLint,</li>
           <li className="high">stylelint,</li>
           <li className="high">Prettier,</li>
-          <li className="high">Flow,</li>
-          <li className="low">JSCS,</li>
-          <li className="low">JSHint,</li>
-          <li className="low">JSLint</li>
+          <li className="high">Flow</li>
         </ul>
       </dd>
     </dl>
@@ -108,7 +104,6 @@ const Tools = () => (
           <li className="high">yarn,</li>
           <li className="high">webpack,</li>
           <li className="high">Babel,</li>
-          <li className="middle">Browserify,</li>
           <li className="middle">Gulp,</li>
           <li className="low">Grunt,</li>
           <li className="low">Maven</li>
