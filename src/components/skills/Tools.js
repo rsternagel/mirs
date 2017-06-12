@@ -111,6 +111,7 @@ const Tools = () => (
       </dd>
     </dl>
 
+    {/*
     <dl className="skill-list">
       <dt className="category">Projekt Management</dt>
       <dd className="details">
@@ -121,6 +122,7 @@ const Tools = () => (
         </ul>
       </dd>
     </dl>
+    */}
 
     <style jsx>{`
     `}</style>
