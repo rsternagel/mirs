@@ -40,7 +40,7 @@ const Angebot = ({
       <li>Mein Schwerpunkt liegt auf <a href="https://facebook.github.io/react/">React</a>
         {' '}und seinem Ökosystem (z.B. {' '}<a href="http://redux.js.org/">Redux</a>,
         {' '}<a href="http://graphql.org/">GraphQL</a>, {' '}<a href="https://facebook.github.io/relay/">Relay</a>,
-        {' '}<a href="https://webpack.js.org/">Webpack</a>).</li>
+        {' '}<a href="https://webpack.js.org/">webpack</a>).</li>
       <li>Agile Vorgehensmodelle (z.B. Kanban und <a href="https://www.scrum.org/">Scrum</a>) sind mir mehr als vertraut.</li>
       <li>Ich kommuniziere mit allen Beteiligten (z.B. PM, Backend, UI/UX-Design, Ops, SysAdmin) auf Augenhöhe.</li>
       <li>Build-Tools und Versionsverwaltung sind für mich selbstverständlich.</li>

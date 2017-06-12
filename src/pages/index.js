@@ -66,7 +66,7 @@ const Homepage = ({
           Aktuell liegt mein Projektschwerpunkt auf
           {' '}<a href="https://facebook.github.io/react/">React</a> und dessen Ökosystem (d.h.
           {' '}<a href="http://redux.js.org/">Redux</a>, <a href="http://graphql.org/">GraphQL</a>,
-          {' '}<a href="https://facebook.github.io/relay/">Relay</a>, <a href="https://webpack.js.org/">Webpack</a> etc.).
+          {' '}<a href="https://facebook.github.io/relay/">Relay</a>, <a href="https://webpack.js.org/">webpack</a> etc.).
         </p>
 
         <p>
