@@ -18,7 +18,9 @@ const MiscSkills = () => (
       <dt className="category">Misc</dt>
       <dd className="details">
         <ul className="row">
+          <li className="high">Sketch,</li>
           <li className="high">Photoshop,</li>
+          <li className="high">Illustrator,</li>
           <li className="high">LibreOffice</li>
         </ul>
       </dd>
