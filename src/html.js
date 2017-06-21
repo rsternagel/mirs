@@ -11,6 +11,8 @@ import Helmet from 'react-helmet'
 
 import typography from './utils/typography'
 
+import favicon from "./favicon.ico"
+
 let styles = ''
 if (process.env.NODE_ENV === `production`) {
   try {
@@ -51,6 +53,7 @@ const Skeleton = ({
         {head.meta.toComponent()}
         {head.link.toComponent()}
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet" />
+        <link rel="shortcut icon" type="image/x-icon" href={favicon} />
       </head>
       <body>
         <div id="___gatsby" dangerouslySetInnerHTML={{ __html: body }} />
