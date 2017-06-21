@@ -1,6 +1,6 @@
 // const _ = require('lodash')
 // const Promise = require('bluebird')
-const path = require('path')
+// const path = require('path')
 // const select = require('unist-util-select')
 // const precache = require('sw-precache')
 // const fs = require('fs-extra')
@@ -49,6 +49,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 */
 
 // add custom url pathname for blog posts
+/*
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators
   if (node.internal.type === 'File' && typeof node.slug === 'undefined') {
@@ -67,3 +68,4 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     })
   }
 }
+*/
