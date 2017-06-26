@@ -59,7 +59,7 @@ const Angebot = ({
       <li>Ich lege Wert auf sauberen, lesbaren und einfachen Code.
         Kommentare, Dokumentation im Code sowie Code Reviews sind für mich selbstverständlich.</li>
       <li>Ich bin mit sämtlichen Praktiken des „eXtreme Programming“ vertraut und setze
-        viele von ihnen ein (z.B. Pair Programming, Coding Standards, Code Review,
+        viele von diesen ein (z.B. Pair Programming, Coding Standards, Code Review,
         Continuous Integration, Continuous Delivery, Planning, Unit Tests, Integrationstests).
         Bei Bedarf bringe ich diese gerne in die Teamkultur mit ein.</li>
       <li>Ich bin ausgesprochen teamfähig, da ich lange als Angestellter auch mit IT-Freelancern
