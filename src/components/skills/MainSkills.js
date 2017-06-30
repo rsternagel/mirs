@@ -22,13 +22,11 @@ const MainSkills = () => (
       <dd className="details">
         <ul>
           <li className="middle">qooxdoo (JavaScript - Core-Team Mitglied)</li>
-          <li className="middle">CherryPy (Python)</li>
-          <li className="middle">Flask (Python)</li>
           <li className="middle">Django (Python)</li>
-          <li className="low">AngularJS 1 (JS)</li>
-          <li className="low">AngularJS 2 (JS)</li>
-          <li className="low">Pustefix (Java)</li>
+          <li className="middle">Flask (Python)</li>
+          <li className="low">Angular 1 & 2 (JS)</li>
           <li className="low">Spring (Java)</li>
+          {/* <li className="low">Pustefix (Java)</li> */}
         </ul>
       </dd>
     </dl>
@@ -38,8 +36,10 @@ const MainSkills = () => (
       <dd className="details">
         <ul className="row">
           <li className="high">React,</li>
-          <li className="high">Redux,</li>
           <li className="high">React Router,</li>
+          <li className="high">Redux,</li>
+          <li className="high">Redux Form,</li>
+          <li className="high">Redux-Saga,</li>
           <li className="high">Relay</li>
         </ul>
       </dd>
