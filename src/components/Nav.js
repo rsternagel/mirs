@@ -41,25 +41,43 @@ class Nav extends React.Component {
   componentWillReceiveProps(nextProps) {
     const home = 'home'
     const { pathname } = nextProps
+    let matchedNavTitle = ''
     let curPageHasOneOfNavTitlesList = []
 
     this.navTitles.forEach((title) => {
       let isHome = (pathname === '/' && title === home)
       let hasNavTitleMatchingPathname = (pathname.search(new RegExp(`/${title}/?`)) !== -1)
+      if (hasNavTitleMatchingPathname && matchedNavTitle === '') {
+        matchedNavTitle = title
+      }
       curPageHasOneOfNavTitlesList.push(isHome || hasNavTitleMatchingPathname)
     })
+
+    const setNavActiveState = (entry) => {
+      if (entry !== null) {
+        const selectedHtmlElem = this.navHtmlElems.get(entry)
+        this.setState({ selectedNavItemId: entry })
+        this.moveSelectionIndicatorTo(selectedHtmlElem)
+      }
+
+      // could be an 'else' but better be explicit
+      if (entry === null) {
+        this.setState({ selectedNavItemId: null })
+        this.moveSelectionIndicatorTo(null)
+      }
+    }
 
     if (pathname === '/') {
       // set selectedNavItemId if root no matter
       // if other links than nav home link was used
-      const selectedHtmlElem = this.navHtmlElems.get(home)
-      this.setState({ selectedNavItemId: home })
-      this.moveSelectionIndicatorTo(selectedHtmlElem)
+      setNavActiveState(home)
     } else if (curPageHasOneOfNavTitlesList.includes(true) === false) {
       // unset selectedNavItemId cause current
       // page is not part of any navTitle
-      this.setState({ selectedNavItemId: null })
-      this.moveSelectionIndicatorTo(null)
+      setNavActiveState(null)
+    } else {
+      // set selectedNavItemId to matching nav entry
+      setNavActiveState(matchedNavTitle)
     }
   }
 
