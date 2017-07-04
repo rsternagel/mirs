@@ -21,7 +21,7 @@ const MainSkills = () => (
       <dt className="category">Frameworks</dt>
       <dd className="details">
         <ul>
-          <li className="middle">qooxdoo (JavaScript - Core-Team Mitglied)</li>
+          <li className="middle">qooxdoo (JS - ehem. Core-Team Mitglied)</li>
           <li className="middle">Django (Python)</li>
           <li className="middle">Flask (Python)</li>
           <li className="low">Angular 1 & 2 (JS)</li>
@@ -62,8 +62,8 @@ const MainSkills = () => (
       <dd className="details">
         <ul className="row">
           <li className="middle">nginx,</li>
-          <li className="low">Apache,</li>
-          <li className="low">Tomcat</li>
+          <li className="low">Apache HTTP Server,</li>
+          <li className="low">Apache Tomcat</li>
         </ul>
       </dd>
     </dl>
