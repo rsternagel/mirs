@@ -19,8 +19,8 @@ const Angebot = ({
     <ul className="noBullet">
       <li>… der Entwicklung einer komplexen Web-Applikation?</li>
       <li>… der Entwicklung eines kritischen Projektes, das in JavaScript (inkl. Node.js) geschrieben ist?</li>
-      <li>… der Erweiterung ihrer Infrastruktur oder ihres Toolings,
-        bspw. ihres Entwicklungs- oder Deploymentprozesses
+      <li>… der Erweiterung Ihrer Infrastruktur oder Ihres Toolings,
+        bspw. Ihres Entwicklungs- oder Deploymentprozesses
         (<abbr title="Continuous Integration">CI</abbr>/
         <abbr title="Continuous Delivery">CD</abbr>-Systeme)?
       </li>
