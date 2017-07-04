@@ -45,7 +45,7 @@ const Projekte = ({
 
       <div className="responsibility">
         <p>Über 8,7 Millionen 1&1-Bestandskunden von DSL und Mobile-Produkten
-          können ihre Vertrags- und Leistungsdetails über das{' '}
+          können Ihre Vertrags- und Leistungsdetails über das{' '}
           <strong>1&1 Control Center (Access)</strong>{' '}einsehen sowie
           diverse Einstellungen vornehmen (z.B. SIM-Karte bestellen).
         </p>
