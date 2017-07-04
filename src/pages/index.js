@@ -1,5 +1,4 @@
 import MdMailOutline from 'react-icons/lib/md/mail-outline'
-import FaPhone from 'react-icons/lib/fa/phone'
 
 import React from 'react'
 import PropTypes from 'prop-types'
@@ -37,7 +36,6 @@ const Homepage = ({
           <p className="contact">
             So erreichen Sie mich:
             <span><MdMailOutline />{' '} <a href="mailto:rsternagel@posteo.de">rsternagel@posteo.de</a></span>
-            <span><FaPhone />{' '} <a href="tel:+4917621746640">+49 176 / 21746640</a></span>
           </p>
         </div>
       </aside>
