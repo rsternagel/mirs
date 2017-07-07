@@ -3532,35 +3532,35 @@ gather-stream@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/gather-stream/-/gather-stream-1.0.0.tgz#b33994af457a8115700d410f317733cbe7a0904b"
 
-gatsby-link@1.0.0-beta.6:
-  version "1.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-1.0.0-beta.6.tgz#f108b5353e04eab3ac508d787c70011e645605f0"
+gatsby-link@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-1.0.1.tgz#018ba8b1028a34c7ede2d804a3bf7228aa5af91f"
   dependencies:
     prop-types "^15.5.8"
     ric "^1.3.0"
 
-gatsby-plugin-manifest@1.0.0-beta.6:
-  version "1.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-1.0.0-beta.6.tgz#08d81ebae29e3b1d78ca7f4e724da27ed25247de"
+gatsby-plugin-manifest@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-1.0.1.tgz#caeca2c1fac4160032680cfbe7d9e4b1266f9813"
   dependencies:
     bluebird "^3.5.0"
 
-gatsby-plugin-offline@1.0.0-beta.3:
-  version "1.0.0-beta.3"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-1.0.0-beta.3.tgz#4b2a59274f0e202ba78a41c4fe90cb6149239ab9"
+gatsby-plugin-offline@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-1.0.1.tgz#1ac610a6bf17cdefb6e8a0789db5c4601712aba8"
   dependencies:
     sw-precache "^5.0.0"
 
-gatsby-plugin-preact@1.0.0-beta.6:
-  version "1.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-preact/-/gatsby-plugin-preact-1.0.0-beta.6.tgz#7ba939fbc4e9d3bca8905c18d4fed0af26075bee"
+gatsby-plugin-preact@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-preact/-/gatsby-plugin-preact-1.0.1.tgz#f76accd95887870a7f43aa9d7aa4968fb5424aad"
   dependencies:
     preact "^8.1.0"
     preact-compat "^3.16.0"
 
-gatsby-plugin-sharp@1.0.0-beta.6:
-  version "1.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-1.0.0-beta.6.tgz#a2a7f60f9a2faf15a6543706e8123196b90197c0"
+gatsby-plugin-sharp@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-1.0.1.tgz#b961f9783815557edf67d862c82eaddfe35337e9"
   dependencies:
     async "^2.4.1"
     bluebird "^3.5.0"
@@ -3571,9 +3571,9 @@ gatsby-plugin-sharp@1.0.0-beta.6:
     progress "^1.1.8"
     sharp "^0.17.3"
 
-gatsby-source-filesystem@1.0.0-beta.6:
-  version "1.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-1.0.0-beta.6.tgz#ba94ba35797d853bdd056d3d1ebb484c81e091db"
+gatsby-source-filesystem@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-1.0.1.tgz#d7229fbbbdc895ef669a3101d6199df90c31e5e7"
   dependencies:
     babel-cli "^6.24.1"
     bluebird "^3.5.0"
@@ -3581,15 +3581,15 @@ gatsby-source-filesystem@1.0.0-beta.6:
     pretty-bytes "^4.0.2"
     slash "^1.0.0"
 
-gatsby-transformer-sharp@1.0.0-beta.6:
-  version "1.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-1.0.0-beta.6.tgz#25cd9ed8f950aa3125ab59b81d6afd4a67d5f929"
+gatsby-transformer-sharp@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-1.0.1.tgz#52493b9f68c3d2c8ebb0fa892cfd17b0168b37db"
   dependencies:
     bluebird "^3.5.0"
 
-gatsby@1.0.0-beta.6:
-  version "1.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.0.0-beta.6.tgz#0c4acd85e959f1e5498df7a323656cd754cbde5d"
+gatsby@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.0.5.tgz#0d554bd049ffd50ecd8fd054f6387213270790fa"
   dependencies:
     async "^2.1.2"
     babel-core "^6.24.1"
@@ -3627,7 +3627,7 @@ gatsby@1.0.0-beta.6:
     glob "^7.1.1"
     graphql "^0.10.3"
     graphql-relay "^0.5.1"
-    graphql-skip-limit "^1.0.0-beta.6"
+    graphql-skip-limit "^1.0.1"
     gray-matter "^2.1.0"
     hapi "^8.5.1"
     history "^4.6.2"
@@ -3947,9 +3947,9 @@ graphql-relay@^0.5.1:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/graphql-relay/-/graphql-relay-0.5.2.tgz#40ff714efd60c2cd89e0bcc79e2afa6d87fa8673"
 
-graphql-skip-limit@^1.0.0-beta.6:
-  version "1.0.0-beta.6-alpha.320adb17"
-  resolved "https://registry.yarnpkg.com/graphql-skip-limit/-/graphql-skip-limit-1.0.0-beta.6-alpha.320adb17.tgz#1147f7465d96c8c1d716e77908b277dbb46a8dd4"
+graphql-skip-limit@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/graphql-skip-limit/-/graphql-skip-limit-1.0.1.tgz#71c8890564af5df5f428e645177280d5d783dcc6"
 
 graphql@^0.10.1, graphql@^0.10.3:
   version "0.10.3"
@@ -8963,9 +8963,9 @@ typography-normalize@^0.14.0:
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/typography-normalize/-/typography-normalize-0.14.0.tgz#1d77c1fe2aaf4a51b3673c4c85c85a65a2d4b573"
 
-typography@^0.15.10:
-  version "0.15.10"
-  resolved "https://registry.yarnpkg.com/typography/-/typography-0.15.10.tgz#e7196926d678047ab1f7058900d3a6fdb1164cb3"
+typography@^0.15.12:
+  version "0.15.12"
+  resolved "https://registry.yarnpkg.com/typography/-/typography-0.15.12.tgz#333189035f85e585c0a5ac72669dd508e394a73e"
   dependencies:
     compass-vertical-rhythm "^1.3.0"
     decamelize "^1.2.0"
