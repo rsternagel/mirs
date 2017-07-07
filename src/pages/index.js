@@ -71,7 +71,7 @@ const Homepage = ({
           Mein bevorzugtes Einsatzgebiet ist Frankfurt am Main und das umliegende Rhein-Main Gebiet.
         </p>
 
-        <p>Ich bin ab <time>Juni 2017</time> verfügbar.</p>
+        <p>Ich bin ab <time>Mitte Oktober 2017</time> verfügbar.</p>
       </section>
     </section>
     <style jsx>{`
