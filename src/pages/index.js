@@ -71,7 +71,8 @@ const Homepage = ({
           Mein bevorzugtes Einsatzgebiet ist Frankfurt am Main und das umliegende Rhein-Main Gebiet.
         </p>
 
-        <p>Ich bin ab <time>Mitte Oktober 2017</time> verfügbar.</p>
+        <p>Ich bin ab <time>Mitte November 2017</time> verfügbar. Mein Wunschsetup wären
+           3 Tage die Woche - am besten remote.</p>
       </section>
     </section>
     <style jsx>{`
