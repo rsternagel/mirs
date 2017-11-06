@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Tools = () => (
+const Tools = () =>
   <div>
     <dl className="skill-list">
       <dt className="category">Dev</dt>
@@ -86,7 +86,9 @@ const Tools = () => (
     </dl>
 
     <dl className="skill-list">
-      <dt className="category"><abbr title="Distributed Version Control System">(D)VCS</abbr></dt>
+      <dt className="category">
+        <abbr title="Distributed Version Control System">(D)VCS</abbr>
+      </dt>
       <dd className="details">
         <ul className="row">
           <li className="high">Git,</li>
@@ -124,12 +126,7 @@ const Tools = () => (
     </dl>
     */}
 
-    <style jsx>{`
-    `}</style>
+    <style jsx>{``}</style>
   </div>
-)
 
 export default Tools
-
-
-

@@ -9,10 +9,7 @@ import Footer from '../components/Footer'
 
 import { m } from '../utils/breakpoints'
 
-const Layout = ({
-  location,
-  children,
-}) => (
+const Layout = ({ location, children }) =>
   <div>
     <div className="container">
       <header className="masthead">
@@ -79,11 +76,12 @@ const Layout = ({
       }
 
       @media (max-width: ${m}) {
-        .masthead { display: block; }
+        .masthead {
+          display: block;
+        }
       }
     `}</style>
   </div>
-)
 
 Layout.propTypes = {
   children: PropTypes.func.isRequired,

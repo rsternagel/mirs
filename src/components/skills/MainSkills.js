@@ -1,9 +1,11 @@
 import React from 'react'
 
-const MainSkills = () => (
+const MainSkills = () =>
   <div>
     <dl className="skill-list">
-      <dt className="category">Programmiersprachen /<br />Plattformen</dt>
+      <dt className="category">
+        Programmiersprachen /<br />Plattformen
+      </dt>
       <dd className="details">
         <ul>
           <li className="high">JavaScript (inkl. ES6) (8 Jahre)</li>
@@ -68,12 +70,7 @@ const MainSkills = () => (
       </dd>
     </dl>
 
-
-    <style jsx>{`
-    `}</style>
+    <style jsx>{``}</style>
   </div>
-)
 
 export default MainSkills
-
-

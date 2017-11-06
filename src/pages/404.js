@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 const FourOFour = ({
   data: { site: { siteMetadata: { title: siteTitle } } },
   data: { site: { siteMetadata: { domain } } },
-}) => (
+}) =>
   <div>
     <Helmet>
       <title>{`Fehler 404 | ${siteTitle}`}</title>
@@ -13,14 +13,12 @@ const FourOFour = ({
 
     <h1>Sorry, diese Seite existiert nicht!</h1>
     <p>
-      Die Seite oder der eingegebene Pfad (z.B.: {`www.${domain}/michGibtEsNicht`}),
-      ist entweder falsch geschrieben oder nicht mehr verfügbar.
+      Die Seite oder der eingegebene Pfad (z.B.:{' '}
+      {`www.${domain}/michGibtEsNicht`}), ist entweder falsch geschrieben oder
+      nicht mehr verfügbar.
     </p>
-    <p>
-      :_(
-    </p>
+    <p>:_(</p>
   </div>
-)
 
 FourOFour.propTypes = {
   data: PropTypes.shape({
@@ -36,13 +34,12 @@ FourOFour.propTypes = {
 export default FourOFour
 
 export const pageQuery = graphql`
-query FOFQuery {
-  site {
-    siteMetadata {
-      title
-      domain
+  query FOFQuery {
+    site {
+      siteMetadata {
+        title
+        domain
+      }
     }
   }
- }
 `
-
