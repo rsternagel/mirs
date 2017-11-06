@@ -1,8 +1,7 @@
 import React from 'react'
 
-const MiscSkills = () => (
+const MiscSkills = () =>
   <div>
-
     <dl className="skill-list">
       <dt className="category">Agile Methoden</dt>
       <dd className="details">
@@ -37,12 +36,7 @@ const MiscSkills = () => (
       </dd>
     </dl>
 
-    <style jsx>{`
-    `}</style>
+    <style jsx>{``}</style>
   </div>
-)
 
 export default MiscSkills
-
-
-

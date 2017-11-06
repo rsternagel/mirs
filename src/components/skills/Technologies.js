@@ -1,8 +1,7 @@
 import React from 'react'
 
-const Technologies = () => (
+const Technologies = () =>
   <div>
-
     <dl className="skill-list">
       <dt className="category">Webtechnologien</dt>
       <dd className="details">
@@ -74,7 +73,9 @@ const Technologies = () => (
     */}
 
     <dl className="skill-list">
-      <dt className="category"><abbr title="Domain Specific Language">DSL</abbr></dt>
+      <dt className="category">
+        <abbr title="Domain Specific Language">DSL</abbr>
+      </dt>
       <dd className="details">
         <ul className="row">
           <li className="high">Regular Expressions</li>
@@ -82,13 +83,7 @@ const Technologies = () => (
       </dd>
     </dl>
 
-    <style jsx>{`
-    `}</style>
+    <style jsx>{``}</style>
   </div>
-)
 
 export default Technologies
-
-
-
-

@@ -9,20 +9,17 @@ import MiscSkills from '../../components/skills/MiscSkills'
 
 import { s, m } from '../../utils/breakpoints'
 
-const Skills = ({
-  data: { site: { siteMetadata: { title: siteTitle } } },
-}) => (
+const Skills = ({ data: { site: { siteMetadata: { title: siteTitle } } } }) =>
   <div>
-
     <Helmet>
       <title>{`Kenntnisse | ${siteTitle}`}</title>
     </Helmet>
 
     <h1>Kenntnisse</h1>
-    <p>Diese Liste spiegelt wider <span
-       className="low">woher ich komme</span>, <span
-       className="middle">was ich bevorzuge</span> und <span
-       className="high">wofür ich brenne</span>.
+    <p>
+      Diese Liste spiegelt wider <span className="low">woher ich komme</span>,{' '}
+      <span className="middle">was ich bevorzuge</span> und{' '}
+      <span className="high">wofür ich brenne</span>.
     </p>
 
     <div className="skills">
@@ -94,22 +91,28 @@ const Skills = ({
       }
 
       /* Media Queries */
-      /* stylelint-disable declaration-block-single-line-max-declarations */
 
       @media (max-width: ${m}) {
-        .skills :global(.skill-list) { display: block; }
-        .skills :global(.category) { width: 100%; }
-        .skills :global(.details) { width: 100%; }
+        .skills :global(.skill-list) {
+          display: block;
+        }
+
+        .skills :global(.category) {
+          width: 100%;
+        }
+
+        .skills :global(.details) {
+          width: 100%;
+        }
       }
 
       @media (max-width: ${s}) {
-        .skills :global(.row) { display: block; }
+        .skills :global(.row) {
+          display: block;
+        }
       }
-
-      /* stylelint-enable */
     `}</style>
   </div>
-)
 
 Skills.propTypes = {
   data: PropTypes.shape({
@@ -124,12 +127,11 @@ Skills.propTypes = {
 export default Skills
 
 export const pageQuery = graphql`
-query SkillsQuery {
-  site {
-    siteMetadata {
-      title
+  query SkillsQuery {
+    site {
+      siteMetadata {
+        title
+      }
     }
   }
- }
 `
-

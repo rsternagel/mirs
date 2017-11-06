@@ -15,8 +15,11 @@ class Nav extends React.Component {
     this.navHtmlElems = new Map()
 
     const { pathname } = props
-    const selectedNavItemId = this.getInitialSelectedNav(pathname, this.navTitles)
-    const indicatorWrapperStyle = { display: "none" }
+    const selectedNavItemId = this.getInitialSelectedNav(
+      pathname,
+      this.navTitles,
+    )
+    const indicatorWrapperStyle = { display: 'none' }
 
     this.state = { selectedNavItemId, indicatorWrapperStyle }
   }
@@ -25,16 +28,22 @@ class Nav extends React.Component {
     const selectedId = this.state.selectedNavItemId
 
     window.setTimeout(() => {
-      if (selectedId === null || this.navHtmlElems.has(selectedId) === false) { return }
+      if (selectedId === null || this.navHtmlElems.has(selectedId) === false) {
+        return
+      }
 
       const selectedHtmlElem = this.navHtmlElems.get(selectedId)
       this.moveSelectionIndicatorTo(selectedHtmlElem)
 
       const mql = window.matchMedia(`(max-width: ${s})`)
-      mql.addListener(function () {
-        return () => this.moveSelectionIndicatorTo(this.navHtmlElems.get(this.state.selectedNavItemId))
-      }.bind(this)())
-
+      mql.addListener(
+        function() {
+          return () =>
+            this.moveSelectionIndicatorTo(
+              this.navHtmlElems.get(this.state.selectedNavItemId),
+            )
+        }.bind(this)(),
+      )
     }, 500)
   }
 
@@ -44,16 +53,17 @@ class Nav extends React.Component {
     let matchedNavTitle = ''
     let curPageHasOneOfNavTitlesList = []
 
-    this.navTitles.forEach((title) => {
-      let isHome = (pathname === '/' && title === home)
-      let hasNavTitleMatchingPathname = (pathname.search(new RegExp(`/${title}/?`)) !== -1)
+    this.navTitles.forEach(title => {
+      let isHome = pathname === '/' && title === home
+      let hasNavTitleMatchingPathname =
+        pathname.search(new RegExp(`/${title}/?`)) !== -1
       if (hasNavTitleMatchingPathname && matchedNavTitle === '') {
         matchedNavTitle = title
       }
       curPageHasOneOfNavTitlesList.push(isHome || hasNavTitleMatchingPathname)
     })
 
-    const setNavActiveState = (entry) => {
+    const setNavActiveState = entry => {
       if (entry !== null) {
         const selectedHtmlElem = this.navHtmlElems.get(entry)
         this.setState({ selectedNavItemId: entry })
@@ -84,7 +94,9 @@ class Nav extends React.Component {
   componentDidUpdate(prevProps, prevState) {
     const selectedId = this.state.selectedNavItemId
 
-    if (selectedId === null || this.navHtmlElems.has(selectedId) === false) { return }
+    if (selectedId === null || this.navHtmlElems.has(selectedId) === false) {
+      return
+    }
 
     if (this.state.selectedNavItemId !== prevState.selectedNavItemId) {
       const selectedHtmlElem = this.navHtmlElems.get(selectedId)
@@ -95,9 +107,9 @@ class Nav extends React.Component {
   getInitialSelectedNav(path, navTitles) {
     let selectedNavItemId = ''
 
-    navTitles.forEach((title) => {
-      let hasNavTitleMatchingPathname = (path.search(new RegExp(`/${title}/?`)) !== -1)
-
+    navTitles.forEach(title => {
+      let hasNavTitleMatchingPathname =
+        path.search(new RegExp(`/${title}/?`)) !== -1
       if (hasNavTitleMatchingPathname) {
         selectedNavItemId = title
       }
@@ -110,7 +122,7 @@ class Nav extends React.Component {
     return selectedNavItemId
   }
 
-  handleClick = (e) => {
+  handleClick = e => {
     const newNavItemId = e.currentTarget.id
     const { selectedNavItemId } = this.state
 
@@ -120,22 +132,29 @@ class Nav extends React.Component {
   }
 
   moveSelectionIndicatorTo(newSelectedItem) {
-    let indicatorWrapperStyle = { display: "none" }
+    let indicatorWrapperStyle = { display: 'none' }
     if (newSelectedItem !== null && newSelectedItem !== undefined) {
-      const { clientHeight, clientWidth, offsetLeft, offsetTop } = newSelectedItem
+      const {
+        clientHeight,
+        clientWidth,
+        offsetLeft,
+        offsetTop,
+      } = newSelectedItem
       indicatorWrapperStyle = {
         height: clientHeight,
-        transform: `translateX(${Math.floor(offsetLeft)}px) translateY(${Math.floor(offsetTop)}px)`,
+        transform: `translateX(${Math.floor(
+          offsetLeft,
+        )}px) translateY(${Math.floor(offsetTop)}px)`,
         width: clientWidth,
       }
     }
     this.setState({ indicatorWrapperStyle })
   }
 
-  render () {
+  render() {
     let navLinks = []
 
-    this.navTitles.forEach((item) => {
+    this.navTitles.forEach(item => {
       let liElem = {}
       let linkTarget = {}
       let dynamicAttrs = {}
@@ -144,27 +163,31 @@ class Nav extends React.Component {
         dynamicAttrs['data-selected'] = true
       }
 
-      linkTarget = (item === 'home')
-        ? '/'
-        : `/${item}/`
+      linkTarget = item === 'home' ? '/' : `/${item}/`
 
-      liElem = <li key={item}
-                   id={item}
-                   onClick={this.handleClick}
-                   ref={(navHtmlElem) => { this.navHtmlElems.set(item, navHtmlElem) }}
-                   {...dynamicAttrs}>
-        <Link to={linkTarget}>
-          {item[0].toUpperCase().concat(item.substr(1))}
-        </Link>
-      </li>
-
+      liElem = (
+        <li
+          key={item}
+          id={item}
+          onClick={this.handleClick}
+          ref={navHtmlElem => {
+            this.navHtmlElems.set(item, navHtmlElem)
+          }}
+          {...dynamicAttrs}>
+          <Link to={linkTarget}>
+            {item[0].toUpperCase().concat(item.substr(1))}
+          </Link>
+        </li>
+      )
       navLinks.push(liElem)
     })
 
     return (
       <nav>
         <ul>
-          <li className="nav-indicator-wrapper" style={this.state.indicatorWrapperStyle}>
+          <li
+            className="nav-indicator-wrapper"
+            style={this.state.indicatorWrapperStyle}>
             <div className="nav-indicator" />
           </li>
           {navLinks}
@@ -177,7 +200,7 @@ class Nav extends React.Component {
 
           nav {
             flex: 8 1 0;
-            font-family: 'Open Sans', Palatino, 'Palatino Linotype', Georgia, serif;
+            font-family: 'Open Sans', Palatino, 'Palatino Linotype', serif;
             text-transform: uppercase;
             font-size: 90%;
           }
@@ -234,17 +257,19 @@ class Nav extends React.Component {
           }
 
           /* Media Queries */
-          /* stylelint-disable declaration-block-single-line-max-declarations */
 
           @media (max-width: ${s}) {
-            ul { flex-direction: column; align-items: flex-start; }
+            ul {
+              flex-direction: column;
+              align-items: flex-start;
+            }
           }
 
           @media print {
-            nav { display: none; }
+            nav {
+              display: none;
+            }
           }
-
-          /* stylelint-enable */
         `}</style>
       </nav>
     )
@@ -256,4 +281,3 @@ Nav.propTypes = {
 }
 
 export default Nav
-

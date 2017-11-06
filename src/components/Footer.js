@@ -6,11 +6,11 @@ import Link from 'gatsby-link'
 
 import { s } from '../utils/breakpoints'
 
-const Footer = () => (
+const Footer = () =>
   <footer>
     <div className="meta">
       <span className="copyright">
-        © { new Date().getFullYear() }
+        © {new Date().getFullYear()}
         <em>Richard Sternagel</em>
       </span>
       {/*
@@ -87,15 +87,21 @@ const Footer = () => (
       /* Media Queries */
 
       @media (max-width: ${s}) {
-        .copyright { display: block; }
-        .icons { display: block; }
+        .copyright {
+          display: block;
+        }
+
+        .icons {
+          display: block;
+        }
       }
 
       @media print {
-        .metaLinks { display: none; }
+        .metaLinks {
+          display: none;
+        }
       }
     `}</style>
   </footer>
-)
 
 export default Footer
