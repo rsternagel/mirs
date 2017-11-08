@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Technologies = () =>
+const Technologies = () => (
   <div>
     <dl className="skill-list">
       <dt className="category">Webtechnologien</dt>
@@ -85,5 +85,6 @@ const Technologies = () =>
 
     <style jsx>{``}</style>
   </div>
+)
 
 export default Technologies

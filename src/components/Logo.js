@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import logoMirs from './img/logo_mirs.png'
 
-const Logo = () =>
+const Logo = () => (
   <div className="logo">
     <Link to={'/'}>
       <img
@@ -26,5 +26,6 @@ const Logo = () =>
       }
     `}</style>
   </div>
+)
 
 export default Logo

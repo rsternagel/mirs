@@ -7,7 +7,9 @@ import logoQx from '../../components/img/logo_qooxdoo.png'
 
 import { m } from '../../utils/breakpoints'
 
-const Projekte = ({ data: { site: { siteMetadata: { title: siteTitle } } } }) =>
+const Projekte = ({
+  data: { site: { siteMetadata: { title: siteTitle } } }
+}) => (
   <div>
     <Helmet>
       <title>{`Projekte | ${siteTitle}`}</title>
@@ -238,15 +240,16 @@ const Projekte = ({ data: { site: { siteMetadata: { title: siteTitle } } } }) =>
       }
     `}</style>
   </div>
+)
 
 Projekte.propTypes = {
   data: PropTypes.shape({
     site: PropTypes.shape({
       siteMetadata: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-      }).isRequired,
-    }).isRequired,
-  }).isRequired,
+        title: PropTypes.string.isRequired
+      }).isRequired
+    }).isRequired
+  }).isRequired
 }
 
 export default Projekte

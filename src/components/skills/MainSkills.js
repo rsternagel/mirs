@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MainSkills = () =>
+const MainSkills = () => (
   <div>
     <dl className="skill-list">
       <dt className="category">
@@ -72,5 +72,6 @@ const MainSkills = () =>
 
     <style jsx>{``}</style>
   </div>
+)
 
 export default MainSkills

@@ -9,7 +9,7 @@ import MiscSkills from '../../components/skills/MiscSkills'
 
 import { s, m } from '../../utils/breakpoints'
 
-const Skills = ({ data: { site: { siteMetadata: { title: siteTitle } } } }) =>
+const Skills = ({ data: { site: { siteMetadata: { title: siteTitle } } } }) => (
   <div>
     <Helmet>
       <title>{`Kenntnisse | ${siteTitle}`}</title>
@@ -113,15 +113,16 @@ const Skills = ({ data: { site: { siteMetadata: { title: siteTitle } } } }) =>
       }
     `}</style>
   </div>
+)
 
 Skills.propTypes = {
   data: PropTypes.shape({
     site: PropTypes.shape({
       siteMetadata: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-      }).isRequired,
-    }).isRequired,
-  }).isRequired,
+        title: PropTypes.string.isRequired
+      }).isRequired
+    }).isRequired
+  }).isRequired
 }
 
 export default Skills

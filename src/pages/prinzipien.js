@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 const Prinzipien = ({
-  data: { site: { siteMetadata: { title: siteTitle } } },
-}) =>
+  data: { site: { siteMetadata: { title: siteTitle } } }
+}) => (
   <div>
     <Helmet>
       <title>{`Impressum | ${siteTitle}`}</title>
@@ -13,9 +13,7 @@ const Prinzipien = ({
     <h1>Prinzipien</h1>
     <p>
       Angelehnt an{' '}
-      <a href="http://www.python.org/dev/peps/pep-0020/">
-        The Zen of Python
-      </a>{' '}
+      <a href="http://www.python.org/dev/peps/pep-0020/">The Zen of Python</a>{' '}
       und das <a href="http://agilemanifesto.org/ ">Agile Manifesto</a>, einige
       meiner Überzeugungen:
     </p>
@@ -53,7 +51,9 @@ const Prinzipien = ({
         <ul>
           <li>No code (if possible) over some code</li>
           <li>
-            As few code as possible over too much code (<abbr title="You ain't gonna need it">YAGNI</abbr>{' '}
+            As few code as possible over too much code (<abbr title="You ain't gonna need it">
+              YAGNI
+            </abbr>{' '}
             <span className="amp">&</span>{' '}
             <abbr title="Keep It Simple, Stupid">KISS</abbr>)
           </li>
@@ -71,15 +71,16 @@ const Prinzipien = ({
 
     <style jsx>{``}</style>
   </div>
+)
 
 Prinzipien.propTypes = {
   data: PropTypes.shape({
     site: PropTypes.shape({
       siteMetadata: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-      }).isRequired,
-    }).isRequired,
-  }).isRequired,
+        title: PropTypes.string.isRequired
+      }).isRequired
+    }).isRequired
+  }).isRequired
 }
 
 export default Prinzipien

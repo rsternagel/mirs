@@ -9,16 +9,14 @@ import Footer from '../components/Footer'
 
 import { m } from '../utils/breakpoints'
 
-const Layout = ({ location, children }) =>
+const Layout = ({ location, children }) => (
   <div>
     <div className="container">
       <header className="masthead">
         <Logo />
         <Nav pathname={location.pathname} />
       </header>
-      <main className="maincontent">
-        {children()}
-      </main>
+      <main className="maincontent">{children()}</main>
     </div>
     <Footer />
 
@@ -82,12 +80,13 @@ const Layout = ({ location, children }) =>
       }
     `}</style>
   </div>
+)
 
 Layout.propTypes = {
   children: PropTypes.func.isRequired,
   location: PropTypes.shape({
-    pathname: PropTypes.string.isRequired,
-  }).isRequired,
+    pathname: PropTypes.string.isRequired
+  }).isRequired
 }
 
 export default Layout
