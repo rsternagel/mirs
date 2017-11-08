@@ -8,7 +8,9 @@ import Helmet from 'react-helmet'
 import profilePic from '../components/img/profile_pic.jpg'
 import { s, m } from '../utils/breakpoints'
 
-const Homepage = ({ data: { site: { siteMetadata: { title: siteTitle } } } }) =>
+const Homepage = ({
+  data: { site: { siteMetadata: { title: siteTitle } } }
+}) => (
   <div>
     <Helmet>
       <title>{`${siteTitle}`}</title>
@@ -37,7 +39,7 @@ const Homepage = ({ data: { site: { siteMetadata: { title: siteTitle } } } }) =>
           <p className="contact">
             So erreichen Sie mich:
             <span>
-              <MdMailOutline /> {' '}
+              <MdMailOutline />{' '}
               <a href="mailto:rsternagel@posteo.de">rsternagel@posteo.de</a>
             </span>
           </p>
@@ -197,15 +199,16 @@ const Homepage = ({ data: { site: { siteMetadata: { title: siteTitle } } } }) =>
       }
     `}</style>
   </div>
+)
 
 Homepage.propTypes = {
   data: PropTypes.shape({
     site: PropTypes.shape({
       siteMetadata: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-      }).isRequired,
-    }).isRequired,
-  }).isRequired,
+        title: PropTypes.string.isRequired
+      }).isRequired
+    }).isRequired
+  }).isRequired
 }
 
 export default Homepage

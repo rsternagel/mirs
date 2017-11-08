@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 const Datenschutz = ({
-  data: { site: { siteMetadata: { title: siteTitle } } },
-}) =>
+  data: { site: { siteMetadata: { title: siteTitle } } }
+}) => (
   <div>
     <Helmet>
       <title>{`Datenschutz | ${siteTitle}`}</title>
@@ -51,9 +51,7 @@ const Datenschutz = ({
     </p>
     <p>
       Sie können viele Online-Anzeigen-Cookies von Unternehmen über die{' '}
-      <a href="http://www.aboutads.info/choices/">
-        US-amerikanische Seite
-      </a>{' '}
+      <a href="http://www.aboutads.info/choices/">US-amerikanische Seite</a>{' '}
       oder die{' '}
       <a href="http://www.youronlinechoices.com/uk/your-ad-choices/">
         EU-Seite
@@ -108,15 +106,16 @@ const Datenschutz = ({
       </a>.
     </p>
   </div>
+)
 
 Datenschutz.propTypes = {
   data: PropTypes.shape({
     site: PropTypes.shape({
       siteMetadata: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-      }).isRequired,
-    }).isRequired,
-  }).isRequired,
+        title: PropTypes.string.isRequired
+      }).isRequired
+    }).isRequired
+  }).isRequired
 }
 
 export default Datenschutz

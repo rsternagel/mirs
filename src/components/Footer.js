@@ -6,7 +6,7 @@ import Link from 'gatsby-link'
 
 import { s } from '../utils/breakpoints'
 
-const Footer = () =>
+const Footer = () => (
   <footer>
     <div className="meta">
       <span className="copyright">
@@ -103,5 +103,6 @@ const Footer = () =>
       }
     `}</style>
   </footer>
+)
 
 export default Footer

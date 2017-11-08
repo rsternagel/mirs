@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 const Impressum = ({
-  data: { site: { siteMetadata: { title: siteTitle } } },
-}) =>
+  data: { site: { siteMetadata: { title: siteTitle } } }
+}) => (
   <div>
     <Helmet>
       <title>{`Impressum | ${siteTitle}`}</title>
@@ -36,15 +36,16 @@ const Impressum = ({
       }
     `}</style>
   </div>
+)
 
 Impressum.propTypes = {
   data: PropTypes.shape({
     site: PropTypes.shape({
       siteMetadata: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-      }).isRequired,
-    }).isRequired,
-  }).isRequired,
+        title: PropTypes.string.isRequired
+      }).isRequired
+    }).isRequired
+  }).isRequired
 }
 
 export default Impressum

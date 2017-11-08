@@ -17,7 +17,7 @@ class Nav extends React.Component {
     const { pathname } = props
     const selectedNavItemId = this.getInitialSelectedNav(
       pathname,
-      this.navTitles,
+      this.navTitles
     )
     const indicatorWrapperStyle = { display: 'none' }
 
@@ -40,9 +40,9 @@ class Nav extends React.Component {
         function() {
           return () =>
             this.moveSelectionIndicatorTo(
-              this.navHtmlElems.get(this.state.selectedNavItemId),
+              this.navHtmlElems.get(this.state.selectedNavItemId)
             )
-        }.bind(this)(),
+        }.bind(this)()
       )
     }, 500)
   }
@@ -138,14 +138,14 @@ class Nav extends React.Component {
         clientHeight,
         clientWidth,
         offsetLeft,
-        offsetTop,
+        offsetTop
       } = newSelectedItem
       indicatorWrapperStyle = {
         height: clientHeight,
         transform: `translateX(${Math.floor(
-          offsetLeft,
+          offsetLeft
         )}px) translateY(${Math.floor(offsetTop)}px)`,
-        width: clientWidth,
+        width: clientWidth
       }
     }
     this.setState({ indicatorWrapperStyle })
@@ -166,6 +166,7 @@ class Nav extends React.Component {
       linkTarget = item === 'home' ? '/' : `/${item}/`
 
       liElem = (
+        // eslint-disable-next-line jsx-a11y/click-events-have-key-events
         <li
           key={item}
           id={item}
@@ -277,7 +278,7 @@ class Nav extends React.Component {
 }
 
 Nav.propTypes = {
-  pathname: PropTypes.string.isRequired,
+  pathname: PropTypes.string.isRequired
 }
 
 export default Nav

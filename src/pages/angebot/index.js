@@ -4,7 +4,9 @@ import Helmet from 'react-helmet'
 
 import MdMailOutline from 'react-icons/lib/md/mail-outline'
 
-const Angebot = ({ data: { site: { siteMetadata: { title: siteTitle } } } }) =>
+const Angebot = ({
+  data: { site: { siteMetadata: { title: siteTitle } } }
+}) => (
   <div>
     <Helmet>
       <title>{`Angebot | ${siteTitle}`}</title>
@@ -21,7 +23,9 @@ const Angebot = ({ data: { site: { siteMetadata: { title: siteTitle } } } }) =>
       </li>
       <li>
         … der Erweiterung Ihrer Infrastruktur oder Ihres Toolings, bspw. Ihres
-        Entwicklungs- oder Deploymentprozesses (<abbr title="Continuous Integration">CI</abbr>/
+        Entwicklungs- oder Deploymentprozesses (<abbr title="Continuous Integration">
+          CI
+        </abbr>/
         <abbr title="Continuous Delivery">CD</abbr>-Systeme)?
       </li>
     </ul>
@@ -38,14 +42,15 @@ const Angebot = ({ data: { site: { siteMetadata: { title: siteTitle } } } }) =>
       <li>
         Ich kenne aktuelle Frameworks (<a href="(https://angular.io/">
           Angular
-        </a>, <a href="https://vuejs.org/">Vue</a>) und Libraries (<a href="https://facebook.github.io/react/">React</a>)
-        gut.
+        </a>, <a href="https://vuejs.org/">Vue</a>) und Libraries (<a href="https://facebook.github.io/react/">
+          React
+        </a>) gut.
       </li>
       <li>
         Mein Schwerpunkt liegt auf{' '}
         <a href="https://facebook.github.io/react/">React</a> und seinem
         Ökosystem (z.B. <a href="http://redux.js.org/">Redux</a>,{' '}
-        <a href="http://graphql.org/">GraphQL</a>, {' '}
+        <a href="http://graphql.org/">GraphQL</a>,{' '}
         <a href="https://facebook.github.io/relay/">Relay</a>,{' '}
         <a href="https://webpack.js.org/">webpack</a>).
       </li>
@@ -111,7 +116,7 @@ const Angebot = ({ data: { site: { siteMetadata: { title: siteTitle } } } }) =>
       Nennen Sie mir Ihre Herausforderungen, bei denen ich Sie unterstützen
       kann:
       <span>
-        <MdMailOutline /> {' '}
+        <MdMailOutline />{' '}
         <a href="mailto:rsternagel@posteo.de">rsternagel@posteo.de</a>
       </span>
     </p>
@@ -149,15 +154,16 @@ const Angebot = ({ data: { site: { siteMetadata: { title: siteTitle } } } }) =>
       }
     `}</style>
   </div>
+)
 
 Angebot.propTypes = {
   data: PropTypes.shape({
     site: PropTypes.shape({
       siteMetadata: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-      }).isRequired,
-    }).isRequired,
-  }).isRequired,
+        title: PropTypes.string.isRequired
+      }).isRequired
+    }).isRequired
+  }).isRequired
 }
 
 export default Angebot
