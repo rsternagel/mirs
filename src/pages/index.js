@@ -87,8 +87,8 @@ const Homepage = ({
         </p>
 
         <p>
-          Ich bin ab <time>Mitte November 2017</time> verfügbar. Mein
-          Wunschsetup wären 3 Tage die Woche - am besten remote.
+          Ich bin ab <time>Mitte Februar 2018</time> verfügbar. Mein Wunschsetup
+          wären 3 Tage die Woche - am besten remote.
         </p>
       </section>
     </section>
