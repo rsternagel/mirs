@@ -21,6 +21,85 @@ const Projekte = ({
 
     <section className="project-list">
       <div className="project">
+        <img
+          src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iRWJlbmVfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAxNzUuNiA2MiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTc1LjYgNjIiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZD0iTTE0NC4yLDBjLTcsMC0xMy41LDIuMy0xOC44LDYuMkMxMjAuMSwyLjMsMTEzLjYsMCwxMDYuNiwwYy03LDAtMTMuNSwyLjMtMTguOCw2LjJDODIuNSwyLjMsNzYuMSwwLDY5LDANCgljLTcsMC0xMy41LDIuMy0xOC44LDYuMkM0NSwyLjMsMzguNSwwLDMxLjQsMEMxNC4xLDAsMCwxMy45LDAsMzFzMTQuMSwzMSwzMS40LDMxYzcsMCwxMy41LTIuMywxOC44LTYuMkM1NS41LDU5LjcsNjIsNjIsNjksNjINCgljNywwLDEzLjUtMi4zLDE4LjgtNi4yQzkzLDU5LjcsOTkuNSw2MiwxMDYuNiw2MmM3LDAsMTMuNS0yLjMsMTguOC02LjJjNS4yLDMuOSwxMS43LDYuMiwxOC44LDYuMmMxNy4zLDAsMzEuNC0xMy45LDMxLjQtMzENCglTMTYxLjUsMCwxNDQuMiwweiBNMTI1LjQsNDdjLTMuOC00LjMtNi4xLTkuOS02LjEtMTZjMC02LjEsMi4zLTExLjcsNi4xLTE2YzMuOCw0LjMsNi4xLDkuOSw2LjEsMTZDMTMxLjUsMzcuMSwxMjkuMiw0Mi43LDEyNS40LDQ3DQoJeiBNODcuOCw0N2MtMy44LTQuMy02LjEtOS45LTYuMS0xNmMwLTYuMSwyLjMtMTEuNyw2LjEtMTZjMy44LDQuMyw2LjEsOS45LDYuMSwxNkM5My45LDM3LjEsOTEuNiw0Mi43LDg3LjgsNDd6IE01MC4yLDQ3DQoJYy0zLjgtNC4zLTYuMS05LjktNi4xLTE2YzAtNi4xLDIuMy0xMS43LDYuMS0xNmMzLjgsNC4zLDYuMSw5LjksNi4xLDE2QzU2LjQsMzcuMSw1NCw0Mi43LDUwLjIsNDd6IE02LjUsMzENCgljMC0xMy41LDExLjItMjQuNSwyNC45LTI0LjVjNS4xLDAsOS45LDEuNSwxMy45LDQuMmMtNC44LDUuNC03LjcsMTIuNS03LjcsMjAuM2MwLDcuOCwyLjksMTQuOSw3LjcsMjAuM2MtNCwyLjYtOC43LDQuMi0xMy45LDQuMg0KCUMxNy43LDU1LjUsNi41LDQ0LjUsNi41LDMxeiBNNTUuMSw1MS4zYzQuOC01LjQsNy43LTEyLjUsNy43LTIwLjNjMC03LjgtMi45LTE0LjktNy43LTIwLjNjNC0yLjYsOC43LTQuMiwxMy45LTQuMg0KCXM5LjksMS41LDEzLjksNC4yYy00LjgsNS40LTcuOCwxMi41LTcuOCwyMC4zYzAsNy44LDIuOSwxNC45LDcuOCwyMC4zYy00LDIuNi04LjcsNC4yLTEzLjksNC4yQzYzLjksNTUuNSw1OS4xLDUzLjksNTUuMSw1MS4zeg0KCSBNOTIuNyw1MS4zYzQuOC01LjQsNy44LTEyLjUsNy44LTIwLjNjMC03LjgtMi45LTE0LjktNy44LTIwLjNjNC0yLjYsOC43LTQuMiwxMy45LTQuMnM5LjksMS41LDEzLjksNC4yDQoJYy00LjgsNS40LTcuOCwxMi41LTcuOCwyMC4zYzAsNy44LDIuOSwxNC45LDcuOCwyMC4zYy00LDIuNi04LjcsNC4yLTEzLjksNC4yUzk2LjcsNTMuOSw5Mi43LDUxLjN6IE0xNDQuMiw1NS41DQoJYy01LjEsMC05LjktMS41LTEzLjktNC4yYzQuOC01LjQsNy44LTEyLjUsNy44LTIwLjNjMC03LjgtMi45LTE0LjktNy44LTIwLjNjNC0yLjYsOC43LTQuMiwxMy45LTQuMmMxMy43LDAsMjQuOSwxMSwyNC45LDI0LjUNCglDMTY5LjEsNDQuNSwxNTcuOSw1NS41LDE0NC4yLDU1LjV6Ii8+DQo8L3N2Zz4NCg=="
+          width="100"
+          height="55"
+          alt="Audi AG"
+        />
+
+        <dl>
+          <dt>Projekt</dt>
+          <dd>
+            <a href="https://www.audi-boerse.de">
+              Audi Gebrauchtwagenbörse - Onlinekauf (Checkout)
+            </a>
+          </dd>
+
+          <dt>Firma</dt>
+          <dd>Audi AG</dd>
+
+          <dt>Aufgabengebiete</dt>
+          <dd>Frontend (JS)</dd>
+
+          <dt>Technologien im Frontend</dt>
+          <dd>
+            React, React Router, Redux, Redux Form, Redux-Saga, styled
+            components, webpack
+          </dd>
+
+          <dt>Zeitraum</dt>
+          <dd>
+            <time>2017 (4 Monate / remote)</time>
+          </dd>
+        </dl>
+      </div>
+
+      <div className="responsibility">
+        <p>
+          Autorisierte Audi-Händler können über die offizielle
+          Gebrauchtwagenbörse von Audi ihre Fahrzeuge einstellen und zum
+          Onlinekauf freigeben. Potentielle Interessenten können den kompletten
+          Autokauf (Entscheidung für Abholung oder Lieferung, Zulassung und
+          Bezahlung/Finanzierung) in einem mehrstufigen Prozess online
+          abwickeln.
+        </p>
+        <p>
+          Als Teil des Frontend-Teams, welches den Checkout-Prozess als
+          Web-Applikation entwickelt hat, waren meine Aufgaben:
+        </p>
+        <ul>
+          <li>
+            Fachliche Umsetzung von User-Stories, u.a.:
+            <ul>
+              <li>
+                Implementierung diverser Views gemäß{' '}
+                <a href="http://atomicdesign.bradfrost.com/">Atomic Design</a>{' '}
+                und Responsive web design
+              </li>
+              <li>Implementierung diverser Atoms, Molecules und Organisms</li>
+              <li>Implementierung des kompletten Fragecenters</li>
+              <li>Erstellung von Formularen mit Redux Form</li>
+              <li>Erstellung von Actions/Reducern mit Redux</li>
+              <li>Validierung sämtlicher Formulare</li>
+            </ul>
+          </li>
+          <li>
+            Verbesserung des Entwicklerflows:
+            <ul>
+              <li>Einsatz von ESLint (integriert als Git Hook)</li>
+              <li>Einsatz von Prettier (integriert als Git Hook)</li>
+              <li>Dokumentation diverser Atoms, Molecules und Organisms</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <hr />
+
+    <section className="project-list">
+      <div className="project">
         <img src={logoEue} alt="1&1" />
 
         <dl>
