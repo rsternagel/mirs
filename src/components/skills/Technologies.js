@@ -82,8 +82,6 @@ const Technologies = () => (
         </ul>
       </dd>
     </dl>
-
-    <style jsx>{``}</style>
   </div>
 )
 

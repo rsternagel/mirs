@@ -69,8 +69,6 @@ const MainSkills = () => (
         </ul>
       </dd>
     </dl>
-
-    <style jsx>{``}</style>
   </div>
 )
 

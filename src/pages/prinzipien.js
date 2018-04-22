@@ -68,8 +68,6 @@ const Prinzipien = ({
       That is, while there is value in the items on the right, I value the items
       on the left more.
     </p>
-
-    <style jsx>{``}</style>
   </div>
 )
 

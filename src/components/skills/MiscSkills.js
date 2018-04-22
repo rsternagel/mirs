@@ -35,8 +35,6 @@ const MiscSkills = () => (
         </ul>
       </dd>
     </dl>
-
-    <style jsx>{``}</style>
   </div>
 )
 
