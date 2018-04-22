@@ -4,15 +4,15 @@
   "version": "0.0.1",
   "author": "Richard Sternagel",
   "dependencies": {
-    "gatsby": "^1.9.112",
-    "gatsby-link": "^1.6.28",
-    "gatsby-plugin-manifest": "^1.0.8",
-    "gatsby-plugin-offline": "^1.0.10",
-    "gatsby-plugin-preact": "^1.0.12",
-    "gatsby-plugin-sharp": "^1.6.21",
-    "gatsby-source-filesystem": "^1.5.8",
-    "gatsby-transformer-sharp": "^1.6.14",
-    "prop-types": "^15.6.0",
+    "gatsby": "^1.9.253",
+    "gatsby-link": "^1.6.41",
+    "gatsby-plugin-manifest": "^1.0.20",
+    "gatsby-plugin-offline": "^1.0.15",
+    "gatsby-plugin-preact": "^1.0.17",
+    "gatsby-plugin-sharp": "^1.6.43",
+    "gatsby-source-filesystem": "^1.5.33",
+    "gatsby-transformer-sharp": "^1.6.23",
+    "prop-types": "^15.6.1",
     "react-helmet": "^5.2.0",
     "react-icons": "^2.2.7",
     "react-typography": "^0.16.5",
@@ -54,13 +54,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "NODE_ENV=production gatsby build",
     "serve": "gatsby serve",
-    "clean": "rm -rf .cache/* && rm -rf node_modules && rm -rf yarn.lock && rm -rf public/*",
+    "clean":
+      "rm -rf .cache/* && rm -rf node_modules && rm -rf yarn.lock && rm -rf public/*",
     "precommit": "lint-staged",
     "sec": "nsp check"
   },
   "lint-staged": {
-    "*.js": [
-      "lint"
-    ]
+    "*.js": ["lint"]
   }
 }
