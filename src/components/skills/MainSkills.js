@@ -8,7 +8,7 @@ const MainSkills = () => (
       </dt>
       <dd className="details">
         <ul>
-          <li className="high">JavaScript (inkl. ES6) (8 Jahre)</li>
+          <li className="high">JavaScript (inkl. ES6) (9 Jahre)</li>
           <li className="high">Node.js (3 Jahre)</li>
           <li className="middle">Python (3 Jahre)</li>
           <li className="middle">UNIX shell scripting (4 Jahre)</li>
@@ -38,11 +38,11 @@ const MainSkills = () => (
       <dd className="details">
         <ul className="row">
           <li className="high">React,</li>
+          <li className="high">React Native,</li>
           <li className="high">React Router,</li>
           <li className="high">Redux,</li>
           <li className="high">Redux Form,</li>
-          <li className="high">Redux-Saga,</li>
-          <li className="high">Relay</li>
+          <li className="high">Redux-Saga</li>
         </ul>
       </dd>
     </dl>

@@ -60,7 +60,7 @@ const Homepage = ({
           </Link>. Mein{' '}
           <Link to={'/kenntnisse/'}>praxiserprobtes Expertenwissen</Link> ist
           das Ergebnis meines Studiums (Medieninformatik auf Diplom) sowie
-          meiner 10-jährigen <Link to={'/projekte/'}>Berufserfahrung</Link>.
+          meiner 11-jährigen <Link to={'/projekte/'}>Berufserfahrung</Link>.
         </p>
 
         <p>
@@ -74,10 +74,10 @@ const Homepage = ({
 
         <p>
           Aktuell liegt mein Projektschwerpunkt auf{' '}
-          <a href="https://facebook.github.io/react/">React</a> und dessen
-          Ökosystem (d.h. <a href="http://redux.js.org/">Redux</a>,{' '}
+          <a href="https://facebook.github.io/react/">React</a> /{' '}
+          <a href="https://facebook.github.io/react-native/">React Native</a>{' '}
+          und dessen Ökosystem (d.h. <a href="http://redux.js.org/">Redux</a>,{' '}
           <a href="http://graphql.org/">GraphQL</a>,{' '}
-          <a href="https://facebook.github.io/relay/">Relay</a>,{' '}
           <a href="https://webpack.js.org/">webpack</a> etc.).
         </p>
 
@@ -87,7 +87,7 @@ const Homepage = ({
         </p>
 
         <p>
-          Ich bin ab <time>Mitte Februar 2018</time> verfügbar. Mein Wunschsetup
+          Ich bin ab <time>Mitte Mai 2018</time> verfügbar. Mein Wunschsetup
           wären 3 Tage die Woche - am besten remote.
         </p>
       </section>

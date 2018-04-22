@@ -40,18 +40,19 @@ const Angebot = ({
 
     <ul>
       <li>
-        Ich kenne aktuelle Frameworks (<a href="(https://angular.io/">
-          Angular
-        </a>, <a href="https://vuejs.org/">Vue</a>) und Libraries (<a href="https://facebook.github.io/react/">
+        Ich kenne aktuelle Frameworks (<a href="https://facebook.github.io/react-native/">
+          React Native
+        </a>, <a href="(https://angular.io/">Angular</a>,{' '}
+        <a href="https://vuejs.org/">Vue</a>) und Libraries (<a href="https://facebook.github.io/react/">
           React
         </a>) gut.
       </li>
       <li>
         Mein Schwerpunkt liegt auf{' '}
-        <a href="https://facebook.github.io/react/">React</a> und seinem
-        Ökosystem (z.B. <a href="http://redux.js.org/">Redux</a>,{' '}
+        <a href="https://facebook.github.io/react/">React</a> /{' '}
+        <a href="https://facebook.github.io/react-native/">React Native</a> und
+        seinem Ökosystem (z.B. <a href="http://redux.js.org/">Redux</a>,{' '}
         <a href="http://graphql.org/">GraphQL</a>,{' '}
-        <a href="https://facebook.github.io/relay/">Relay</a>,{' '}
         <a href="https://webpack.js.org/">webpack</a>).
       </li>
       <li>
@@ -74,7 +75,7 @@ const Angebot = ({
 
     <ul>
       <li>
-        Ich bringe mein praxiserprobtes 10-jähriges Expertenwissen und meine
+        Ich bringe mein praxiserprobtes 11-jähriges Expertenwissen und meine
         Berufserfahrung ein.
       </li>
       <li>
