@@ -125,8 +125,6 @@ const Tools = () => (
       </dd>
     </dl>
     */}
-
-    <style jsx>{``}</style>
   </div>
 )
 
