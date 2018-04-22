@@ -8,8 +8,8 @@ const Technologies = () => (
         <ul className="row">
           <li className="high">HTML,</li>
           <li className="high">CSS (inkl. SCSS & PostCSS),</li>
+          <li className="high">SVG,</li>
           <li className="middle">XML,</li>
-          <li className="middle">XUL,</li>
           <li className="low">XPath</li>
         </ul>
       </dd>

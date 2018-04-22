@@ -6,8 +6,8 @@ const Tools = () => (
       <dt className="category">Dev</dt>
       <dd className="details">
         <ul className="row">
+          <li className="high">Atom/Nuclide,</li>
           <li className="high">(M)Vim,</li>
-          <li className="middle">Atom,</li>
           <li className="low">Eclipse</li>
         </ul>
       </dd>
@@ -31,10 +31,10 @@ const Tools = () => (
       <dt className="category">Qualitätskontrolle</dt>
       <dd className="details">
         <ul className="row">
-          <li className="high">ESLint,</li>
-          <li className="high">stylelint,</li>
           <li className="high">Prettier,</li>
-          <li className="high">Flow</li>
+          <li className="high">Flow,</li>
+          <li className="high">ESLint,</li>
+          <li className="high">stylelint</li>
         </ul>
       </dd>
     </dl>
