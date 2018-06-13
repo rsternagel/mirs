@@ -9,7 +9,13 @@ import MiscSkills from '../../components/skills/MiscSkills'
 
 import { s, m } from '../../utils/breakpoints'
 
-const Skills = ({ data: { site: { siteMetadata: { title: siteTitle } } } }) => (
+const Skills = ({
+  data: {
+    site: {
+      siteMetadata: { title: siteTitle }
+    }
+  }
+}) => (
   <div>
     <Helmet>
       <title>{`Kenntnisse | ${siteTitle}`}</title>

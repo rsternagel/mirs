@@ -8,7 +8,11 @@ import logoQx from '../../components/img/logo_qooxdoo.png'
 import { m } from '../../utils/breakpoints'
 
 const Projekte = ({
-  data: { site: { siteMetadata: { title: siteTitle } } }
+  data: {
+    site: {
+      siteMetadata: { title: siteTitle }
+    }
+  }
 }) => (
   <div>
     <Helmet>

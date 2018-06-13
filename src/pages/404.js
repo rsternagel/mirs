@@ -3,8 +3,16 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 const FourOFour = ({
-  data: { site: { siteMetadata: { title: siteTitle } } },
-  data: { site: { siteMetadata: { domain } } }
+  data: {
+    site: {
+      siteMetadata: { title: siteTitle }
+    }
+  },
+  data: {
+    site: {
+      siteMetadata: { domain }
+    }
+  }
 }) => (
   <div>
     <Helmet>

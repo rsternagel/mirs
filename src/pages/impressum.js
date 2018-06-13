@@ -3,7 +3,11 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 const Impressum = ({
-  data: { site: { siteMetadata: { title: siteTitle } } }
+  data: {
+    site: {
+      siteMetadata: { title: siteTitle }
+    }
+  }
 }) => (
   <div>
     <Helmet>

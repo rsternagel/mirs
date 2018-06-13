@@ -53,7 +53,7 @@ class Nav extends React.Component {
     let matchedNavTitle = ''
     let curPageHasOneOfNavTitlesList = []
 
-    this.navTitles.forEach(title => {
+    this.navTitles.forEach((title) => {
       let isHome = pathname === '/' && title === home
       let hasNavTitleMatchingPathname =
         pathname.search(new RegExp(`/${title}/?`)) !== -1
@@ -63,7 +63,7 @@ class Nav extends React.Component {
       curPageHasOneOfNavTitlesList.push(isHome || hasNavTitleMatchingPathname)
     })
 
-    const setNavActiveState = entry => {
+    const setNavActiveState = (entry) => {
       if (entry !== null) {
         const selectedHtmlElem = this.navHtmlElems.get(entry)
         this.setState({ selectedNavItemId: entry })
@@ -107,7 +107,7 @@ class Nav extends React.Component {
   getInitialSelectedNav(path, navTitles) {
     let selectedNavItemId = ''
 
-    navTitles.forEach(title => {
+    navTitles.forEach((title) => {
       let hasNavTitleMatchingPathname =
         path.search(new RegExp(`/${title}/?`)) !== -1
       if (hasNavTitleMatchingPathname) {
@@ -122,7 +122,7 @@ class Nav extends React.Component {
     return selectedNavItemId
   }
 
-  handleClick = e => {
+  handleClick = (e) => {
     const newNavItemId = e.currentTarget.id
     const { selectedNavItemId } = this.state
 
@@ -154,7 +154,7 @@ class Nav extends React.Component {
   render() {
     let navLinks = []
 
-    this.navTitles.forEach(item => {
+    this.navTitles.forEach((item) => {
       let liElem = {}
       let linkTarget = {}
       let dynamicAttrs = {}
@@ -171,7 +171,7 @@ class Nav extends React.Component {
           key={item}
           id={item}
           onClick={this.handleClick}
-          ref={navHtmlElem => {
+          ref={(navHtmlElem) => {
             this.navHtmlElems.set(item, navHtmlElem)
           }}
           {...dynamicAttrs}>
