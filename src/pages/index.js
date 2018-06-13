@@ -9,7 +9,11 @@ import profilePic from '../components/img/profile_pic.jpg'
 import { s, m } from '../utils/breakpoints'
 
 const Homepage = ({
-  data: { site: { siteMetadata: { title: siteTitle } } }
+  data: {
+    site: {
+      siteMetadata: { title: siteTitle }
+    }
+  }
 }) => (
   <div>
     <Helmet>
@@ -30,9 +34,9 @@ const Homepage = ({
         <div className="container-labels-contact">
           <div className="labels">
             <p>
-              Entwicklung von Web-Applikationen<br />
+              Entwicklung von Web/Mobile-Apps<br />
               Infrastruktur · Tooling · Workflows<br />
-              JavaScript · React · Node.js
+              JS · React · React Native · Node.js
             </p>
           </div>
 
@@ -50,13 +54,13 @@ const Homepage = ({
           <span className="greeting">Hallo,</span>
           <br />
           ich bin <span className="name">Richard Sternagel</span>,<br />
-          Web-Entwickler (IT-Freelancer) aus Frankfurt am Main.
+          Web/App-Entwickler (IT-Freelancer) aus Frankfurt am Main.
         </p>
 
         <p>
           Ich bin Spezialist für die{' '}
           <Link to={'/angebot/'}>
-            Entwicklung von Web Applikationen, Infrastruktur und Tooling
+            Entwicklung von Web/Mobile Apps, Infrastruktur und Tooling
           </Link>. Mein{' '}
           <Link to={'/kenntnisse/'}>praxiserprobtes Expertenwissen</Link> ist
           das Ergebnis meines Studiums (Medieninformatik auf Diplom) sowie
@@ -87,7 +91,7 @@ const Homepage = ({
         </p>
 
         <p>
-          Ich bin ab <time>Mitte Mai 2018</time> verfügbar. Mein Wunschsetup
+          Ich bin ab <time>Anfang Juli 2018</time> verfügbar. Mein Wunschsetup
           wären 3 Tage die Woche - am besten remote.
         </p>
       </section>

@@ -5,7 +5,11 @@ import Helmet from 'react-helmet'
 import MdMailOutline from 'react-icons/lib/md/mail-outline'
 
 const Angebot = ({
-  data: { site: { siteMetadata: { title: siteTitle } } }
+  data: {
+    site: {
+      siteMetadata: { title: siteTitle }
+    }
+  }
 }) => (
   <div>
     <Helmet>
@@ -17,6 +21,7 @@ const Angebot = ({
     <p>Sie benötigen Unterstützung bei</p>
     <ul className="noBullet">
       <li>… der Entwicklung einer komplexen Web-Applikation?</li>
+      <li>… der Entwicklung einer komplexen (Mobile) App in React Native?</li>
       <li>
         … der Entwicklung eines kritischen Projektes, das in JavaScript (inkl.
         Node.js) geschrieben ist?
