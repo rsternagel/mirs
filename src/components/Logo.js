@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import logoMirs from './img/logo_mirs.png'
+import logoMirs from './img/logo_mirs.svg'
 
 const Logo = () => (
   <div className="logo">
@@ -8,21 +8,21 @@ const Logo = () => (
       <img
         src={logoMirs}
         alt="Medieninformatik Richard Sternagel"
-        width="216"
-        height="58"
+        width="200"
+        height="48"
       />
     </Link>
 
     <style jsx>{`
       .logo {
-        width: 65%;
+        width: 100%;
       }
 
       .logo :global(img) {
-        min-width: 216px;
-        min-height: 58px;
-        margin-left: -10px;
-        margin-top: 5px;
+        min-width: 200px;
+        min-height: 48px;
+        margin-left: 5px;
+        margin-top: 10px;
       }
     `}</style>
   </div>
