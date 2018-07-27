@@ -36,6 +36,7 @@ const Layout = ({ location, children }) => (
 
       .masthead {
         display: flex;
+        justify-content: space-between;
         flex-direction: row;
       }
 

@@ -14,10 +14,6 @@ const Logo = () => (
     </Link>
 
     <style jsx>{`
-      .logo {
-        width: 100%;
-      }
-
       .logo :global(img) {
         min-width: 200px;
         min-height: 48px;
