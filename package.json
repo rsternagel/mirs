@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "author": "Richard Sternagel",
   "dependencies": {
+    "fs-extra": "^7.0.0",
     "gatsby": "^1.9.270",
     "gatsby-link": "^1.6.44",
     "gatsby-plugin-manifest": "^1.0.25",
