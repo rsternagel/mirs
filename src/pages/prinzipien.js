@@ -55,9 +55,8 @@ const Prinzipien = ({
         <ul>
           <li>No code (if possible) over some code</li>
           <li>
-            As few code as possible over too much code (<abbr title="You ain't gonna need it">
-              YAGNI
-            </abbr>{' '}
+            As few code as possible over too much code (
+            <abbr title="You ain't gonna need it">YAGNI</abbr>{' '}
             <span className="amp">&</span>{' '}
             <abbr title="Keep It Simple, Stupid">KISS</abbr>)
           </li>

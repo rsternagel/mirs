@@ -4,7 +4,8 @@ const MainSkills = () => (
   <div>
     <dl className="skill-list">
       <dt className="category">
-        Programmiersprachen /<br />Plattformen
+        Programmiersprachen /<br />
+        Plattformen
       </dt>
       <dd className="details">
         <ul>

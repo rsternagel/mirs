@@ -1,3 +1,5 @@
+/* eslint-disable  prettier/prettier */
+
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
@@ -28,9 +30,8 @@ const Angebot = ({
       </li>
       <li>
         … der Erweiterung Ihrer Infrastruktur oder Ihres Toolings, bspw. Ihres
-        Entwicklungs- oder Deploymentprozesses (<abbr title="Continuous Integration">
-          CI
-        </abbr>/
+        Entwicklungs- oder Deploymentprozesses (
+        <abbr title="Continuous Integration">CI</abbr>/
         <abbr title="Continuous Delivery">CD</abbr>-Systeme)?
       </li>
     </ul>
@@ -45,12 +46,11 @@ const Angebot = ({
 
     <ul>
       <li>
-        Ich kenne aktuelle Frameworks (<a href="https://facebook.github.io/react-native/">
-          React Native
-        </a>, <a href="(https://angular.io/">Angular</a>,{' '}
-        <a href="https://vuejs.org/">Vue</a>) und Libraries (<a href="https://facebook.github.io/react/">
-          React
-        </a>) gut.
+        Ich kenne aktuelle Frameworks (
+        <a href="https://facebook.github.io/react-native/">React Native</a>,
+        <a href="(https://angular.io/">Angular</a>,{' '}
+        <a href="https://vuejs.org/">Vue</a>) und Libraries (
+        <a href="https://facebook.github.io/react/">React</a>) gut.
       </li>
       <li>
         Mein Schwerpunkt liegt auf{' '}
@@ -58,7 +58,8 @@ const Angebot = ({
         <a href="https://facebook.github.io/react-native/">React Native</a> und
         seinem Ökosystem (z.B. <a href="http://redux.js.org/">Redux</a>,{' '}
         <a href="http://graphql.org/">GraphQL</a>,{' '}
-        <a href="https://webpack.js.org/">webpack</a>).
+        <a href="https://webpack.js.org/">webpack</a>
+        ).
       </li>
       <li>
         Agile Vorgehensmodelle (z.B. Kanban und{' '}

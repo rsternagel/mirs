@@ -22,7 +22,7 @@ const FourOFour = ({
     <h1>Sorry, diese Seite existiert nicht!</h1>
     <p>
       Die Seite oder der eingegebene Pfad (z.B.:{' '}
-      {`www.${domain}/michGibtEsNicht`}), ist entweder falsch geschrieben oder
+      {`www.${domain}/michGibtEsNicht`}) , ist entweder falsch geschrieben oder
       nicht mehr verfügbar.
     </p>
     <p>:_(</p>

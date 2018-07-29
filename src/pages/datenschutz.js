@@ -107,7 +107,8 @@ const Datenschutz = ({
       <a href="https://clicky.com/terms/privacy">
         genaue Erklärung der Funktionsweise von Clicky Web Analytics und allen
         verwendeten Cookies
-      </a>.
+      </a>
+      .
     </p>
   </div>
 )

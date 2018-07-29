@@ -1,3 +1,5 @@
+/* eslint-disable  prettier/prettier */
+
 import MdMailOutline from 'react-icons/lib/md/mail-outline'
 
 import React from 'react'
@@ -67,8 +69,8 @@ const Homepage = ({
           <Link to={'/angebot/'}>
             Entwicklung von Web/Mobile Apps, Infrastruktur und Tooling
           </Link>. Mein{' '}
-          <Link to={'/kenntnisse/'}>praxiserprobtes Expertenwissen</Link> ist
-          das Ergebnis meines Studiums (Medieninformatik auf Diplom) sowie
+          <Link to={'/kenntnisse/'}>praxiserprobtes Expertenwissen</Link>
+          ist das Ergebnis meines Studiums (Medieninformatik auf Diplom) sowie
           meiner 11-jährigen <Link to={'/projekte/'}>Berufserfahrung</Link>.
         </p>
 
@@ -218,7 +220,7 @@ Homepage.propTypes = {
       }).isRequired
     }).isRequired
   }).isRequired,
-  t: PropTypes.any
+  t: PropTypes.shape({}).isRequired
 }
 
 export default translate('root')(Homepage)
