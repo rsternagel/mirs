@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 
 import 'sanitize.css/sanitize.css'
 
+import i18n from '../utils/i18n'
+
 import Nav from '../components/Nav'
 import Logo from '../components/Logo'
 import Footer from '../components/Footer'
