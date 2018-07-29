@@ -2,8 +2,10 @@ import MdMailOutline from 'react-icons/lib/md/mail-outline'
 
 import React from 'react'
 import PropTypes from 'prop-types'
+
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
+import { translate } from 'react-i18next'
 
 import profilePic from '../components/img/profile_pic.jpg'
 import { s, m } from '../utils/breakpoints'
@@ -13,7 +15,8 @@ const Homepage = ({
     site: {
       siteMetadata: { title: siteTitle }
     }
-  }
+  },
+  t
 }) => (
   <div>
     <Helmet>
@@ -34,14 +37,16 @@ const Homepage = ({
         <div className="container-labels-contact">
           <div className="labels">
             <p>
-              Entwicklung von Web/Mobile-Apps<br />
-              Infrastruktur · Tooling · Workflows<br />
+              {t('labelsLine1')}
+              <br />
+              {t('labelsLine2')}
+              <br />
               JS · React · React Native · Node.js
             </p>
           </div>
 
           <p className="contact">
-            So erreichen Sie mich:
+            {t('reachMe')}
             <span>
               <MdMailOutline />{' '}
               <a href="mailto:rsternagel@posteo.de">rsternagel@posteo.de</a>
@@ -212,10 +217,11 @@ Homepage.propTypes = {
         title: PropTypes.string.isRequired
       }).isRequired
     }).isRequired
-  }).isRequired
+  }).isRequired,
+  t: PropTypes.any
 }
 
-export default Homepage
+export default translate('root')(Homepage)
 
 export const pageQuery = graphql`
   query IndexQuery {
