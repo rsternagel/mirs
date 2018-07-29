@@ -227,7 +227,8 @@ const Projekte = ({
 
           <dt>Aufgabengebiete</dt>
           <dd>
-            Core-Entwickler,<br />
+            Core-Entwickler,
+            <br />
             Toolchainverantwortlicher (JS/Python)
           </dd>
 

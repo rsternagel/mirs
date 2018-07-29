@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 import 'sanitize.css/sanitize.css'
 
+// eslint-disable-next-line  no-unused-vars
 import i18n from '../utils/i18n'
 
 import Nav from '../components/Nav'
