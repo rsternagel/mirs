@@ -1,5 +1,14 @@
 {
-  "404-headline": "",
+  "_lang": "en",
+  "language": "Language",
+  "imprint": "Imprint",
+  "imprintPath": "/imprint/",
+  "privacy": "Privacy",
+  "privacyPath": "/privacy/",
+  "offer": "offer",
+  "projects": "projects",
+  "skills": "skills",
+  "404-headline": "a",
   "404-desc1": "",
   "404-desc2": "",
   "404-path": ""
