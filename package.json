@@ -54,6 +54,7 @@
   },
   "scripts": {
     "dev": "gatsby develop --host 127.0.0.1 --port 8000",
+    "edit": "find src/locales | entr -s 'cp -R src/locales public/'",
     "lint": "yarn lint-js && yarn lint-css",
     "lint-js": "eslint --ignore-path .gitignore . --ignore-pattern flow-typed/*",
     "lint-css": "stylelint \"src/**/*.js\"",
