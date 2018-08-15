@@ -1,1 +1,9 @@
-{}
+{
+  "imprint": "Impressum",
+  "responsible": "Verantwortlich gemäß § 5 TMG:",
+  "address": "Anschrift",
+  "contact": "Kontakt",
+  "phone": "Telefon",
+  "mail": "E-Mail",
+  "vatId": "Umsatzsteuer-ID"
+}

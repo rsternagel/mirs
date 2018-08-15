@@ -1,1 +1,26 @@
-{}
+{
+  "skills": "Skills",
+  "thisList": "This list reflects",
+  "comingFrom": "where I'm coming from",
+  "prefering": "what I am prefering",
+  "and": "and",
+  "passionateAbout": "what I am passionate about",
+  "progLang": "Programming Languages",
+  "platforms": "Platforms",
+  "formerCoreTeam": "former member of core team",
+  "incl": "incl.",
+  "3years": "3 years",
+  "4years": "4 years",
+  "5years": "5 years",
+  "9years": "9 years",
+  "databases": "Databases",
+  "webTechnologies": "Web Technologies",
+  "architecture": "Architecture",
+  "paradigms": "Paradigms",
+  "protocols": "Protocols",
+  "schemaLanguages": "Schema Languages",
+  "queryLanguages": "Query Languages",
+  "quality": "Quality  Assurance",
+  "doc": "Documentation",
+  "agileMethods": "Agile Software Dev"
+}

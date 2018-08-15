@@ -1,1 +1,26 @@
-{}
+{
+  "skills": "Kenntnisse",
+  "thisList": "Diese Liste spiegelt wider",
+  "comingFrom": "woher ich komme",
+  "prefering": "was ich bevorzuge",
+  "and": "und",
+  "passionateAbout": "wofür ich brenne",
+  "progLang": "Programmiersprachen",
+  "platforms": "Plattformen",
+  "formerCoreTeam": "ehem. Core-Team Mitglied",
+  "incl": "inkl.",
+  "3years": "3 Jahre",
+  "4years": "4 Jahre",
+  "5years": "5 Jahre",
+  "9years": "9 Jahre",
+  "databases": "Datenbanken",
+  "webTechnologies": "Webtechnologien",
+  "architecture": "Architektur",
+  "paradigms": "Paradigmen",
+  "protocols": "Protokolle",
+  "schemaLanguages": "Schemasprachen",
+  "queryLanguages": "Query-Languages",
+  "quality": "Qualitätskontrolle",
+  "doc": "Dokumentation",
+  "agileMethods": "Agile Methoden"
+}

@@ -1,4 +1,13 @@
 {
+  "_lang": "de",
+  "language": "Sprache",
+  "imprint": "Impressum",
+  "imprintPath": "/impressum/",
+  "privacy": "Datenschutz",
+  "privacyPath": "/datenschutz/",
+  "offer": "angebot",
+  "projects": "projekte",
+  "skills": "kenntnisse",
   "404-headline": "",
   "404-desc1": "",
   "404-desc2": "",
