@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 import 'sanitize.css/sanitize.css'
 
+import { translate } from 'react-i18next'
 // eslint-disable-next-line  no-unused-vars
 import i18n from '../utils/i18n'
 
@@ -12,8 +13,8 @@ import Footer from '../components/Footer'
 
 import { m } from '../utils/breakpoints'
 
-const Layout = ({ location, children }) => (
-  <div>
+const Layout = ({ location, children, t }) => (
+  <div lang={t('_lang')}>
     <div className="container">
       <header className="masthead">
         <Logo />
@@ -21,7 +22,7 @@ const Layout = ({ location, children }) => (
       </header>
       <main className="maincontent">{children()}</main>
     </div>
-    <Footer />
+    <Footer pathname={location.pathname} />
 
     <style jsx>{`
       :global(body) {
@@ -90,7 +91,8 @@ Layout.propTypes = {
   children: PropTypes.func.isRequired,
   location: PropTypes.shape({
     pathname: PropTypes.string.isRequired
-  }).isRequired
+  }).isRequired,
+  t: PropTypes.func.isRequired
 }
 
-export default Layout
+export default translate()(Layout)
