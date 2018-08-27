@@ -1,23 +1,29 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
 import Helmet from 'react-helmet'
+import { translate } from 'react-i18next'
 
 const Impressum = ({
   data: {
     site: {
       siteMetadata: { title: siteTitle }
     }
-  }
+  },
+  t
 }) => (
   <div>
     <Helmet>
-      <title>{`Impressum | ${siteTitle}`}</title>
+      <title>
+        {t('siteTitle')}
+        {` | ${siteTitle}`}
+      </title>
     </Helmet>
 
-    <h1>Impressum</h1>
-    <p>Verantwortlich gemäß § 5 TMG:</p>
+    <h1>{t('imprint')}</h1>
+    <p>{t('responsible')}</p>
 
-    <h2>Anschrift</h2>
+    <h2>{t('address')}</h2>
     <p>
       Medieninformatik
       <br />
@@ -29,14 +35,14 @@ const Impressum = ({
       <br />
       60599 Frankfurt
     </p>
-    <h2>Kontakt</h2>
+    <h2>{t('contact')}</h2>
     <p>
-      <span>Telefon:</span> +49 176 / 217 466 40
+      <span>{t('phone')}:</span> +49 176 / 217 466 40
       <br />
-      <span>E-Mail:</span> rsternagel@posteo.de
+      <span>{t('mail')}:</span> rsternagel@posteo.de
       <br />
     </p>
-    <h2>Umsatzsteuer-ID</h2>
+    <h2>{t('vatId')}</h2>
     <p>DE310204622</p>
 
     <style jsx>{`
@@ -55,13 +61,14 @@ Impressum.propTypes = {
         title: PropTypes.string.isRequired
       }).isRequired
     }).isRequired
-  }).isRequired
+  }).isRequired,
+  t: PropTypes.func.isRequired
 }
 
-export default Impressum
+export default translate('imprint')(Impressum)
 
 export const pageQuery = graphql`
-  query ImprintQuery {
+  query ImpressumQuery {
     site {
       siteMetadata {
         title

@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
 import Helmet from 'react-helmet'
+import { translate } from 'react-i18next'
 
 import logoEue from '../../components/img/logo_eue.png'
 import logoQx from '../../components/img/logo_qooxdoo.png'
@@ -12,16 +14,20 @@ const Projekte = ({
     site: {
       siteMetadata: { title: siteTitle }
     }
-  }
+  },
+  t
 }) => (
   <div>
     <Helmet>
-      <title>{`Projekte | ${siteTitle}`}</title>
+      <title>
+        {t('siteTitle')}
+        {` | ${siteTitle}`}
+      </title>
     </Helmet>
 
-    <h1>Projekte</h1>
+    <h1>{t('projects')}</h1>
 
-    <p>Hier sehen Sie meine Projektreferenzen:</p>
+    <p>{t('hereYouCanSee')}:</p>
 
     <section className="project-list">
       <div className="project">
@@ -33,26 +39,26 @@ const Projekte = ({
         />
 
         <dl>
-          <dt>Projekt</dt>
+          <dt>{t('catProjects')}</dt>
           <dd>
             <a href="https://www.audi-boerse.de">
               Audi Gebrauchtwagenbörse - Onlinekauf (Checkout)
             </a>
           </dd>
 
-          <dt>Firma</dt>
+          <dt>{t('catCompany')}</dt>
           <dd>Audi AG</dd>
 
-          <dt>Aufgabengebiete</dt>
+          <dt>{t('catAssignment')}</dt>
           <dd>Frontend (JS)</dd>
 
-          <dt>Technologien im Frontend</dt>
+          <dt>{t('catTechnologies')}</dt>
           <dd>
             React, React Router, Redux, Redux Form, Redux-Saga, styled
             components, webpack
           </dd>
 
-          <dt>Zeitraum</dt>
+          <dt>{t('catTimeframe')}</dt>
           <dd>
             <time>2017 (4 Monate / remote)</time>
           </dd>
@@ -60,40 +66,33 @@ const Projekte = ({
       </div>
 
       <div className="responsibility">
-        <p>
-          Autorisierte Audi-Händler können über die offizielle
-          Gebrauchtwagenbörse von Audi ihre Fahrzeuge einstellen und zum
-          Onlinekauf freigeben. Potentielle Interessenten können den kompletten
-          Autokauf (Entscheidung für Abholung oder Lieferung, Zulassung und
-          Bezahlung/Finanzierung) in einem mehrstufigen Prozess online
-          abwickeln.
-        </p>
-        <p>
-          Als Teil des Frontend-Teams, welches den Checkout-Prozess als
-          Web-Applikation entwickelt hat, waren meine Aufgaben:
-        </p>
+        <p>{t('project3Desc')}</p>
+        <p>{t('project3Tasks')}</p>
         <ul>
           <li>
-            Fachliche Umsetzung von User-Stories, u.a.:
+            {t('project3Ul1')}
             <ul>
               <li>
-                Implementierung diverser Views gemäß{' '}
+                {t('project3Ul1-1a')}{' '}
                 <a href="http://atomicdesign.bradfrost.com/">Atomic Design</a>{' '}
-                und Responsive web design
+                {t('project3Ul1-1b')}{' '}
+                <a href="https://alistapart.com/article/responsive-web-design">
+                  Responsive web design
+                </a>
               </li>
-              <li>Implementierung diverser Atoms, Molecules und Organisms</li>
-              <li>Implementierung des kompletten Fragecenters</li>
-              <li>Erstellung von Formularen mit Redux Form</li>
-              <li>Erstellung von Actions/Reducern mit Redux</li>
-              <li>Validierung sämtlicher Formulare</li>
+              <li>{t('project3Ul1-2')}</li>
+              <li>{t('project3Ul1-3')}</li>
+              <li>{t('project3Ul1-4')}</li>
+              <li>{t('project3Ul1-5')}</li>
+              <li>{t('project3Ul1-6')}</li>
             </ul>
           </li>
           <li>
-            Verbesserung des Entwicklerflows:
+            {t('project3Ul2')}
             <ul>
-              <li>Einsatz von ESLint (integriert als Git Hook)</li>
-              <li>Einsatz von Prettier (integriert als Git Hook)</li>
-              <li>Dokumentation diverser Atoms, Molecules und Organisms</li>
+              <li>{t('project3Ul2-1')}</li>
+              <li>{t('project3Ul2-2')}</li>
+              <li>{t('project3Ul2-3')}</li>
             </ul>
           </li>
         </ul>
@@ -107,24 +106,24 @@ const Projekte = ({
         <img src={logoEue} alt="1&1" />
 
         <dl>
-          <dt>Projekt</dt>
+          <dt>{t('catProjects')}</dt>
           <dd>
             <a href="http://control-center.1und1.de/">
               1&1 Control Center Access
             </a>
-            <br /> (Bestandskundenportal)
+            <br /> ({t('catProjectsProject2')})
           </dd>
 
-          <dt>Firma</dt>
+          <dt>{t('catCompany')}</dt>
           <dd>1&1 Internet SE</dd>
 
-          <dt>Aufgabengebiete</dt>
+          <dt>{t('catAssignment')}</dt>
           <dd>Frontend & Tooling (JS)</dd>
 
-          <dt>Technologien im Frontend</dt>
+          <dt>{t('catTechnologies')}</dt>
           <dd>qooxdoo, React, Angular 1&2</dd>
 
-          <dt>Zeitraum</dt>
+          <dt>{t('catTimeframe')}</dt>
           <dd>
             <time>2015 - 2016</time>
           </dd>
@@ -133,76 +132,53 @@ const Projekte = ({
 
       <div className="responsibility">
         <p>
-          Über 8,7 Millionen 1&1-Bestandskunden von DSL und Mobile-Produkten
-          können Ihre Vertrags- und Leistungsdetails über das{' '}
-          <strong>1&1 Control Center (Access)</strong> einsehen sowie diverse
-          Einstellungen vornehmen (z.B. SIM-Karte bestellen).
+          {t('project2DescPrefix')} <strong>1&1 Control Center (Access)</strong>{' '}
+          {t('project2DescPostfix')}
         </p>
-        <p>
-          Als Teil des Frontend-Teams, welches diese Web-Applikation entwickelt
-          hat, waren meine Aufgaben:
-        </p>
+        <p>{t('project2Tasks')}</p>
         <ul>
           <li>
-            Fachliche Umsetzung von User-Stories, u.a.:
+            {t('project2Ul1')}
             <ul>
-              <li>
-                1&1 Multi-Card (Anfordern, Aktivieren, Sperren, Entsperren)
-              </li>
-              <li>DSL-Störungsformular</li>
-              <li>
-                Einbindung der Kontaktstrategie in Hilfe-Lasche mit
-                Kontaktkanal- und Anliegenauswahl
-              </li>
-              <li>Technikerterminvereinbarung mit Calendar-Widget</li>
-              <li>
-                Verschiedene DSL und Mobile Accordions, um „Einstellungen &
-                Services“ zu konfigurieren
-              </li>
+              <li>{t('project2Ul1-1')}</li>
+              <li>{t('project2Ul1-2')}</li>
+              <li>{t('project2Ul1-3')}</li>
             </ul>
           </li>
           <li>
-            Wartung/Modernisierung der Frontend-Toolchain:
+            {t('project2Ul2')}
             <ul>
-              <li>Einbindung von Browserify und Babel</li>
-              <li>Umstellung des Buildprozesses auf Node.js/npm-packages</li>
-              <li>Einbau von ESLint als Ersatz für JSCS und JSHint</li>
+              <li>{t('project2Ul2-1')}</li>
+              <li>{t('project2Ul2-2')}</li>
+              <li>{t('project2Ul2-3')}</li>
             </ul>
           </li>
           <li>
-            Verantwortung der Jobs auf dem CI-Server (Jenkins):
+            {t('project2Ul3')}
             <ul>
-              <li>Job, der die App baut und Releases mittels Maven erstellt</li>
-              <li>
-                Frontend Code Quality-Job, der Checks durchführt (Linting von JS
-                und SCSS-Code sowie JS Unit- und Integrationstests)
-              </li>
-              <li>
-                Frontend Security Job, der auf bekannte Schwachstellen in
-                npm-Packages, die verwendet werden, hinweist
-              </li>
+              <li>{t('project2Ul3-1')}</li>
+              <li>{t('project2Ul3-2')}</li>
+              <li>{t('project2Ul3-3')}</li>
             </ul>
           </li>
           <li>
-            Verbesserung des Entwicklerflows:
+            {t('project2Ul4')}
             <ul>
-              <li>Migration von SVN zu Git</li>
-              <li>Einsatz von selbstgeschriebenen Git Hooks</li>
+              <li>{t('project2Ul4-1')}</li>
+              <li>{t('project2Ul4-2')}</li>
             </ul>
           </li>
           <li>
-            Sonstiges:
+            {t('project2Ul5')}
             <ul>
-              <li>Überarbeitung der REST-Ressourcen mit dem Backend-Team</li>
-              <li>Erweiterung des Frontend-Review/Release-Prozesses</li>
-              <li>Dokumentation des CD-Build/Relase/Deployment-Prozesses</li>
-              <li>Analyse/Konzeption FE- Zielarchitektur mit Migrationsplan</li>
-              <li>Schreiben von Unit/E2E-Tests (Karma, Jasmine, Protractor)</li>
-              <li>Leiten von Reviews und Retrospektiven</li>
-              <li>Releasemanager und Bugmanager in diversen Scrum-Sprints</li>
-              <li>
-                Team-Einführung in Kanban (als Alt. für Scrum) sowie Kibana
-              </li>
+              <li>{t('project2Ul5-1')}</li>
+              <li>{t('project2Ul5-2')}</li>
+              <li>{t('project2Ul5-3')}</li>
+              <li>{t('project2Ul5-4')}</li>
+              <li>{t('project2Ul5-5')}</li>
+              <li>{t('project2Ul5-6')}</li>
+              <li>{t('project2Ul5-7')}</li>
+              <li>{t('project2Ul5-8')}</li>
             </ul>
           </li>
         </ul>
@@ -215,24 +191,23 @@ const Projekte = ({
       <div className="project">
         <img src={logoQx} alt="qooxdoo" />
         <dl>
-          <dt>Projekt</dt>
+          <dt>{t('catProjects')}</dt>
           <dd>
             <a href="http://www.qooxdoo.org/">qooxdoo</a>
             <br />
-            Open-Source Web-Framework
+            {t('catProjectsProject1')}
           </dd>
 
-          <dt>Firma</dt>
+          <dt>{t('catCompany')}</dt>
           <dd>1&1 Internet AG</dd>
 
-          <dt>Aufgabengebiete</dt>
+          <dt>{t('catAssignment')}</dt>
           <dd>
-            Core-Entwickler,
-            <br />
-            Toolchainverantwortlicher (JS/Python)
+            {t('catAssignmentProject1-1')},<br />
+            {t('catAssignmentProject1-2')} (JS/Python)
           </dd>
 
-          <dt>Zeitraum</dt>
+          <dt>{t('catTimeframe')}</dt>
           <dd>
             <time>2012 - 2015</time>
           </dd>
@@ -241,46 +216,31 @@ const Projekte = ({
 
       <div className="responsibility">
         <p>
-          <strong>qooxdoo</strong> ist ein Open Source Web Framework zur
-          Erstellung von RIAs, nativ-ähnlicher Mobile Apps und leichtgewichtiger
-          Web-Anwendungen. Die komplette Entwicklung passiert auf{' '}
+          <strong>qooxdoo</strong> {t('project1Desc')}{' '}
           <a href="https://github.com/qooxdoo/qooxdoo">GitHub</a>.
         </p>
-        <p>
-          Als Teil des Core-Teams, welches qooxdoo weiterentwickelt, waren meine
-          Aufgaben:
-        </p>
+        <p>{t('project1Tasks')}:</p>
         <ul>
           <li>
-            Core-Entwickler und verantwortlich für die (Python-)Toolchain:
+            {t('project1Ul1')}:
             <ul>
-              <li>
-                Weiterentwicklung der Buildprozesse (Parsing, Preprocessing,
-                Minifying etc)
-              </li>
-              <li>
-                Weiterentwicklung des JS-Framework-Codes auf GitHub, v.a. des
-                IO-Bereiches (z.B. XHR/JSONP und REST)
-              </li>
+              <li>{t('project1Ul1-1')}</li>
+              <li>{t('project1Ul1-2')}</li>
             </ul>
           </li>
           <li>
-            Konzeption und Entwicklung einer neuen JS-Toolchain (via
-            Grunt-Plugins):
+            {t('project1Ul2')}:
             <ul>
-              <li>Parsing von JS-Code inkl. Scope- und Dependency-Analyse</li>
-              <li>Minifizierung und Optimierung von JS Code</li>
-              <li>Preprocessing von Ressourcen (z.B. Bildern)</li>
-              <li>Verarbeitung qooxdoo-spezifischer Compiler-Hints</li>
-              <li>Pflege/Wartung der bestehenden Python Toolchain</li>
-              <li>Einführung von ESLint und custom-Lint-Regeln</li>
-              <li>Erstellung des Contribution-Catalog (für 3rd Party Libs)</li>
-              <li>UnitTests mittels nodeunit/Mocha/Chai</li>
-              <li>Dokumentation mittels Sphinx/JSDoc</li>
-              <li>
-                Interaktion mit Open-Source Community (Pull Requests / Support
-                via Stack Overflow und Mailingliste)
-              </li>
+              <li>{t('project1Ul2-1')}</li>
+              <li>{t('project1Ul2-2')}</li>
+              <li>{t('project1Ul2-3')}</li>
+              <li>{t('project1Ul2-4')}</li>
+              <li>{t('project1Ul2-5')}</li>
+              <li>{t('project1Ul2-6')}</li>
+              <li>{t('project1Ul2-7')}</li>
+              <li>{t('project1Ul2-8')}</li>
+              <li>{t('project1Ul2-9')}</li>
+              <li>{t('project1Ul2-10')}</li>
             </ul>
           </li>
         </ul>
@@ -333,13 +293,14 @@ Projekte.propTypes = {
         title: PropTypes.string.isRequired
       }).isRequired
     }).isRequired
-  }).isRequired
+  }).isRequired,
+  t: PropTypes.func.isRequired
 }
 
-export default Projekte
+export default translate('projects')(Projekte)
 
 export const pageQuery = graphql`
-  query ProjectsQuery {
+  query ProjekteQuery {
     site {
       siteMetadata {
         title

@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
 import Helmet from 'react-helmet'
+import { translate } from 'react-i18next'
 
 import MainSkills from '../../components/skills/MainSkills'
 import Technologies from '../../components/skills/Technologies'
@@ -14,18 +16,22 @@ const Skills = ({
     site: {
       siteMetadata: { title: siteTitle }
     }
-  }
+  },
+  t
 }) => (
   <div>
     <Helmet>
-      <title>{`Kenntnisse | ${siteTitle}`}</title>
+      <title>
+        {t('siteTitle')}
+        {` | ${siteTitle}`}
+      </title>
     </Helmet>
 
-    <h1>Kenntnisse</h1>
+    <h1>{t('skills')}</h1>
     <p>
-      Diese Liste spiegelt wider <span className="low">woher ich komme</span>,{' '}
-      <span className="middle">was ich bevorzuge</span> und{' '}
-      <span className="high">wofür ich brenne</span>.
+      {t('thisList')} <span className="low">{t('comingFrom')}</span>,{' '}
+      <span className="middle">{t('prefering')}</span> {t('and')}{' '}
+      <span className="high">{t('passionateAbout')}</span>.
     </p>
 
     <div className="skills">
@@ -128,13 +134,14 @@ Skills.propTypes = {
         title: PropTypes.string.isRequired
       }).isRequired
     }).isRequired
-  }).isRequired
+  }).isRequired,
+  t: PropTypes.func.isRequired
 }
 
-export default Skills
+export default translate('skills')(Skills)
 
 export const pageQuery = graphql`
-  query SkillsQuery {
+  query KentnisseQuery {
     site {
       siteMetadata {
         title

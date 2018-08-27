@@ -58,24 +58,20 @@ const Homepage = ({
       </aside>
       <section className="intro">
         <p>
-          <span className="greeting">Hallo,</span>
+          <span className="greeting">{t('hello')},</span>
           <br />
-          ich bin <span className="name">Richard Sternagel</span>,<br />
-          Web/App-Entwickler (IT-Freelancer) aus Frankfurt am Main.
+          {t('iam')} <span className="name">Richard Sternagel</span>,<br />
+          {t('doingThisAndFrom')} {t('ffm')}.
         </p>
 
         <p>
-          Ich bin Spezialist für die{' '}
-          <Link to={'/angebot/'}>
-            Entwicklung von Web/Mobile Apps, Infrastruktur und Tooling
-          </Link>. Mein{' '}
-          <Link to={'/kenntnisse/'}>praxiserprobtes Expertenwissen</Link>
-          ist das Ergebnis meines Studiums (Medieninformatik auf Diplom) sowie
-          meiner 11-jährigen <Link to={'/projekte/'}>Berufserfahrung</Link>.
+          {t('expertFor')} <Link to={'/angebot/'}>{t('devOfWebMobApp')}</Link>.{' '}
+          {t('my')} <Link to={'/kenntnisse/'}>{t('practicalExperience')}</Link>{' '}
+          {t('basedOn')} <Link to={'/projekte/'}>{t('workExperience')}</Link>.
         </p>
 
         <p>
-          Mein Fokus liegt auf{' '}
+          {t('myFocus')}{' '}
           <a href="https://developer.mozilla.org/en/docs/Web/JavaScript">
             JavaScript
           </a>{' '}
@@ -84,22 +80,17 @@ const Homepage = ({
         </p>
 
         <p>
-          Aktuell liegt mein Projektschwerpunkt auf{' '}
-          <a href="https://facebook.github.io/react/">React</a> /{' '}
+          {t('myEmphasisRightNow')}{' '}
           <a href="https://facebook.github.io/react-native/">React Native</a>{' '}
-          und dessen Ökosystem (d.h. <a href="http://redux.js.org/">Redux</a>,{' '}
-          <a href="http://graphql.org/">GraphQL</a>,{' '}
-          <a href="https://webpack.js.org/">webpack</a> etc.).
+          {t('trainings')} <Link to={'/kenntnisse/'}>{t('burningDesire')}</Link>
+          .
         </p>
 
-        <p>
-          Mein bevorzugtes Einsatzgebiet ist Frankfurt am Main und das
-          umliegende Rhein-Main Gebiet.
-        </p>
+        <p>{t('preferredLocation')}</p>
 
         <p>
-          Ich bin ab <time>Anfang Juli 2018</time> verfügbar. Mein Wunschsetup
-          wären 3 Tage die Woche - am besten remote.
+          {t('availablePrefix')} <time>{t('availableDate')}</time>{' '}
+          {t('availableAffix')}
         </p>
       </section>
     </section>
@@ -220,10 +211,10 @@ Homepage.propTypes = {
       }).isRequired
     }).isRequired
   }).isRequired,
-  t: PropTypes.shape({}).isRequired
+  t: PropTypes.func.isRequired
 }
 
-export default translate('root')(Homepage)
+export default translate('home')(Homepage)
 
 export const pageQuery = graphql`
   query IndexQuery {
