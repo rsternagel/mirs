@@ -3,6 +3,8 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
+
+import { translate } from 'react-i18next'
 import Link from 'gatsby-link'
 
 import { s } from '../utils/breakpoints'
@@ -11,14 +13,10 @@ class Nav extends React.Component {
   constructor(props) {
     super(props)
 
-    this.navTitles = ['home', 'angebot', 'projekte', 'kenntnisse']
     this.navHtmlElems = new Map()
 
     const { pathname } = props
-    const selectedNavItemId = this.getInitialSelectedNav(
-      pathname,
-      this.navTitles
-    )
+    const selectedNavItemId = this.getInitialSelectedNav(pathname)
     const indicatorWrapperStyle = { display: 'none' }
 
     this.state = { selectedNavItemId, indicatorWrapperStyle }
@@ -52,12 +50,15 @@ class Nav extends React.Component {
     const { pathname } = nextProps
     let matchedNavTitle = ''
     let curPageHasOneOfNavTitlesList = []
+    let getTranslatedPathnameWord = () =>
+      this.getBilingualNavTitles()[pathname.replace(/\//g, '')]
 
-    this.navTitles.forEach((title) => {
+    this.getNavTitles().forEach((title) => {
       let isHome = pathname === '/' && title === home
       let hasNavTitleMatchingPathname =
-        pathname.search(new RegExp(`/${title}/?`)) !== -1
-      if (hasNavTitleMatchingPathname && matchedNavTitle === '') {
+        pathname.search(new RegExp(`/${title}/?`)) !== -1 ||
+        getTranslatedPathnameWord() === title
+      if (hasNavTitleMatchingPathname) {
         matchedNavTitle = title
       }
       curPageHasOneOfNavTitlesList.push(isHome || hasNavTitleMatchingPathname)
@@ -78,7 +79,7 @@ class Nav extends React.Component {
     }
 
     if (pathname === '/') {
-      // set selectedNavItemId if root no matter
+      // set selectedNavItemId if root - no matter
       // if other links than nav home link was used
       setNavActiveState(home)
     } else if (curPageHasOneOfNavTitlesList.includes(true) === false) {
@@ -104,15 +105,35 @@ class Nav extends React.Component {
     }
   }
 
-  getInitialSelectedNav(path, navTitles) {
+  getNavTitles = () => [
+    'home',
+    this.props.t('offer'),
+    this.props.t('projects'),
+    this.props.t('skills')
+  ]
+
+  getBilingualNavTitles = () => {
+    return {
+      offer: 'angebot',
+      angebot: 'offer',
+      projects: 'projekte',
+      projekte: 'projects',
+      skills: 'kenntnisse',
+      kenntnisse: 'skills'
+    }
+  }
+
+  getInitialSelectedNav = (path) => {
     let selectedNavItemId = ''
 
-    navTitles.forEach((title) => {
+    Object.keys(this.getBilingualNavTitles()).some((title) => {
       let hasNavTitleMatchingPathname =
         path.search(new RegExp(`/${title}/?`)) !== -1
       if (hasNavTitleMatchingPathname) {
         selectedNavItemId = title
+        return true
       }
+      return false
     })
 
     if (path === '/') {
@@ -154,12 +175,15 @@ class Nav extends React.Component {
   render() {
     let navLinks = []
 
-    this.navTitles.forEach((item) => {
+    this.getNavTitles().forEach((item) => {
       let liElem = {}
       let linkTarget = {}
       let dynamicAttrs = {}
+      let selNavId = this.state.selectedNavItemId
+      let bilingualNavs = this.getBilingualNavTitles()
 
-      if (item === this.state.selectedNavItemId) {
+      if (item === selNavId || bilingualNavs[item] === selNavId) {
+        // alert(item)
         dynamicAttrs['data-selected'] = true
       }
 
@@ -277,7 +301,8 @@ class Nav extends React.Component {
 }
 
 Nav.propTypes = {
-  pathname: PropTypes.string.isRequired
+  pathname: PropTypes.string.isRequired,
+  t: PropTypes.func.isRequired
 }
 
-export default Nav
+export default translate()(Nav)
