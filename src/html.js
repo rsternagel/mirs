@@ -1,6 +1,7 @@
 /* eslint-disable react/no-danger */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/forbid-prop-types */
+/* eslint-disable jsx-a11y/html-has-lang */
 
 import flush from 'styled-jsx/server'
 
@@ -38,7 +39,7 @@ const Skeleton = ({ body, headComponents, postBodyComponents }) => {
   }
 
   return (
-    <html lang="de">
+    <html>
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
