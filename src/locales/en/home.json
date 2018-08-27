@@ -13,11 +13,11 @@
   "basedOn": "is based on my studies (degree in Computer Science in Media) as well as my eleven years",
   "workExperience": "work experience",
   "myFocus": "My focus is on",
-  "myEmphasisRightNow": "Currently my focus is on app development with",
+  "myEmphasisRightNow": "Currently my emphasis is on app development with",
   "trainings": "as well as in-house trainings for",
   "burningDesire": "topics I'm passionate about",
-  "preferredLocation": "My preferred area of work is \"Frankfurt am Main\" and the \"Rhein-Main\" area.",
-  "availablePrefix": "I am available at",
+  "preferredLocation": "My preferred location to work from is Frankfurt am Main, the Rhein-Main area or from home (remote).",
+  "availablePrefix": "I am available as from",
   "availableDate": "August 2018.",
-  "availableAffix": "Working remotely only 3 days a week would be my favorite project setup."
+  "availableAffix": "Working remotely part time would be my favorite project setup."
 }
