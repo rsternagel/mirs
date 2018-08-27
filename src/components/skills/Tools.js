@@ -1,6 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const Tools = () => (
+import { translate } from 'react-i18next'
+
+const Tools = ({ t }) => (
   <div>
     <dl className="skill-list">
       <dt className="category">Dev</dt>
@@ -31,7 +34,7 @@ const Tools = () => (
     </dl>
 
     <dl className="skill-list">
-      <dt className="category">Qualitätskontrolle</dt>
+      <dt className="category">{t('quality')}</dt>
       <dd className="details">
         <ul className="row">
           <li className="high">Prettier,</li>
@@ -53,7 +56,7 @@ const Tools = () => (
     </dl>
 
     <dl className="skill-list">
-      <dt className="category">Dokumentation</dt>
+      <dt className="category">{t('doc')}</dt>
       <dd className="details">
         <ul className="row">
           <li className="high">documentation.js,</li>
@@ -118,4 +121,8 @@ const Tools = () => (
   </div>
 )
 
-export default Tools
+Tools.propTypes = {
+  t: PropTypes.func.isRequired
+}
+
+export default translate('skills')(Tools)

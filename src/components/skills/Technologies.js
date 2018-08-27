@@ -1,13 +1,16 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const Technologies = () => (
+import { translate } from 'react-i18next'
+
+const Technologies = ({ t }) => (
   <div>
     <dl className="skill-list">
-      <dt className="category">Webtechnologien</dt>
+      <dt className="category">{t('webTechnologies')}</dt>
       <dd className="details">
         <ul className="row">
           <li className="high">HTML,</li>
-          <li className="high">CSS (inkl. SCSS & PostCSS),</li>
+          <li className="high">CSS ({t('incl')} SCSS & PostCSS),</li>
           <li className="high">SVG,</li>
           <li className="middle">XML,</li>
           <li className="low">XPath</li>
@@ -16,7 +19,7 @@ const Technologies = () => (
     </dl>
 
     <dl className="skill-list">
-      <dt className="category">Architektur</dt>
+      <dt className="category">{t('architecture')}</dt>
       <dd className="details">
         <ul className="row">
           <li className="high">GraphQL,</li>
@@ -27,7 +30,7 @@ const Technologies = () => (
     </dl>
 
     <dl className="skill-list">
-      <dt className="category">Paradigmen</dt>
+      <dt className="category">{t('paradigms')}</dt>
       <dd className="details">
         <ul className="row">
           <li className="high">Responsive web design,</li>
@@ -37,7 +40,7 @@ const Technologies = () => (
     </dl>
 
     <dl className="skill-list">
-      <dt className="category">Protokolle</dt>
+      <dt className="category">{t('protocols')}</dt>
       <dd className="details">
         <ul className="row">
           <li className="high">HTTP,</li>
@@ -50,7 +53,7 @@ const Technologies = () => (
     </dl>
 
     <dl className="skill-list">
-      <dt className="category">Schemasprachen</dt>
+      <dt className="category">{t('schemaLanguages')}</dt>
       <dd className="details">
         <ul className="row">
           <li className="high">JSON Schema,</li>
@@ -62,7 +65,7 @@ const Technologies = () => (
 
     {/*
     <dl className="skill-list">
-      <dt className="category">Query-Languages</dt>
+      <dt className="category">{t('queryLanguages')}</dt>
       <dd className="details">
         <ul className="row">
           <li className="high">GraphQL,</li>
@@ -85,4 +88,8 @@ const Technologies = () => (
   </div>
 )
 
-export default Technologies
+Technologies.propTypes = {
+  t: PropTypes.func.isRequired
+}
+
+export default translate('skills')(Technologies)

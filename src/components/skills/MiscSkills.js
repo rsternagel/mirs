@@ -1,9 +1,12 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const MiscSkills = () => (
+import { translate } from 'react-i18next'
+
+const MiscSkills = ({ t }) => (
   <div>
     <dl className="skill-list">
-      <dt className="category">Agile Methoden</dt>
+      <dt className="category">{t('agileMethods')}</dt>
       <dd className="details">
         <ul className="row">
           <li className="high">eXtreme Programming,</li>
@@ -38,4 +41,8 @@ const MiscSkills = () => (
   </div>
 )
 
-export default MiscSkills
+MiscSkills.propTypes = {
+  t: PropTypes.func.isRequired
+}
+
+export default translate('skills')(MiscSkills)
