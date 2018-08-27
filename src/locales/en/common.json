@@ -8,8 +8,8 @@
   "offer": "offer",
   "projects": "projects",
   "skills": "skills",
-  "404-headline": "a",
-  "404-desc1": "",
-  "404-desc2": "",
-  "404-path": ""
+  "404-siteTitle": "Error 404",
+  "404-headline": "Sorry, this page doesn't exist!",
+  "404-desc1": "This page or the given path (e.g.:",
+  "404-desc2": ") is either misspelled or not available anymore."
 }

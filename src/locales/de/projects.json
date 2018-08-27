@@ -1,4 +1,5 @@
 {
+  "siteTitle": "Projekte",
   "projects": "Projekte",
   "hereYouCanSee": "Hier sehen Sie ausgewählte Projektreferenzen",
   "catProjects": "Projekt",
@@ -31,9 +32,8 @@
   "project2Tasks": "Als Teil des Frontend-Teams, welches diese Web-Applikation entwickelt hat, waren meine Aufgaben:",
   "project2Ul1": "Fachliche Umsetzung von User-Stories, u.a.:",
   "project2Ul1-1": "1&1 Multi-Card (Anfordern, Aktivieren, Sperren, Entsperren)",
-  "project2Ul1-2": "DSL-Störungsformular",
-  "project2Ul1-3": "Technikerterminvereinbarung mit Calendar-Widget",
-  "project2Ul1-4": "Verschiedene DSL und Mobile Accordions, um „Einstellungen & Services“ zu konfigurieren",
+  "project2Ul1-2": "Technikerterminvereinbarung mit Calendar-Widget",
+  "project2Ul1-3": "Verschiedene DSL und Mobile Accordions, um „Einstellungen & Services“ zu konfigurieren",
   "project2Ul2": "Wartung/Modernisierung der Frontend-Toolchain:",
   "project2Ul2-1": "Einbindung von Browserify und Babel",
   "project2Ul2-2": "Umstellung des Buildprozesses auf Node.js/npm-packages",

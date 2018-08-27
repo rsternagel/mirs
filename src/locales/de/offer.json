@@ -1,10 +1,13 @@
 {
+  "siteTitle": "Angebot",
   "offer": "Angebot",
   "youNeedSupport": "Sie benötigen Unterstützung bei",
   "support1": "der Entwicklung einer komplexen Web-Applikation?",
   "support2": "der Entwicklung einer komplexen (Mobile) App in React Native?",
   "support3": "der Entwicklung eines kritischen Projektes, das in JavaScript (inkl. Node.js) geschrieben ist?",
   "support4": "der Erweiterung Ihrer Infrastruktur oder Ihres Toolings, bspw. Ihres Entwicklungs- oder Deploymentprozesses",
+  "support5": "eine in-house Schulung zu einem",
+  "burningDesire": "Thema für das ich brenne",
   "rightMan": "Dann bin ich der passende Mann für Sie.",
   "myProfile": "Mein Profil:",
   "webDev": "Senior Web/App-Entwickler,",

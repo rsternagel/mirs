@@ -8,8 +8,8 @@
   "offer": "angebot",
   "projects": "projekte",
   "skills": "kenntnisse",
-  "404-headline": "",
-  "404-desc1": "",
-  "404-desc2": "",
-  "404-path": ""
+  "404-siteTitle": "Fehler 404",
+  "404-headline": "Sorry, diese Seite existiert nicht!",
+  "404-desc1": "Die Seite oder der eingegebene Pfad (z.B.:",
+  "404-desc2": ") ist entweder falsch geschrieben oder nicht mehr verfügbar."
 }
