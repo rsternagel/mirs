@@ -1,34 +1,32 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
+import { translate } from 'react-i18next'
 import Link from 'gatsby-link'
 
-// import FaGithub from 'react-icons/lib/fa/github'
-// import FaStackOverflow from 'react-icons/lib/fa/stack-overflow'
+import LanguageSwitcher from './LanguageSwitcher'
 
 import { s } from '../utils/breakpoints'
 
-const Footer = () => (
+const Footer = ({ t, pathname }) => (
   <footer>
-    <div className="meta">
-      <span className="copyright">
-        © {new Date().getFullYear()}
-        <em>Richard Sternagel</em>
-      </span>
-      {/*
+    <div className="wrapper">
+      <div className="meta">
+        <span className="copyright">
+          © {new Date().getFullYear()}
+          <em>Richard Sternagel</em>
+        </span>
+        {/*
       <Link to={'/prinzipien/'}>Prinzipien</Link>
       <span className="seperator apart"></span>
       */}
-      <span className="metaLinks">
-        <Link to={'/impressum/'}>Impressum</Link>
-        <span className="seperator">•</span>
-        <Link to={'/datenschutz/'}>Datenschutz</Link>
-      </span>
-      {/*
-      <span className="seperator apart"></span>
-      <span className="icons">
-        <a href="#"><FaGithub /></a>
-        <a href="#"><FaStackOverflow /></a>
-      </span>
-      */}
+        <span className="metaLinks">
+          <Link to={t('imprintPath')}>{t('imprint')}</Link>
+          <span className="separator">•</span>
+          <Link to={t('privacyPath')}>{t('privacy')}</Link>
+        </span>
+        <LanguageSwitcher pathname={pathname} />
+      </div>
     </div>
 
     <style jsx>{`
@@ -56,17 +54,15 @@ const Footer = () => (
         background-color: #ffb;
       }
 
-      .icons {
-        font-size: 110%;
+      .wrapper {
+        margin: 0 auto;
+        max-width: 54rem;
       }
 
       .meta {
-        margin: 0 auto;
+        display: flex;
+        justify-content: space-evenly;
         text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
-      }
-
-      .copyright {
-        padding-right: 30px;
       }
 
       .copyright em {
@@ -74,12 +70,7 @@ const Footer = () => (
         padding-left: 5px;
       }
 
-      .seperator.apart {
-        padding: 0 20px 0 10px;
-        color: #999;
-      }
-
-      .seperator {
+      .separator {
         padding: 0 5px;
         color: #999;
       }
@@ -87,12 +78,8 @@ const Footer = () => (
       /* Media Queries */
 
       @media (max-width: ${s}) {
-        .copyright {
-          display: block;
-        }
-
-        .icons {
-          display: block;
+        .meta {
+          flex-direction: column;
         }
       }
 
@@ -105,4 +92,9 @@ const Footer = () => (
   </footer>
 )
 
-export default Footer
+Footer.propTypes = {
+  pathname: PropTypes.string.isRequired,
+  t: PropTypes.func.isRequired
+}
+
+export default translate()(Footer)
