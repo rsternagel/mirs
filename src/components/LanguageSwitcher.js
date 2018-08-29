@@ -49,14 +49,17 @@ class LanguageSwitcher extends Component {
     return false
   }
 
+  /* eslint-disable react/destructuring-assignment */
   renderLanguageChoice = ({ code, label }) => (
     <button
+      type="button"
       key={code}
       className={this.state.language.includes(code) ? 'selected' : ''}
       onClick={() => this.handleChangeLanguage(code)}>
       {label}
     </button>
   )
+  /* eslint-enable react/destructuring-assignment */
 
   render = () => {
     const languages = [{ code: 'en', label: 'EN' }, { code: 'de', label: 'DE' }]
@@ -68,8 +71,16 @@ class LanguageSwitcher extends Component {
         {languages.map((language) => this.renderLanguageChoice(language))}
 
         <style jsx>{`
+          :global(button) {
+            background-color: transparent;
+          }
+
           :global(button.selected) {
             background-color: #ffb;
+          }
+
+          :global(button.selected):focus {
+            outline: 0;
           }
 
           :global(button),
