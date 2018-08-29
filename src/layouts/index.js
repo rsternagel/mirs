@@ -63,6 +63,10 @@ const Layout = ({ location, children, t }) => (
         font-family: 'Open Sans', sans-serif;
       }
 
+      .maincontent :global(ul) {
+        font-size: 95%;
+      }
+
       .maincontent :global(a),
       .maincontent :global(a:visited) {
         text-decoration: none;
@@ -72,10 +76,6 @@ const Layout = ({ location, children, t }) => (
 
       .maincontent :global(a:hover) {
         background-color: #ffb;
-      }
-
-      .maincontent :global(ul) {
-        font-size: 95%;
       }
 
       @media (max-width: ${m}) {

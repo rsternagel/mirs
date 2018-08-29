@@ -220,8 +220,18 @@ class Nav extends React.Component {
         </ul>
 
         <style jsx>{`
-          nav :global(a) {
-            text-decoration: none;
+          ul {
+            position: relative;
+            display: flex;
+            margin-top: 20px;
+          }
+
+          ul :global(li) {
+            flex: 0 1 content;
+            padding-left: 8px;
+            padding-right: 8px;
+            padding-bottom: 10px;
+            cursor: pointer;
           }
 
           nav {
@@ -233,30 +243,17 @@ class Nav extends React.Component {
           nav :global(a) {
             padding: 3px;
             color: rgba(0, 0, 0, 0.8);
-          }
-
-          nav :global(a:hover),
-          nav :global([data-selected='true']) :global(a),
-          nav :global([data-selected='true']) :global(a:visited) {
-            color: #479047;
-          }
-
-          ul {
-            position: relative;
-            display: flex;
-            margin-top: 20px;
+            text-decoration: none;
           }
 
           ul :global(li:not(:last-child)) {
             margin-right: 30px;
           }
 
-          ul :global(li) {
-            flex: 0 1 content;
-            padding-left: 8px;
-            padding-right: 8px;
-            padding-bottom: 10px;
-            cursor: pointer;
+          nav :global(a:hover),
+          nav :global([data-selected='true']) :global(a),
+          nav :global([data-selected='true']) :global(a:visited) {
+            color: #479047;
           }
 
           .nav-indicator-wrapper {
