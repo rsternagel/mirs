@@ -71,8 +71,17 @@ class LanguageSwitcher extends Component {
         {languages.map((language) => this.renderLanguageChoice(language))}
 
         <style jsx>{`
-          :global(button) {
+          :global(button),
+          :global(button.selected) {
+            font-family: inherit;
+            font-size: 100%;
+            border: 0;
             background-color: transparent;
+            padding: 0 5px;
+            text-decoration: none;
+            padding-bottom: 1px;
+            border-radius: 5px;
+            color: #1964ae;
           }
 
           :global(button.selected) {
@@ -81,18 +90,6 @@ class LanguageSwitcher extends Component {
 
           :global(button.selected):focus {
             outline: 0;
-          }
-
-          :global(button),
-          :global(button.selected) {
-            font-family: inherit;
-            font-size: 100%;
-            border: 0;
-            padding: 0 5px;
-            text-decoration: none;
-            padding-bottom: 1px;
-            border-radius: 5px;
-            color: #1964ae;
           }
 
           .lang em {

@@ -50,10 +50,6 @@ const Skills = ({
         list-style-type: none;
       }
 
-      .skills :global(ul) {
-        list-style-type: none;
-      }
-
       .skills :global(ul),
       .skills :global(dl),
       .skills :global(dd) {
@@ -82,11 +78,6 @@ const Skills = ({
         display: flex;
       }
 
-      .skills :global(.details) :global(li) {
-        padding-left: 5px;
-        margin-bottom: 3px;
-      }
-
       .low,
       .skills :global(.low) {
         color: hsla(220, 0%, 60%, 0.9);
@@ -100,6 +91,11 @@ const Skills = ({
       .high,
       .skills :global(.high) {
         color: hsla(130, 45%, 30%, 1);
+      }
+
+      .skills :global(.details) :global(li) {
+        padding-left: 5px;
+        margin-bottom: 3px;
       }
 
       /* Media Queries */
