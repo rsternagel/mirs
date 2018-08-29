@@ -1,7 +1,5 @@
-export default {
-  // xxs: '320px',
-  // xs: '500px',
-  s: '580px',
-  m: '735px'
-  // l: '750px',
-}
+// export const xxs = '320px'
+// export const xs = '500px'
+export const s = '580px'
+export const m = '735px'
+// export const l = '750px'
