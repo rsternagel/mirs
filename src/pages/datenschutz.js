@@ -48,6 +48,10 @@ const Datenschutz = ({
       </a>
       .
     </p>
+    <p>
+      {t('dataAnalysisHereYouFind3')}{' '}
+      <a href="https://clicky.com/optout">{t('dataAnalysisHereYouFind4')}</a>.
+    </p>
   </div>
 )
 
