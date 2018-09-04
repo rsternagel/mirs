@@ -103,7 +103,7 @@ class LanguageSwitcher extends Component {
 }
 
 LanguageSwitcher.propTypes = {
-  i18n: PropTypes.func.isRequired,
+  i18n: PropTypes.object.isRequired,
   pathname: PropTypes.string.isRequired,
   t: PropTypes.func.isRequired
 }

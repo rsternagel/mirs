@@ -49,7 +49,6 @@ const Tools = ({ t }) => (
       <dt className="category">Security</dt>
       <dd className="details">
         <ul className="row">
-          <li className="high">nsp,</li>
           <li className="high">Snyk</li>
         </ul>
       </dd>
@@ -59,9 +58,9 @@ const Tools = ({ t }) => (
       <dt className="category">{t('doc')}</dt>
       <dd className="details">
         <ul className="row">
-          <li className="high">documentation.js,</li>
+          <li className="high">Docusaurus,</li>
           <li className="high">Gatsby (JS),</li>
-          <li className="high">Sphinx (Python),</li>
+          <li className="middle">Sphinx (Python),</li>
           <li className="low">JSDoc</li>
         </ul>
       </dd>

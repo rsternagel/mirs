@@ -11,7 +11,9 @@ module.exports = {
         name: 'pages'
       }
     },
+    `gatsby-plugin-flow`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-offline`
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-styled-jsx`
   ]
 }

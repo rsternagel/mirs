@@ -5,8 +5,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import { Link } from 'gatsby'
 import { translate } from 'react-i18next'
-import Link from 'gatsby-link'
 
 import { s } from '../utils/breakpoints'
 
@@ -43,7 +43,7 @@ class Nav extends React.Component {
             )
         }.bind(this)()
       )
-    }, 500)
+    }, 100)
   }
 
   componentWillReceiveProps(nextProps) {
