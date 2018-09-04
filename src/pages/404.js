@@ -1,8 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import { translate } from 'react-i18next'
+
+import Layout from '../components/Layout'
 
 const FourOFour = ({
   data: {
@@ -15,23 +18,26 @@ const FourOFour = ({
       siteMetadata: { domain }
     }
   },
+  location,
   t
 }) => (
-  <div>
-    <Helmet>
-      <title>
-        {t('404-siteTitle')}
-        {` | ${siteTitle}`}
-      </title>
-    </Helmet>
+  <Layout location={location}>
+    <div>
+      <Helmet>
+        <title>
+          {t('404-siteTitle')}
+          {` | ${siteTitle}`}
+        </title>
+      </Helmet>
 
-    <h1>{t('404-headline')}</h1>
-    <p>
-      {t('404-desc1')} {`www.${domain}/iDontExist`}
-      {t('404-desc2')}
-    </p>
-    <p>:_(</p>
-  </div>
+      <h1>{t('404-headline')}</h1>
+      <p>
+        {t('404-desc1')} {`www.${domain}/iDontExist`}
+        {t('404-desc2')}
+      </p>
+      <p>:_(</p>
+    </div>
+  </Layout>
 )
 
 FourOFour.propTypes = {
@@ -43,13 +49,14 @@ FourOFour.propTypes = {
       }).isRequired
     }).isRequired
   }).isRequired,
+  location: PropTypes.object.isRequired,
   t: PropTypes.func.isRequired
 }
 
 export default translate()(FourOFour)
 
 export const pageQuery = graphql`
-  query FOFQuery {
+  {
     site {
       siteMetadata {
         title
