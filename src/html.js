@@ -8,12 +8,13 @@ import React from 'react'
 import { TypographyStyle } from 'react-typography'
 import Helmet from 'react-helmet'
 
-import typography from './utils/typography'
-import favicon from './favicon.ico'
-
 // https://github.com/gatsbyjs/gatsby/issues/4750
 // XMLHttpRequest polyfill
 import { XMLHttpRequest } from 'xmlhttprequest'
+
+import typography from './utils/typography'
+import favicon from './favicon.ico'
+
 global.XMLHttpRequest = XMLHttpRequest
 
 const Skeleton = ({ body, headComponents, postBodyComponents }) => {

@@ -1,7 +1,6 @@
 /* eslint-disable  prettier/prettier */
 
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import { Link, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
@@ -131,18 +130,6 @@ const Angebot = ({
     </div>
   </Layout>
 )
-
-Angebot.propTypes = {
-  data: PropTypes.shape({
-    site: PropTypes.shape({
-      siteMetadata: PropTypes.shape({
-        title: PropTypes.string.isRequired
-      }).isRequired
-    }).isRequired
-  }).isRequired,
-  location: PropTypes.object.isRequired,
-  t: PropTypes.func.isRequired
-}
 
 export default translate('offer')(Angebot)
 

@@ -4,13 +4,12 @@
  * See: https://www.gatsbyjs.org/docs/ssr-apis/
  */
 
-import React from 'react'
 import { renderToString } from 'react-dom/server'
 import Backend from 'i18next-sync-fs-backend'
 
 import i18n from './src/utils/i18n'
 
-export const replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
+const replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
   i18n
     .use(Backend)
     .init({
@@ -25,3 +24,5 @@ export const replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
       replaceBodyHTMLString(renderToString(bodyComponent))
     })
 }
+
+export { replaceRenderer as default }
