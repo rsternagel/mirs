@@ -49,7 +49,7 @@ const Layout = ({ children, location, t }) => (
           font-size: 130%;
           border-bottom: 2px solid #6aae6a;
           display: inline-block;
-          margin-bottom: 30px;
+          margin: 0.67em 0;
           padding: 0 5px;
         }
 
