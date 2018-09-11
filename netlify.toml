@@ -1,2 +1,2 @@
-[Settings]
-YARN_VERSION = "1.9.4"
+[context.production]
+  YARN_VERSION = "1.9.4"
