@@ -81,6 +81,10 @@ const Layout = ({ children, location, t }) => (
           background-color: #ffb;
         }
 
+        .maincontent :global(a.nohover:hover) {
+          background-color: transparent;
+        }
+
         @media (max-width: ${m}) {
           .masthead {
             display: block;
