@@ -24,6 +24,7 @@
     "graphql": true
   },
   "rules": {
+    "react/prop-types": "off",
     "prettier/prettier": "error",
     "no-console": "off",
     "valid-jsdoc": "off",

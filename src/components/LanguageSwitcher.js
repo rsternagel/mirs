@@ -1,7 +1,6 @@
 /* global window, history */
 
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 
 import { translate } from 'react-i18next'
 
@@ -100,12 +99,6 @@ class LanguageSwitcher extends Component {
       </span>
     )
   }
-}
-
-LanguageSwitcher.propTypes = {
-  i18n: PropTypes.object.isRequired,
-  pathname: PropTypes.string.isRequired,
-  t: PropTypes.func.isRequired
 }
 
 export default translate()(LanguageSwitcher)

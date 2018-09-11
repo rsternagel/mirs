@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import { translate } from 'react-i18next'
 import { Link } from 'gatsby'
@@ -91,10 +90,5 @@ const Footer = ({ t, pathname }) => (
     `}</style>
   </footer>
 )
-
-Footer.propTypes = {
-  pathname: PropTypes.string.isRequired,
-  t: PropTypes.func.isRequired
-}
 
 export default translate()(Footer)

@@ -1,7 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-
-import { StaticQuery, graphql } from 'gatsby'
 
 import 'sanitize.css/sanitize.css'
 
@@ -94,13 +91,5 @@ const Layout = ({ children, location, t }) => (
     </div>
   </I18nextProvider>
 )
-
-Layout.propTypes = {
-  children: PropTypes.object.isRequired,
-  location: PropTypes.shape({
-    pathname: PropTypes.string.isRequired
-  }).isRequired,
-  t: PropTypes.func.isRequired
-}
 
 export default translate()(Layout)

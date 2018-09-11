@@ -3,7 +3,6 @@
 /* eslint-disable react/destructuring-assignment */
 
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import { Link } from 'gatsby'
 import { translate } from 'react-i18next'
@@ -296,11 +295,6 @@ class Nav extends React.Component {
       </nav>
     )
   }
-}
-
-Nav.propTypes = {
-  pathname: PropTypes.string.isRequired,
-  t: PropTypes.func.isRequired
 }
 
 export default translate()(Nav)

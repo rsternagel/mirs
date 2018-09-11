@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import { translate } from 'react-i18next'
 
@@ -77,9 +76,5 @@ const MainSkills = ({ t }) => (
     </dl>
   </div>
 )
-
-MainSkills.propTypes = {
-  t: PropTypes.func.isRequired
-}
 
 export default translate('skills')(MainSkills)
