@@ -6,6 +6,8 @@ import Helmet from 'react-helmet'
 import { translate } from 'react-i18next'
 
 import Layout from '../../components/Layout'
+import logoBfh from '../../components/img/logo_bfh_app.png'
+import logoChase from '../../components/img/logo_chase_app.png'
 import logoEue from '../../components/img/logo_eue.png'
 import logoQx from '../../components/img/logo_qooxdoo.png'
 
@@ -32,6 +34,78 @@ const Projekte = ({
       <h1>{t('projects')}</h1>
 
       <p>{t('hereYouCanSee')}:</p>
+
+      <section className="project-list">
+        <div className="project">
+          <a
+            className="nohover"
+            href="https://play.google.com/store/apps/details?id=com.blackforesthop.bfh">
+            <img className="app" src={logoBfh} alt="BFH App" />
+          </a>
+          <a
+            className="nohover"
+            href="https://play.google.com/store/apps/details?id=com.chasefestival.companion">
+            <img className="app" src={logoChase} alt="Chase App" />
+          </a>
+
+          <dl>
+            <dt>{t('catProjects')}</dt>
+            <dd>
+              Black Forest Hop App <span className="amp">&</span>
+              <br /> Chase Festival App
+            </dd>
+
+            <dt>{t('catCompany')}</dt>
+            <dd>
+              Black Forest Hop e.V. <span className="amp">&</span>
+              <br /> SwingStep GmbH
+            </dd>
+
+            <dt>{t('catAssignment')}</dt>
+            <dd>{t('catAssignmentProject4')}</dd>
+
+            <dt>{t('catTechnologies')}</dt>
+            <dd>React, React Native, SVG, Flow, Jest</dd>
+
+            <dt>{t('catTimeframe')}</dt>
+            <dd>
+              <time>{t('catTimeframeProject4')}</time>
+            </dd>
+          </dl>
+        </div>
+
+        <div className="responsibility">
+          <p>{t('project4Desc-1')}</p>
+          <p>{t('project4Desc-2')}</p>
+          <p>{t('project4Tasks')}</p>
+          <ul>
+            <li>
+              {t('project4Ul1')}
+              <ul>
+                <li>{t('project4Ul1-1')}</li>
+                <li>{t('project4Ul1-2')}</li>
+                <li>{t('project4Ul1-3')}</li>
+              </ul>
+            </li>
+            <li>
+              {t('project4Ul2')}
+              <ul>
+                <li>{t('project4Ul2-1')}</li>
+                <li>{t('project4Ul2-2')}</li>
+              </ul>
+            </li>
+            <li>
+              {t('project4Ul3')}
+              <ul>
+                <li>{t('project4Ul3-1')}</li>
+                <li>{t('project4Ul3-2')}</li>
+                <li>{t('project4Ul3-3')}</li>
+                <li>{t('project4Ul3-4')}</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
 
       <section className="project-list">
         <div className="project">
@@ -64,7 +138,7 @@ const Projekte = ({
 
             <dt>{t('catTimeframe')}</dt>
             <dd>
-              <time>2017 (4 Monate / remote)</time>
+              <time>{t('catTimeframeProject3')}</time>
             </dd>
           </dl>
         </div>
@@ -195,6 +269,7 @@ const Projekte = ({
       <section className="project-list">
         <div className="project">
           <img src={logoQx} alt="qooxdoo" />
+
           <dl>
             <dt>{t('catProjects')}</dt>
             <dd>
@@ -253,6 +328,12 @@ const Projekte = ({
       </section>
 
       <style jsx>{`
+        .app {
+          border-radius: 20px;
+          border: 1px solid lightgrey;
+          margin-right: 20px;
+        }
+
         .project-list {
           display: flex;
         }
