@@ -79,6 +79,7 @@ const Skills = ({
 
         .skills :global(.row) {
           display: flex;
+          flex-wrap: wrap;
         }
 
         .low,
