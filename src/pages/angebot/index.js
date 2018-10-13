@@ -5,7 +5,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import { translate } from 'react-i18next'
-import MdMailOutline from 'react-icons/lib/md/mail-outline'
+import { MdMailOutline } from 'react-icons/md/'
 
 import Layout from '../../components/Layout'
 
