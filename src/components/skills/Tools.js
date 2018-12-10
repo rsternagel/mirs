@@ -54,6 +54,19 @@ const Tools = ({ t }) => (
     </dl>
 
     <dl className="skill-list">
+      <dt className="category">Virtualization</dt>
+      <dd className="details">
+        <ul className="row">
+          <li className="high">Docker,</li>
+          <li className="high">Kubernetes,</li>
+          <li className="low">Parallels,</li>
+          <li className="low">VirtualBox,</li>
+          <li className="low">VMware</li>
+        </ul>
+      </dd>
+    </dl>
+
+    <dl className="skill-list">
       <dt className="category">{t('doc')}</dt>
       <dd className="details">
         <ul className="row">
