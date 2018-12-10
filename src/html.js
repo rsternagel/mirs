@@ -36,6 +36,11 @@ const Skeleton = ({ body, headComponents, postBodyComponents }) => {
           rel="stylesheet"
         />
         <link rel="shortcut icon" type="image/x-icon" href={favicon} />
+        <script>
+          var clicky_site_ids = clicky_site_ids || [];
+          clicky_site_ids.push(101043267);
+        </script>
+        <script async src="//static.getclicky.com/js" />
       </head>
       <body>
         <div id="___gatsby" dangerouslySetInnerHTML={{ __html: body }} />
