@@ -22,7 +22,7 @@ const Technologies = ({ t }) => (
       <dd className="details">
         <ul className="row">
           <li className="high">GraphQL,</li>
-          <li className="high">REST,</li>
+          <li className="middle">REST,</li>
           <li className="low">SOA / Web Services</li>
         </ul>
       </dd>
