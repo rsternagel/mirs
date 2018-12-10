@@ -4,7 +4,7 @@
 
 import React from 'react'
 
-import { Link } from 'gatsby'
+import { Link, navigate } from 'gatsby'
 import { translate } from 'react-i18next'
 
 import { s } from '../utils/breakpoints'
@@ -194,7 +194,10 @@ class Nav extends React.Component {
         <li
           key={item}
           id={item}
-          onClick={this.handleClick}
+          onClick={() => {
+            this.handleClick
+            navigate(linkTarget)
+          }}
           ref={(navHtmlElem) => {
             this.navHtmlElems.set(item, navHtmlElem)
           }}
