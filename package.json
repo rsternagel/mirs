@@ -64,8 +64,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "NODE_ENV=production gatsby build",
     "serve": "gatsby serve",
-    "clean": "rm -rf .cache/* && rm -rf node_modules && rm -rf yarn.lock && rm -rf public/*",
-    "precommit": "lint-staged"
+    "clean": "rm -rf .cache/* && rm -rf node_modules && rm -rf yarn.lock && rm -rf public/*"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "*.js": [
