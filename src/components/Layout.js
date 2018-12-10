@@ -67,6 +67,10 @@ const Layout = ({ children, location, t }) => (
           font-size: 95%;
         }
 
+        .maincontent :global(hr) {
+          margin-bottom: 6rem;
+        }
+
         .maincontent :global(a),
         .maincontent :global(a:visited) {
           text-decoration: none;
