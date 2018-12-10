@@ -63,8 +63,11 @@ const Projekte = ({
             <dt>{t('catAssignment')}</dt>
             <dd>{t('catAssignmentProject4')}</dd>
 
-            <dt>{t('catTechnologies')}</dt>
+            <dt>{t('catTechnologiesFrontend')}</dt>
             <dd>React, React Native, SVG, Flow, Jest</dd>
+
+            <dt>{t('catTechnologiesBackend')}</dt>
+            <dd>GraphQL, MongoDB, Docker</dd>
 
             <dt>{t('catTimeframe')}</dt>
             <dd>
@@ -106,6 +109,8 @@ const Projekte = ({
         </div>
       </section>
 
+      <hr />
+
       <section className="project-list">
         <div className="project">
           <img
@@ -129,7 +134,7 @@ const Projekte = ({
             <dt>{t('catAssignment')}</dt>
             <dd>Frontend (JS)</dd>
 
-            <dt>{t('catTechnologies')}</dt>
+            <dt>{t('catTechnologiesFrontend')}</dt>
             <dd>
               React, React Router, Redux, Redux Form, Redux-Saga, styled
               components, webpack
@@ -197,7 +202,7 @@ const Projekte = ({
             <dt>{t('catAssignment')}</dt>
             <dd>Frontend & Tooling (JS)</dd>
 
-            <dt>{t('catTechnologies')}</dt>
+            <dt>{t('catTechnologiesFrontend')}</dt>
             <dd>qooxdoo, React, Angular 1&2</dd>
 
             <dt>{t('catTimeframe')}</dt>
