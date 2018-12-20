@@ -11,8 +11,7 @@ const Technologies = ({ t }) => (
           <li className="high">HTML,</li>
           <li className="high">CSS ({t('incl')} SCSS & PostCSS),</li>
           <li className="high">SVG,</li>
-          <li className="middle">XML,</li>
-          <li className="low">XPath</li>
+          <li className="middle">XML</li>
         </ul>
       </dd>
     </dl>
@@ -22,8 +21,8 @@ const Technologies = ({ t }) => (
       <dd className="details">
         <ul className="row">
           <li className="high">GraphQL,</li>
-          <li className="middle">REST,</li>
-          <li className="low">SOA / Web Services</li>
+          {/* <li className="high">GraphQL (with Prisma)</li> */}
+          <li className="middle">REST</li>
         </ul>
       </dd>
     </dl>
@@ -43,10 +42,7 @@ const Technologies = ({ t }) => (
       <dd className="details">
         <ul className="row">
           <li className="high">HTTP,</li>
-          <li className="low">LDAP,</li>
-          <li className="low">SOAP,</li>
-          <li className="low">XML-RPC,</li>
-          <li className="low">JSON-RPC</li>
+          <li className="middle">LDAP</li>
         </ul>
       </dd>
     </dl>
@@ -56,23 +52,10 @@ const Technologies = ({ t }) => (
       <dd className="details">
         <ul className="row">
           <li className="high">JSON Schema,</li>
-          <li className="high">Relax NG,</li>
-          <li className="low">XML Schema</li>
+          <li className="high">Relax NG</li>
         </ul>
       </dd>
     </dl>
-
-    {/*
-    <dl className="skill-list">
-      <dt className="category">{t('queryLanguages')}</dt>
-      <dd className="details">
-        <ul className="row">
-          <li className="high">GraphQL,</li>
-          <li className="low">SQL</li>
-        </ul>
-      </dd>
-    </dl>
-    */}
 
     <dl className="skill-list">
       <dt className="category">

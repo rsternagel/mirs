@@ -32,9 +32,8 @@ const Skills = ({
 
       <h1>{t('skills')}</h1>
       <p>
-        {t('thisList')} <span className="low">{t('comingFrom')}</span>,{' '}
-        <span className="middle">{t('prefering')}</span> {t('and')}{' '}
-        <span className="high">{t('passionateAbout')}</span>.
+        {t('thisList')} <span className="middle">{t('prefering')}</span>{' '}
+        {t('and')} <span className="high">{t('passionateAbout')}</span>.
       </p>
 
       <div className="skills">

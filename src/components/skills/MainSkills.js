@@ -12,14 +12,13 @@ const MainSkills = ({ t }) => (
       <dd className="details">
         <ul>
           <li className="high">
-            JavaScript ({t('incl')} ES6) ({t('9years')})
+            JavaScript ({t('incl')} ES 20XX) ({t('9years')})
           </li>
+          <li className="high">TypeScript ({t('couple of months')})</li>
           <li className="high">Node.js ({t('3years')})</li>
+          <li className="high">Go ({t('xmonths')})</li>
           <li className="middle">Python ({t('3years')})</li>
           <li className="middle">UNIX shell scripting ({t('4years')})</li>
-          <li className="low">Java ({t('5years')})</li>
-          <li className="low">PHP5 ({t('3years')})</li>
-          <li className="low">XSLT ({t('5years')})</li>
         </ul>
       </dd>
     </dl>
@@ -31,9 +30,6 @@ const MainSkills = ({ t }) => (
           <li className="middle">qooxdoo (JS - {t('formerCoreTeam')})</li>
           <li className="middle">Django (Python)</li>
           <li className="middle">Flask (Python)</li>
-          <li className="low">Angular 1 & 2 (JS)</li>
-          <li className="low">Spring (Java)</li>
-          {/* <li className="low">Pustefix (Java)</li> */}
         </ul>
       </dd>
     </dl>
@@ -59,7 +55,9 @@ const MainSkills = ({ t }) => (
           <li className="middle">Redis,</li>
           <li className="middle">MongoDB,</li>
           <li className="middle">MySQL,</li>
-          <li className="low">SQLite</li>
+          <li className="middle">SQLite</li>
+          {/* <li className="middle">RethinkDB</li> */}
+          {/* <li className="middle">Realm</li> */}
         </ul>
       </dd>
     </dl>
@@ -68,9 +66,8 @@ const MainSkills = ({ t }) => (
       <dt className="category">Server</dt>
       <dd className="details">
         <ul className="row">
-          <li className="middle">nginx,</li>
-          <li className="low">Apache HTTP Server,</li>
-          <li className="low">Apache Tomcat</li>
+          <li className="middle">nginx</li>
+          {/* <li className="middle">traefik</li> */}
         </ul>
       </dd>
     </dl>
