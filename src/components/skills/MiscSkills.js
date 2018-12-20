@@ -32,8 +32,7 @@ const MiscSkills = ({ t }) => (
       <dd className="details">
         <ul className="row">
           <li className="high">macOS,</li>
-          <li className="middle">Linux,</li>
-          <li className="low">Windows</li>
+          <li className="middle">Linux</li>
         </ul>
       </dd>
     </dl>

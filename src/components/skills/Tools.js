@@ -12,8 +12,7 @@ const Tools = ({ t }) => (
           <li className="high">Atom/Nuclide,</li>
           <li className="high">(M)Vim,</li>
           <li className="middle">Xcode,</li>
-          <li className="middle">Android Studio,</li>
-          <li className="low">Eclipse</li>
+          <li className="middle">Android Studio</li>
         </ul>
       </dd>
     </dl>
@@ -25,9 +24,7 @@ const Tools = ({ t }) => (
           <li className="high">Jest,</li>
           <li className="high">Enzyme,</li>
           <li className="middle">Jasmine,</li>
-          <li className="middle">Mocha,</li>
-          <li className="low">Protractor,</li>
-          <li className="low">Selenium</li>
+          <li className="middle">Mocha</li>
         </ul>
       </dd>
     </dl>
@@ -54,14 +51,11 @@ const Tools = ({ t }) => (
     </dl>
 
     <dl className="skill-list">
-      <dt className="category">Virtualization</dt>
+      <dt className="category">{t('virtualization')}</dt>
       <dd className="details">
         <ul className="row">
-          <li className="high">Docker,</li>
-          <li className="high">Kubernetes,</li>
-          <li className="low">Parallels,</li>
-          <li className="low">VirtualBox,</li>
-          <li className="low">VMware</li>
+          <li className="high">Docker ({t('incl')} Swarm mode),</li>
+          <li className="high">Kubernetes</li>
         </ul>
       </dd>
     </dl>
@@ -71,9 +65,7 @@ const Tools = ({ t }) => (
       <dd className="details">
         <ul className="row">
           <li className="high">Docusaurus,</li>
-          <li className="high">Gatsby (JS),</li>
-          <li className="middle">Sphinx (Python),</li>
-          <li className="low">JSDoc</li>
+          <li className="middle">Sphinx (Python)</li>
         </ul>
       </dd>
     </dl>
@@ -83,7 +75,7 @@ const Tools = ({ t }) => (
       <dd className="details">
         <ul className="row">
           <li className="high">Gatsby (JS),</li>
-          <li className="middle">Pelican (Python)</li>
+          <li className="middle">Hugo (Go)</li>
         </ul>
       </dd>
     </dl>
@@ -95,9 +87,11 @@ const Tools = ({ t }) => (
       </dt>
       <dd className="details">
         <ul className="row">
+          {/* <li className="high">CircleCI,</li> */}
           <li className="high">Travis CI,</li>
           <li className="high">Greenkeeper,</li>
           <li className="middle">Jenkins</li>
+          {/* <li className="middle">Jenkins X</li> */}
         </ul>
       </dd>
     </dl>
@@ -109,8 +103,7 @@ const Tools = ({ t }) => (
       <dd className="details">
         <ul className="row">
           <li className="high">Git,</li>
-          <li className="middle">Mercurial,</li>
-          <li className="low">Subversion</li>
+          <li className="middle">Mercurial</li>
         </ul>
       </dd>
     </dl>
@@ -122,10 +115,7 @@ const Tools = ({ t }) => (
           <li className="high">npm,</li>
           <li className="high">yarn,</li>
           <li className="high">webpack,</li>
-          <li className="high">Babel,</li>
-          <li className="middle">Gulp,</li>
-          <li className="low">Grunt,</li>
-          <li className="low">Maven</li>
+          <li className="high">Babel</li>
         </ul>
       </dd>
     </dl>
