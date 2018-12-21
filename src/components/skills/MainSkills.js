@@ -14,7 +14,7 @@ const MainSkills = ({ t }) => (
           <li className="high">
             JavaScript ({t('incl')} ES 20XX) ({t('9years')})
           </li>
-          <li className="high">TypeScript ({t('months')})</li>
+          <li className="high">TypeScript ({t('xmonths')})</li>
           <li className="high">Node.js ({t('3years')})</li>
           <li className="high">Go ({t('xmonths')})</li>
           <li className="middle">Python ({t('3years')})</li>
