@@ -23,6 +23,7 @@
   "queryLanguages": "Query-Languages",
   "quality": "Qualitätskontrolle",
   "virtualization": "Containerisierung",
+  "orchestration": "Orchestrierung",
   "doc": "Dokumentation",
   "agileMethods": "Agile Methoden"
 }

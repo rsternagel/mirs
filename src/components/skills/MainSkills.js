@@ -5,10 +5,7 @@ import { translate } from 'react-i18next'
 const MainSkills = ({ t }) => (
   <div>
     <dl className="skill-list">
-      <dt className="category">
-        {t('progLang')} /<br />
-        {t('platforms')}
-      </dt>
+      <dt className="category">{t('progLang')}</dt>
       <dd className="details">
         <ul>
           <li className="high">
