@@ -23,6 +23,7 @@ const Tools = ({ t }) => (
         <ul className="row">
           <li className="high">Jest,</li>
           <li className="high">Enzyme,</li>
+          {/* <li className="high">Cypress,</li> */}
           <li className="middle">Jasmine,</li>
           <li className="middle">Mocha</li>
         </ul>
@@ -54,7 +55,16 @@ const Tools = ({ t }) => (
       <dt className="category">{t('virtualization')}</dt>
       <dd className="details">
         <ul className="row">
-          <li className="high">Docker ({t('incl')} Swarm mode),</li>
+          <li className="high">Docker</li>
+        </ul>
+      </dd>
+    </dl>
+
+    <dl className="skill-list">
+      <dt className="category">{t('orchestration')}</dt>
+      <dd className="details">
+        <ul className="row">
+          <li className="high">Docker Swarm mode,</li>
           <li className="high">Kubernetes</li>
         </ul>
       </dd>
@@ -87,7 +97,7 @@ const Tools = ({ t }) => (
       </dt>
       <dd className="details">
         <ul className="row">
-          {/* <li className="high">CircleCI,</li> */}
+          <li className="high">CircleCI,</li>
           <li className="high">Travis CI,</li>
           <li className="high">Greenkeeper,</li>
           <li className="middle">Jenkins</li>

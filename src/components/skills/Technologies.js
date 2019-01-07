@@ -20,8 +20,7 @@ const Technologies = ({ t }) => (
       <dt className="category">{t('architecture')}</dt>
       <dd className="details">
         <ul className="row">
-          <li className="high">GraphQL,</li>
-          {/* <li className="high">GraphQL (with Prisma)</li> */}
+          <li className="high">GraphQL ({t('incl')} Prisma),</li>
           <li className="middle">REST</li>
         </ul>
       </dd>
