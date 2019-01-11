@@ -203,7 +203,11 @@ const Projekte = ({
             <dd>Frontend & Tooling (JS)</dd>
 
             <dt>{t('catTechnologiesFrontend')}</dt>
-            <dd>qooxdoo, React, Angular 1&2</dd>
+            <dd>
+              Node.js, qooxdoo,
+              <br />
+              React, Angular 1&2
+            </dd>
 
             <dt>{t('catTimeframe')}</dt>
             <dd>
