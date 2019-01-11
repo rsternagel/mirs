@@ -5,6 +5,40 @@ import { translate } from 'react-i18next'
 const Tools = ({ t }) => (
   <div>
     <dl className="skill-list">
+      <dt className="category">{t('virtualization')}</dt>
+      <dd className="details">
+        <ul className="row">
+          <li className="high">Docker</li>
+        </ul>
+      </dd>
+    </dl>
+
+    <dl className="skill-list">
+      <dt className="category">{t('orchestration')}</dt>
+      <dd className="details">
+        <ul className="row">
+          <li className="high">Docker Swarm mode,</li>
+          <li className="high">Kubernetes</li>
+        </ul>
+      </dd>
+    </dl>
+
+    <dl className="skill-list">
+      <dt className="category">
+        <abbr title="Infrastructure/Container/Platform/Backend/Function/Software as a Service">
+          *aaS
+        </abbr>
+      </dt>
+      <dd className="details">
+        <ul className="row">
+          <li className="high">Google Firebase,</li>
+          <li className="high">Visual Studio App Center,</li>
+          <li className="high">Netlify</li>
+        </ul>
+      </dd>
+    </dl>
+
+    <dl className="skill-list">
       <dt className="category">Dev</dt>
       <dd className="details">
         <ul className="row">
@@ -47,25 +81,6 @@ const Tools = ({ t }) => (
       <dd className="details">
         <ul className="row">
           <li className="high">Snyk</li>
-        </ul>
-      </dd>
-    </dl>
-
-    <dl className="skill-list">
-      <dt className="category">{t('virtualization')}</dt>
-      <dd className="details">
-        <ul className="row">
-          <li className="high">Docker</li>
-        </ul>
-      </dd>
-    </dl>
-
-    <dl className="skill-list">
-      <dt className="category">{t('orchestration')}</dt>
-      <dd className="details">
-        <ul className="row">
-          <li className="high">Docker Swarm mode,</li>
-          <li className="high">Kubernetes</li>
         </ul>
       </dd>
     </dl>
