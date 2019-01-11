@@ -24,6 +24,7 @@ const MainSkills = ({ t }) => (
       <dt className="category">Frameworks</dt>
       <dd className="details">
         <ul>
+          <li className="high">React Native</li>
           <li className="middle">qooxdoo (JS - {t('formerCoreTeam')})</li>
           <li className="middle">Django (Python)</li>
           <li className="middle">Flask (Python)</li>
@@ -36,7 +37,6 @@ const MainSkills = ({ t }) => (
       <dd className="details">
         <ul className="row">
           <li className="high">React,</li>
-          <li className="high">React Native,</li>
           <li className="high">React Router,</li>
           <li className="high">Redux,</li>
           <li className="high">Redux Form,</li>
