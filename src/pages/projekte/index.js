@@ -288,7 +288,8 @@ const Projekte = ({
             <dt>{t('catAssignment')}</dt>
             <dd>
               {t('catAssignmentProject1-1')},<br />
-              {t('catAssignmentProject1-2')} (JS/Python)
+              {t('catAssignmentProject1-2')}
+              <br /> (JS, Node.js, Python)
             </dd>
 
             <dt>{t('catTimeframe')}</dt>
