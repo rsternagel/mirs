@@ -42,7 +42,7 @@ const Homepage = ({
               <p>
                 {t('labelsLine1')}
                 <br />
-                {t('labelsLine2')}
+                Full Stack · Cloud Native Attitude · IaC
                 <br />
                 JS · React · React Native · Node.js
               </p>
@@ -66,8 +66,8 @@ const Homepage = ({
           </p>
 
           <p>
-            {t('expertFor')} <Link to={'/angebot/'}>{t('devOfWebMobApp')}</Link>
-            . {t('my')}{' '}
+            {t('expertFor')} <Link to={'/angebot/'}>{t('devOfWebMobApp')}</Link>{' '}
+            {t('my')}{' '}
             <Link to={'/kenntnisse/'}>{t('practicalExperience')}</Link>{' '}
             {t('basedOn')} <Link to={'/projekte/'}>{t('workExperience')}</Link>.
           </p>
@@ -76,16 +76,16 @@ const Homepage = ({
             {t('myFocus')}{' '}
             <a href="https://developer.mozilla.org/en/docs/Web/JavaScript">
               JavaScript
-            </a>{' '}
+            </a>
+            , <a href="https://www.typescriptlang.org/">TypeScript</a>{' '}
             <span className="amp">&</span>{' '}
-            <a href="https://nodejs.org/">Node.js</a>.
+            <a href="https://nodejs.org/">Node.js</a>
           </p>
 
           <p>
             {t('myEmphasisRightNow')}{' '}
             <a href="https://facebook.github.io/react-native/">React Native</a>{' '}
-            {t('trainings')}{' '}
-            <Link to={'/kenntnisse/'}>{t('burningDesire')}</Link>.
+            {t('cloudNative')}
           </p>
 
           <p>{t('preferredLocation')}</p>

@@ -33,7 +33,7 @@ const Tools = ({ t }) => (
         <ul className="row">
           <li className="high">Google Cloud Platform,</li>
           <li className="high">Google Firebase,</li>
-          <li className="high">VS App Center,</li>
+          <li className="high">App Center,</li>
           <li className="high">Netlify</li>
         </ul>
       </dd>
@@ -70,6 +70,7 @@ const Tools = ({ t }) => (
         <ul className="row">
           <li className="high">Prettier,</li>
           <li className="high">Flow,</li>
+          <li className="high">TSLint,</li>
           <li className="high">ESLint,</li>
           <li className="high">stylelint</li>
         </ul>
@@ -137,8 +138,8 @@ const Tools = ({ t }) => (
       <dt className="category">Build</dt>
       <dd className="details">
         <ul className="row">
-          <li className="high">npm,</li>
           <li className="high">yarn,</li>
+          <li className="high">npm,</li>
           <li className="high">webpack,</li>
           <li className="high">Babel</li>
         </ul>

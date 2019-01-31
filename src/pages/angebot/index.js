@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import { translate } from 'react-i18next'
 import { MdMailOutline } from 'react-icons/md/'
@@ -32,15 +32,7 @@ const Angebot = ({
         <li>… {t('support1')}</li>
         <li>… {t('support2')}</li>
         <li>… {t('support3')}</li>
-        <li>
-          … {t('support5')}{' '}
-          <Link to={'/kenntnisse/'}>{t('burningDesire')}</Link>?
-        </li>
-        <li>
-          … {t('support4')} (<abbr title="Continuous Integration">CI</abbr>/
-          <abbr title="Continuous Delivery">CD</abbr>
-          )?
-        </li>
+        <li>… {t('support5')}</li>
       </ul>
       <p>{t('rightMan')}</p>
       <header>

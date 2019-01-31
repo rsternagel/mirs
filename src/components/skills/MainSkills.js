@@ -15,6 +15,7 @@ const MainSkills = ({ t }) => (
           <li className="high">Node.js ({t('4years')})</li>
           <li className="high">Go ({t('xmonths')})</li>
           <li className="middle">Python ({t('4years')})</li>
+          <li className="middle">Java SE ({t('5years')})</li>
           <li className="middle">UNIX shell scripting ({t('4years')})</li>
         </ul>
       </dd>
@@ -37,8 +38,10 @@ const MainSkills = ({ t }) => (
       <dd className="details">
         <ul className="row">
           <li className="high">React,</li>
-          <li className="high">React Router,</li>
           <li className="high">Redux,</li>
+          <li className="high">React Router,</li>
+          <li className="high">React Navigation,</li>
+          <li className="high">React Native SVG,</li>
           <li className="high">Redux Form,</li>
           <li className="high">Redux-Saga</li>
         </ul>
