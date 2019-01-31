@@ -10,19 +10,22 @@ import Backend from 'i18next-sync-fs-backend'
 import i18n from './src/utils/i18n'
 
 const replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
-  i18n
-    .use(Backend)
-    .init({
+  i18n.use(Backend).init(
+    {
       initImmediate: false,
       backend: {
         // when this site renders serverside we want to get the locales from the src folder
         loadPath: 'src/locales/{{lng}}/{{ns}}.json'
       }
-    })
-    // load the common namespace
-    .loadNamespaces(['common'], () => {
-      replaceBodyHTMLString(renderToString(bodyComponent))
-    })
+    },
+    () => {
+      // load the common namespace
+      i18n.loadNamespaces(['common'], () => {
+        replaceBodyHTMLString(renderToString(bodyComponent))
+      })
+    }
+  )
 }
 
-export { replaceRenderer as default }
+// eslint-disable-next-line import/prefer-default-export
+export { replaceRenderer }
