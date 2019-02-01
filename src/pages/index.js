@@ -39,13 +39,9 @@ const Homepage = ({
 
           <div className="container-labels-contact">
             <div className="labels">
-              <p>
-                {t('labelsLine1')}
-                <br />
-                Full Stack · Cloud Native Attitude · IaC
-                <br />
-                JS · React · React Native · Node.js
-              </p>
+              <span>{t('labelsLine1')}</span>
+              <span>Full Stack · Cloud Native · IaC</span>
+              <span>JS · React · React Native · Node.js</span>
             </div>
 
             <p className="contact">
@@ -119,17 +115,20 @@ const Homepage = ({
           height: auto;
         }
 
-        .labels p {
-          font-size: 70%;
-          margin-right: 3rem;
-          text-align: center;
+        .labels {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          max-width: 200px;
+          min-width: 150px;
+          font-size: 75%;
         }
 
         .contact {
           display: flex;
           flex-direction: column;
           font-size: 95%;
-          padding: 10px;
+          margin: 40px 10px;
         }
 
         .contact a {
@@ -166,8 +165,12 @@ const Homepage = ({
             width: 100%;
           }
 
+          .container-img img {
+            max-width: 85%;
+          }
+
           .container-labels-contact {
-            margin: 30px 0 0 50px;
+            margin: 20px 0 0 20px;
           }
 
           .container-labels-contact .labels p {
@@ -189,12 +192,16 @@ const Homepage = ({
             width: 100%;
           }
 
+          .container-img img {
+            max-width: 80%;
+          }
+
           .container-labels-contact {
             margin: 0;
           }
 
-          .labels p {
-            text-align: left;
+          .labels {
+            align-items: flex-start;
           }
 
           .intro {

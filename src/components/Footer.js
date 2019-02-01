@@ -36,7 +36,6 @@ const Footer = ({ t, pathname }) => (
         border-bottom: 1px solid #b0dda4;
         background-color: #ebf6e8;
         font-size: 80%;
-        text-align: center;
         padding: 8px 0;
       }
 
@@ -56,6 +55,7 @@ const Footer = ({ t, pathname }) => (
       .wrapper {
         margin: 0 auto;
         max-width: 54rem;
+        padding: 0.5rem 2.7rem;
       }
 
       .meta {
