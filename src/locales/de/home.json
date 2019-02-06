@@ -1,5 +1,4 @@
 {
-  "labelsLine1": "Entwicklung von Web/Mobile-Apps",
   "reachMe": "So erreichen Sie mich:",
   "hello": "Hallo",
   "iam": "ich bin ",
@@ -13,9 +12,10 @@
   "workExperience": "Berufserfahrung",
   "myFocus": "Mein Fokus liegt auf",
   "myEmphasisRightNow": "Aktuell liegt mein Projektschwerpunkt auf der App-Entwicklung mit",
+  "or": "oder",
   "cloudNative": "und der Transformation von Web Apps in Cloud Native Apps.",
   "preferredLocation": "Mein bevorzugtes Einsatzgebiet ist Frankfurt am Main und das umliegende Rhein-Main Gebiet.",
   "availablePrefix": "Ich bin ab ",
-  "availableDate": "Januar 2019",
-  "availableAffix": "verfügbar. Mein Wunschsetup wäre in Teilzeit und remote."
+  "availableDate": "Februar 2019",
+  "availableAffix": "verfügbar. Mein Wunschsetup ist eine Auslastung von 60-80% und remote."
 }

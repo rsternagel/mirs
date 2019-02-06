@@ -45,7 +45,7 @@ const Tools = ({ t }) => (
         <ul className="row">
           <li className="high">VS Code,</li>
           <li className="high">(M)Vim,</li>
-          <li className="middle">Xcode,</li>
+          <li className="high">Xcode,</li>
           <li className="middle">Android Studio</li>
         </ul>
       </dd>

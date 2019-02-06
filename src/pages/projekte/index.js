@@ -64,7 +64,7 @@ const Projekte = ({
             <dd>{t('catAssignmentProject4')}</dd>
 
             <dt>{t('catTechnologiesFrontend')}</dt>
-            <dd>React, React Native, SVG, Flow, Jest</dd>
+            <dd>React, React Native, SVG, TypeScript, Jest</dd>
 
             <dt>{t('catTechnologiesBackend')}</dt>
             <dd>GraphQL, MongoDB, Docker</dd>
