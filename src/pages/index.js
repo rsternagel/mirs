@@ -39,9 +39,9 @@ const Homepage = ({
 
           <div className="container-labels-contact">
             <div className="labels">
-              <span>{t('labelsLine1')}</span>
-              <span>Full Stack · Cloud Native · IaC</span>
+              <span>Web/Mobile-Apps (iOS / Swift)</span>
               <span>JS · React · React Native · Node.js</span>
+              <span>Full Stack · Cloud Native</span>
             </div>
 
             <p className="contact">
@@ -73,14 +73,15 @@ const Homepage = ({
             <a href="https://developer.mozilla.org/en/docs/Web/JavaScript">
               JavaScript
             </a>
-            , <a href="https://www.typescriptlang.org/">TypeScript</a>{' '}
-            <span className="amp">&</span>{' '}
+            , <a href="https://www.typescriptlang.org/">TypeScript</a>,{' '}
+            <a href="http://swift.org/">Swift</a> <span className="amp">&</span>{' '}
             <a href="https://nodejs.org/">Node.js</a>
           </p>
 
           <p>
             {t('myEmphasisRightNow')}{' '}
             <a href="https://facebook.github.io/react-native/">React Native</a>{' '}
+            {t('or')} <a href="http://swift.org/">Swift (iOS)</a>{' '}
             {t('cloudNative')}
           </p>
 

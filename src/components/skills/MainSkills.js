@@ -13,6 +13,7 @@ const MainSkills = ({ t }) => (
           </li>
           <li className="high">TypeScript ({t('xmonths')})</li>
           <li className="high">Node.js ({t('4years')})</li>
+          <li className="high">Swift ({t('xmonths')})</li>
           <li className="high">Go ({t('xmonths')})</li>
           <li className="middle">Python ({t('4years')})</li>
           <li className="middle">Java SE ({t('5years')})</li>

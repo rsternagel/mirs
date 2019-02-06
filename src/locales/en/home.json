@@ -1,5 +1,4 @@
 {
-  "labelsLine1": "Development of Web/Mobile-Apps",
   "reachMe": "Mail me:",
   "hello": "Hello",
   "iam": "I am",
@@ -13,9 +12,10 @@
   "workExperience": "work experience",
   "myFocus": "My focus is on",
   "myEmphasisRightNow": "Currently my emphasis is on app development with",
+  "or": "or",
   "cloudNative": "as well as transforming Web Apps into Cloud Native Apps.",
   "preferredLocation": "My preferred location to work from is Frankfurt am Main, the Rhein-Main area or from home (remote).",
   "availablePrefix": "I am available as from",
-  "availableDate": "January 2019.",
-  "availableAffix": "Working remotely part time would be my favorite project setup."
+  "availableDate": "February 2019.",
+  "availableAffix": "Working remotely part time is my favorite project setup."
 }
