@@ -44,8 +44,8 @@ const Angebot = ({
       <ul>
         <li>
           {t('profile1a')} (
-          <a href="https://facebook.github.io/react-native/">React Native</a>,
-          <a href="(https://angular.io/">Angular</a>,{' '}
+          <a href="https://facebook.github.io/react-native/">React Native</a>,{' '}
+          <a href="https://angular.io/">Angular</a>,{' '}
           <a href="https://vuejs.org/">Vue</a>) {t('profile1b')} (
           <a href="https://facebook.github.io/react/">React</a>){' '}
           {t('profile1c')}
