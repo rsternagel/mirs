@@ -25,7 +25,7 @@ const Tools = ({ t }) => (
 
     <dl className="skill-list">
       <dt className="category">
-        <abbr title="Infrastructure/Container/Platform/Backend/Function/Software as a Service">
+        <abbr title="Infrastructure / Container / Platform / Backend / Function / Software as a Service">
           *aaS
         </abbr>
       </dt>
@@ -58,6 +58,8 @@ const Tools = ({ t }) => (
           <li className="high">Jest,</li>
           <li className="high">Enzyme,</li>
           {/* <li className="high">Cypress,</li> */}
+          <li className="high">Quick (iOS),</li>
+          <li className="high">Nimble (iOS),</li>
           <li className="middle">Jasmine,</li>
           <li className="middle">Mocha</li>
         </ul>
@@ -135,13 +137,33 @@ const Tools = ({ t }) => (
     </dl>
 
     <dl className="skill-list">
-      <dt className="category">Build</dt>
+      <dt className="category">Build (web)</dt>
       <dd className="details">
         <ul className="row">
           <li className="high">yarn,</li>
           <li className="high">npm,</li>
           <li className="high">webpack,</li>
           <li className="high">Babel</li>
+        </ul>
+      </dd>
+    </dl>
+
+    <dl className="skill-list">
+      <dt className="category">Build (iOS)</dt>
+      <dd className="details">
+        <ul className="row">
+          <li className="high">CocoaPods,</li>
+          <li className="high">Carthage,</li>
+          <li className="high">Swift Package Manager</li>
+        </ul>
+      </dd>
+    </dl>
+
+    <dl className="skill-list">
+      <dt className="category">Releases</dt>
+      <dd className="details">
+        <ul className="row">
+          <li className="high">fastlane</li>
         </ul>
       </dd>
     </dl>
