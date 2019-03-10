@@ -74,14 +74,15 @@ const Homepage = ({
               JavaScript
             </a>
             , <a href="https://www.typescriptlang.org/">TypeScript</a>,{' '}
-            <a href="http://swift.org/">Swift</a> <span className="amp">&</span>{' '}
+            <a href="https://swift.org/">Swift</a>{' '}
+            <span className="amp">&</span>{' '}
             <a href="https://nodejs.org/">Node.js</a>
           </p>
 
           <p>
             {t('myEmphasisRightNow')}{' '}
             <a href="https://facebook.github.io/react-native/">React Native</a>{' '}
-            {t('or')} <a href="http://swift.org/">Swift (iOS)</a>{' '}
+            {t('or')} <a href="https://swift.org/">Swift (iOS)</a>{' '}
             {t('cloudNative')}
           </p>
 

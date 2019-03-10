@@ -219,7 +219,7 @@ const Projekte = ({
         <div className="responsibility">
           <p>
             {t('project2DescPrefix')}{' '}
-            <strong>1&1 Control Center (Access)</strong>{' '}
+            <strong>1&1 Control Center (Access)</strong>
             {t('project2DescPostfix')}
           </p>
           <p>{t('project2Tasks')}</p>
