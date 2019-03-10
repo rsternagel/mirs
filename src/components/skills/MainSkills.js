@@ -27,6 +27,7 @@ const MainSkills = ({ t }) => (
       <dd className="details">
         <ul>
           <li className="high">React Native</li>
+          <li className="high">UIKit (iOS)</li>
           <li className="middle">qooxdoo (JS - {t('formerCoreTeam')})</li>
           <li className="middle">Django (Python)</li>
           <li className="middle">Flask (Python)</li>
@@ -50,6 +51,21 @@ const MainSkills = ({ t }) => (
     </dl>
 
     <dl className="skill-list">
+      <dt className="category">
+        <abbr title="Functional Programming">FP</abbr> &{' '}
+        <abbr title="Reactive Programming">RP</abbr>
+      </dt>
+      <dd className="details">
+        <ul className="row">
+          <li className="high">RxJS,</li>
+          <li className="high">RxSwift,</li>
+          <li className="high">Ramda,</li>
+          <li className="high">Lodash</li>
+        </ul>
+      </dd>
+    </dl>
+
+    <dl className="skill-list">
       <dt className="category">{t('databases')}</dt>
       <dd className="details">
         <ul className="row">
@@ -67,7 +83,8 @@ const MainSkills = ({ t }) => (
       <dt className="category">Server</dt>
       <dd className="details">
         <ul className="row">
-          <li className="middle">nginx</li>
+          <li className="middle">nginx,</li>
+          <li className="middle">Apache HTTP Server</li>
           {/* <li className="middle">traefik</li> */}
         </ul>
       </dd>

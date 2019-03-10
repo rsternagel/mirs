@@ -17,11 +17,23 @@ const Technologies = ({ t }) => (
     </dl>
 
     <dl className="skill-list">
-      <dt className="category">{t('architecture')}</dt>
+      <dt className="category">
+        {t('architecture')} ({t('dataCommunication')})
+      </dt>
       <dd className="details">
         <ul className="row">
           <li className="high">GraphQL ({t('incl')} Prisma),</li>
           <li className="middle">REST</li>
+        </ul>
+      </dd>
+    </dl>
+
+    <dl className="skill-list">
+      <dt className="category">{t('architecture')} (app)</dt>
+      <dd className="details">
+        <ul className="row">
+          <li className="high">MVC,</li>
+          <li className="high">MVVM</li>
         </ul>
       </dd>
     </dl>
