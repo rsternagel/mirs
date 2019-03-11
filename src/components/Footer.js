@@ -24,7 +24,9 @@ const Footer = ({ t, pathname }) => (
           <span className="separator">•</span>
           <Link to={t('privacyPath')}>{t('privacy')}</Link>
         </span>
-        <LanguageSwitcher pathname={pathname} />
+        <span className="languages">
+          <LanguageSwitcher pathname={pathname} />
+        </span>
       </div>
     </div>
 
@@ -83,7 +85,8 @@ const Footer = ({ t, pathname }) => (
       }
 
       @media print {
-        .metaLinks {
+        .metaLinks,
+        .languages {
           display: none;
         }
       }
