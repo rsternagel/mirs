@@ -103,7 +103,7 @@ const Skills = ({
 
         /* Media Queries */
 
-        @media (max-width: ${m}) {
+        @media only screen and (max-width: ${m}) {
           .skills :global(.skill-list) {
             display: block;
           }
@@ -117,7 +117,7 @@ const Skills = ({
           }
         }
 
-        @media (max-width: ${s}) {
+        @media only screen and (max-width: ${s}) {
           .skills :global(.row) {
             display: block;
           }

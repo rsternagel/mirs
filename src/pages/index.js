@@ -157,7 +157,7 @@ const Homepage = ({
 
         /* Media Queries */
 
-        @media (max-width: ${m}) {
+        @media only screen and (max-width: ${m}) {
           .content {
             display: block;
           }
@@ -184,7 +184,7 @@ const Homepage = ({
           }
         }
 
-        @media (max-width: ${s}) {
+        @media only screen and (max-width: ${s}) {
           .content {
             display: block;
           }
@@ -208,6 +208,12 @@ const Homepage = ({
 
           .intro {
             width: 100%;
+          }
+        }
+
+        @media print {
+          #___gatsby {
+            font-size: 75% !important;
           }
         }
       `}</style>
