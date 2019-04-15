@@ -28,6 +28,7 @@ const MainSkills = ({ t }) => (
         <ul>
           <li className="high">React Native</li>
           <li className="high">UIKit (iOS)</li>
+          <li className="middle">Angular 6/7</li>
           <li className="middle">qooxdoo (JS - {t('formerCoreTeam')})</li>
           <li className="middle">Django (Python)</li>
           <li className="middle">Flask (Python)</li>
@@ -41,10 +42,9 @@ const MainSkills = ({ t }) => (
         <ul className="row">
           <li className="high">React,</li>
           <li className="high">Redux,</li>
-          <li className="high">React Router,</li>
+          <li className="high">MobX,</li>
           <li className="high">React Navigation,</li>
           <li className="high">React Native SVG,</li>
-          <li className="high">Redux Form,</li>
           <li className="high">Redux-Saga</li>
         </ul>
       </dd>
@@ -85,7 +85,6 @@ const MainSkills = ({ t }) => (
         <ul className="row">
           <li className="middle">nginx,</li>
           <li className="middle">Apache HTTP Server</li>
-          {/* <li className="middle">traefik</li> */}
         </ul>
       </dd>
     </dl>
