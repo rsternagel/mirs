@@ -31,6 +31,7 @@ const Tools = ({ t }) => (
       </dt>
       <dd className="details">
         <ul className="row">
+          <li className="high">AWS,</li>
           <li className="high">Google Cloud Platform,</li>
           <li className="high">Google Firebase,</li>
           <li className="high">App Center,</li>
