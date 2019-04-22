@@ -34,7 +34,7 @@ const Tools = ({ t }) => (
           <li className="high">AWS,</li>
           <li className="high">Google Cloud Platform,</li>
           <li className="high">Google Firebase,</li>
-          <li className="high">App Center,</li>
+          <li className="high">VS App Center,</li>
           <li className="high">Netlify</li>
         </ul>
       </dd>
