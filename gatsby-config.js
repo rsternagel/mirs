@@ -12,8 +12,9 @@ module.exports = {
       }
     },
     `gatsby-plugin-flow`,
-    `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
-    `gatsby-plugin-styled-jsx`
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-styled-jsx`,
+    `gatsby-transformer-sharp`
   ]
 }
