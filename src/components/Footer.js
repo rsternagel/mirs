@@ -15,10 +15,6 @@ const Footer = ({ t, pathname }) => (
           © {new Date().getFullYear()}
           <em>Richard Sternagel</em>
         </span>
-        {/*
-      <Link to={'/prinzipien/'}>Prinzipien</Link>
-      <span className="seperator apart"></span>
-      */}
         <span className="metaLinks">
           <Link to={t('imprintPath')}>{t('imprint')}</Link>
           <span className="separator">•</span>

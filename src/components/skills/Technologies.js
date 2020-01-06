@@ -9,7 +9,7 @@ const Technologies = ({ t }) => (
       <dd className="details">
         <ul className="row">
           <li className="high">HTML,</li>
-          <li className="high">CSS ({t('incl')} SCSS & PostCSS),</li>
+          <li className="high">CSS ({t('incl')} SCSS),</li>
           <li className="high">SVG,</li>
           <li className="middle">XML</li>
         </ul>

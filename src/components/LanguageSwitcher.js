@@ -30,10 +30,10 @@ class LanguageSwitcher extends Component {
 
     if (pathname !== '/') {
       Object.keys(bilingualNavTitles).some((title) => {
-        let hasNavTitleMatchingPathname =
+        const hasNavTitleMatchingPathname =
           window.location.pathname.search(new RegExp(`/${title}/?`)) !== -1
         if (hasNavTitleMatchingPathname) {
-          let translatedNavItemId = bilingualNavTitles[title]
+          const translatedNavItemId = bilingualNavTitles[title]
           history.replaceState(
             {},
             translatedNavItemId,
@@ -61,7 +61,10 @@ class LanguageSwitcher extends Component {
   /* eslint-enable react/destructuring-assignment */
 
   render = () => {
-    const languages = [{ code: 'en', label: 'EN' }, { code: 'de', label: 'DE' }]
+    const languages = [
+      { code: 'en', label: 'EN' },
+      { code: 'de', label: 'DE' }
+    ]
     const { t } = this.props
 
     return (
@@ -81,6 +84,7 @@ class LanguageSwitcher extends Component {
             padding-bottom: 1px;
             border-radius: 5px;
             color: #1964ae;
+            cursor: pointer;
           }
 
           :global(button.selected) {

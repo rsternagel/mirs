@@ -108,9 +108,7 @@ const Projekte = ({
           </ul>
         </div>
       </section>
-
       <hr />
-
       <section className="project-list">
         <div className="project">
           <img
@@ -180,9 +178,7 @@ const Projekte = ({
           </ul>
         </div>
       </section>
-
       <hr />
-
       <section className="project-list">
         <div className="project">
           <img src={logoEue} alt="1&1" />
@@ -219,7 +215,7 @@ const Projekte = ({
         <div className="responsibility">
           <p>
             {t('project2DescPrefix')}{' '}
-            <strong>1&1 Control Center (Access)</strong>
+            <strong>1&1 Control Center (Access)</strong>{' '}
             {t('project2DescPostfix')}
           </p>
           <p>{t('project2Tasks')}</p>
@@ -271,9 +267,7 @@ const Projekte = ({
           </ul>
         </div>
       </section>
-
       <hr />
-
       <section className="project-list">
         <div className="project">
           <img src={logoQx} alt="qooxdoo" />
@@ -335,7 +329,6 @@ const Projekte = ({
           </ul>
         </div>
       </section>
-
       <style jsx>{`
         .app {
           border-radius: 20px;

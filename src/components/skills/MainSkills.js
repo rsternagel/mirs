@@ -28,8 +28,9 @@ const MainSkills = ({ t }) => (
         <ul>
           <li className="high">React Native</li>
           <li className="high">UIKit (iOS)</li>
-          <li className="middle">Angular 6/7</li>
-          <li className="middle">qooxdoo (JS - {t('formerCoreTeam')})</li>
+          <li className="high">Koa & Express</li>
+          <li className="middle">Angular</li>
+          {/* <li className="middle">qooxdoo (JS - {t('formerCoreTeam')})</li> */}
           <li className="middle">Django (Python)</li>
           <li className="middle">Flask (Python)</li>
         </ul>
@@ -73,8 +74,6 @@ const MainSkills = ({ t }) => (
           <li className="middle">MongoDB,</li>
           <li className="middle">MySQL,</li>
           <li className="middle">SQLite</li>
-          {/* <li className="middle">RethinkDB</li> */}
-          {/* <li className="middle">Realm</li> */}
         </ul>
       </dd>
     </dl>
