@@ -1,7 +1,4 @@
 import React from 'react'
-
-// TODO: fix double underline for abbr
-//       (sanitize & typography get in each ways)
 import 'sanitize.css/sanitize.css'
 
 import { I18nextProvider, translate } from 'react-i18next'

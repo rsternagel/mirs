@@ -96,12 +96,8 @@ const Angebot = ({
           display: block;
         }
 
-        ul {
-          font-size: 90%;
-        }
-
         ul.noBullet {
-          font-size: 100%;
+          font-size: 95%;
           list-style-type: none;
           margin-left: 1rem;
         }

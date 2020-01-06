@@ -49,13 +49,13 @@ class Nav extends React.Component {
     const home = 'home'
     const { pathname } = nextProps
     let matchedNavTitle = ''
-    let curPageHasOneOfNavTitlesList = []
-    let getTranslatedPathnameWord = () =>
+    const curPageHasOneOfNavTitlesList = []
+    const getTranslatedPathnameWord = () =>
       this.getBilingualNavTitles()[pathname.replace(/\//g, '')]
 
     this.getNavTitles().forEach((title) => {
-      let isHome = pathname === '/' && title === home
-      let hasNavTitleMatchingPathname =
+      const isHome = pathname === '/' && title === home
+      const hasNavTitleMatchingPathname =
         pathname.search(new RegExp(`/${title}/?`)) !== -1 ||
         getTranslatedPathnameWord() === title
       if (hasNavTitleMatchingPathname) {
@@ -127,7 +127,7 @@ class Nav extends React.Component {
     let selectedNavItemId = ''
 
     Object.keys(this.getBilingualNavTitles()).some((title) => {
-      let hasNavTitleMatchingPathname =
+      const hasNavTitleMatchingPathname =
         path.search(new RegExp(`/${title}/?`)) !== -1
       if (hasNavTitleMatchingPathname) {
         selectedNavItemId = title
@@ -173,14 +173,14 @@ class Nav extends React.Component {
   }
 
   render() {
-    let navLinks = []
+    const navLinks = []
 
     this.getNavTitles().forEach((item) => {
       let liElem = {}
       let linkTarget = {}
-      let dynamicAttrs = {}
-      let selNavId = this.state.selectedNavItemId
-      let bilingualNavs = this.getBilingualNavTitles()
+      const dynamicAttrs = {}
+      const selNavId = this.state.selectedNavItemId
+      const bilingualNavs = this.getBilingualNavTitles()
 
       if (item === selNavId || bilingualNavs[item] === selNavId) {
         // alert(item)

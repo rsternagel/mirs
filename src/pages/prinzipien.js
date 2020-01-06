@@ -38,24 +38,6 @@ const Prinzipien = ({
           </ul>
         </li>
         <li>
-          Tools
-          <ul>
-            <li>
-              An elegant, well-conceived editor (e.g Vim) over a (too big){' '}
-              <abbr title="Integrated development environment">IDE</abbr>
-            </li>
-          </ul>
-        </li>
-        <li>
-          Languages
-          <ul>
-            <li>
-              dynamic languages (e.g. JavaScript, Python or Ruby) over non
-              dynamic languages (e.g Java or C#)
-            </li>
-          </ul>
-        </li>
-        <li>
           Implementation
           <ul>
             <li>No code (if possible) over some code</li>
