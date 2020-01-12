@@ -35,6 +35,10 @@ const Prinzipien = ({
             <li>Evolutionary Design over Speculative Design</li>
             <li>Interdisciplinary teams over workplace silos</li>
             <li>Agile software development over Waterfall (model)</li>
+            <li>
+              Plain banana over gorilla holding the banana and the entire jungle
+              ;)
+            </li>
           </ul>
         </li>
         <li>
