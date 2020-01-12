@@ -9,12 +9,13 @@ const MainSkills = ({ t }) => (
       <dd className="details">
         <ul>
           <li className="high">
-            JavaScript ({t('incl')} ES 20XX) ({t('10years')})
+            JavaScript ({t('incl')} ES 20XX) ({t('11years')})
           </li>
-          <li className="high">TypeScript ({t('xmonths')})</li>
-          <li className="high">Node.js ({t('4years')})</li>
-          <li className="high">Swift ({t('xmonths')})</li>
-          <li className="high">Go ({t('xmonths')})</li>
+          <li className="high">TypeScript ({t('1year')})</li>
+          <li className="high">Node.js ({t('5years')})</li>
+          <li className="high">Swift (6 {t('xmonths')})</li>
+          <li className="high">Rust (3 {t('xmonths')})</li>
+          <li className="high">Go (3 {t('xmonths')})</li>
           <li className="middle">Python ({t('4years')})</li>
           <li className="middle">Java SE ({t('5years')})</li>
           <li className="middle">UNIX shell scripting ({t('4years')})</li>

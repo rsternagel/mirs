@@ -9,6 +9,7 @@ import logoBfh from '../../components/img/logo_bfh_app.png'
 import logoChase from '../../components/img/logo_chase_app.png'
 import logoEue from '../../components/img/logo_eue.png'
 import logoQx from '../../components/img/logo_qooxdoo.png'
+import logoPorsche from '../../components/img/logo_porsche.svg'
 
 import { m } from '../../utils/breakpoints'
 
@@ -29,11 +30,68 @@ const Projekte = ({
           {` | ${siteTitle}`}
         </title>
       </Helmet>
-
       <h1>{t('projects')}</h1>
-
       <p>{t('hereYouCanSee')}:</p>
 
+      <section className="project-list">
+        <div className="project">
+          <img src={logoPorsche} width="208" height="106" alt="Porsche AG" />
+          <dl>
+            <dt>{t('catProjects')}</dt>
+            <dd>
+              Porsche Taycan <br /> (Infotainment)
+            </dd>
+            <dt>{t('catCompany')}</dt>
+            <dd>Porsche AG</dd>
+            <dt>{t('catAssignment')}</dt>
+            <dd>
+              Web apps <br /> Node services <br /> CLI-Tools
+            </dd>
+            <dt>{t('catTechnologiesFrontend')}</dt>
+            <dd>TypeScript, Angular 6-9, RxJS, SVG, MapBox, Jest, webpack</dd>
+            <dt>{t('catTechnologiesBackend')}</dt>
+            <dd>
+              Node.js, Koa, GraphQL, <br /> Docker, Rust
+            </dd>
+            <dt>{t('catTimeframe')}</dt>
+            <dd>
+              <time>{t('catTimeframeProject5')}</time>
+            </dd>
+          </dl>
+        </div>
+
+        <div className="responsibility">
+          <p>
+            {t('project5Desc-1a')}
+            <a href="https://www.porsche.com/international/models/taycan/taycan-models/">
+              Porsche Taycan
+            </a>{' '}
+            {t('project5Desc-1b')}
+          </p>
+          <p>{t('project5Tasks')}</p>
+          <ul>
+            <li>
+              {t('project5Ul1')}
+              <ul>
+                <li>{t('project5Ul1-1')}</li>
+                <li>{t('project5Ul1-2')}</li>
+                <li>{t('project5Ul1-3')}</li>
+                <li>{t('project5Ul1-4')}</li>
+                <li>{t('project5Ul1-5')}</li>
+              </ul>
+            </li>
+            <li>
+              {t('project5Ul2')}
+              <ul>
+                <li>{t('project5Ul2-1')}</li>
+                <li>{t('project5Ul2-2')}</li>
+                <li>{t('project5Ul2-3')}</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <hr />
       <section className="project-list">
         <div className="project">
           <a
@@ -64,14 +122,18 @@ const Projekte = ({
             <dd>{t('catAssignmentProject4')}</dd>
 
             <dt>{t('catTechnologiesFrontend')}</dt>
-            <dd>React, React Native, SVG, TypeScript, Jest</dd>
+            <dd>TypeScript, React, React Native, SVG, Jest</dd>
 
             <dt>{t('catTechnologiesBackend')}</dt>
-            <dd>GraphQL, MongoDB, Docker</dd>
+            <dd>GraphQL, MongoDB, Docker, Google Firebase</dd>
 
             <dt>{t('catTimeframe')}</dt>
             <dd>
-              <time>{t('catTimeframeProject4')}</time>
+              <time>{t('catTimeframeProject4a')}</time>
+              <br />
+              <time>{t('catTimeframeProject4b')}</time>
+              <br />
+              <time>{t('catTimeframeProject4c')}</time>
             </dd>
           </dl>
         </div>

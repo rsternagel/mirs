@@ -32,7 +32,9 @@ const Angebot = ({
         <li>… {t('support1')}</li>
         <li>… {t('support2')}</li>
         <li>… {t('support3')}</li>
+        <li>… {t('support4')}</li>
         <li>… {t('support5')}</li>
+        <li>… {t('support6')}</li>
       </ul>
       <p>{t('rightMan')}</p>
       <header>
