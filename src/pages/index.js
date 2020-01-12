@@ -39,9 +39,10 @@ const Homepage = ({
 
           <div className="container-labels-contact">
             <div className="labels">
-              <span>Web/Mobile-Apps (iOS / Swift)</span>
-              <span>JS · React · React Native · Node.js</span>
+              <span>Web/Mobile-Apps (RN / iOS)</span>
               <span>Full Stack · Cloud Native</span>
+              <span>JS/TS · Node.js · Rust · Swift · Go</span>
+              <span>React · React Native</span>
             </div>
 
             <p className="contact">
@@ -73,18 +74,21 @@ const Homepage = ({
             <a href="https://developer.mozilla.org/en/docs/Web/JavaScript">
               JavaScript
             </a>
-            , <a href="https://www.typescriptlang.org/">TypeScript</a>,{' '}
-            <a href="https://swift.org/">Swift</a>{' '}
+            , <a href="https://www.typescriptlang.org/">TypeScript</a>{' '}
             <span className="amp">&</span>{' '}
-            <a href="https://nodejs.org/">Node.js</a>
+            <a href="https://nodejs.org/">Node.js</a>. <br />
+            {t('moreoverPassionateAbout')}{' '}
+            <a href="https://rust-lang.org/">Rust</a>,{' '}
+            <a href="https://swift.org/">Swift</a>{' '}
+            <span className="amp">&</span> <a href="https://golang.org/">Go</a>.
           </p>
 
-          <p>
+          {/* <p>
             {t('myEmphasisRightNow')}{' '}
             <a href="https://facebook.github.io/react-native/">React Native</a>{' '}
             {t('or')} <a href="https://swift.org/">Swift (iOS)</a>{' '}
             {t('cloudNative')}
-          </p>
+          </p> */}
 
           <p>{t('preferredLocation')}</p>
 

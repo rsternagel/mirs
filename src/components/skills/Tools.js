@@ -80,14 +80,14 @@ const Tools = ({ t }) => (
       </dd>
     </dl>
 
-    <dl className="skill-list">
+    {/* <dl className="skill-list">
       <dt className="category">Security</dt>
       <dd className="details">
         <ul className="row">
           <li className="high">Snyk</li>
         </ul>
       </dd>
-    </dl>
+    </dl> */}
 
     <dl className="skill-list">
       <dt className="category">{t('doc')}</dt>
@@ -153,9 +153,9 @@ const Tools = ({ t }) => (
       <dt className="category">Build (iOS)</dt>
       <dd className="details">
         <ul className="row">
-          <li className="high">CocoaPods,</li>
+          <li className="high">Swift Package Manager,</li>
           <li className="high">Carthage,</li>
-          <li className="high">Swift Package Manager</li>
+          <li className="middle">CocoaPods</li>
         </ul>
       </dd>
     </dl>
