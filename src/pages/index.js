@@ -159,8 +159,6 @@ const Homepage = ({
           font-style: italic;
         }
 
-        /* Media Queries */
-
         @media only screen and (max-width: ${m}) {
           .content {
             display: block;
