@@ -101,8 +101,6 @@ const Skills = ({
           margin-bottom: 3px;
         }
 
-        /* Media Queries */
-
         @media only screen and (max-width: ${m}) {
           .skills :global(.skill-list) {
             display: block;

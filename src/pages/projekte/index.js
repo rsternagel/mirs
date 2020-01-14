@@ -417,8 +417,6 @@ const Projekte = ({
           width: 68%;
         }
 
-        /* Media Queries */
-
         @media only screen and (max-width: ${m}) {
           .project-list {
             display: block;

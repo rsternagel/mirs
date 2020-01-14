@@ -72,8 +72,6 @@ const Footer = ({ t, pathname }) => (
         color: #999;
       }
 
-      /* Media Queries */
-
       @media (max-width: ${s}) {
         .meta {
           flex-direction: column;
