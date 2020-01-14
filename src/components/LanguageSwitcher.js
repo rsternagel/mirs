@@ -1,22 +1,11 @@
-/* global window, history */
+/* global window */
 
-import React, { Component } from 'react'
+import React from 'react'
 
 import { translate } from 'react-i18next'
 
-class LanguageSwitcher extends Component {
-  constructor(props) {
-    super(props)
-    const { i18n } = this.props
-    this.state = { language: i18n.language }
-  }
-
-  componentWillReceiveProps = (nextProps) => {
-    this.setState({ language: nextProps.i18n.language })
-  }
-
-  handleChangeLanguage = (lng) => {
-    const { i18n, pathname } = this.props
+const LanguageSwitcher = ({ t, pathname, i18n }) => {
+  const handleChangeLanguage = (lng) => {
     const bilingualNavTitles = {
       offer: 'angebot',
       angebot: 'offer',
@@ -34,7 +23,7 @@ class LanguageSwitcher extends Component {
           window.location.pathname.search(new RegExp(`/${title}/?`)) !== -1
         if (hasNavTitleMatchingPathname) {
           const translatedNavItemId = bilingualNavTitles[title]
-          history.replaceState(
+          window.history.replaceState(
             {},
             translatedNavItemId,
             `/${translatedNavItemId}/`
@@ -49,60 +38,58 @@ class LanguageSwitcher extends Component {
   }
 
   /* eslint-disable react/destructuring-assignment */
-  renderLanguageChoice = ({ code, label }) => (
+  const renderLanguageChoice = (curLang, { code, label }) => (
     <button
       type="button"
       key={code}
-      className={this.state.language.includes(code) ? 'selected' : ''}
-      onClick={() => this.handleChangeLanguage(code)}>
+      className={curLang.includes(code) ? 'selected' : ''}
+      onClick={() => handleChangeLanguage(code)}>
       {label}
     </button>
   )
   /* eslint-enable react/destructuring-assignment */
 
-  render = () => {
-    const languages = [
-      { code: 'en', label: 'EN' },
-      { code: 'de', label: 'DE' }
-    ]
-    const { t } = this.props
+  const languages = [
+    { code: 'en', label: 'EN' },
+    { code: 'de', label: 'DE' }
+  ]
+  const curLang = i18n.language
 
-    return (
-      <span className="lang">
-        <em>{t('language')}:</em>
-        {languages.map((language) => this.renderLanguageChoice(language))}
+  return (
+    <span className="lang">
+      <em>{t('language')}:</em>
+      {languages.map((language) => renderLanguageChoice(curLang, language))}
 
-        <style jsx>{`
-          :global(button),
-          :global(button.selected) {
-            font-family: inherit;
-            font-size: 100%;
-            border: 0;
-            background-color: transparent;
-            padding: 0 5px;
-            text-decoration: none;
-            padding-bottom: 1px;
-            border-radius: 5px;
-            color: #1964ae;
-            cursor: pointer;
-          }
+      <style jsx>{`
+        :global(button),
+        :global(button.selected) {
+          font-family: inherit;
+          font-size: 100%;
+          border: 0;
+          background-color: transparent;
+          padding: 0 5px;
+          text-decoration: none;
+          padding-bottom: 1px;
+          border-radius: 5px;
+          color: #1964ae;
+          cursor: pointer;
+        }
 
-          :global(button.selected) {
-            background-color: #ffb;
-          }
+        :global(button.selected) {
+          background-color: #ffb;
+        }
 
-          :global(button.selected):focus {
-            outline: 0;
-          }
+        :global(button.selected):focus {
+          outline: 0;
+        }
 
-          .lang em {
-            padding-right: 5px;
-            font-style: normal;
-          }
-        `}</style>
-      </span>
-    )
-  }
+        .lang em {
+          padding-right: 5px;
+          font-style: normal;
+        }
+      `}</style>
+    </span>
+  )
 }
 
 export default translate()(LanguageSwitcher)
