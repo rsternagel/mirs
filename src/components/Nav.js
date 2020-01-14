@@ -1,6 +1,4 @@
-/* global window */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable react/destructuring-assignment */
 
 import React from 'react'
 
@@ -9,110 +7,10 @@ import { translate } from 'react-i18next'
 
 import { s } from '../utils/breakpoints'
 
-class Nav extends React.Component {
-  constructor(props) {
-    super(props)
+const Nav = ({ t, pathname }) => {
+  const getNavTitles = () => ['home', t('offer'), t('projects'), t('skills')]
 
-    this.navHtmlElems = new Map()
-
-    const { pathname } = props
-    const selectedNavItemId = this.getInitialSelectedNav(pathname)
-    const indicatorWrapperStyle = { display: 'none' }
-
-    this.state = { selectedNavItemId, indicatorWrapperStyle }
-  }
-
-  componentDidMount() {
-    const selectedId = this.state.selectedNavItemId
-
-    window.setTimeout(() => {
-      if (selectedId === null || this.navHtmlElems.has(selectedId) === false) {
-        return
-      }
-
-      const selectedHtmlElem = this.navHtmlElems.get(selectedId)
-      this.moveSelectionIndicatorTo(selectedHtmlElem)
-
-      const mql = window.matchMedia(`(max-width: ${s})`)
-      mql.addListener(
-        function() {
-          return () =>
-            this.moveSelectionIndicatorTo(
-              this.navHtmlElems.get(this.state.selectedNavItemId)
-            )
-        }.bind(this)()
-      )
-    }, 100)
-  }
-
-  componentWillReceiveProps(nextProps) {
-    const home = 'home'
-    const { pathname } = nextProps
-    let matchedNavTitle = ''
-    const curPageHasOneOfNavTitlesList = []
-    const getTranslatedPathnameWord = () =>
-      this.getBilingualNavTitles()[pathname.replace(/\//g, '')]
-
-    this.getNavTitles().forEach((title) => {
-      const isHome = pathname === '/' && title === home
-      const hasNavTitleMatchingPathname =
-        pathname.search(new RegExp(`/${title}/?`)) !== -1 ||
-        getTranslatedPathnameWord() === title
-      if (hasNavTitleMatchingPathname) {
-        matchedNavTitle = title
-      }
-      curPageHasOneOfNavTitlesList.push(isHome || hasNavTitleMatchingPathname)
-    })
-
-    const setNavActiveState = (entry) => {
-      if (entry !== null) {
-        const selectedHtmlElem = this.navHtmlElems.get(entry)
-        this.setState({ selectedNavItemId: entry })
-        this.moveSelectionIndicatorTo(selectedHtmlElem)
-      }
-
-      // could be an 'else' but better be explicit
-      if (entry === null) {
-        this.setState({ selectedNavItemId: null })
-        this.moveSelectionIndicatorTo(null)
-      }
-    }
-
-    if (pathname === '/') {
-      // set selectedNavItemId if root - no matter
-      // if other links than nav home link was used
-      setNavActiveState(home)
-    } else if (curPageHasOneOfNavTitlesList.includes(true) === false) {
-      // unset selectedNavItemId cause current
-      // page is not part of any navTitle
-      setNavActiveState(null)
-    } else {
-      // set selectedNavItemId to matching nav entry
-      setNavActiveState(matchedNavTitle)
-    }
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    const selectedId = this.state.selectedNavItemId
-
-    if (selectedId === null || this.navHtmlElems.has(selectedId) === false) {
-      return
-    }
-
-    if (this.state.selectedNavItemId !== prevState.selectedNavItemId) {
-      const selectedHtmlElem = this.navHtmlElems.get(selectedId)
-      this.moveSelectionIndicatorTo(selectedHtmlElem)
-    }
-  }
-
-  getNavTitles = () => [
-    'home',
-    this.props.t('offer'),
-    this.props.t('projects'),
-    this.props.t('skills')
-  ]
-
-  getBilingualNavTitles = () => {
+  const getBilingualNavTitles = () => {
     return {
       offer: 'angebot',
       angebot: 'offer',
@@ -123,10 +21,10 @@ class Nav extends React.Component {
     }
   }
 
-  getInitialSelectedNav = (path) => {
+  const getSelectedNavBy = (path) => {
     let selectedNavItemId = ''
 
-    Object.keys(this.getBilingualNavTitles()).some((title) => {
+    Object.keys(getBilingualNavTitles()).some((title) => {
       const hasNavTitleMatchingPathname =
         path.search(new RegExp(`/${title}/?`)) !== -1
       if (hasNavTitleMatchingPathname) {
@@ -143,161 +41,105 @@ class Nav extends React.Component {
     return selectedNavItemId
   }
 
-  handleClick = (e) => {
-    const newNavItemId = e.currentTarget.id
-    const { selectedNavItemId } = this.state
+  const navLinks = []
+  const navHtmlElems = new Map()
 
-    if (newNavItemId !== selectedNavItemId) {
-      this.setState({ selectedNavItemId: newNavItemId })
-    }
-  }
+  getNavTitles().forEach((item) => {
+    let liElem = {}
+    const linkTarget = item === 'home' ? '/' : `/${item}/`
+    const selNavId = getSelectedNavBy(pathname)
+    const bilingualNavs = getBilingualNavTitles()
+    const dataSelected = item === selNavId || bilingualNavs[item] === selNavId
 
-  moveSelectionIndicatorTo(newSelectedItem) {
-    let indicatorWrapperStyle = { display: 'none' }
-    if (newSelectedItem !== null && newSelectedItem !== undefined) {
-      const {
-        clientHeight,
-        clientWidth,
-        offsetLeft,
-        offsetTop
-      } = newSelectedItem
-      indicatorWrapperStyle = {
-        height: clientHeight,
-        transform: `translateX(${Math.floor(
-          offsetLeft
-        )}px) translateY(${Math.floor(offsetTop)}px)`,
-        width: clientWidth
-      }
-    }
-    this.setState({ indicatorWrapperStyle })
-  }
-
-  render() {
-    const navLinks = []
-
-    this.getNavTitles().forEach((item) => {
-      let liElem = {}
-      let linkTarget = {}
-      const dynamicAttrs = {}
-      const selNavId = this.state.selectedNavItemId
-      const bilingualNavs = this.getBilingualNavTitles()
-
-      if (item === selNavId || bilingualNavs[item] === selNavId) {
-        // alert(item)
-        dynamicAttrs['data-selected'] = true
-      }
-
-      linkTarget = item === 'home' ? '/' : `/${item}/`
-
-      liElem = (
-        // eslint-disable-next-line jsx-a11y/click-events-have-key-events
-        <li
-          key={item}
-          id={item}
-          onClick={() => {
-            this.handleClick
-            navigate(linkTarget)
-          }}
-          ref={(navHtmlElem) => {
-            this.navHtmlElems.set(item, navHtmlElem)
-          }}
-          {...dynamicAttrs}>
-          <Link to={linkTarget}>
-            {item[0].toUpperCase().concat(item.substr(1))}
-          </Link>
-        </li>
-      )
-      navLinks.push(liElem)
-    })
-
-    return (
-      <nav>
-        <ul>
-          <li
-            className="nav-indicator-wrapper"
-            style={this.state.indicatorWrapperStyle}>
-            <div className="nav-indicator" />
-          </li>
-          {navLinks}
-        </ul>
-
-        <style jsx>{`
-          ul {
-            position: relative;
-            display: flex;
-            margin-top: 20px;
-          }
-
-          ul :global(li) {
-            flex: 0 1 content;
-            padding-left: 8px;
-            padding-right: 8px;
-            padding-bottom: 10px;
-            cursor: pointer;
-          }
-
-          nav {
-            font-family: 'Open Sans', Palatino, 'Palatino Linotype', serif;
-            text-transform: uppercase;
-            font-size: 90%;
-          }
-
-          nav :global(a) {
-            padding: 3px;
-            color: rgba(0, 0, 0, 0.8);
-            text-decoration: none;
-          }
-
-          ul :global(li:not(:last-child)) {
-            margin-right: 30px;
-          }
-
-          nav :global(a:hover),
-          nav :global([data-selected='true']) :global(a),
-          nav :global([data-selected='true']) :global(a:visited) {
-            color: #479047;
-          }
-
-          .nav-indicator-wrapper {
-            position: absolute;
-            top: 0;
-            left: 0;
-            transform: translateX(0);
-            transition: height, transform, width;
-            transition-duration: 400ms;
-            transition-timing-function: cubic-bezier(0.4, 1, 0.75, 0.9);
-            pointer-events: none;
-          }
-
-          .nav-indicator {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background-color: hsla(105, 70%, 38%, 1);
-            height: 45px;
-            opacity: 0.1;
-            border-radius: 5px;
-          }
-
-          /* Media Queries */
-
-          @media (max-width: ${s}) {
-            ul {
-              flex-direction: column;
-              align-items: flex-start;
-            }
-          }
-
-          @media print {
-            nav {
-              display: none;
-            }
-          }
-        `}</style>
-      </nav>
+    liElem = (
+      // eslint-disable-next-line jsx-a11y/click-events-have-key-events
+      <li
+        key={item}
+        id={item}
+        onClick={() => navigate(linkTarget)}
+        ref={(navHtmlElem) => {
+          navHtmlElems.set(item, navHtmlElem)
+        }}
+        data-selected={dataSelected}>
+        <Link to={linkTarget}>
+          {item[0].toUpperCase().concat(item.substr(1))}
+        </Link>
+      </li>
     )
-  }
+    navLinks.push(liElem)
+  })
+
+  return (
+    <nav>
+      <ul>{navLinks}</ul>
+
+      <style jsx>{`
+        ul {
+          position: relative;
+          display: flex;
+          margin-top: 10px;
+        }
+
+        ul :global(li) {
+          flex: 0 1 content;
+          padding: 10px 8px;
+          cursor: pointer;
+        }
+
+        nav {
+          font-family: 'Open Sans', Palatino, 'Palatino Linotype', serif;
+          text-transform: uppercase;
+          font-size: 90%;
+        }
+
+        nav :global(a) {
+          padding: 3px;
+          color: rgba(0, 0, 0, 0.8);
+          text-decoration: none;
+        }
+
+        /* stylelint-disable no-descending-specificity */
+
+        ul :global(li:not(:last-child)) {
+          margin-right: 30px;
+        }
+
+        nav :global(li:hover),
+        nav :global([data-selected='true']) {
+          background-color: rgb(235, 246, 232);
+          border-radius: 5px;
+        }
+
+        nav :global([data-selected='true']),
+        nav :global([data-selected='true']) :global(a),
+        nav :global([data-selected='true']) :global(a:visited) {
+          cursor: default;
+        }
+
+        nav :global(a:hover),
+        nav :global(li:hover) :global(a),
+        nav :global([data-selected='true']) :global(a),
+        nav :global([data-selected='true']) :global(a:visited) {
+          color: #479047;
+        }
+
+        /* stylelint-enable */
+
+        @media (max-width: ${s}) {
+          ul {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+        }
+
+        @media print {
+          nav {
+            display: none;
+          }
+        }
+      `}</style>
+    </nav>
+  )
 }
 
 export default translate()(Nav)
