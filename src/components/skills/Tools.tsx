@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Tools = () => (
+const Tools: React.FC = () => (
   <div>
     <dl className="skill-list">
       <dt className="category">Containerization</dt>

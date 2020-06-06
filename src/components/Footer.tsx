@@ -1,11 +1,11 @@
 import React from 'react'
 
 // @ts-ignore
-import { Link } from 'gatsby'
+import { Link, PageProps } from 'gatsby'
 
 import { s } from '../utils/breakpoints'
 
-const Footer = () => (
+const Footer: React.FC<PageProps> = () => (
   <footer>
     <div className="wrapper">
       <div className="meta">

@@ -1,7 +1,7 @@
 import React from 'react'
 
 // @ts-ignore
-import { graphql } from 'gatsby'
+import { graphql, PageProps } from 'gatsby'
 import { Helmet } from 'react-helmet'
 
 import Layout from '../../components/Layout'
@@ -12,7 +12,7 @@ import Tools from '../../components/skills/Tools'
 
 import { s, m } from '../../utils/breakpoints'
 
-const Skills = ({
+const Skills: React.FC<PageProps> = ({
   data: {
     site: {
       siteMetadata: { title: siteTitle }
@@ -21,7 +21,7 @@ const Skills = ({
   location
 }: {
   data: { site: { siteMetadata: { title: string } } }
-  location: string
+  location: Location
 }) => (
   <Layout location={location}>
     <div>

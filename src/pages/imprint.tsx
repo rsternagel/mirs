@@ -1,12 +1,12 @@
 import React from 'react'
 
 // @ts-ignore
-import { graphql } from 'gatsby'
+import { graphql, PageProps } from 'gatsby'
 import { Helmet } from 'react-helmet'
 
 import Layout from '../components/Layout'
 
-const Imprint = ({
+const Imprint: React.FC<PageProps> = ({
   data: {
     site: {
       siteMetadata: { title: siteTitle }
@@ -15,7 +15,7 @@ const Imprint = ({
   location
 }: {
   data: { site: { siteMetadata: { title: string } } }
-  location: string
+  location: Location
 }) => (
   <Layout location={location}>
     <div>

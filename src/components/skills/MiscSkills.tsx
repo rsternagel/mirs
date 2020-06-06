@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MiscSkills = () => (
+const MiscSkills: React.FC = () => (
   <div>
     <dl className="skill-list">
       <dt className="category">Agile Software Dev</dt>

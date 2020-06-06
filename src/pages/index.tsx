@@ -1,7 +1,7 @@
 import React from 'react'
 
 // @ts-ignore
-import { graphql, Link } from 'gatsby'
+import { graphql, Link, PageProps } from 'gatsby'
 import { Helmet } from 'react-helmet'
 // @ts-ignore
 import { MdMailOutline } from 'react-icons/md'
@@ -12,7 +12,7 @@ import Layout from '../components/Layout'
 
 import { m, s } from '../utils/breakpoints'
 
-const Homepage = ({
+const Homepage: React.FC<PageProps> = ({
   data: {
     site: {
       siteMetadata: { title: siteTitle }
@@ -21,7 +21,7 @@ const Homepage = ({
   location
 }: {
   data: { site: { siteMetadata: { title: string } } }
-  location: string
+  location: Location
 }) => (
   <Layout location={location}>
     <div>

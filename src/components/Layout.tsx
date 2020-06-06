@@ -6,12 +6,9 @@ import Nav from './Nav'
 
 import { m } from '../utils/breakpoints'
 
-const Layout = ({
+const Layout: React.FC<{ children: React.ReactNode; location: Location }> = ({
   children,
   location
-}: {
-  children: React.ReactNode
-  location: any
 }) => (
   <div lang="en">
     <div className="container">
