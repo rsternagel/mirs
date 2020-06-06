@@ -5,11 +5,21 @@ import { Link, navigate } from 'gatsby'
 
 import { s } from '../utils/breakpoints'
 
-const Nav = ({ pathname }: { pathname: string }) => {
-  const getNavTitles = () => ['home', 'offer', 'projects', 'skills']
+const Nav: React.FC<{ pathname: string }> = ({ pathname }) => {
+  const navTitles = ['home', 'offer', 'projects', 'skills']
 
-  const getSelectedNavBy = (path: string) => {
+  const getSelectedNavBy = (path: string): string => {
     let selectedNavItemId = ''
+
+    navTitles.some((title) => {
+      const hasNavTitleMatchingPathname =
+        path.search(new RegExp(`/${title}/?`)) !== -1
+      if (hasNavTitleMatchingPathname) {
+        selectedNavItemId = title
+        return true
+      }
+      return false
+    })
 
     if (path === '/') {
       selectedNavItemId = 'home'
@@ -18,21 +28,21 @@ const Nav = ({ pathname }: { pathname: string }) => {
     return selectedNavItemId
   }
 
-  const navLinks: string[] = []
+  const navLinks: React.ReactElement[] = []
   const navHtmlElems = new Map()
 
-  getNavTitles().forEach((item) => {
-    let liElem: any = {}
+  navTitles.forEach((item) => {
     const linkTarget = item === 'home' ? '/' : `/${item}/`
     const selNavId = getSelectedNavBy(pathname)
     const dataSelected = item === selNavId
 
-    liElem = (
+    const liElem = (
+      /* eslint-disable @typescript-eslint/no-explicit-any */
       <li
         key={item}
         id={item}
-        onClick={() => navigate(linkTarget)}
-        ref={(navHtmlElem) => {
+        onClick={(): any => navigate(linkTarget)}
+        ref={(navHtmlElem): any => {
           navHtmlElems.set(item, navHtmlElem)
         }}
         data-selected={dataSelected}

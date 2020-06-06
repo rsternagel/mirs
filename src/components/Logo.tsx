@@ -6,7 +6,7 @@ import { Link } from 'gatsby'
 // @ts-ignore
 import logoMirs from './img/logo_mirs.svg'
 
-const Logo = () => (
+const Logo: React.FC = () => (
   <div className="logo">
     <Link to={'/'}>
       <img

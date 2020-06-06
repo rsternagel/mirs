@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MainSkills = () => (
+const MainSkills: React.FC = () => (
   <div>
     <dl className="skill-list">
       <dt className="category">Programming Languages</dt>

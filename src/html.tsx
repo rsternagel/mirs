@@ -10,15 +10,11 @@ import typography from './utils/typography'
 
 // global.XMLHttpRequest = XMLHttpRequest
 
-const Skeleton = ({
-  body,
-  headComponents,
-  postBodyComponents
-}: {
-  body: any
-  headComponents: any
-  postBodyComponents: any
-}) => {
+const Skeleton: React.FC<{
+  body: string
+  headComponents: React.ReactNode
+  postBodyComponents: React.ReactNode
+}> = ({ body, headComponents, postBodyComponents }) => {
   const head = Helmet.renderStatic()
 
   return (

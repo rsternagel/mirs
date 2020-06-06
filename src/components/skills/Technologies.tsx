@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Technologies = () => (
+const Technologies: React.FC = () => (
   <div>
     <dl className="skill-list">
       <dt className="category">Web Technologies</dt>
