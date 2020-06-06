@@ -1,5 +1,4 @@
 import React from 'react'
-import 'sanitize.css'
 
 import Footer from './Footer'
 import Logo from './Logo'
