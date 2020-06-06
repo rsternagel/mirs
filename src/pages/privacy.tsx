@@ -100,7 +100,7 @@ const Privacy: React.FC<PageProps> = ({
         .
       </p>
       <p>
-        You can also
+        You can also{' '}
         <a href="https://clicky.com/optout">
           opt out of tracking by using Clicky's opt-out page
         </a>

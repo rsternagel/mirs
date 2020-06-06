@@ -64,6 +64,7 @@ const Nav: React.FC<{ pathname: string }> = ({ pathname }) => {
           position: relative;
           display: flex;
           margin-top: 10px;
+          list-style-type: none;
         }
 
         ul :global(li) {
