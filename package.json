@@ -16,7 +16,6 @@
     "react-helmet": "^6.0.0",
     "react-icons": "^3.10.0",
     "react-typography": "^0.16.19",
-    "sanitize.css": "^11.0.1",
     "styled-jsx": "^3.3.0",
     "typography": "^0.16.19"
   },
