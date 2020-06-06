@@ -69,7 +69,7 @@ const Projects: React.FC<PageProps> = ({
 
         <div className="responsibility">
           <p>
-            The in-vehicle infotainment of the
+            The in-vehicle infotainment of the{' '}
             <a href="https://www.porsche.com/international/models/taycan/taycan-models/">
               Porsche Taycan
             </a>{' '}

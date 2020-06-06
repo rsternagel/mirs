@@ -66,8 +66,7 @@ const Offer: React.FC<PageProps> = ({
         <li>
           My focus is on <a href="https://facebook.github.io/react/">React</a> /{' '}
           <a href="https://facebook.github.io/react-native/">React Native</a>{' '}
-          and its ecosystem (e.g.
-          <a href="http://redux.js.org/">Redux</a>,{' '}
+          and its ecosystem (e.g. <a href="http://redux.js.org/">Redux</a>,{' '}
           <a href="http://graphql.org/">GraphQL</a>,{' '}
           <a href="https://webpack.js.org/">webpack</a>
           ).
@@ -151,10 +150,12 @@ const Offer: React.FC<PageProps> = ({
         }
 
         .contact a {
-          padding-left: 5px;
+          padding-left: 10px;
         }
 
         .contact span:first-of-type {
+          display: flex;
+          align-items: center;
           margin-top: 15px;
         }
       `}</style>

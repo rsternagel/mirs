@@ -99,8 +99,7 @@ const Homepage: React.FC<PageProps> = ({
           </p>
 
           <p>
-            I am available as from <time>July 2020</time>. Working remotely part
-            time is my favorite project setup.
+            I am available as from <time>July 2020</time>.
           </p>
         </section>
       </section>
@@ -144,7 +143,12 @@ const Homepage: React.FC<PageProps> = ({
         }
 
         .contact a {
-          padding-left: 5px;
+          padding-left: 10px;
+        }
+
+        .contact span:first-of-type {
+          display: flex;
+          align-items: center;
         }
 
         .greeting {
