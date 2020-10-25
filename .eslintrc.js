@@ -17,6 +17,7 @@ module.exports = {
   rules: {
     quotes: 'off',
     '@typescript-eslint/ban-ts-ignore': 'off',
+    '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
     indent: ['error', 2, { SwitchCase: 1 }],
     'prettier/prettier': [
