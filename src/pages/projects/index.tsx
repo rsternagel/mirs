@@ -13,6 +13,8 @@ import logoEue from '../../components/img/logo_eue.png'
 // @ts-ignore
 import logoPorsche from '../../components/img/logo_porsche.svg'
 // @ts-ignore
+import logoBentley from '../../components/img/logo_bentley.png'
+// @ts-ignore
 import logoQx from '../../components/img/logo_qooxdoo.png'
 import Layout from '../../components/Layout'
 
@@ -40,7 +42,7 @@ const Projects: React.FC<PageProps> = ({
       <h1>Projects</h1>
       <p>Here you see selected work references:</p>
 
-      <section className="project-list">
+      <section className="project-list-item">
         <div className="project">
           <img src={logoPorsche} width="208" height="106" alt="Porsche AG" />
           <dl>
@@ -55,14 +57,14 @@ const Projects: React.FC<PageProps> = ({
               Web apps <br /> Node services <br /> CLI-Tools
             </dd>
             <dt>Frontend Technologies</dt>
-            <dd>TypeScript, Angular 6-9, RxJS, SVG, MapBox, Jest, webpack</dd>
+            <dd>TypeScript, Angular 6-10, RxJS, SVG, MapBox, Jest, webpack</dd>
             <dt>Backend Technologies</dt>
             <dd>
-              Node.js, Koa, GraphQL, <br /> Docker, Rust
+              Node.js, Koa, GraphQL, <br /> Docker, MQTT, Rust
             </dd>
             <dt>Period of Time</dt>
             <dd>
-              <time>2019-2020 (12 months)</time>
+              <time>2019-2020 (ongoing)</time>
             </dd>
           </dl>
         </div>
@@ -111,7 +113,75 @@ const Projects: React.FC<PageProps> = ({
         </div>
       </section>
       <hr />
-      <section className="project-list">
+      <section className="project-list-item">
+        <div className="project">
+          <img src={logoBentley} width="116" height="58" alt="Bentley" />
+          <dl>
+            <dt>Project</dt>
+            <dd>
+              Bentley Portal <br /> (specific Website)
+            </dd>
+            <dt>Company</dt>
+            <dd>Bentley Motors Ltd.</dd>
+            <dt>Responsibilities</dt>
+            <dd>Cloud native Web apps</dd>
+            <dt>Frontend Technologies</dt>
+            <dd>
+              TypeScript, Angular 6-10,
+              <br /> NgRx, Sass, Cypress (e2e)
+            </dd>
+            <dt>Backend Technologies</dt>
+            <dd>
+              AWS, Terraform, Kubernetes,
+              <br />
+              Helm, Docker, Jenkins
+            </dd>
+            <dt>Period of Time</dt>
+            <dd>
+              <time>2020 (4 months / remote)</time>
+            </dd>
+          </dl>
+        </div>
+
+        <div className="responsibility">
+          <p>
+            Dealers and customers are able to register new Bentley cars online
+            in order to benefit from additional services Bentley is offering.
+          </p>
+          <p>My responsibilities were:</p>
+          <ul>
+            <li>
+              App (frontend) development:
+              <ul>
+                <li>
+                  Creating and consolidating Angular apps within a microservice
+                  architecture of over 20 parts (apps and services)
+                </li>
+                <li>Development of new Angular components and services</li>
+                <li>Bringing several projects back on track</li>
+              </ul>
+            </li>
+            <li>
+              Leadership role:
+              <ul>
+                <li>Guidance of two Junior Co-workers</li>
+                <li>Giving a presentation about Jenkins and CI/CD</li>
+                <li>Giving a presentation about Cypress and e2e-Testing</li>
+              </ul>
+            </li>
+            <li>
+              Miscellaneous:
+              <ul>
+                <li>Streamlining and Updating Jenkins Jobs</li>
+                <li>Laying down basis of e2e testing via Cypress</li>
+                <li>Establishing a CI/CD mindset within team</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <hr />
+      <section className="project-list-item">
         <div className="project">
           <a
             className="nohover"
@@ -143,7 +213,11 @@ const Projects: React.FC<PageProps> = ({
             <dd>Everything (Idea, Concept, Design and Development)</dd>
 
             <dt>Frontend Technologies</dt>
-            <dd>TypeScript, React, React Native, SVG, Jest</dd>
+            <dd>
+              TypeScript, React, React Native,
+              <br />
+              SVG, Jest
+            </dd>
 
             <dt>Backend Technologies</dt>
             <dd>GraphQL, MongoDB, Docker, Google Firebase</dd>
@@ -152,7 +226,7 @@ const Projects: React.FC<PageProps> = ({
             <dd>
               <time>2018 (3 months all in all / remote)</time>
               <br />
-              <time>2019 (Wochen)</time>
+              <time>2019 (weeks)</time>
             </dd>
           </dl>
         </div>
@@ -206,7 +280,7 @@ const Projects: React.FC<PageProps> = ({
         </div>
       </section>
       <hr />
-      <section className="project-list">
+      <section className="project-list-item">
         <div className="project">
           <img
             src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iRWJlbmVfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAxNzUuNiA2MiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTc1LjYgNjIiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZD0iTTE0NC4yLDBjLTcsMC0xMy41LDIuMy0xOC44LDYuMkMxMjAuMSwyLjMsMTEzLjYsMCwxMDYuNiwwYy03LDAtMTMuNSwyLjMtMTguOCw2LjJDODIuNSwyLjMsNzYuMSwwLDY5LDANCgljLTcsMC0xMy41LDIuMy0xOC44LDYuMkM0NSwyLjMsMzguNSwwLDMxLjQsMEMxNC4xLDAsMCwxMy45LDAsMzFzMTQuMSwzMSwzMS40LDMxYzcsMCwxMy41LTIuMywxOC44LTYuMkM1NS41LDU5LjcsNjIsNjIsNjksNjINCgljNywwLDEzLjUtMi4zLDE4LjgtNi4yQzkzLDU5LjcsOTkuNSw2MiwxMDYuNiw2MmM3LDAsMTMuNS0yLjMsMTguOC02LjJjNS4yLDMuOSwxMS43LDYuMiwxOC44LDYuMmMxNy4zLDAsMzEuNC0xMy45LDMxLjQtMzENCglTMTYxLjUsMCwxNDQuMiwweiBNMTI1LjQsNDdjLTMuOC00LjMtNi4xLTkuOS02LjEtMTZjMC02LjEsMi4zLTExLjcsNi4xLTE2YzMuOCw0LjMsNi4xLDkuOSw2LjEsMTZDMTMxLjUsMzcuMSwxMjkuMiw0Mi43LDEyNS40LDQ3DQoJeiBNODcuOCw0N2MtMy44LTQuMy02LjEtOS45LTYuMS0xNmMwLTYuMSwyLjMtMTEuNyw2LjEtMTZjMy44LDQuMyw2LjEsOS45LDYuMSwxNkM5My45LDM3LjEsOTEuNiw0Mi43LDg3LjgsNDd6IE01MC4yLDQ3DQoJYy0zLjgtNC4zLTYuMS05LjktNi4xLTE2YzAtNi4xLDIuMy0xMS43LDYuMS0xNmMzLjgsNC4zLDYuMSw5LjksNi4xLDE2QzU2LjQsMzcuMSw1NCw0Mi43LDUwLjIsNDd6IE02LjUsMzENCgljMC0xMy41LDExLjItMjQuNSwyNC45LTI0LjVjNS4xLDAsOS45LDEuNSwxMy45LDQuMmMtNC44LDUuNC03LjcsMTIuNS03LjcsMjAuM2MwLDcuOCwyLjksMTQuOSw3LjcsMjAuM2MtNCwyLjYtOC43LDQuMi0xMy45LDQuMg0KCUMxNy43LDU1LjUsNi41LDQ0LjUsNi41LDMxeiBNNTUuMSw1MS4zYzQuOC01LjQsNy43LTEyLjUsNy43LTIwLjNjMC03LjgtMi45LTE0LjktNy43LTIwLjNjNC0yLjYsOC43LTQuMiwxMy45LTQuMg0KCXM5LjksMS41LDEzLjksNC4yYy00LjgsNS40LTcuOCwxMi41LTcuOCwyMC4zYzAsNy44LDIuOSwxNC45LDcuOCwyMC4zYy00LDIuNi04LjcsNC4yLTEzLjksNC4yQzYzLjksNTUuNSw1OS4xLDUzLjksNTUuMSw1MS4zeg0KCSBNOTIuNyw1MS4zYzQuOC01LjQsNy44LTEyLjUsNy44LTIwLjNjMC03LjgtMi45LTE0LjktNy44LTIwLjNjNC0yLjYsOC43LTQuMiwxMy45LTQuMnM5LjksMS41LDEzLjksNC4yDQoJYy00LjgsNS40LTcuOCwxMi41LTcuOCwyMC4zYzAsNy44LDIuOSwxNC45LDcuOCwyMC4zYy00LDIuNi04LjcsNC4yLTEzLjksNC4yUzk2LjcsNTMuOSw5Mi43LDUxLjN6IE0xNDQuMiw1NS41DQoJYy01LjEsMC05LjktMS41LTEzLjktNC4yYzQuOC01LjQsNy44LTEyLjUsNy44LTIwLjNjMC03LjgtMi45LTE0LjktNy44LTIwLjNjNC0yLjYsOC43LTQuMiwxMy45LTQuMmMxMy43LDAsMjQuOSwxMSwyNC45LDI0LjUNCglDMTY5LjEsNDQuNSwxNTcuOSw1NS41LDE0NC4yLDU1LjV6Ii8+DQo8L3N2Zz4NCg=="
@@ -286,7 +360,7 @@ const Projects: React.FC<PageProps> = ({
         </div>
       </section>
       <hr />
-      <section className="project-list">
+      <section className="project-list-item">
         <div className="project">
           <img src={logoEue} alt="1&1" />
 
@@ -397,7 +471,7 @@ const Projects: React.FC<PageProps> = ({
         </div>
       </section>
       <hr />
-      <section className="project-list">
+      <section className="project-list-item last-item">
         <div className="project">
           <img src={logoQx} alt="qooxdoo" />
 
@@ -481,7 +555,7 @@ const Projects: React.FC<PageProps> = ({
           margin-right: 20px;
         }
 
-        .project-list {
+        .project-list-item {
           display: flex;
         }
 
