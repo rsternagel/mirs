@@ -81,7 +81,8 @@ const Homepage: React.FC<PageProps> = ({
             </a>
             , <a href="https://www.typescriptlang.org/">TypeScript</a>{' '}
             <span className="amp">&</span>{' '}
-            <a href="https://nodejs.org/">Node.js</a>. <br />
+            <a href="https://nodejs.org/">Node.js</a> /{' '}
+            <a href="https://deno.land">Deno</a>. <br />
             Moreover I am passionate about{' '}
             <a href="https://rust-lang.org/">Rust</a>,{' '}
             <a href="https://swift.org/">Swift</a>{' '}
@@ -98,8 +99,10 @@ const Homepage: React.FC<PageProps> = ({
             Rhein-Main area or from home (remote).
           </p>
 
+          <p>I speak German (native speaker) an English fluently.</p>
+
           <p>
-            I am available as from <time>July 2020</time>.
+            I am available as from <time>January 2021</time>.
           </p>
         </section>
       </section>
