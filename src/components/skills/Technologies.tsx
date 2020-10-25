@@ -50,6 +50,7 @@ const Technologies: React.FC = () => (
       <dd className="details">
         <ul className="row">
           <li className="high">HTTP,</li>
+          <li className="high">MQTT,</li>
           <li className="middle">LDAP</li>
         </ul>
       </dd>

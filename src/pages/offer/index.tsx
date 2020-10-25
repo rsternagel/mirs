@@ -38,8 +38,8 @@ const Offer: React.FC<PageProps> = ({
           Swift (iOS)?
         </li>
         <li>
-          … the development of a critical project, written in
-          JavaScript/TypeScript or Node.js?
+          … the development of a critical project, written in JavaScript /
+          TypeScript for Node.js / Deno
         </li>
         <li>… the development of a critical project, written in Rust or Go?</li>
         <li>
