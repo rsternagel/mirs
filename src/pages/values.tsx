@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet'
 
 import Layout from '../components/Layout'
 
-const Principles: React.FC<PageProps> = ({
+const Values: React.FC<PageProps> = ({
   data: {
     site: {
       siteMetadata: { title: siteTitle }
@@ -20,10 +20,10 @@ const Principles: React.FC<PageProps> = ({
   <Layout location={location}>
     <div>
       <Helmet>
-        <title>{`Principles | ${siteTitle}`}</title>
+        <title>{`Values | ${siteTitle}`}</title>
       </Helmet>
 
-      <h1>Principles</h1>
+      <h1>Values</h1>
       <p>
         Leaning on{' '}
         <a href="http://www.python.org/dev/peps/pep-0020/">The Zen of Python</a>{' '}
@@ -70,7 +70,7 @@ const Principles: React.FC<PageProps> = ({
   </Layout>
 )
 
-export default Principles
+export default Values
 
 export const pageQuery = graphql`
   {

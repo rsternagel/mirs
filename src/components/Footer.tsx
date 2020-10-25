@@ -14,6 +14,8 @@ const Footer: React.FC<PageProps> = () => (
           <em>Richard Sternagel</em>
         </span>
         <span className="metaLinks">
+          <Link to="/values/">Values</Link>
+          <span className="separator">•</span>
           <Link to="/imprint/">Imprint</Link>
           <span className="separator">•</span>
           <Link to="/privacy/">Privacy</Link>
