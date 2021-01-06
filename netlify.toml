@@ -2,14 +2,14 @@
 # repository branch will inherit these settings.
 [context.production]
   [context.production.environment]
-    YARN_VERSION = "1.22.4"
+    YARN_VERSION = "1.22.10"
 
 # Deploy Preview context: All Deploy Previews
 # will inherit these settings.
 [context.deploy-preview.environment]
-  YARN_VERSION = "1.22.4"
+  YARN_VERSION = "1.22.10"
 
 # Branch Deploy context: All deploys that are not in
 # an active Deploy Preview will inherit these settings.
 [context.branch-deploy.environment]
-  YARN_VERSION = "1.22.4"
+  YARN_VERSION = "1.22.10"
