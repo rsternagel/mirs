@@ -99,7 +99,7 @@ const Homepage: React.FC<PageProps> = ({
             Rhein-Main area or from home (remote).
           </p>
 
-          <p>I speak German (native speaker) an English fluently.</p>
+          <p>I speak German (native speaker) and English fluently.</p>
 
           <p>
             I am available as from <time>January 2021</time>.

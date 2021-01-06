@@ -68,8 +68,7 @@ const Tools: React.FC = () => (
           <li className="high">Jest,</li>
           <li className="high">Cypress,</li>
           <li className="high">Enzyme,</li>
-          <li className="high">Quick (iOS),</li>
-          <li className="high">Nimble (iOS),</li>
+          <li className="high">Quick/Nimble (iOS),</li>
           <li className="middle">Jasmine,</li>
           <li className="middle">Mocha</li>
         </ul>
