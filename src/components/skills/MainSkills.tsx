@@ -6,15 +6,15 @@ const MainSkills: React.FC = () => (
       <dt className="category">Programming Languages</dt>
       <dd className="details">
         <ul>
-          <li className="high">JavaScript (incl. ES 20XX) 11 years</li>
-          <li className="high">TypeScript (2 years)</li>
-          <li className="high">Node.js (5 years)</li>
+          <li className="high">JavaScript (incl. ES 20XX) 12 years</li>
+          <li className="high">TypeScript (3 years)</li>
+          <li className="high">Node.js (6 years)</li>
+          <li className="high">Swift (6 months)</li>
           <li className="high">Rust (6 months)</li>
-          <li className="high">Swift (3 months)</li>
           <li className="high">Go (3 months)</li>
           <li className="middle">Python (4 years)</li>
           <li className="middle">Java SE (5 5years)</li>
-          <li className="middle">UNIX shell scripting (4 years)</li>
+          <li className="middle">UNIX shell scripting (6 years)</li>
         </ul>
       </dd>
     </dl>
@@ -24,6 +24,7 @@ const MainSkills: React.FC = () => (
       <dd className="details">
         <ul>
           <li className="high">React Native</li>
+          <li className="high">SwiftUI (iOS/macOS)</li>
           <li className="high">UIKit (iOS)</li>
           <li className="high">Koa & Express</li>
           <li className="middle">Angular</li>
@@ -55,7 +56,7 @@ const MainSkills: React.FC = () => (
       <dd className="details">
         <ul className="row">
           <li className="high">RxJS,</li>
-          <li className="high">RxSwift,</li>
+          <li className="high">Combine (iOS/macOS),</li>
           <li className="high">Ramda,</li>
           <li className="high">Lodash</li>
         </ul>
