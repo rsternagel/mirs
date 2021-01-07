@@ -118,7 +118,7 @@ const Tools: React.FC = () => (
           <li className="high">CircleCI,</li>
           <li className="high">Travis CI,</li>
           <li className="high">Greenkeeper,</li>
-          <li className="middle">Jenkins</li>
+          <li className="middle">Jenkins,</li>
           <li className="middle">Jenkins X</li>
         </ul>
       </dd>
