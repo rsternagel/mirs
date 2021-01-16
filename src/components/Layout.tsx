@@ -1,8 +1,16 @@
 import React from 'react'
 
-import Footer from './Footer'
-import Logo from './Logo'
+// @ts-ignore
+import _JSXStyle from 'styled-jsx/style'
+
+// Hack
+if (typeof global !== 'undefined') {
+  Object.assign(global, { _JSXStyle })
+}
+
 import Nav from './Nav'
+import Logo from './Logo'
+import Footer from './Footer'
 
 import { m } from '../utils/breakpoints'
 
