@@ -81,7 +81,6 @@ const Tools: React.FC = () => (
         <ul className="row">
           <li className="high">Prettier,</li>
           <li className="high">Flow,</li>
-          <li className="high">TSLint,</li>
           <li className="high">ESLint,</li>
           <li className="high">stylelint</li>
         </ul>
