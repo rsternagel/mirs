@@ -11,7 +11,7 @@ const MainSkills: React.FC = () => (
           <li className="high">Node.js (6 years)</li>
           <li className="high">Swift (6 months)</li>
           <li className="high">Rust (6 months)</li>
-          <li className="high">Go (3 months)</li>
+          <li className="middle">Go (3 months)</li>
           <li className="middle">Python (4 years)</li>
           <li className="middle">Java SE (5 5years)</li>
           <li className="middle">UNIX shell scripting (6 years)</li>

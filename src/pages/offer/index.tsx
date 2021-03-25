@@ -35,20 +35,20 @@ const Offer: React.FC<PageProps> = ({
         </li>
         <li>
           … the development of a complex (mobile) app written in React Native or
-          Swift (iOS)?
+          Swift (iOS/SwiftUI)?
         </li>
         <li>
           … the development of a critical project, written in JavaScript /
-          TypeScript for Node.js / Deno
+          TypeScript for Node.js / Deno?
         </li>
-        <li>… the development of a critical project, written in Rust or Go?</li>
+        <li>… the development of a critical project, written in Rust?</li>
         <li>
           … the alignment of your infrastructure, tooling, and deployment
           process?
         </li>
         <li>… the transformation of your web app into a cloud native app?</li>
       </ul>
-      <p>Then I'm the right man for you</p>
+      <p>Then I'm the right man for you!</p>
       <header>
         <h2>My profile:</h2>
         <em>Senior web/app developer,</em>

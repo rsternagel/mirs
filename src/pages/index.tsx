@@ -44,7 +44,7 @@ const Homepage: React.FC<PageProps> = ({
             <div className="labels">
               <span>Web/Mobile-Apps (RN / iOS)</span>
               <span>Full Stack · Cloud Native</span>
-              <span>JS/TS · Node.js · Rust · Swift · Go</span>
+              <span>JS/TS · Node.js · Rust · Swift</span>
               <span>React · React Native</span>
             </div>
 
@@ -84,9 +84,9 @@ const Homepage: React.FC<PageProps> = ({
             <a href="https://nodejs.org/">Node.js</a> /{' '}
             <a href="https://deno.land">Deno</a>. <br />
             Moreover I am passionate about{' '}
-            <a href="https://rust-lang.org/">Rust</a>,{' '}
-            <a href="https://swift.org/">Swift</a>{' '}
-            <span className="amp">&</span> <a href="https://golang.org/">Go</a>.
+            <a href="https://rust-lang.org/">Rust</a>{' '}
+            <span className="amp">&</span>{' '}
+            <a href="https://swift.org/">Swift</a>.
           </p>
 
           {/* <p>
@@ -102,7 +102,7 @@ const Homepage: React.FC<PageProps> = ({
           <p>I speak German (native speaker) and English fluently.</p>
 
           <p>
-            I am available as from <time>January 2021</time>.
+            I am available as from <time>July 2021</time>.
           </p>
         </section>
       </section>

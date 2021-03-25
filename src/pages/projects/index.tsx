@@ -57,14 +57,15 @@ const Projects: React.FC<PageProps> = ({
               Web apps <br /> Node services <br /> CLI-Tools
             </dd>
             <dt>Frontend Technologies</dt>
-            <dd>TypeScript, Angular 6-10, RxJS, SVG, MapBox, Jest, webpack</dd>
+            <dd>TypeScript, Angular 6-11, RxJS, SVG, MapBox, Jest, webpack</dd>
             <dt>Backend Technologies</dt>
             <dd>
               Node.js, Koa, GraphQL, <br /> Docker, MQTT, Rust
             </dd>
             <dt>Period of Time</dt>
             <dd>
-              <time>2019-2020 (ongoing)</time>
+              <time>2020-2021 (ongoing)</time>
+              <time>2019-2020</time>
             </dd>
           </dl>
         </div>
@@ -101,10 +102,15 @@ const Projects: React.FC<PageProps> = ({
               Miscellaneous:
               <ul>
                 <li>
-                  Development and maintenance of CLI tools (Rust & TypeScript)
+                  Development and maintenance of CLI tools (Rust / TypeScript /
+                  bash)
                 </li>
                 <li>
                   App-Concept for the realization of distraction free driving
+                </li>
+                <li>
+                  Proactively suggesting concepts and solutions for current
+                  obstacles
                 </li>
                 <li>Documentation of workflows and hardware-specifics</li>
               </ul>
@@ -224,9 +230,8 @@ const Projects: React.FC<PageProps> = ({
 
             <dt>Period of Time</dt>
             <dd>
-              <time>2018 (3 months all in all / remote)</time>
-              <br />
               <time>2019 (weeks)</time>
+              <time>2018 (3 months all in all / remote)</time>
             </dd>
           </dl>
         </div>
@@ -568,6 +573,10 @@ const Projects: React.FC<PageProps> = ({
           width: 32%;
           margin-right: 20px;
           font-size: 85%;
+        }
+
+        .project time {
+          display: block;
         }
 
         .responsibility {
