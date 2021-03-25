@@ -14,3 +14,6 @@ Session.vim
 # generated
 .cache/
 public/
+
+# Local Netlify folder
+.netlify
