@@ -42,7 +42,7 @@ const Homepage: React.FC<PageProps> = ({
 
           <div className="container-labels-contact">
             <div className="labels">
-              <span>Web/Mobile-Apps (RN / iOS)</span>
+              <span>Web/Mobile-Apps (RN / SwiftUI)</span>
               <span>Full Stack · Cloud Native</span>
               <span>JS/TS · Node.js · Rust · Swift</span>
               <span>React · React Native</span>
