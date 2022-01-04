@@ -102,7 +102,7 @@ const Homepage: React.FC<PageProps> = ({
           <p>I speak German (native speaker) and English fluently.</p>
 
           <p>
-            I am available as from <time>July 2021</time>.
+            I am available as from <time>July 2022</time>.
           </p>
         </section>
       </section>
