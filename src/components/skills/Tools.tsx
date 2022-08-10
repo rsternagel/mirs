@@ -148,6 +148,16 @@ const Tools: React.FC = () => (
     </dl>
 
     <dl className="skill-list">
+      <dt className="category">Build (Rust)</dt>
+      <dd className="details">
+        <ul className="row">
+          <li className="high">cargo (duh!),</li>
+          <li className="high">just</li>
+        </ul>
+      </dd>
+    </dl>
+
+    <dl className="skill-list">
       <dt className="category">Build (iOS)</dt>
       <dd className="details">
         <ul className="row">
