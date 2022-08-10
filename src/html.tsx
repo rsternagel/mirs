@@ -28,10 +28,7 @@ const Skeleton: React.FC<{
         {head.title.toComponent()}
         {head.meta.toComponent()}
         {head.link.toComponent()}
-        <link
-          href="https://fonts.googleapis.com/css?family=Open+Sans:400,600"
-          rel="stylesheet"
-        />
+        <link rel="stylesheet" type="text/css" href="/css/fonts.css" />
         <link rel="shortcut icon" type="image/x-icon" href={favicon} />
         <script>
           var clicky_site_ids = clicky_site_ids || [];
