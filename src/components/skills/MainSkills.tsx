@@ -6,15 +6,44 @@ const MainSkills: React.FC = () => (
       <dt className="category">Programming Languages</dt>
       <dd className="details">
         <ul>
-          <li className="high">JavaScript (incl. ES 20XX) 13 years</li>
-          <li className="high">TypeScript (4 years)</li>
-          <li className="high">Node.js (7 years)</li>
-          <li className="high">Rust (1 year)</li>
-          <li className="high">Swift (6 months)</li>
+          <li className="high">Rust (2 years)</li>
+          <li className="high">JavaScript (incl. ES 20XX) 15 years</li>
+          <li className="high">TypeScript (6 years)</li>
+          <li className="high">Node.js (9 years)</li>
+          <li className="high">UNIX shell scripting (7 years)</li>
+          <li className="middle">Swift (6 months)</li>
           <li className="middle">Go (3 months)</li>
           <li className="middle">Python (4 years)</li>
-          <li className="middle">Java SE (5 5years)</li>
-          <li className="middle">UNIX shell scripting (6 years)</li>
+          <li className="middle">Java SE (5 years)</li>
+        </ul>
+      </dd>
+    </dl>
+
+    <dl className="skill-list">
+      <dt className="category">Libraries Rust</dt>
+      <dd className="details">
+        <ul className="row">
+          <li className="high">tokio,</li>
+          <li className="high">hyper,</li>
+          <li className="high">tonic,</li>
+          <li className="high">eyre,</li>
+          <li className="high">clap,</li>
+          <li className="high">tide,</li>
+          <li className="high">axum</li>
+        </ul>
+      </dd>
+    </dl>
+
+    <dl className="skill-list">
+      <dt className="category">Libraries React</dt>
+      <dd className="details">
+        <ul className="row">
+          <li className="high">React,</li>
+          <li className="high">Redux,</li>
+          <li className="high">MobX,</li>
+          <li className="high">React Navigation,</li>
+          <li className="high">React Native SVG,</li>
+          <li className="high">Redux-Saga</li>
         </ul>
       </dd>
     </dl>
@@ -24,26 +53,10 @@ const MainSkills: React.FC = () => (
       <dd className="details">
         <ul>
           <li className="high">React Native</li>
-          <li className="high">SwiftUI (iOS/macOS)</li>
-          <li className="high">UIKit (iOS)</li>
           <li className="high">Koa & Express</li>
           <li className="middle">Angular</li>
           <li className="middle">Django (Python)</li>
           <li className="middle">Flask (Python)</li>
-        </ul>
-      </dd>
-    </dl>
-
-    <dl className="skill-list">
-      <dt className="category">Libraries</dt>
-      <dd className="details">
-        <ul className="row">
-          <li className="high">React,</li>
-          <li className="high">Redux,</li>
-          <li className="high">MobX,</li>
-          <li className="high">React Navigation,</li>
-          <li className="high">React Native SVG,</li>
-          <li className="high">Redux-Saga</li>
         </ul>
       </dd>
     </dl>

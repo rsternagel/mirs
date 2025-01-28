@@ -6,7 +6,8 @@ const Tools: React.FC = () => (
       <dt className="category">Containerization</dt>
       <dd className="details">
         <ul className="row">
-          <li className="high">Docker</li>
+          <li className="high">Docker,</li>
+          <li className="high">Podman</li>
         </ul>
       </dd>
     </dl>
@@ -15,8 +16,26 @@ const Tools: React.FC = () => (
       <dt className="category">Orchestration</dt>
       <dd className="details">
         <ul className="row">
-          <li className="high">Docker Swarm mode,</li>
           <li className="high">Kubernetes (incl. Helm)</li>
+        </ul>
+      </dd>
+    </dl>
+
+    <dl className="skill-list">
+      <dt className="category">Virtualization</dt>
+      <dd className="details">
+        <ul className="row">
+          <li className="high">Vagrant,</li>
+          <li className="high">VirtualBox</li>
+        </ul>
+      </dd>
+    </dl>
+
+    <dl className="skill-list">
+      <dt className="category">Cryptography</dt>
+      <dd className="details">
+        <ul className="row">
+          <li className="high">X.509</li>
         </ul>
       </dd>
     </dl>
@@ -27,7 +46,8 @@ const Tools: React.FC = () => (
       </dt>
       <dd className="details">
         <ul className="row">
-          <li className="high">Terraform</li>
+          <li className="high">Terraform,</li>
+          <li className="high">Ansible</li>
         </ul>
       </dd>
     </dl>
@@ -41,8 +61,9 @@ const Tools: React.FC = () => (
       <dd className="details">
         <ul className="row">
           <li className="high">AWS,</li>
-          <li className="high">Google Cloud Platform,</li>
-          <li className="high">Google Firebase,</li>
+          <li className="high">Azure,</li>
+          <li className="high">GCP,</li>
+          <li className="high">Firebase,</li>
           <li className="high">VS App Center,</li>
           <li className="high">Netlify</li>
         </ul>
@@ -62,15 +83,25 @@ const Tools: React.FC = () => (
     </dl>
 
     <dl className="skill-list">
-      <dt className="category">Testing</dt>
+      <dt className="category">Testing (web)</dt>
       <dd className="details">
         <ul className="row">
           <li className="high">Jest,</li>
           <li className="high">Cypress,</li>
           <li className="high">Enzyme,</li>
-          <li className="high">Quick/Nimble (iOS),</li>
           <li className="middle">Jasmine,</li>
           <li className="middle">Mocha</li>
+        </ul>
+      </dd>
+    </dl>
+
+    <dl className="skill-list">
+      <dt className="category">Testing (Rust)</dt>
+      <dd className="details">
+        <ul className="row">
+          <li className="high">mockall,</li>
+          <li className="high">wiremock,</li>
+          <li className="high">mockito</li>
         </ul>
       </dd>
     </dl>
@@ -80,7 +111,6 @@ const Tools: React.FC = () => (
       <dd className="details">
         <ul className="row">
           <li className="high">Prettier,</li>
-          <li className="high">Flow,</li>
           <li className="high">ESLint,</li>
           <li className="high">stylelint</li>
         </ul>
@@ -101,6 +131,7 @@ const Tools: React.FC = () => (
       <dt className="category">Static Site Generator</dt>
       <dd className="details">
         <ul className="row">
+          <li className="high">Next.js</li>
           <li className="high">Gatsby (JS),</li>
           <li className="middle">Hugo (Go)</li>
         </ul>
@@ -116,9 +147,7 @@ const Tools: React.FC = () => (
         <ul className="row">
           <li className="high">CircleCI,</li>
           <li className="high">Travis CI,</li>
-          <li className="high">Greenkeeper,</li>
-          <li className="middle">Jenkins,</li>
-          <li className="middle">Jenkins X</li>
+          <li className="middle">Jenkins</li>
         </ul>
       </dd>
     </dl>
@@ -152,6 +181,7 @@ const Tools: React.FC = () => (
       <dd className="details">
         <ul className="row">
           <li className="high">cargo (duh!),</li>
+          <li className="high">cross</li>
           <li className="high">just</li>
         </ul>
       </dd>

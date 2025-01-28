@@ -57,14 +57,14 @@ const Projects: React.FC<PageProps> = ({
               Web apps <br /> Node services <br /> CLI-Tools
             </dd>
             <dt>Frontend Technologies</dt>
-            <dd>TypeScript, Angular 6-11, RxJS, SVG, MapBox, Jest, webpack</dd>
+            <dd>TypeScript, Angular 6-12, RxJS, SVG, MapBox, Jest, webpack</dd>
             <dt>Backend Technologies</dt>
             <dd>
               Node.js, Koa, GraphQL, <br /> Docker, MQTT, Rust
             </dd>
             <dt>Period of Time</dt>
             <dd>
-              <time>2020-2021 (ongoing)</time>
+              <time>2022-2024</time>
               <time>2019-2020</time>
             </dd>
           </dl>
@@ -109,8 +109,8 @@ const Projects: React.FC<PageProps> = ({
                   App-Concept for the realization of distraction free driving
                 </li>
                 <li>
-                  Proactively suggesting concepts and solutions for current
-                  obstacles
+                  Proactively suggesting concepts and solutions to other
+                  stakeholders for current obstacles
                 </li>
                 <li>Documentation of workflows and hardware-specifics</li>
               </ul>
@@ -459,7 +459,7 @@ const Projects: React.FC<PageProps> = ({
                   documentation of the CD build/release/deployment pipelines
                 </li>
                 <li>
-                  Analysis/Conceptioning of the frontend target architecture
+                  Analysis/Concept creation of the frontend target architecture
                   with migration plan
                 </li>
                 <li>Writing of Unit/E2E-Tests (Karma, Jasmine, Protractor)</li>

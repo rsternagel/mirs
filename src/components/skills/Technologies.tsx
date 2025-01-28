@@ -18,19 +18,10 @@ const Technologies: React.FC = () => (
       <dt className="category">Architecture (data)</dt>
       <dd className="details">
         <ul className="row">
-          <li className="high">GraphQL (incl. Prisma),</li>
-          <li className="high">JWT,</li>
-          <li className="middle">REST</li>
-        </ul>
-      </dd>
-    </dl>
-
-    <dl className="skill-list">
-      <dt className="category">Architecture (app)</dt>
-      <dd className="details">
-        <ul className="row">
-          <li className="high">MVC,</li>
-          <li className="high">MVVM</li>
+          <li className="high">gRPC (incl. Protobuf),</li>
+          <li className="high">GraphQL,</li>
+          <li className="high">OAuth (incl. JWT),</li>
+          <li className="high">REST</li>
         </ul>
       </dd>
     </dl>

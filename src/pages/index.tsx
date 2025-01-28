@@ -42,10 +42,8 @@ const Homepage: React.FC<PageProps> = ({
 
           <div className="container-labels-contact">
             <div className="labels">
-              <span>Web/Mobile-Apps (RN / SwiftUI)</span>
-              <span>Full Stack · Cloud Native</span>
-              <span>JS/TS · Node.js · Rust · Swift</span>
-              <span>React · React Native</span>
+              <span>Rust · JS/TS · Node.js</span>
+              <span>Web-Apps · Full Stack · CLI</span>
             </div>
 
             <p className="contact">
@@ -63,46 +61,35 @@ const Homepage: React.FC<PageProps> = ({
             <br />I am <span className="name">Richard Sternagel</span>,<br />
             software developer from Frankfurt am Main, Germany.
           </p>
-
           <p>
-            I am an expert for the{' '}
+            I'm experienced with Rust projects
+            <br /> (e.g. in the fields of Networking, CLI and WASM).
+          </p>{' '}
+          <p>
+            Moreover I am an expert for the{' '}
             <Link to={'/offer/'}>
-              development of Web/Mobile Apps with a cloud native attitude.
+              development of Web Apps with a cloud native attitude.
             </Link>{' '}
             My <Link to={'/skills/'}>field-tested knowledge</Link> is based on
             my studies (degree in Computer Science in Media) as well as my
-            twelve years <Link to={'/projects/'}>work experience</Link>.
+            fifteen years <Link to={'/projects/'}>work experience</Link>.
           </p>
-
           <p>
-            My focus is on{' '}
+            My focus is on <a href="https://rust-lang.org/">Rust</a>,{' '}
             <a href="https://developer.mozilla.org/en/docs/Web/JavaScript">
               JavaScript
             </a>
             , <a href="https://www.typescriptlang.org/">TypeScript</a>{' '}
             <span className="amp">&</span>{' '}
-            <a href="https://nodejs.org/">Node.js</a> /{' '}
-            <a href="https://deno.land">Deno</a>. <br />
-            Moreover I am passionate about{' '}
-            <a href="https://rust-lang.org/">Rust</a>{' '}
-            <span className="amp">&</span>{' '}
-            <a href="https://swift.org/">Swift</a>.
+            <a href="https://nodejs.org/">Node.js</a>.
           </p>
-
-          {/* <p>
-            Currently my emphasis is on development with Rust
-            as well as transforming Web Apps into Cloud Native Apps
-          </p> */}
-
           <p>
             My preferred location to work from is Frankfurt am Main, the
             Rhein-Main area or from home (remote).
           </p>
-
           <p>I speak German (native speaker) and English fluently.</p>
-
           <p>
-            I am available as from <time>Januar 2023</time>.
+            I am available as from <time>March 2025</time>.
           </p>
         </section>
       </section>

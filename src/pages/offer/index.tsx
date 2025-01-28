@@ -30,41 +30,39 @@ const Offer: React.FC<PageProps> = ({
       <h1>Offer</h1>
       <p>You need help with</p>
       <ul className="noBullet">
-        <li>
-          … the development of a complex web app (at best done with React)?
-        </li>
-        <li>
-          … the development of a complex (mobile) app written in React Native or
-          Swift (iOS/SwiftUI)?
-        </li>
+        <li>… the development of a critical project, written in Rust?</li>
         <li>
           … the development of a critical project, written in JavaScript /
-          TypeScript for Node.js / Deno?
+          TypeScript for Node.js?
         </li>
-        <li>… the development of a critical project, written in Rust?</li>
         <li>
           … the alignment of your infrastructure, tooling, and deployment
           process?
         </li>
         <li>… the transformation of your web app into a cloud native app?</li>
+        <li>
+          … the consolidation of a technology zoo (i.e. refactor/rewrite)?
+        </li>
       </ul>
       <p>Then I'm the right man for you!</p>
       <header>
         <h2>My profile:</h2>
-        <em>Senior web/app developer,</em>
+        <em>Senior developer,</em>
         <br />
         who does full stack and is also well-versed in the frontend field.
       </header>
       <ul>
+        <li>I bring 2 years Rust experience to the table.</li>
         <li>
-          I know current frameworks (
+          I know current frontend frameworks (
           <a href="https://facebook.github.io/react-native/">React Native</a>,{' '}
           <a href="https://angular.io/">Angular</a>,{' '}
           <a href="https://vuejs.org/">Vue</a>) and libraries (
           <a href="https://facebook.github.io/react/">React</a>) well.
         </li>
         <li>
-          My focus is on <a href="https://facebook.github.io/react/">React</a> /{' '}
+          profound experience with{' '}
+          <a href="https://facebook.github.io/react/">React</a> /{' '}
           <a href="https://facebook.github.io/react-native/">React Native</a>{' '}
           and its ecosystem (e.g. <a href="http://redux.js.org/">Redux</a>,{' '}
           <a href="http://graphql.org/">GraphQL</a>,{' '}
@@ -88,7 +86,7 @@ const Offer: React.FC<PageProps> = ({
       </h2>
       <ul>
         <li>
-          I bring my 12 years of expert knowledge and practical work experience
+          I bring my 15 years of expert knowledge and practical work experience
           to the table.
         </li>
         <li>
@@ -119,6 +117,11 @@ const Offer: React.FC<PageProps> = ({
           I have a professional standard for leaving qualitative, comprehensible
           and maintainable code behind. Therefore I actively pass my knowledge
           to your team for the time after my assignment.
+        </li>
+        <li>
+          I can refactor/rewrite your old software written in any language. I
+          earned my money for several years with a lot of different environments
+          (e.g. Java, PHP and Python), so let's bring it on.
         </li>
       </ul>
       <h2>Let's get ready to do some work!</h2>
