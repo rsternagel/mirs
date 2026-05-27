@@ -20,23 +20,14 @@
     "typography": "^0.16.21"
   },
   "devDependencies": {
-    "@mapbox/stylelint-processor-arbitrary-tags": "^0.4.0",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@types/react-helmet": "^6.1.6",
-    "@types/styled-jsx": "^3.4.4",
     "@types/typography": "^0.16.4",
-    "@typescript-eslint/eslint-plugin": "^5.9.0",
-    "@typescript-eslint/parser": "^5.9.0",
-    "eslint": "^8.6.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
+    "oxlint": "^1.61.0",
     "prettier": "^2.8.3",
-    "stylelint": "^13.12.0",
-    "stylelint-config-css-modules": "^2.2.0",
-    "stylelint-config-standard": "^21.0.0",
     "typescript": "^4.5.4"
   },
   "homepage": "https://github.com/rsternagel/mirs",
@@ -48,22 +39,20 @@
   },
   "scripts": {
     "check": "tsc",
-    "clean": "rm -rf .cache/* && rm -rf node_modules && rm -rf yarn.lock && rm -rf public/*",
-    "lint": "yarn lint-ts && yarn lint-css",
-    "lint-ts": "eslint . --ignore-path .gitignore --ext .ts,.tsx,.js",
-    "lint-css": "stylelint \"src/**/*.ts\" \"src/**/*.tsx\"",
+    "clean": "rm -rf .cache/* && rm -rf node_modules && rm -rf pnpm-lock.yaml && rm -rf public/*",
+    "lint": "pnx oxlint",
     "dev": "gatsby develop --host 127.0.0.1 --port 8000",
     "build": "NODE_ENV=production gatsby build",
     "serve": "gatsby serve",
-    "buse": "yarn build && yarn serve",
+    "buse": "pnpm build && pnpm serve",
     "prepare": "husky install"
   },
   "lint-staged": {
     "*.tsx": [
-      "yarn lint"
+      "pnx lint"
     ],
     "*.ts": [
-      "yarn lint"
+      "pnx lint"
     ]
   }
 }
