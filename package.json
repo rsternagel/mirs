@@ -1,63 +1,42 @@
 {
   "name": "mirs",
-  "description": "",
   "version": "0.0.1",
+  "description": "",
+  "license": "MIT",
   "author": "Richard Sternagel",
+  "scripts": {
+    "build": "astro build",
+    "clean": "rm -rf .astro && rm -rf node_modules && rm -rf pnpm-lock.yaml && rm -rf dist/*",
+    "check": "astro check",
+    "dev": "astro dev",
+    "lint-css": "stylelint src/**/*astro src/**/*css",
+    "preview": "astro preview"
+  },
   "dependencies": {
-    "gatsby": "^5.5.0",
-    "gatsby-plugin-manifest": "^5.5.0",
-    "gatsby-plugin-offline": "^6.5.0",
-    "gatsby-plugin-sharp": "^5.5.0",
-    "gatsby-plugin-styled-jsx": "^6.5.0",
-    "gatsby-source-filesystem": "^5.5.0",
-    "gatsby-transformer-sharp": "^5.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
-    "react-icons": "^4.3.1",
-    "react-typography": "^0.16.23",
-    "styled-jsx": "^4.0.1",
-    "typography": "^0.16.21"
+    "astro": "^6.4.2"
   },
   "devDependencies": {
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
-    "@types/react-helmet": "^6.1.6",
-    "@types/typography": "^0.16.4",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.1.0",
-    "oxlint": "^1.61.0",
-    "prettier": "^2.8.3",
-    "typescript": "^4.5.4"
-  },
-  "homepage": "https://github.com/rsternagel/mirs",
-  "license": "MIT",
-  "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/rsternagel/mirs"
-  },
-  "scripts": {
-    "check": "tsc",
-    "clean": "rm -rf .cache/* && rm -rf node_modules && rm -rf pnpm-lock.yaml && rm -rf public/*",
-    "lint": "pnx oxlint",
-    "dev": "gatsby develop --host 127.0.0.1 --port 8000",
-    "build": "NODE_ENV=production gatsby build",
-    "serve": "gatsby serve",
-    "buse": "pnpm build && pnpm serve",
-    "prepare": "husky install"
+    "@astrojs/check": "^0.9.9",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.7",
+    "oxfmt": "^0.52.0",
+    "sharp": "^0.34.5",
+    "stylelint": "^17.12.0",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-standard": "^40.0.0",
+    "typescript": "^6.0.3"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pnx run lint-staged"
+      "pre-commit": "pnpm run lint-staged"
     }
   },
   "lint-staged": {
-    "*.tsx": [
-      "pnx lint"
+    "*.astro": [
+      "pnpm check && pnpm lint-css"
     ],
-    "*.ts": [
-      "pnx lint"
+    "*.css": [
+      "pnpm check && pnpm lint-css"
     ]
   }
 }

@@ -1,19 +1,24 @@
-# OSX file system
-.DS_Store
+# build output
+dist/
 
-# Node.js/npm
+# generated types
+.astro/
+
+# dependencies
 node_modules/
-npm-debug.log
 
-# yarn
-# yarn.lock
+# logs
+pnpm-debug.log*
 
-# vim
-Session.vim
+# todo
+todo.txt
 
-# generated
-.cache/
-public/
+# environment variables
+.env
+.env.production
 
 # Local Netlify folder
 .netlify
+
+# macOS-specific files
+.DS_Store

@@ -1,16 +1,13 @@
 {
-  "extends": [
-    "stylelint-config-standard",
-    "stylelint-config-css-modules"
-  ],
-  "processors": [
-    [ "@mapbox/stylelint-processor-arbitrary-tags", {
-            "startTag": "\\s*<style jsx>{`",
-            "endTag": "\\s*`}<\/style>"
+  "extends": ["stylelint-config-standard", "stylelint-config-html/astro"],
+  "rules": {
+    "comment-empty-line-before": "always",
+    "no-empty-source": null,
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["global"]
       }
     ]
-  ],
-  "rules": {
-    "no-empty-source": null
   }
 }
