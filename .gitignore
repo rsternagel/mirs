@@ -14,8 +14,8 @@ pnpm-debug.log*
 todo.txt
 
 # environment variables
-.env
-.env.production
+# .env
+# .env.production
 
 # Local Netlify folder
 .netlify
