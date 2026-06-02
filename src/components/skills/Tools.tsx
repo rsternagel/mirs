@@ -25,8 +25,9 @@ const Tools: React.FC = () => (
       <dt className="category">Virtualization</dt>
       <dd className="details">
         <ul className="row">
-          <li className="high">Vagrant,</li>
-          <li className="high">VirtualBox</li>
+          <li className="high">Multipass,</li>
+          <li className="middle">Vagrant,</li>
+          <li className="middle">VirtualBox</li>
         </ul>
       </dd>
     </dl>
@@ -63,9 +64,10 @@ const Tools: React.FC = () => (
           <li className="high">AWS,</li>
           <li className="high">Azure,</li>
           <li className="high">GCP,</li>
-          <li className="high">Firebase,</li>
-          <li className="high">VS App Center,</li>
-          <li className="high">Netlify</li>
+          <li className="high">Supabase,</li>
+          <li className="high">Neon,</li>
+          <li className="high">Netlify,</li>
+          <li className="middle">Firebase</li>
         </ul>
       </dd>
     </dl>
@@ -74,9 +76,10 @@ const Tools: React.FC = () => (
       <dt className="category">Dev</dt>
       <dd className="details">
         <ul className="row">
+          <li className="high">Zed,</li>
           <li className="high">VS Code,</li>
           <li className="high">(M)Vim,</li>
-          <li className="high">Xcode,</li>
+          <li className="middle">Xcode,</li>
           <li className="middle">Android Studio</li>
         </ul>
       </dd>
@@ -87,10 +90,8 @@ const Tools: React.FC = () => (
       <dd className="details">
         <ul className="row">
           <li className="high">Jest,</li>
-          <li className="high">Cypress,</li>
-          <li className="high">Enzyme,</li>
-          <li className="middle">Jasmine,</li>
-          <li className="middle">Mocha</li>
+          <li className="high">Playwright,</li>
+          <li className="high">Cypress</li>
         </ul>
       </dd>
     </dl>
@@ -110,9 +111,11 @@ const Tools: React.FC = () => (
       <dt className="category">Quality Assurance</dt>
       <dd className="details">
         <ul className="row">
-          <li className="high">Prettier,</li>
-          <li className="high">ESLint,</li>
-          <li className="high">stylelint</li>
+          <li className="high">Oxfmt,</li>
+          <li className="high">Oxlint,</li>
+          <li className="middle">Prettier,</li>
+          <li className="middle">ESLint,</li>
+          <li className="middle">stylelint</li>
         </ul>
       </dd>
     </dl>
@@ -131,8 +134,10 @@ const Tools: React.FC = () => (
       <dt className="category">Static Site Generator</dt>
       <dd className="details">
         <ul className="row">
-          <li className="high">Next.js</li>
-          <li className="high">Gatsby (JS),</li>
+          <li className="high">Astro,</li>
+          <li className="high">Zola (Rust),</li>
+          <li className="middle">Next.js,</li>
+          <li className="middle">Gatsby (JS),</li>
           <li className="middle">Hugo (Go)</li>
         </ul>
       </dd>
@@ -145,8 +150,9 @@ const Tools: React.FC = () => (
       </dt>
       <dd className="details">
         <ul className="row">
+          <li className="high">GitHub Actions,</li>
+          <li className="high">GitLab CI/CD,</li>
           <li className="high">CircleCI,</li>
-          <li className="high">Travis CI,</li>
           <li className="middle">Jenkins</li>
         </ul>
       </dd>
@@ -168,10 +174,13 @@ const Tools: React.FC = () => (
       <dt className="category">Build (web)</dt>
       <dd className="details">
         <ul className="row">
-          <li className="high">yarn,</li>
-          <li className="high">npm,</li>
-          <li className="high">webpack,</li>
-          <li className="high">Babel</li>
+          <li className="high">pnpm,</li>
+          <li className="high">Rspack,</li>
+          <li className="high">Rolldown,</li>
+          <li className="high">esbuild,</li>
+          <li className="middle">yarn,</li>
+          <li className="middle">npm,</li>
+          <li className="middle">webpack</li>
         </ul>
       </dd>
     </dl>
@@ -180,9 +189,8 @@ const Tools: React.FC = () => (
       <dt className="category">Build (Rust)</dt>
       <dd className="details">
         <ul className="row">
-          <li className="high">cargo (duh!),</li>
+          <li className="high">just,</li>
           <li className="high">cross</li>
-          <li className="high">just</li>
         </ul>
       </dd>
     </dl>
@@ -194,15 +202,6 @@ const Tools: React.FC = () => (
           <li className="high">Swift Package Manager,</li>
           <li className="high">Carthage,</li>
           <li className="middle">CocoaPods</li>
-        </ul>
-      </dd>
-    </dl>
-
-    <dl className="skill-list">
-      <dt className="category">Releases</dt>
-      <dd className="details">
-        <ul className="row">
-          <li className="high">fastlane</li>
         </ul>
       </dd>
     </dl>

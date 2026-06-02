@@ -30,7 +30,7 @@ const MiscSkills: React.FC = () => (
       <dd className="details">
         <ul className="row">
           <li className="high">macOS,</li>
-          <li className="middle">Linux</li>
+          <li className="high">Linux</li>
         </ul>
       </dd>
     </dl>

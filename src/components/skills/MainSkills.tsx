@@ -23,13 +23,14 @@ const MainSkills: React.FC = () => (
       <dt className="category">Libraries Rust</dt>
       <dd className="details">
         <ul className="row">
-          <li className="high">tokio,</li>
+          <li className="high">Axum,</li>
+          <li className="high">Tokio,</li>
           <li className="high">hyper,</li>
+          <li className="high">SQLx</li>
           <li className="high">tonic,</li>
           <li className="high">eyre,</li>
-          <li className="high">clap,</li>
-          <li className="high">tide,</li>
-          <li className="high">axum</li>
+          <li className="high">Clap,</li>
+          <li className="high">tracing</li>
         </ul>
       </dd>
     </dl>
@@ -42,8 +43,7 @@ const MainSkills: React.FC = () => (
           <li className="high">Redux,</li>
           <li className="high">MobX,</li>
           <li className="high">React Navigation,</li>
-          <li className="high">React Native SVG,</li>
-          <li className="high">Redux-Saga</li>
+          <li className="high">React Native SVG</li>
         </ul>
       </dd>
     </dl>
@@ -80,20 +80,35 @@ const MainSkills: React.FC = () => (
       <dt className="category">Databases</dt>
       <dd className="details">
         <ul className="row">
+          <li className="high">PostegreSQL,</li>
+          <li className="high">Turso,</li>
+          <li className="high">SQLite,</li>
           <li className="middle">Redis,</li>
           <li className="middle">MongoDB,</li>
-          <li className="middle">MySQL,</li>
-          <li className="middle">SQLite</li>
+          <li className="middle">MySQL</li>
         </ul>
       </dd>
     </dl>
 
     <dl className="skill-list">
-      <dt className="category">Server</dt>
+      <dt className="category">HTTP Server</dt>
       <dd className="details">
         <ul className="row">
           <li className="middle">nginx,</li>
           <li className="middle">Apache HTTP Server</li>
+        </ul>
+      </dd>
+    </dl>
+
+    <dl className="skill-list">
+      <dt className="category">
+        <abbr title="Message-oriented middleware">MOMs</abbr>
+      </dt>
+      <dd className="details">
+        <ul className="row">
+          <li className="high">NATS,</li>
+          <li className="high">RMQTT,</li>
+          <li className="middle">Mosquitto</li>
         </ul>
       </dd>
     </dl>
