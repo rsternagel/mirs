@@ -1,0 +1,26 @@
+---
+import { Image } from 'astro:assets'
+
+import logoMirs from '../img/logo_mirs.svg'
+---
+
+<div class="logo">
+  <a href="/" }>
+    <Image
+      src={logoMirs}
+      alt="Medieninformatik Richard Sternagel"
+      loading="eager"
+      width="200"
+      height="48"
+    />
+  </a>
+</div>
+
+<style>
+  .logo img {
+    min-width: 200px;
+    min-height: 48px;
+    margin-left: 5px;
+    margin-top: 10px;
+  }
+</style>

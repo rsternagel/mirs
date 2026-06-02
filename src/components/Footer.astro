@@ -1,0 +1,81 @@
+---
+const fullYear = new Date().getFullYear()
+---
+
+<footer>
+  <div class="wrapper">
+    <div class="meta">
+      <span class="copyright">
+        © {fullYear}
+        <em>Richard Sternagel</em>
+      </span>
+      <span class="meta-links">
+        <a href="/values/">Values</a>
+        <span class="separator">•</span>
+        <a href="/imprint/">Imprint</a>
+        <span class="separator">•</span>
+        <a href="/privacy/">Privacy</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    border-top: 1px solid #b0dda4;
+    border-bottom: 1px solid #b0dda4;
+    background-color: #ebf6e8;
+    font-size: 80%;
+    padding: 8px 0;
+  }
+
+  footer :global(a),
+  footer :global(a:visited) {
+    padding: 0 2px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #1964ae;
+  }
+
+  footer :global(a:hover) {
+    background-color: #ffb;
+  }
+
+  .wrapper {
+    margin: 0 auto;
+    max-width: 54rem;
+    padding: 0.5rem 2.7rem;
+  }
+
+  .meta {
+    display: flex;
+    justify-content: space-evenly;
+    text-shadow: 0 1px 0 rgb(255 255 255 / 100%);
+  }
+
+  .copyright em {
+    font-style: normal;
+    padding-left: 2px;
+  }
+
+  .separator {
+    padding: 0 5px;
+    color: #999;
+  }
+
+  /* @media (max-width: var(--s)) { */
+  @media (width <= 580px) {
+    .meta {
+      flex-direction: column;
+    }
+  }
+
+  @media print {
+    .meta-links,
+    .languages {
+      display: none;
+    }
+  }
+</style>

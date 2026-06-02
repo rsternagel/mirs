@@ -1,0 +1,99 @@
+---
+const navTitles = ['home', 'offer', 'projects', 'skills']
+
+const getSelectedNavBy = (path: string): string => {
+  let selectedNavItemId = ''
+
+  navTitles.some((title) => {
+    const hasNavTitleMatchingPathname =
+      path.search(new RegExp(`/${title}/?`)) !== -1
+    if (hasNavTitleMatchingPathname) {
+      selectedNavItemId = title
+      return true
+    }
+    return false
+  })
+
+  return path === '/' ? 'home' : selectedNavItemId
+}
+
+const selectedNavItem = getSelectedNavBy(Astro.url.pathname)
+---
+
+<nav>
+  <ul>
+    {
+      navTitles.map((item) => (
+        <li data-selected={item === `${selectedNavItem}`}>
+          <a href={item === 'home' ? '/' : `/${item}/`}>
+            {item[0].toUpperCase().concat(item.substring(1))}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<style>
+  ul {
+    position: relative;
+    display: flex;
+    margin-top: 10px;
+    list-style-type: none;
+  }
+
+  ul :global(li) {
+    flex: 0 1 content;
+    padding: 10px 0;
+    cursor: pointer;
+  }
+
+  nav {
+    font-family: 'Open Sans', Palatino, 'Palatino Linotype', serif;
+    text-transform: uppercase;
+    font-size: 90%;
+  }
+
+  nav :global(a) {
+    padding: 10px;
+    color: rgb(0 0 0 / 80%);
+    text-decoration: none;
+  }
+
+  ul :global(li:not(:last-child)) {
+    margin-right: 20px;
+  }
+
+  nav :global(li:hover),
+  nav :global([data-selected='true']) {
+    background-color: rgb(235 246 232);
+    border-radius: 5px;
+  }
+
+  nav :global([data-selected='true']),
+  nav :global([data-selected='true']) :global(a),
+  nav :global([data-selected='true']) :global(a:visited) {
+    cursor: default;
+  }
+
+  nav :global(a:hover),
+  nav :global(li:hover) :global(a),
+  nav :global([data-selected='true']) :global(a),
+  nav :global([data-selected='true']) :global(a:visited) {
+    color: #479047;
+  }
+
+  /* @media (max-width: var(--s)) { */
+  @media (width <= 580px) {
+    ul {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  @media print {
+    nav {
+      display: none;
+    }
+  }
+</style>
