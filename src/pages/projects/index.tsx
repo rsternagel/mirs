@@ -64,6 +64,7 @@ const Projects: React.FC<PageProps> = ({
             </dd>
             <dt>Period of Time</dt>
             <dd>
+              <time>2026</time>
               <time>2022-2024</time>
               <time>2019-2020</time>
             </dd>
