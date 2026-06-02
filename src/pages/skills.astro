@@ -1,0 +1,103 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+import MainSkills from '../components/skills/MainSkills.astro'
+import MiscSkills from '../components/skills/MiscSkills.astro'
+import Technologies from '../components/skills/Technologies.astro'
+import Tools from '../components/skills/Tools.astro'
+
+const title = 'Skills | ' + import.meta.env.SITE_TITLE
+---
+
+<Layout title={title}>
+  <div>
+    <h1>Skills</h1>
+    <p>
+      This list reflects <span class="middle">what I know</span> and{' '}
+      <span class="high">what I am passionate about</span>.
+    </p>
+
+    <div class="skills">
+      <MainSkills />
+      <Technologies />
+      <Tools />
+      <MiscSkills />
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .skills {
+    margin-bottom: 30px;
+  }
+
+  .skills :global(ul) {
+    list-style-type: none;
+  }
+
+  .skills :global(ul),
+  .skills :global(dl),
+  .skills :global(dd) {
+    margin-bottom: 0;
+  }
+
+  .skills :global(.skill-list) {
+    display: flex;
+  }
+
+  .skills :global(.category),
+  .skills :global(.details) {
+    padding: 5px 0;
+  }
+
+  .skills :global(.category) {
+    width: 30%;
+    margin-right: 20px;
+  }
+
+  .skills :global(.details) {
+    width: 70%;
+  }
+
+  .skills :global(.row) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .middle,
+  .skills :global(.middle) {
+    color: rgb(125 93 54 / 90%);
+  }
+
+  .high,
+  .skills :global(.high) {
+    color: rgb(42 111 54);
+  }
+
+  .skills :global(.details) :global(li) {
+    padding-left: 5px;
+    margin-bottom: 3px;
+  }
+
+  /* @media only screen and (max-width: var(--m)) { */
+  @media only screen and (width <= 735px) {
+    .skills :global(.skill-list) {
+      display: block;
+    }
+
+    .skills :global(.category) {
+      width: 100%;
+    }
+
+    .skills :global(.details) {
+      width: 100%;
+    }
+  }
+
+  /* @media only screen and (max-width: var(--s)) { */
+  @media only screen and (width <= 580px) {
+    .skills :global(.row) {
+      display: block;
+    }
+  }
+</style>

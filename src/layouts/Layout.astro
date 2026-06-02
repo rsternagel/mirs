@@ -1,0 +1,103 @@
+---
+import Base from './Base.astro'
+
+import Nav from '../components/Nav.astro'
+import Logo from '../components/Logo.astro'
+import Footer from '../components/Footer.astro'
+
+interface Props {
+  title: string
+}
+const { title } = Astro.props
+---
+
+<Base title={title}>
+  <div lang="en">
+    <div class="container">
+      <header class="masthead">
+        <Logo />
+        <Nav />
+      </header>
+      <main class="maincontent">
+        <slot />
+      </main>
+    </div>
+    <Footer />
+  </div>
+</Base>
+
+<style>
+  :global(body) {
+    border-top: 6px solid #6aae6a;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.6rem;
+  }
+
+  .container {
+    max-width: 54rem;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+  }
+
+  .masthead {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .maincontent :global(h1) {
+    font-family: Palatino, 'Palatino Linotype', Georgia, serif;
+    font-size: 130%;
+    border-bottom: 2px solid #6aae6a;
+    display: inline-block;
+    margin: 0.67em 0 30px;
+    padding: 0 5px;
+  }
+
+  .maincontent :global(h2) {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 100%;
+    margin-bottom: 0.7rem;
+  }
+
+  .maincontent {
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .maincontent :global(ul) {
+    font-size: 95%;
+  }
+
+  .maincontent :global(hr) {
+    margin-bottom: 6rem;
+  }
+
+  .maincontent :global(a),
+  .maincontent :global(a:visited) {
+    text-decoration: none;
+    padding-bottom: 1px;
+    color: #1964ae;
+  }
+
+  .maincontent :global(a:hover) {
+    background-color: #ffb;
+  }
+
+  .maincontent :global(a.nohover:hover) {
+    background-color: transparent;
+  }
+
+  /* @media (max-width: var(--m)) { */
+  @media (width <= 735px) {
+    .masthead {
+      display: block;
+    }
+  }
+
+  @media print {
+    .container {
+      font-size: 75% !important;
+    }
+  }
+</style>

@@ -1,0 +1,200 @@
+---
+import { Image } from 'astro:assets'
+import profilePic from '../img/profile_pic.jpg'
+
+import Layout from '../layouts/Layout.astro'
+
+const title = import.meta.env.SITE_TITLE
+---
+
+<Layout title={title}>
+  <div>
+    <section class="content">
+      <aside class="sidebar">
+        <div class="container-img">
+          <Image
+            src={profilePic}
+            alt="Richard Sternagel"
+            loading="eager"
+            width="200"
+            height="248"
+          />
+        </div>
+
+        <div class="container-labels-contact">
+          <div class="labels">
+            <span>Rust · JS/TS · Node.js</span>
+            <span>Web-Apps · Full Stack · CLI</span>
+          </div>
+
+          <p class="contact">
+            Mail me:
+            <span>
+              ✉️<a href="mailto:rsternagel@posteo.de">rsternagel@posteo.de</a>
+            </span>
+          </p>
+        </div>
+      </aside>
+      <section class="intro">
+        <p>
+          <span class="greeting">Hello,</span><br />
+          I am <span class="name">Richard Sternagel</span>,<br />
+          software developer from Frankfurt am Main, Germany.
+        </p>
+        <p>
+          I'm experienced with Rust projects<br />
+          (e.g. in the fields of Networking, CLI and WASM).
+        </p>
+        <p>
+          Moreover I am an expert for the
+          <a href="/offer/">
+            development of Web Apps with a cloud native attitude.
+          </a>
+          My <a href="/skills/">field-tested knowledge</a> is based on my studies
+          (degree in Computer Science in Media) as well as my fifteen years <a
+            href="/projects/">work experience</a
+          >.
+        </p>
+        <p>
+          My focus is on <a href="https://rust-lang.org/">Rust</a>,
+          <a href="https://developer.mozilla.org/en/docs/Web/JavaScript"
+            >JavaScript</a
+          >, <a href="https://www.typescriptlang.org/">TypeScript</a>
+          <span class="amp">&</span>
+          <a href="https://nodejs.org/">Node.js</a>.
+        </p>
+        <p>
+          My preferred location to work from is Frankfurt am Main, the
+          Rhein-Main area or from home (remote).
+        </p>
+        <p>I speak German (native speaker) and English fluently.</p>
+        <p>
+          I am available as from <time>September 2026</time>.
+        </p>
+      </section>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .content {
+    display: flex;
+  }
+
+  .sidebar {
+    width: 35%;
+    margin-right: 10px;
+  }
+
+  .container-img {
+    max-width: 200px;
+    min-width: 150px;
+  }
+
+  .container-img img {
+    padding: 1px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .labels {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
+    min-width: 150px;
+    font-size: 75%;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    font-size: 95%;
+    margin: 40px 10px;
+  }
+
+  .contact a {
+    padding-left: 10px;
+  }
+
+  .contact span:first-of-type {
+    display: flex;
+    align-items: center;
+  }
+
+  .greeting {
+    display: block;
+  }
+
+  .intro,
+  .sidebar {
+    padding: 10px;
+  }
+
+  .intro {
+    width: 65%;
+  }
+
+  :global(.amp) {
+    font-family: Palatino, 'Palatino Linotype', serif;
+    font-style: italic;
+  }
+
+  /* @media only screen and (max-width: var(--m)) { */
+  @media only screen and (width <= 735px) {
+    .content {
+      display: block;
+    }
+
+    .sidebar {
+      display: flex;
+      width: 100%;
+    }
+
+    .container-img img {
+      max-width: 85%;
+    }
+
+    .container-labels-contact {
+      margin: 20px 0 0 20px;
+    }
+
+    .container-labels-contact .labels p {
+      font-size: 80%;
+    }
+
+    .intro {
+      width: 100%;
+    }
+  }
+
+  /* @media only screen and (max-width: var(--s)) { */
+  @media only screen and (width <= 580px) {
+    .content {
+      display: block;
+    }
+
+    .sidebar {
+      display: block;
+      width: 100%;
+    }
+
+    .container-img img {
+      max-width: 80%;
+    }
+
+    .container-labels-contact {
+      margin: 0;
+    }
+
+    .labels {
+      align-items: flex-start;
+    }
+
+    .intro {
+      width: 100%;
+    }
+  }
+</style>

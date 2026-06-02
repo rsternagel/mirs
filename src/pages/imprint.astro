@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+const title = 'Imprint | ' + import.meta.env.SITE_TITLE
+---
+
+<Layout title={title}>
+  <div>
+    <h1>Imprint</h1>
+    <p>responsible in accordance with § 5 TMG:</p>
+
+    <h2>Address</h2>
+    <p>
+      Medieninformatik
+      <br />
+      Richard Sternagel
+      <br />
+      Diplom Medien-Informatiker (DH)
+      <br />
+      Geleitsstraße 17
+      <br />
+      60599 Frankfurt
+    </p>
+    <h2>Contact</h2>
+    <p>
+      <span>Phone:</span> +49 176 / 217 466 40
+      <br />
+      <span>Mail:</span> rsternagel@posteo.de
+      <br />
+    </p>
+    <h2>VAT identification number</h2>
+    <p>DE310204622</p>
+  </div>
+</Layout>
+
+<style>
+  span {
+    color: #555;
+    padding: 0 3px 0 0;
+  }
+</style>
