@@ -47,6 +47,11 @@
     "buse": "pnpm build && pnpm serve",
     "prepare": "husky install"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pnx run lint-staged"
+    }
+  },
   "lint-staged": {
     "*.tsx": [
       "pnx lint"
