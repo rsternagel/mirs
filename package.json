@@ -13,15 +13,15 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "astro": "^6.4.2"
+    "astro": "^6.4.4"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
     "husky": "^9.1.7",
     "lint-staged": "^17.0.7",
-    "oxfmt": "^0.52.0",
+    "oxfmt": "^0.54.0",
     "sharp": "^0.34.5",
-    "stylelint": "^17.12.0",
+    "stylelint": "^17.13.0",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-standard": "^40.0.0",
     "typescript": "^6.0.3"
